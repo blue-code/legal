@@ -7,6 +7,7 @@ Hosted via GitHub Pages at: https://blue-code.github.io/legal/
 ## Apps
 
 - **AI 관상 (FaceFortune)** — [Privacy](./facefortune/privacy.html) · [Terms](./facefortune/terms.html)
+- **삼국지 덕력고사 (Three Kingdoms Quiz)** — [Privacy](./samguk/privacy.html) · [Terms](./samguk/terms.html)
 
 ## Adding a new app
 
