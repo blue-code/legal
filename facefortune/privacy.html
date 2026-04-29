@@ -53,8 +53,16 @@ small { color: #888; }
   <li>업로드한 사진의 영구 저장본</li>
 </ul>
 
-<h2>3. 사진의 처리 방식</h2>
-<p>AI 관상 분석에 사용된 사진은 Google Gemini API로 전송되어 분석된 후, 즉시 폐기됩니다. 당사 서버에 영구 저장되지 않으며, 광고나 모델 학습 등 다른 목적으로 사용되지 않습니다.</p>
+<h2>3. 얼굴 데이터(Face Data) 처리</h2>
+<p><strong>본 앱은 얼굴 인식, 얼굴 식별, 얼굴 측정값(facial landmark/biometric template) 등 어떠한 형태의 얼굴 데이터(Face Data)도 추출, 저장, 또는 보관하지 않습니다.</strong></p>
+<ul>
+  <li><strong>수집되는 얼굴 데이터</strong>: 없음. 본 앱은 사용자가 직접 업로드한 일반 사진(JPEG/PNG)만을 일회성 분석에 사용합니다. 얼굴의 측정값, 임베딩, 식별자, 또는 어떠한 생체정보도 추출하거나 저장하지 않습니다.</li>
+  <li><strong>이용 목적</strong>: 업로드된 사진은 오직 1회 AI 분석(관상/배우자 예측/궁합) 결과 생성 목적에만 사용됩니다.</li>
+  <li><strong>제3자 공유</strong>: 분석 처리 시 사진은 일시적으로 Google LLC가 운영하는 Gemini API로 전송됩니다. Google은 이 데이터를 자사의 데이터 처리 정책에 따라 처리하며, 처리 후 폐기합니다. 본 앱 운영자, Vercel(API 호스팅), 또는 어떠한 제3자도 사진을 영구 저장하지 않습니다.</li>
+  <li><strong>저장 위치</strong>: 사진은 분석 처리 중 메모리 상에만 존재하며, 분석 완료 즉시 메모리에서 폐기됩니다. 디스크나 데이터베이스에 저장되지 않습니다.</li>
+  <li><strong>보유 기간</strong>: 0초. 분석 응답 반환 즉시 폐기됩니다. 본 앱 서버, Google Gemini API, 또는 어떠한 시스템에도 영구 저장되지 않습니다.</li>
+</ul>
+<p>온디바이스에서는 사진 업로드 전 사용자 보호를 위해 Apple Vision Framework로 얼굴 존재 여부와 크기·위치만 확인합니다(얼굴 영역 좌표만 사용, 어떠한 데이터도 외부 전송·저장되지 않음).</p>
 
 <h2>4. 제3자 제공</h2>
 <p>AI 관상 분석을 위해 다음 서비스가 사용됩니다:</p>
@@ -107,8 +115,16 @@ small { color: #888; }
   <li>Permanent copies of uploaded photos</li>
 </ul>
 
-<h2>3. How Photos Are Handled</h2>
-<p>Photos used for AI analysis are sent to the Google Gemini API for processing and discarded immediately afterward. They are not stored on our servers or used for ads, model training, or any other purpose.</p>
+<h2>3. Face Data Handling</h2>
+<p><strong>This app does NOT extract, store, or retain any form of Face Data — including facial recognition templates, biometric identifiers, facial landmark measurements, or face embeddings.</strong></p>
+<ul>
+  <li><strong>Face Data Collected</strong>: None. The app only uses ordinary photos (JPEG/PNG) the user uploads, for a single one-time analysis. We do not extract any biometric measurements, face embeddings, or identifiers.</li>
+  <li><strong>Purpose</strong>: Uploaded photos are used solely to generate one analysis result (face reading, spouse prediction, or compatibility) per upload. The photo is not used for any other purpose.</li>
+  <li><strong>Third-Party Sharing</strong>: During analysis, the photo is transiently sent to the Google Gemini API operated by Google LLC. Google processes this data per their data handling policies and discards it after processing. Neither this app's operator, Vercel (API hosting), nor any other third party permanently stores the photo.</li>
+  <li><strong>Storage Location</strong>: The photo exists only in volatile memory during processing and is discarded immediately upon completion. It is never written to disk or any database.</li>
+  <li><strong>Retention</strong>: Zero seconds. The photo is discarded the moment the analysis response is returned. It is never permanently stored on this app's servers, Google's systems, or any other system.</li>
+</ul>
+<p>For on-device user protection, before upload, Apple's Vision Framework is used locally to detect face presence and approximate position/size only — only bounding-box coordinates are used; no data is transmitted or stored externally.</p>
 
 <h2>4. Third-Party Services</h2>
 <ul>
