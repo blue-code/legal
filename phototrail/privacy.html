@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoTrail — 개인정보처리방침 / Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; }
+h3 { margin-top: 24px; color: #2E86DE; }
+section { margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ccc4; padding: 8px 12px; text-align: left; vertical-align: top; }
+th { background: #2E86DE22; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #2E86DE; text-decoration: none; }
+.lang-toggle a:hover { text-decoration: underline; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+small { color: #888; }
+code { background: #ccc2; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<!-- =========== KOREAN =========== -->
+<section id="ko">
+<h1>개인정보처리방침 — PhotoTrail</h1>
+<p><small>최종 업데이트: 2026년 4월 30일</small></p>
+
+<p>본 앱(이하 "PhotoTrail")은 사용자의 개인정보와 사진을 소중히 여기며, 본 처리방침에 따라 투명하게 처리합니다. PhotoTrail은 <strong>로컬-퍼스트</strong> 원칙으로 설계되었으며, 사진과 위치 데이터는 사용자의 기기 내에서만 처리됩니다. 외부 서버로 사진이나 사용자 데이터를 전송하지 않습니다.</p>
+
+<h2>1. 수집 및 처리하는 정보</h2>
+<table>
+  <tr><th>항목</th><th>수집 시점</th><th>처리 위치</th><th>이용 목적</th></tr>
+  <tr><td>사진 라이브러리 접근 (사용자 선택 사진)</td><td>Trip 생성·편집 시</td><td>기기 로컬 (PhotoKit)</td><td>EXIF 읽기/쓰기, 동선 시각화</td></tr>
+  <tr><td>EXIF 메타데이터 (카메라/렌즈/GPS/시간)</td><td>사진 가져오기 시</td><td>기기 로컬</td><td>표시 및 편집</td></tr>
+  <tr><td>Trip 데이터 (제목, 설명, 사진 식별자)</td><td>Trip 생성 시</td><td>기기 로컬 (SwiftData) + iCloud</td><td>여행 기록 보관</td></tr>
+  <tr><td>위치 정보 (Apple Watch 트래킹 시)</td><td>트래킹 사용 시</td><td>기기 로컬 (CoreLocation)</td><td>이동 경로 수집</td></tr>
+  <tr><td>역지오코딩 좌표</td><td>위치명 표시 시</td><td>Apple 지도 서비스</td><td>좌표 → 지명 변환</td></tr>
+  <tr><td>GPX 파일</td><td>사용자가 가져올 때</td><td>기기 로컬 (XMLParser)</td><td>트랙 매칭</td></tr>
+</table>
+
+<h2>2. 외부 서버로 전송되지 않는 정보</h2>
+<p>PhotoTrail은 <strong>외부 서버나 분석 서비스로 어떠한 사용자 데이터도 전송하지 않습니다</strong>. 다음 정보는 모두 기기 내에만 존재합니다:</p>
+<ul>
+  <li>사진 원본 및 EXIF 메타데이터</li>
+  <li>Trip 정보, 타임라인, 동선 좌표</li>
+  <li>장비 통계 (카메라/렌즈/조리개/ISO 분포)</li>
+  <li>설정 (시간대, 지도 스타일, 썸네일 품질 등)</li>
+  <li>Apple Watch에서 수집한 GPS 트랙</li>
+</ul>
+
+<h2>3. 사진 라이브러리 권한</h2>
+<p>PhotoTrail은 사용자의 명시적 선택을 통해서만 사진에 접근합니다.</p>
+<ul>
+  <li><strong>읽기</strong>: 선택한 사진의 EXIF 메타데이터 및 썸네일</li>
+  <li><strong>쓰기</strong>: 사용자가 EXIF 편집을 적용한 경우, 해당 사진의 메타데이터만 수정 (이미지 픽셀은 재압축하지 않음)</li>
+</ul>
+<p>접근 권한은 iOS 설정 > PhotoTrail > 사진에서 언제든지 변경할 수 있습니다.</p>
+
+<h2>4. 위치 정보 (Apple Watch)</h2>
+<p>Apple Watch 앱에서 트래킹을 시작한 경우에만 CoreLocation을 통해 GPS 좌표를 수집합니다. 수집된 좌표는:</p>
+<ul>
+  <li>Apple Watch 내부 메모리에 일시 저장</li>
+  <li>WatchConnectivity로 페어링된 iPhone에 전송 (Bluetooth/Wi-Fi 직접 통신, 외부 서버 미경유)</li>
+  <li>iPhone의 PhotoTrail에서 Trip 동선과 통합되어 SwiftData에 저장</li>
+</ul>
+<p>위치 권한은 iOS/watchOS 설정에서 언제든 철회할 수 있으며, 트래킹을 중지하면 즉시 수집이 멈춥니다.</p>
+
+<h2>5. iCloud 동기화</h2>
+<p>iCloud 동기화를 활성화한 경우, PhotoTrail은 SwiftData + CloudKit을 통해 Trip 데이터를 사용자의 <strong>개인 iCloud 컨테이너</strong>에 저장합니다.</p>
+<ul>
+  <li>데이터는 Apple iCloud의 보안 인프라 안에서만 처리됩니다</li>
+  <li>PhotoTrail 개발자나 제3자는 사용자의 iCloud 데이터에 접근할 수 없습니다</li>
+  <li>사진 원본은 동기화되지 않으며, 사진 식별자(localIdentifier)만 저장됩니다</li>
+  <li>iCloud 동기화는 설정 화면에서 언제든 비활성화할 수 있습니다</li>
+</ul>
+
+<h2>6. 지도 및 역지오코딩</h2>
+<p>PhotoTrail은 동선 시각화를 위해 Apple의 MapKit을 사용합니다. 지도 표시 및 위치명 변환(역지오코딩) 과정에서:</p>
+<ul>
+  <li>지도 타일 요청 시 화면 영역 좌표가 Apple 지도 서버로 전송됩니다 (Apple의 위치 서비스 약관 적용)</li>
+  <li>역지오코딩 요청 시 좌표가 Apple로 전송되어 지명으로 변환됩니다</li>
+</ul>
+<p>이 통신은 Apple의 표준 iOS 프레임워크를 통해 이뤄지며, PhotoTrail은 결과만 받아 표시합니다.</p>
+
+<h2>7. 광고 및 분석</h2>
+<p>PhotoTrail은 <strong>광고를 표시하지 않으며</strong>, Google Analytics, Firebase, Meta SDK 등 어떠한 분석/추적 SDK도 통합하지 않았습니다. App Tracking Transparency (ATT) 권한도 요청하지 않습니다.</p>
+
+<h2>8. 데이터 보관 및 삭제</h2>
+<ul>
+  <li>모든 Trip 데이터는 사용자가 앱 내에서 직접 삭제할 수 있습니다</li>
+  <li>앱을 삭제하면 기기 내 모든 PhotoTrail 데이터(SwiftData 저장소)가 함께 삭제됩니다</li>
+  <li>iCloud 동기화 데이터는 iOS 설정 > Apple ID > iCloud > PhotoTrail에서 삭제할 수 있습니다</li>
+  <li>EXIF 편집으로 수정된 사진은 사진 라이브러리에 그대로 남습니다 (앱 삭제 영향 없음)</li>
+</ul>
+
+<h2>9. 어린이 개인정보</h2>
+<p>PhotoTrail은 만 13세 미만 어린이로부터 의도적으로 개인정보를 수집하지 않습니다.</p>
+
+<h2>10. 본 방침의 변경</h2>
+<p>처리방침이 변경되는 경우, 본 페이지를 업데이트하고 앱 업데이트 노트를 통해 안내합니다.</p>
+
+<h2>11. 문의</h2>
+<p>개인정보 관련 문의: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+</section>
+
+<hr>
+
+<!-- =========== ENGLISH =========== -->
+<section id="en">
+<h1>Privacy Policy — PhotoTrail</h1>
+<p><small>Last updated: April 30, 2026</small></p>
+
+<p>This app ("PhotoTrail") values your privacy and your photos, and processes them transparently per this policy. PhotoTrail is built on a <strong>local-first</strong> principle: photos and location data are processed entirely on your device. We do not transmit your photos or personal data to external servers.</p>
+
+<h2>1. Data We Collect & Process</h2>
+<table>
+  <tr><th>Item</th><th>When</th><th>Where</th><th>Purpose</th></tr>
+  <tr><td>Photo library access (photos you select)</td><td>Trip creation/editing</td><td>On-device (PhotoKit)</td><td>EXIF read/write, route visualization</td></tr>
+  <tr><td>EXIF metadata (camera/lens/GPS/time)</td><td>On photo import</td><td>On-device</td><td>Display and editing</td></tr>
+  <tr><td>Trip data (title, description, photo IDs)</td><td>On Trip creation</td><td>On-device (SwiftData) + iCloud</td><td>Travel record storage</td></tr>
+  <tr><td>Location data (Apple Watch tracking)</td><td>While tracking</td><td>On-device (CoreLocation)</td><td>Movement route capture</td></tr>
+  <tr><td>Reverse-geocoding coordinates</td><td>For place name display</td><td>Apple Maps service</td><td>Coordinate → place name</td></tr>
+  <tr><td>GPX files</td><td>On user import</td><td>On-device (XMLParser)</td><td>Track matching</td></tr>
+</table>
+
+<h2>2. Data We Do NOT Send to External Servers</h2>
+<p>PhotoTrail <strong>does not send any user data to external servers or analytics services</strong>. The following stays entirely on your device:</p>
+<ul>
+  <li>Original photos and EXIF metadata</li>
+  <li>Trip information, timeline, and route coordinates</li>
+  <li>Equipment statistics (camera/lens/aperture/ISO distribution)</li>
+  <li>Settings (timezone, map style, thumbnail quality, etc.)</li>
+  <li>GPS tracks collected by Apple Watch</li>
+</ul>
+
+<h2>3. Photo Library Permission</h2>
+<p>PhotoTrail accesses your photos only through your explicit selection.</p>
+<ul>
+  <li><strong>Read</strong>: EXIF metadata and thumbnails of the photos you choose</li>
+  <li><strong>Write</strong>: When you apply EXIF edits, only the metadata of those photos is modified (image pixels are not re-encoded)</li>
+</ul>
+<p>You can change permission at any time via iOS Settings → PhotoTrail → Photos.</p>
+
+<h2>4. Location Data (Apple Watch)</h2>
+<p>Location is collected via CoreLocation only when you start tracking in the Apple Watch app. Captured coordinates:</p>
+<ul>
+  <li>Are stored temporarily in Apple Watch memory</li>
+  <li>Are transmitted to your paired iPhone via WatchConnectivity (direct Bluetooth/Wi-Fi, no external servers)</li>
+  <li>Are merged with the Trip route on iPhone and saved to SwiftData</li>
+</ul>
+<p>You can revoke location permission at any time in iOS/watchOS Settings, and stopping tracking immediately ends collection.</p>
+
+<h2>5. iCloud Sync</h2>
+<p>If you enable iCloud sync, PhotoTrail stores Trip data in your <strong>private iCloud container</strong> via SwiftData + CloudKit.</p>
+<ul>
+  <li>Data is processed only within Apple's secure iCloud infrastructure</li>
+  <li>Neither the developer nor any third party can access your iCloud data</li>
+  <li>Original photos are not synced — only photo identifiers (localIdentifier) are stored</li>
+  <li>iCloud sync can be disabled at any time in the Settings screen</li>
+</ul>
+
+<h2>6. Maps and Reverse Geocoding</h2>
+<p>PhotoTrail uses Apple's MapKit to visualize routes. During map display and place-name lookup (reverse geocoding):</p>
+<ul>
+  <li>Map tile requests send the visible region's coordinates to Apple's map servers (subject to Apple's location services terms)</li>
+  <li>Reverse geocoding requests send coordinates to Apple to convert into place names</li>
+</ul>
+<p>This communication happens through standard iOS frameworks — PhotoTrail only receives the results to display.</p>
+
+<h2>7. Ads & Tracking</h2>
+<p>PhotoTrail <strong>shows no ads</strong> and integrates <strong>no analytics or tracking SDKs</strong> (no Google Analytics, Firebase, Meta SDK, etc.). We do not request App Tracking Transparency (ATT) permission.</p>
+
+<h2>8. Data Retention & Deletion</h2>
+<ul>
+  <li>All Trip data can be deleted directly from within the app</li>
+  <li>Deleting the app removes all PhotoTrail data on the device (SwiftData store)</li>
+  <li>iCloud-synced data can be deleted via iOS Settings → Apple ID → iCloud → PhotoTrail</li>
+  <li>Photos that were modified by EXIF edits remain in your photo library (unaffected by app deletion)</li>
+</ul>
+
+<h2>9. Children's Privacy</h2>
+<p>PhotoTrail does not knowingly collect personal information from children under 13.</p>
+
+<h2>10. Policy Changes</h2>
+<p>If this policy changes, we'll update this page and notify users via app release notes.</p>
+
+<h2>11. Contact</h2>
+<p>Privacy inquiries: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+</section>
+
+</body>
+</html>

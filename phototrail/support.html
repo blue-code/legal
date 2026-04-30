@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoTrail — 지원 / Support</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; color: #2E86DE; }
+section { margin-bottom: 24px; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #2E86DE; text-decoration: none; }
+.lang-toggle a:hover { text-decoration: underline; }
+.faq { margin: 16px 0; padding: 12px 16px; border-left: 3px solid #2E86DE; background: #2E86DE11; border-radius: 4px; }
+.faq strong { display: block; margin-bottom: 6px; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<!-- =========== KOREAN =========== -->
+<section id="ko">
+<h1>PhotoTrail 지원</h1>
+<p><small>최종 업데이트: 2026년 4월 30일</small></p>
+
+<h2>문의</h2>
+<p>버그 리포트, 기능 제안, 기타 문의는 이메일로 연락 주세요.<br>
+<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+<h2>자주 묻는 질문</h2>
+
+<div class="faq">
+  <strong>Q. EXIF를 편집하면 원본 사진이 손상되나요?</strong>
+  PhotoTrail은 메타데이터(EXIF)만 수정하며, 이미지 픽셀은 재압축하지 않습니다. 원본 화질은 그대로 유지됩니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 사진이 외부 서버로 전송되나요?</strong>
+  아니요. 모든 처리는 기기 내에서 이뤄지며, 사진과 위치 데이터를 외부 서버로 보내지 않습니다. 자세한 내용은 <a href="./privacy.html">개인정보처리방침</a>을 확인해주세요.
+</div>
+
+<div class="faq">
+  <strong>Q. GPX 파일은 어디서 가져올 수 있나요?</strong>
+  대부분의 GPS 로거 앱(Strava, Garmin Connect, GeoTracker 등)에서 GPX 1.1 형식으로 내보낼 수 있습니다. iCloud Drive 또는 파일 앱에서 PhotoTrail로 가져올 수 있습니다.
+</div>
+
+<div class="faq">
+  <strong>Q. DSLR 카메라 시간이 실제 시간과 다를 때 어떻게 보정하나요?</strong>
+  GPX 가져오기 화면에서 "카메라 시간 오프셋"을 조정하세요. 예: 카메라가 한국 시간으로 설정되어 있고 현지(일본) 시간이 +1시간이면 오프셋을 +1로 설정합니다.
+</div>
+
+<div class="faq">
+  <strong>Q. iCloud 동기화가 안 됩니다.</strong>
+  iOS 설정 > Apple ID > iCloud > "iCloud Drive 사용 중인 앱" 목록에서 PhotoTrail이 활성화되어 있는지 확인하세요. 또한 PhotoTrail 설정 화면에서 iCloud 동기화 토글이 켜져 있어야 합니다.
+</div>
+
+<div class="faq">
+  <strong>Q. Apple Watch에서 트래킹이 안 됩니다.</strong>
+  Watch에서 위치 권한을 "앱 사용 중에 허용"으로 설정해주세요. 또한 iPhone과 페어링이 정상이어야 WatchConnectivity로 GPS 데이터가 전송됩니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 지원 기기는 어떻게 되나요?</strong>
+  iPhone (iOS 17 이상), Apple Watch (watchOS 10 이상)에서 동작합니다. 더 낮은 버전은 SwiftData·MapKit 신규 API 의존성으로 지원하지 않습니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 지원 언어는 무엇인가요?</strong>
+  한국어, 영어, 일본어, 중국어 간체. 시스템 언어에 따라 자동 전환됩니다.
+</div>
+
+</section>
+
+<hr>
+
+<!-- =========== ENGLISH =========== -->
+<section id="en">
+<h1>PhotoTrail Support</h1>
+<p><small>Last updated: April 30, 2026</small></p>
+
+<h2>Contact</h2>
+<p>Bug reports, feature suggestions, and general inquiries — please email:<br>
+<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <strong>Q. Does editing EXIF damage the original photo?</strong>
+  PhotoTrail only modifies metadata (EXIF). Image pixels are not re-encoded. Original quality is preserved.
+</div>
+
+<div class="faq">
+  <strong>Q. Are my photos sent to external servers?</strong>
+  No. All processing happens on device. We do not transmit photos or location data to external servers. See the <a href="./privacy.html">Privacy Policy</a> for details.
+</div>
+
+<div class="faq">
+  <strong>Q. Where can I get GPX files?</strong>
+  Most GPS logger apps (Strava, Garmin Connect, GeoTracker, etc.) can export to GPX 1.1 format. You can import via iCloud Drive or the Files app into PhotoTrail.
+</div>
+
+<div class="faq">
+  <strong>Q. My DSLR clock is wrong — how do I correct it?</strong>
+  On the GPX import screen, adjust the "Camera time offset". Example: if your camera is set to home time and you're in a +1 hour timezone, set the offset to +1.
+</div>
+
+<div class="faq">
+  <strong>Q. iCloud sync isn't working.</strong>
+  Check iOS Settings → Apple ID → iCloud → "Apps using iCloud Drive" — PhotoTrail must be enabled. Also confirm the iCloud sync toggle is on in PhotoTrail Settings.
+</div>
+
+<div class="faq">
+  <strong>Q. Tracking doesn't work on Apple Watch.</strong>
+  Ensure the Watch has location permission set to "While Using". Pairing with iPhone must be healthy for WatchConnectivity to deliver GPS data.
+</div>
+
+<div class="faq">
+  <strong>Q. What devices are supported?</strong>
+  iPhone (iOS 17+) and Apple Watch (watchOS 10+). Lower versions are not supported due to SwiftData and new MapKit API dependencies.
+</div>
+
+<div class="faq">
+  <strong>Q. What languages are supported?</strong>
+  Korean, English, Japanese, and Simplified Chinese. The app switches automatically based on your system language.
+</div>
+
+</section>
+
+</body>
+</html>
