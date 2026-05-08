@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UnzipMate — 지원 / Support</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; color: #8a4fff; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #8a4fff; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+.faq { margin: 16px 0; padding: 12px 16px; border-left: 3px solid #8a4fff; background: #8a4fff10; border-radius: 4px; }
+.faq strong { display: block; margin-bottom: 4px; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<section id="ko">
+<h1>UnzipMate 지원</h1>
+
+<h2>문의</h2>
+<p>버그 리포트, 기능 제안, 일반 문의: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+<p>GitHub Issues: <a href="https://github.com/blue-code/UnzipMate/issues">github.com/blue-code/UnzipMate/issues</a></p>
+
+<h2>자주 묻는 질문</h2>
+
+<div class="faq">
+  <strong>Q. Finder 오른쪽 클릭에 메뉴가 안 나와요.</strong>
+  시스템 설정 → 개인정보 보호 및 보안 → 확장 프로그램 → "추가된 확장 프로그램" → Finder 확장에서 UnzipMate Finder를 켜주세요. 켠 뒤 Finder를 다시 시작하면 적용됩니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 한글 zip을 풀었는데 파일 이름이 깨져 보여요.</strong>
+  설정 → 압축 해제 → "한글/일어/중문 zip 자동 인코딩 감지"가 켜져 있는지 확인하세요. 그래도 안 되면 메일로 zip 파일 하나만 보내주시면 분석해 드립니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 7Z, RAR도 풀 수 있나요?</strong>
+  현재 버전은 ZIP / TAR / TAR.GZ / TAR.BZ2 / TAR.XZ / GZ / BZ2 / XZ까지 지원합니다. 7Z와 RAR 지원은 다음 업데이트에서 추가될 예정입니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 비밀번호가 걸린 zip은 어떻게 푸나요?</strong>
+  현재는 비밀번호 보호된 압축은 지원되지 않습니다. 비밀번호 입력 UI는 다음 업데이트 일정에 포함되어 있습니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 압축 풀린 폴더가 어디 만들어지나요?</strong>
+  기본은 원본 zip 파일과 같은 위치에, 같은 이름의 폴더로 생성됩니다. 설정에서 "지정된 폴더"로 바꾸면 항상 한 폴더에 모을 수 있습니다.
+</div>
+
+</section>
+
+<hr>
+
+<section id="en">
+<h1>UnzipMate Support</h1>
+
+<h2>Contact</h2>
+<p>Bug reports, feature requests, general questions: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+<p>GitHub Issues: <a href="https://github.com/blue-code/UnzipMate/issues">github.com/blue-code/UnzipMate/issues</a></p>
+
+<h2>FAQ</h2>
+
+<div class="faq">
+  <strong>Q. The right-click menu doesn't show up in Finder.</strong>
+  Open System Settings → Privacy &amp; Security → Extensions → "Added Extensions" → Finder Extensions, and enable "UnzipMate Finder". Restart Finder afterwards.
+</div>
+
+<div class="faq">
+  <strong>Q. My Korean / Japanese ZIP still has garbled names.</strong>
+  Make sure Settings → Extract → "Auto-detect Korean / Japanese / Chinese filenames" is ON. If it still misbehaves, email us a sample ZIP and we'll diagnose it.
+</div>
+
+<div class="faq">
+  <strong>Q. Does it support 7Z and RAR?</strong>
+  This release supports ZIP / TAR / TAR.GZ / TAR.BZ2 / TAR.XZ / GZ / BZ2 / XZ. 7Z and RAR support is planned for the next update.
+</div>
+
+<div class="faq">
+  <strong>Q. How do I extract a password-protected ZIP?</strong>
+  Password-protected archives aren't supported in this release. The password prompt is on the roadmap.
+</div>
+
+<div class="faq">
+  <strong>Q. Where does the extracted folder go?</strong>
+  By default, into the same location as the original archive, in a folder with the same name. You can switch the destination to a fixed folder in Settings.
+</div>
+
+</section>
+
+</body>
+</html>
