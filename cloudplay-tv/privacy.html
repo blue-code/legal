@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CloudPlay TV — 개인정보처리방침 / Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; }
+h3 { margin-top: 24px; color: #4fa6ff; }
+section { margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ccc4; padding: 8px 12px; text-align: left; }
+th { background: #4fa6ff22; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #4fa6ff; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="#ja">日本語</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<section id="ko">
+<h1>CloudPlay TV — 개인정보처리방침</h1>
+<p><small>최종 업데이트: 2026년 5월 9일</small></p>
+
+<p>blue-code(이하 "당사")는 Apple TV용 동영상 플레이어 <strong>CloudPlay TV</strong>(이하 "본 앱")을 통해 사용자의 개인정보를 보호하는 것을 최우선 가치로 여깁니다. 본 방침은 본 앱이 어떤 정보를 수집하고, 어떻게 사용·보관·공유하는지 설명합니다.</p>
+
+<h2>1. 본 앱이 수집·전송하지 않는 정보</h2>
+<ul>
+  <li><strong>동영상·자막 콘텐츠</strong>: 사용자가 보유한 클라우드/NAS에 저장된 콘텐츠는 사용자 디바이스(Apple TV)와 사용자가 지정한 저장소 사이에서 직접 스트리밍되며, 당사 서버를 거치지 않습니다.</li>
+  <li><strong>시청 기록</strong>: 어떤 영상을 언제 보았는지에 대한 정보는 디바이스에 로컬로만 저장됩니다 (이어보기 용도). 외부로 전송되지 않습니다.</li>
+  <li><strong>광고·분석 SDK</strong>: 본 앱은 어떠한 광고 SDK, 분석 도구, 추적 식별자도 사용하지 않습니다.</li>
+</ul>
+
+<h2>2. 사용자가 제공하는 정보 (선택)</h2>
+<table>
+  <tr><th>구분</th><th>내용</th><th>저장 위치</th></tr>
+  <tr><td>OAuth 액세스/리프레시 토큰</td><td>Google Drive, OneDrive 로그인 시 발급되는 토큰</td><td>Apple TV 키체인 (디바이스 로컬, 암호화)</td></tr>
+  <tr><td>NAS 인증 정보</td><td>사용자가 직접 입력한 NAS URL/아이디/비밀번호</td><td>UserDefaults / Keychain (디바이스 로컬)</td></tr>
+  <tr><td>이어보기 위치</td><td>마지막 재생 위치/길이</td><td>UserDefaults (디바이스 로컬)</td></tr>
+</table>
+<p>위 정보는 본 앱이 사용자 클라우드 또는 NAS의 콘텐츠를 사용자의 명시적 요청에 따라 가져오기 위해서만 사용되며, <strong>당사 서버에는 어떠한 정보도 저장되지 않습니다.</strong></p>
+
+<h2>3. 제3자 서비스</h2>
+<p>본 앱은 사용자가 사용을 선택한 경우에만 다음 서비스에 접속합니다:</p>
+<ul>
+  <li><strong>Google Drive API</strong> — 사용자가 Google 계정으로 로그인한 경우에 한해 접근. <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>.</li>
+  <li><strong>Microsoft Graph (OneDrive)</strong> — 사용자가 Microsoft 계정으로 로그인한 경우에 한해 접근. <a href="https://privacy.microsoft.com/privacystatement">Microsoft 개인정보처리방침</a>.</li>
+  <li><strong>Apple iCloud Drive</strong> — Apple TV에 로그인된 Apple ID의 iCloud 컨테이너에 접근. <a href="https://www.apple.com/legal/privacy/">Apple 개인정보처리방침</a>.</li>
+  <li><strong>OpenSubtitles API</strong> — 사이드카 자막이 없을 때만 영상 파일명 기반으로 자막을 검색. 영상 파일은 전송되지 않습니다. <a href="https://www.opensubtitles.com/en/privacy_policy">OpenSubtitles 정책</a>.</li>
+  <li><strong>사용자 지정 NAS/HTTP/FTP/WebDAV 서버</strong> — 사용자가 직접 입력한 주소에만 연결.</li>
+</ul>
+
+<h2>4. 권한 사용 사유</h2>
+<ul>
+  <li><strong>로컬 네트워크</strong> (Bonjour 검색): 동일 네트워크의 NAS·미디어 서버 검색 및 연결.</li>
+  <li><strong>iCloud 컨테이너</strong>: iCloud Drive에서 사용자 영상에 접근.</li>
+</ul>
+
+<h2>5. 데이터 삭제</h2>
+<p>설정 > 클라우드 계정 > 로그아웃을 누르면 해당 계정의 토큰이 즉시 키체인에서 삭제됩니다. NAS 항목 삭제 시 자격 증명이 함께 제거됩니다. 앱 삭제 시 모든 로컬 데이터가 함께 제거됩니다.</p>
+
+<h2>6. 어린이</h2>
+<p>본 앱은 13세 미만 어린이를 대상으로 하지 않으며, 의도적으로 어린이의 개인정보를 수집하지 않습니다.</p>
+
+<h2>7. 정책 변경</h2>
+<p>본 방침이 변경될 경우 본 페이지에 게시되며, 중대한 변경의 경우 앱 내에 알립니다.</p>
+
+<h2>8. 문의</h2>
+<p>개인정보처리에 관한 문의: <a href="mailto:sukhaverse@gmail.com">sukhaverse@gmail.com</a></p>
+</section>
+
+<hr/>
+
+<section id="en">
+<h1>CloudPlay TV — Privacy Policy</h1>
+<p><small>Last updated: May 9, 2026</small></p>
+
+<p>blue-code ("we", "us") publishes <strong>CloudPlay TV</strong>, an Apple TV video player. We treat user privacy as a top priority. This policy explains what data the app handles, how, and why.</p>
+
+<h2>1. What we do NOT collect or transmit</h2>
+<ul>
+  <li><strong>Video and subtitle content</strong>: Streams directly between your Apple TV and the cloud/NAS you choose. Nothing passes through CloudPlay TV servers.</li>
+  <li><strong>Viewing history</strong>: Stored only locally on your device for resume-playback. Never transmitted.</li>
+  <li><strong>No ads, no analytics SDKs, no tracking identifiers.</strong></li>
+</ul>
+
+<h2>2. Data you provide (optional)</h2>
+<table>
+  <tr><th>Item</th><th>Details</th><th>Storage</th></tr>
+  <tr><td>OAuth tokens</td><td>Google Drive, OneDrive sign-in tokens</td><td>Apple TV Keychain (device local, encrypted)</td></tr>
+  <tr><td>NAS credentials</td><td>URL / username / password you enter</td><td>UserDefaults / Keychain (device local)</td></tr>
+  <tr><td>Resume position</td><td>Last playback position</td><td>UserDefaults (device local)</td></tr>
+</table>
+<p>This data is used only to access your own cloud or NAS at your explicit request. <strong>None of it is stored on our servers.</strong></p>
+
+<h2>3. Third-party services</h2>
+<ul>
+  <li><strong>Google Drive API</strong> (<a href="https://policies.google.com/privacy">policy</a>) — only when you sign in with Google.</li>
+  <li><strong>Microsoft Graph / OneDrive</strong> (<a href="https://privacy.microsoft.com/privacystatement">policy</a>) — only when you sign in with Microsoft.</li>
+  <li><strong>Apple iCloud Drive</strong> (<a href="https://www.apple.com/legal/privacy/">policy</a>) — uses the Apple ID signed in on your Apple TV.</li>
+  <li><strong>OpenSubtitles API</strong> (<a href="https://www.opensubtitles.com/en/privacy_policy">policy</a>) — searches by filename only when no sidecar subtitle exists. The video file itself is never sent.</li>
+  <li><strong>Your own NAS/HTTP/FTP/WebDAV servers</strong> — only the addresses you configure.</li>
+</ul>
+
+<h2>4. Permissions</h2>
+<ul>
+  <li><strong>Local Network</strong>: discover and connect to NAS and media servers.</li>
+  <li><strong>iCloud container</strong>: access videos in your iCloud Drive.</li>
+</ul>
+
+<h2>5. Data deletion</h2>
+<p>Tapping Settings → Cloud Accounts → Sign Out immediately removes the token from Keychain. Removing a NAS entry removes its credentials. Uninstalling the app removes all local data.</p>
+
+<h2>6. Children</h2>
+<p>The app is not directed to children under 13. We do not knowingly collect their data.</p>
+
+<h2>7. Changes</h2>
+<p>Material changes will be announced in-app and on this page.</p>
+
+<h2>8. Contact</h2>
+<p><a href="mailto:sukhaverse@gmail.com">sukhaverse@gmail.com</a></p>
+</section>
+
+<hr/>
+
+<section id="ja">
+<h1>CloudPlay TV — プライバシーポリシー</h1>
+<p><small>最終更新: 2026年5月9日</small></p>
+<p>blue-code は Apple TV 向け動画プレーヤー <strong>CloudPlay TV</strong> を提供しています。本ポリシーは本アプリの個人情報の取り扱いについて説明します。</p>
+
+<h2>1. 収集・送信しない情報</h2>
+<ul>
+  <li><strong>動画・字幕コンテンツ</strong>: ユーザーのクラウド/NAS と Apple TV の間で直接ストリーミングされ、当社サーバーを経由しません。</li>
+  <li><strong>視聴履歴</strong>: 端末ローカルにのみ保存され、外部送信されません。</li>
+  <li><strong>広告・分析 SDK・トラッキング ID は使用していません。</strong></li>
+</ul>
+
+<h2>2. ユーザー提供データ（任意）</h2>
+<p>OAuth トークン（Google / Microsoft）、NAS 認証情報、再生位置などは Apple TV のキーチェーンまたは UserDefaults にのみ保存されます。当社サーバーには一切保存されません。</p>
+
+<h2>3. 第三者サービス</h2>
+<ul>
+  <li>Google Drive API、Microsoft Graph、Apple iCloud、OpenSubtitles、ユーザーが指定した NAS/HTTP/FTP/WebDAV のみ。</li>
+</ul>
+
+<h2>4. データ削除</h2>
+<p>「設定 → クラウドアカウント → ログアウト」でトークンを即時削除。アプリの削除で全ローカルデータが削除されます。</p>
+
+<h2>5. お問い合わせ</h2>
+<p><a href="mailto:sukhaverse@gmail.com">sukhaverse@gmail.com</a></p>
+</section>
+
+</body>
+</html>
