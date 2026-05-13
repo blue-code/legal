@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VisionCut — 지원 / Support</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; color: #6E56CF; }
+section { margin-bottom: 24px; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #6E56CF; text-decoration: none; }
+.lang-toggle a:hover { text-decoration: underline; }
+.faq { margin: 16px 0; padding: 12px 16px; border-left: 3px solid #6E56CF; background: #6E56CF11; border-radius: 4px; }
+.faq strong { display: block; margin-bottom: 6px; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<!-- =========== KOREAN =========== -->
+<section id="ko">
+<h1>VisionCut 지원</h1>
+<p><small>최종 업데이트: 2026년 5월 13일</small></p>
+
+<h2>문의</h2>
+<p>버그 리포트, 기능 제안, 기타 문의는 이메일로 연락 주세요.<br>
+<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+<h2>자주 묻는 질문</h2>
+
+<div class="faq">
+  <strong>Q. 영상이 외부로 전송되나요?</strong>
+  아니요. 모든 임포트·편집·익스포트는 기기 내에서만 처리됩니다. 자세한 내용은 <a href="./privacy.html">개인정보처리방침</a>을 확인해주세요.
+</div>
+
+<div class="faq">
+  <strong>Q. 4K 영상이 너무 무거워요. 부드럽게 편집할 수 있나요?</strong>
+  설정에 따라 자동으로 540p H.264 프록시가 생성되어 편집·재생에는 프록시가 사용됩니다. 익스포트는 항상 원본을 사용하므로 결과물 화질은 유지됩니다. 클립 인스펙터의 "PROXY" 섹션에서 수동 생성/제거할 수 있습니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 자동 자막은 어떻게 작동하나요?</strong>
+  Apple의 음성 인식(SFSpeechRecognizer)을 사용합니다. 일부 언어 모델은 Apple 서버에서 처리될 수 있으며, VisionCut은 변환된 텍스트만 받아 자막 트랙으로 표시합니다. 음성 데이터를 따로 저장·전송하지 않습니다.
+</div>
+
+<div class="faq">
+  <strong>Q. iCloud 동기화를 켜면 어떤 데이터가 올라가나요?</strong>
+  프로젝트 폴더 전체(메타데이터·임포트한 영상 사본·프록시 등)가 사용자의 개인 iCloud Drive 컨테이너에 저장됩니다. 외부 서버는 거치지 않으며 개발자도 접근할 수 없습니다. 언제든지 비활성화 가능합니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 익스포트 중 앱을 백그라운드로 보내면 어떻게 되나요?</strong>
+  iOS의 일반 정책에 따라 백그라운드에서는 일정 시간만 인코딩이 계속되며, 그 후 일시 정지될 수 있습니다. 긴 영상은 화면을 켜둔 채 익스포트하시는 것을 권장합니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 트랜지션이나 필터를 적용한 후 시뮬레이터에서 미리보기가 끊겨요.</strong>
+  실기기에서는 훨씬 부드럽게 동작합니다. 시뮬레이터는 GPU 가속이 제한적이므로 미리보기 성능은 참고용입니다.
+</div>
+
+<div class="faq">
+  <strong>Q. 프로젝트가 갑자기 사라졌어요.</strong>
+  iCloud 동기화가 켜진 상태에서 iCloud 용량이 부족하면 동기화가 중단될 수 있습니다. 설정 > Apple ID > iCloud에서 용량과 동기화 상태를 확인해주세요.
+</div>
+
+<h2>요구 사항</h2>
+<ul>
+  <li>iOS / iPadOS 26 이상</li>
+  <li>iPhone / iPad 모두 지원</li>
+  <li>4K 익스포트 시 A14 Bionic 이상의 칩셋 권장</li>
+</ul>
+
+</section>
+
+<hr>
+
+<!-- =========== ENGLISH =========== -->
+<section id="en">
+<h1>VisionCut Support</h1>
+<p><small>Last updated: May 13, 2026</small></p>
+
+<h2>Contact</h2>
+<p>For bug reports, feature requests, or any other inquiry, please reach out by email.<br>
+<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+<h2>FAQ</h2>
+
+<div class="faq">
+  <strong>Q. Are my videos sent anywhere?</strong>
+  No. All import, editing, and export happens entirely on your device. See the <a href="./privacy.html">Privacy Policy</a> for details.
+</div>
+
+<div class="faq">
+  <strong>Q. 4K video feels heavy. Can I edit smoothly?</strong>
+  A 540p H.264 proxy is generated automatically and used for playback / scrubbing. Export always uses the original, so your output quality is preserved. You can also manually trigger or discard proxies in the clip inspector's "PROXY" section.
+</div>
+
+<div class="faq">
+  <strong>Q. How do auto subtitles work?</strong>
+  We use Apple's Speech Recognition (SFSpeechRecognizer). Some language models may process audio on Apple's servers; VisionCut receives only the converted text for the caption track. We do not store or transmit audio ourselves.
+</div>
+
+<div class="faq">
+  <strong>Q. What goes into iCloud when sync is enabled?</strong>
+  Your entire project folder (metadata, imported video copies, proxies, etc.) is stored in your private iCloud Drive container. It never passes through any external server, and the developer cannot access it. You can disable sync at any time.
+</div>
+
+<div class="faq">
+  <strong>Q. What happens if I background the app during export?</strong>
+  Per iOS policy, encoding continues for a limited time in the background and may then be suspended. For long exports we recommend keeping the screen on.
+</div>
+
+<div class="faq">
+  <strong>Q. Preview stutters after applying transitions or filters in the simulator.</strong>
+  Real devices are much smoother. The simulator has limited GPU acceleration, so preview performance there is indicative only.
+</div>
+
+<div class="faq">
+  <strong>Q. A project disappeared.</strong>
+  If iCloud sync is on and iCloud storage is full, syncing can stall. Check Settings → Apple ID → iCloud for storage and sync status.
+</div>
+
+<h2>Requirements</h2>
+<ul>
+  <li>iOS / iPadOS 26 or later</li>
+  <li>Supports both iPhone and iPad</li>
+  <li>A14 Bionic or newer recommended for 4K exports</li>
+</ul>
+
+</section>
+
+</body>
+</html>

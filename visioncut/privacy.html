@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VisionCut — 개인정보처리방침 / Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; }
+h3 { margin-top: 24px; color: #6E56CF; }
+section { margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ccc4; padding: 8px 12px; text-align: left; vertical-align: top; }
+th { background: #6E56CF22; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #6E56CF; text-decoration: none; }
+.lang-toggle a:hover { text-decoration: underline; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+small { color: #888; }
+code { background: #ccc2; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<!-- =========== KOREAN =========== -->
+<section id="ko">
+<h1>개인정보처리방침 — VisionCut</h1>
+<p><small>최종 업데이트: 2026년 5월 13일</small></p>
+
+<p>본 앱(이하 "VisionCut")은 사용자의 영상·오디오·음성 데이터를 소중히 여기며, 본 처리방침에 따라 투명하게 처리합니다. VisionCut은 <strong>로컬-퍼스트 비디오 에디터</strong>로 설계되었으며, 모든 편집·렌더링·익스포트는 사용자의 기기 내에서만 수행됩니다. 외부 서버로 영상이나 사용자 데이터를 전송하지 않습니다.</p>
+
+<h2>1. 수집 및 처리하는 정보</h2>
+<table>
+  <tr><th>항목</th><th>수집 시점</th><th>처리 위치</th><th>이용 목적</th></tr>
+  <tr><td>사진 라이브러리 영상·이미지 (사용자 선택)</td><td>임포트 시</td><td>기기 로컬 (PhotosPicker)</td><td>편집 대상 가져오기</td></tr>
+  <tr><td>Files 앱의 사용자 선택 파일</td><td>임포트 시</td><td>기기 로컬 (security-scoped)</td><td>편집 대상 가져오기</td></tr>
+  <tr><td>마이크 입력 (보이스오버 녹음)</td><td>녹음 시작 시</td><td>기기 로컬 (AVAudioEngine)</td><td>보이스오버 트랙 생성</td></tr>
+  <tr><td>음성 인식 (자동 자막)</td><td>사용자가 자막 생성 요청 시</td><td>Apple Speech Recognition</td><td>음성 → 텍스트 변환</td></tr>
+  <tr><td>프로젝트 데이터 (클립·자막·효과 설정)</td><td>편집 시</td><td>기기 로컬 (JSON) + 선택적 iCloud</td><td>프로젝트 저장·재개</td></tr>
+  <tr><td>익스포트 결과물 (mp4)</td><td>익스포트 시</td><td>기기 로컬</td><td>최종 영상 출력</td></tr>
+</table>
+
+<h2>2. 외부 서버로 전송되지 않는 정보</h2>
+<p>VisionCut은 <strong>외부 서버나 분석 서비스로 어떠한 사용자 데이터도 전송하지 않습니다</strong>. 다음 정보는 모두 기기 내에만 존재합니다:</p>
+<ul>
+  <li>임포트한 영상·이미지·오디오 원본</li>
+  <li>편집한 클립의 트랜스폼·필터·색보정·자막 정보</li>
+  <li>프록시 트랜스코딩 결과물 (540p H.264 캐시)</li>
+  <li>오디오 처리 결과 (컴프레서·EQ·게이트 적용된 베이크 파일)</li>
+  <li>모션 트래킹·스태빌라이제이션 분석 데이터</li>
+  <li>썸네일·웨이브폼 캐시</li>
+  <li>익스포트된 mp4 결과물</li>
+</ul>
+
+<h2>3. 사진 라이브러리 권한</h2>
+<p>VisionCut은 사용자의 명시적 선택을 통해서만 영상에 접근합니다.</p>
+<ul>
+  <li>iOS의 PhotosPicker를 통해 사용자가 직접 고른 영상만 임포트합니다 (앱이 라이브러리 전체에 접근하지 않음)</li>
+  <li>임포트된 영상은 앱 샌드박스 내 프로젝트 폴더로 복사되며, 원본은 수정되지 않습니다</li>
+  <li>편집 결과는 사진 라이브러리에 자동으로 저장되지 않습니다 (사용자가 익스포트 후 별도로 저장)</li>
+</ul>
+
+<h2>4. 마이크 권한 (보이스오버)</h2>
+<p>VisionCut은 사용자가 보이스오버 녹음 기능을 시작했을 때만 마이크에 접근합니다.</p>
+<ul>
+  <li>녹음 데이터는 즉시 프로젝트 폴더에 m4a 파일로 저장됩니다</li>
+  <li>녹음 중 어떠한 데이터도 외부로 전송되지 않습니다</li>
+  <li>마이크 권한은 iOS 설정 > VisionCut > 마이크에서 언제든지 철회할 수 있습니다</li>
+</ul>
+
+<h2>5. 음성 인식 권한 (자동 자막)</h2>
+<p>사용자가 클립에서 "자막 자동 생성" 기능을 사용할 때만 음성 인식이 동작합니다.</p>
+<ul>
+  <li>Apple의 <code>SFSpeechRecognizer</code> 프레임워크를 사용합니다</li>
+  <li>일부 언어 모델은 Apple 서버에서 처리될 수 있습니다 (Apple의 개인정보 보호 정책 적용)</li>
+  <li>VisionCut은 변환된 텍스트만 받아 자막 트랙으로 표시하며, 음성 데이터를 자체적으로 저장하거나 전송하지 않습니다</li>
+  <li>음성 인식 권한은 iOS 설정에서 언제든지 철회할 수 있습니다</li>
+</ul>
+
+<h2>6. iCloud Drive 동기화 (선택)</h2>
+<p>iCloud Drive 동기화를 활성화한 경우, VisionCut은 프로젝트 폴더를 사용자의 <strong>개인 iCloud Drive</strong>에 저장합니다.</p>
+<ul>
+  <li>데이터는 Apple의 보안 iCloud 인프라 안에서만 처리됩니다</li>
+  <li>개발자 또는 제3자는 사용자의 iCloud 데이터에 접근할 수 없습니다</li>
+  <li>iCloud Drive 동기화는 설정 화면에서 언제든지 비활성화할 수 있습니다</li>
+  <li>동기화 비활성화 시 데이터는 기기 로컬에만 보관됩니다</li>
+</ul>
+
+<h2>7. 광고와 추적</h2>
+<p>VisionCut은 <strong>광고를 표시하지 않으며</strong>, <strong>분석·트래킹 SDK를 일절 포함하지 않습니다</strong> (Google Analytics, Firebase, Meta SDK 등 모두 미포함). App Tracking Transparency(ATT) 권한도 요청하지 않습니다.</p>
+
+<h2>8. 데이터 보관 및 삭제</h2>
+<ul>
+  <li>모든 프로젝트는 앱 내 프로젝트 브라우저에서 직접 삭제할 수 있습니다</li>
+  <li>앱을 삭제하면 기기의 모든 VisionCut 데이터가 함께 제거됩니다 (Documents 디렉터리)</li>
+  <li>iCloud로 동기화된 데이터는 iOS 설정 > Apple ID > iCloud > VisionCut에서 삭제할 수 있습니다</li>
+  <li>익스포트된 mp4는 사진 앱이나 Files 앱에서 별도로 관리됩니다 (앱 삭제와 무관)</li>
+</ul>
+
+<h2>9. 어린이 개인정보</h2>
+<p>VisionCut은 만 13세 미만 어린이로부터 의도적으로 개인정보를 수집하지 않습니다.</p>
+
+<h2>10. 본 방침의 변경</h2>
+<p>처리방침이 변경되는 경우, 본 페이지를 업데이트하고 앱 업데이트 노트를 통해 안내합니다.</p>
+
+<h2>11. 문의</h2>
+<p>개인정보 관련 문의: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+</section>
+
+<hr>
+
+<!-- =========== ENGLISH =========== -->
+<section id="en">
+<h1>Privacy Policy — VisionCut</h1>
+<p><small>Last updated: May 13, 2026</small></p>
+
+<p>This app ("VisionCut") values your video, audio, and voice data, and processes them transparently per this policy. VisionCut is a <strong>local-first video editor</strong>: all editing, rendering, and exporting happen entirely on your device. We do not transmit your videos or personal data to external servers.</p>
+
+<h2>1. Data We Collect & Process</h2>
+<table>
+  <tr><th>Item</th><th>When</th><th>Where</th><th>Purpose</th></tr>
+  <tr><td>Videos & images from Photos (your selection)</td><td>On import</td><td>On-device (PhotosPicker)</td><td>Edit source material</td></tr>
+  <tr><td>Files you pick from the Files app</td><td>On import</td><td>On-device (security-scoped)</td><td>Edit source material</td></tr>
+  <tr><td>Microphone input (voiceover recording)</td><td>While recording</td><td>On-device (AVAudioEngine)</td><td>Create voiceover tracks</td></tr>
+  <tr><td>Speech recognition (auto subtitles)</td><td>When you request subtitles</td><td>Apple Speech Recognition</td><td>Speech → text conversion</td></tr>
+  <tr><td>Project data (clips, captions, effects)</td><td>While editing</td><td>On-device (JSON) + optional iCloud</td><td>Save and resume projects</td></tr>
+  <tr><td>Exported videos (mp4)</td><td>On export</td><td>On-device</td><td>Final video output</td></tr>
+</table>
+
+<h2>2. Data We Do NOT Send to External Servers</h2>
+<p>VisionCut <strong>does not send any user data to external servers or analytics services</strong>. The following stays entirely on your device:</p>
+<ul>
+  <li>Imported videos, images, and audio originals</li>
+  <li>Per-clip transforms, filters, color grades, and caption data</li>
+  <li>Proxy transcode artefacts (540p H.264 cache)</li>
+  <li>Audio processing results (baked files with compressor/EQ/gate applied)</li>
+  <li>Motion-tracking and stabilization analysis data</li>
+  <li>Thumbnail and waveform caches</li>
+  <li>Exported mp4 results</li>
+</ul>
+
+<h2>3. Photo Library Permission</h2>
+<p>VisionCut accesses your videos only through your explicit selection.</p>
+<ul>
+  <li>Imports go through the iOS PhotosPicker — only the items you pick are accessible (the app cannot see your entire library)</li>
+  <li>Imported videos are copied into the app's sandbox project folder; the originals are never modified</li>
+  <li>Edits are not automatically saved back to your Photos library (you choose where to save after exporting)</li>
+</ul>
+
+<h2>4. Microphone Permission (Voiceover)</h2>
+<p>VisionCut accesses the microphone only when you start a voiceover recording.</p>
+<ul>
+  <li>Recordings are written immediately to the project folder as m4a files</li>
+  <li>Nothing is transmitted externally while recording</li>
+  <li>You can revoke microphone permission at any time via iOS Settings → VisionCut → Microphone</li>
+</ul>
+
+<h2>5. Speech Recognition Permission (Auto Subtitles)</h2>
+<p>Speech recognition runs only when you trigger "Auto subtitles" on a clip.</p>
+<ul>
+  <li>We use Apple's <code>SFSpeechRecognizer</code> framework</li>
+  <li>Some language models may process audio on Apple's servers, subject to Apple's privacy policy</li>
+  <li>VisionCut receives only the converted text for the caption track — we do not store or transmit the audio ourselves</li>
+  <li>Speech recognition permission can be revoked at any time in iOS Settings</li>
+</ul>
+
+<h2>6. iCloud Drive Sync (Optional)</h2>
+<p>If you enable iCloud Drive sync, VisionCut stores your project folder in your <strong>private iCloud Drive</strong>.</p>
+<ul>
+  <li>Data is processed only within Apple's secure iCloud infrastructure</li>
+  <li>Neither the developer nor any third party can access your iCloud data</li>
+  <li>iCloud Drive sync can be disabled at any time in the in-app settings</li>
+  <li>When disabled, data stays only on the local device</li>
+</ul>
+
+<h2>7. Ads & Tracking</h2>
+<p>VisionCut <strong>shows no ads</strong> and integrates <strong>no analytics or tracking SDKs</strong> (no Google Analytics, Firebase, Meta SDK, etc.). We do not request App Tracking Transparency (ATT) permission.</p>
+
+<h2>8. Data Retention & Deletion</h2>
+<ul>
+  <li>All projects can be deleted directly from the in-app project browser</li>
+  <li>Deleting the app removes all VisionCut data on the device (Documents directory)</li>
+  <li>iCloud-synced data can be deleted via iOS Settings → Apple ID → iCloud → VisionCut</li>
+  <li>Exported mp4 files live in your Photos or Files app and are unaffected by app deletion</li>
+</ul>
+
+<h2>9. Children's Privacy</h2>
+<p>VisionCut does not knowingly collect personal information from children under 13.</p>
+
+<h2>10. Policy Changes</h2>
+<p>If this policy changes, we'll update this page and notify users via app release notes.</p>
+
+<h2>11. Contact</h2>
+<p>Privacy inquiries: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+</section>
+
+</body>
+</html>
