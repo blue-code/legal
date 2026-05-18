@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BizCard AI — プライバシーポリシー</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.85; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #2b6cb0; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.9rem; }
+.lang-toggle a { margin-right: 10px; }
+.callout { background: #2b6cb011; border-left: 3px solid #2b6cb0; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="./privacy.ko.html">한국어</a> |
+  <a href="./privacy.en.html">English</a> |
+  <strong>日本語</strong> |
+  <a href="./privacy.zh-Hans.html">简体中文</a>
+</div>
+
+<h1>プライバシーポリシー — BizCard AI</h1>
+<p><small>施行日: 2026年5月18日 &middot; 最終更新: 2026年5月18日</small></p>
+
+<div class="callout">
+<strong>要約:</strong> BizCard AI はすべての処理を<strong>端末内のみ</strong>で完結します。名刺画像、OCRテキスト、抽出された連絡先データは<strong>端末から外部に送信されません</strong>。アナリティクス・トラッキング・第三者SDKは一切含まれておらず、ネットワーク通信は一切発生しません。
+</div>
+
+<h2>1. 取り扱う情報</h2>
+<p>BizCard AI は外部サーバーへ情報を送信しません。すべてのデータはアプリのサンドボックス内、または利用者が明示的に許可した iOS システム領域(連絡先)にのみ保存されます。</p>
+<ul>
+  <li><strong>名刺画像</strong> — カメラまたは写真ライブラリから取得した画像。端末内で処理され、利用者が保存を選択しない限り即時破棄されます。</li>
+  <li><strong>OCR テキスト結果</strong> — Apple のオンデバイス Vision / VisionKit を用いて抽出され、端末外に送信されません。</li>
+  <li><strong>抽出された連絡先データ</strong>(氏名、会社、電話、メールなど) — 利用者が明示的に保存または書き出しを行った場合のみ、アプリ内または iOS 連絡先に保存されます。</li>
+</ul>
+
+<h2>2. 第三者への提供</h2>
+<p><strong>BizCard AI はいかなるデータも第三者に提供・共有しません。</strong></p>
+<ul>
+  <li>アナリティクスツール:なし</li>
+  <li>クラッシュレポート SDK:なし</li>
+  <li>広告・トラッキング識別子(IDFA):未使用</li>
+  <li>独自のバックエンドサーバー:なし &mdash; ネットワーク通信そのものが発生しません</li>
+</ul>
+
+<h2>3. 権限について</h2>
+<p>本アプリは以下の iOS 権限を要求する場合があります。用途は厳格に下記の通りです。</p>
+<ul>
+  <li><strong>カメラ</strong> — 名刺撮影のために使用。撮影された画像は端末内でのみ処理されます。</li>
+  <li><strong>写真ライブラリ</strong> (任意) — 既に撮影済みの画像から名刺を選ぶ場合のみ使用。ライブラリ全体をスキャンせず、利用者が選択した画像のみ読み込みます。</li>
+  <li><strong>連絡先</strong> — 「連絡先に追加」を選択した名刺のみ iOS 連絡先に保存します。既存の連絡先を読み取ったり外部に送信したりしません。</li>
+</ul>
+<p>各権限は iOS の設定からいつでも取り消せます。権限を取り消しても該当機能が制限されるだけで、データが秘密裡に収集されることはありません。</p>
+
+<h2>4. データの保持と削除</h2>
+<ul>
+  <li>アプリ内に保存された名刺データはいつでも削除できます。</li>
+  <li>アプリを削除すると、アプリサンドボックス内のすべてのデータ(画像、OCR結果、連絡先データ)が直ちに消去されます。</li>
+  <li>iOS 連絡先に保存された項目は iOS 連絡先アプリで管理されます。</li>
+</ul>
+
+<h2>5. アカウントとログイン</h2>
+<p>BizCard AI はアカウント作成・ログインを要求しません。メール・電話番号・ソーシャルログインなどの識別子も一切要求しません。</p>
+
+<h2>6. 利用者の権利</h2>
+<ul>
+  <li>すべてのデータが端末内に存在するため、利用者は常に完全な管理権を持ちます。</li>
+  <li>アクセス・訂正・削除の権利はアプリ内 UI と iOS システム設定を通じて直接行使できます。</li>
+  <li>GDPR・CCPA など関連法令上の権利に関するお問い合わせは下記までご連絡ください。</li>
+</ul>
+
+<h2>7. 児童のプライバシー</h2>
+<p>BizCard AI は13歳未満の児童を対象としておらず、意図的に児童の情報を収集しません。</p>
+
+<h2>8. ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、本ページに変更内容と新しい施行日を掲載します。重大な変更はアプリ内でも告知します。</p>
+
+<h2>9. お問い合わせ</h2>
+<p>開発者: <strong>Blue Code</strong> (<a href="https://blue-code.dev">blue-code.dev</a>)<br>
+メール: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+バンドル ID: <code>com.blueCode.BizCardAI</code></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; BizCard AI Legal</a></p>
+
+</body>
+</html>
