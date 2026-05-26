@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>빙고 스트릿 — 지원 / Support</title>
+<style>
+:root {
+  --ink: #1a1a1a; --inkSoft: #5b554a; --inkMute: #a8a195;
+  --paper: #f5f1e8; --paperDeep: #ece5d3; --line: #d8d1bf;
+  --hi: #fde047; --hiInk: #7c5e00;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7;
+  color: var(--ink); background: var(--paper);
+}
+h1 {
+  font-size: 1.7rem; line-height: 1.3;
+  border-bottom: 2px solid var(--ink); padding-bottom: 10px;
+}
+h1 .mark { background: var(--hi); padding: 0 6px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+h2 { margin-top: 34px; font-size: 1.25rem; }
+section { margin-bottom: 24px; }
+a { color: var(--hiInk); text-decoration: underline; text-decoration-color: var(--hi); text-decoration-thickness: 2px; }
+a:hover { background: var(--hi); }
+.lang-toggle { margin-bottom: 28px; font-weight: 600; }
+.lang-toggle a { margin-right: 12px; text-decoration: none; }
+.lang-toggle a:hover { background: var(--hi); }
+.contact { background: var(--paperDeep); border: 1.6px solid var(--ink); border-radius: 10px; padding: 4px 18px; box-shadow: 3px 3px 0 var(--ink); }
+.faq {
+  margin: 16px 0; padding: 14px 18px;
+  background: #fffdf6; border: 1.5px solid var(--ink); border-left: 6px solid var(--hi);
+  border-radius: 8px;
+}
+.faq strong { display: block; margin-bottom: 6px; }
+hr { border: none; border-top: 2px dashed var(--line); margin: 52px 0; }
+small { color: var(--inkSoft); }
+@media (prefers-color-scheme: dark) {
+  body { background: #1f1d18; color: #f0ead9; }
+  h1 { border-bottom-color: #f0ead9; }
+  .faq { background: #2a2720; border-color: #6b6457; border-left-color: var(--hi); }
+  .contact { background: #2a2720; box-shadow: 3px 3px 0 #000; border-color: #6b6457; }
+  small { color: var(--inkMute); }
+  a { color: #ffe87a; }
+}
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<!-- =========== KOREAN =========== -->
+<section id="ko">
+<h1><span class="mark">빙고 스트릿</span> 지원</h1>
+<p><small>최종 업데이트: 2026년 5월 26일</small></p>
+
+<p>빙고 스트릿은 거리의 흔한 풍경을 직접 찾아 사진으로 인증하면 5×5 빙고판이 채워지는 iOS 게임입니다. 도움이 필요하시면 아래 FAQ를 먼저 확인하시고, 해결되지 않으면 이메일로 문의해 주세요.</p>
+
+<h2>문의</h2>
+<p class="contact">버그 리포트, 기능 제안, 기타 문의:<br>
+<a href="mailto:dev@bingostreet.app">dev@bingostreet.app</a></p>
+
+<h2>자주 묻는 질문</h2>
+
+<div class="faq">
+  <strong>Q. 회원가입이 필요한가요?</strong>
+  아니요. 빙고 스트릿은 회원가입이나 로그인 없이 바로 시작할 수 있습니다.
+</div>
+<div class="faq">
+  <strong>Q. 갤러리에 있는 사진으로 칸을 채울 수 있나요?</strong>
+  아니요. 진정성을 위해 앱 안에서 직접 촬영한 사진만 인증으로 인정됩니다. 갤러리 권한도 요청하지 않습니다.
+</div>
+<div class="faq">
+  <strong>Q. 친구와 함께 하려면 인터넷이 필요한가요?</strong>
+  아니요. 멀티플레이는 근거리 통신(Bluetooth / Wi-Fi)으로만 작동합니다. 같은 공간에 있는 기기끼리 연결되며, 인터넷 서버를 사용하지 않습니다.
+</div>
+<div class="faq">
+  <strong>Q. 카메라 권한을 거부했어요. 어떻게 하나요?</strong>
+  사진 인증에는 카메라 권한이 필요합니다. 기기 설정 → 빙고 스트릿 → 카메라에서 권한을 켜 주세요.
+</div>
+<div class="faq">
+  <strong>Q. 내 사진이 서버로 전송되나요?</strong>
+  아니요. 사진은 기기 안에만 저장되며 외부로 전송되지 않습니다. 멀티플레이에서도 사진 원본은 다른 기기로 전송되지 않습니다. 자세한 내용은 <a href="./privacy.html">개인정보처리방침</a>을 확인해 주세요.
+</div>
+<div class="faq">
+  <strong>Q. 사진에 위치가 기록되나요?</strong>
+  사진 촬영 시 위치가 메타데이터에 포함될 수 있으며, 이는 기록 화면에서 보여 주기 위한 용도일 뿐 서버로 전송되지 않습니다.
+</div>
+<div class="faq">
+  <strong>Q. 기록을 삭제하고 싶어요.</strong>
+  기록 상세 화면에서 개별 게임 기록을 삭제할 수 있습니다. 앱을 삭제하면 모든 로컬 데이터가 함께 제거됩니다.
+</div>
+<div class="faq">
+  <strong>Q. 어떤 기기에서 동작하나요?</strong>
+  iOS 17.0 이상의 iPhone에서 동작합니다(세로 모드). 한국어와 영어를 지원합니다.
+</div>
+</section>
+
+<hr>
+
+<!-- =========== ENGLISH =========== -->
+<section id="en">
+<h1><span class="mark">Bingo Street</span> Support</h1>
+<p><small>Last updated: May 26, 2026</small></p>
+
+<p>Bingo Street is an iOS game where you fill a 5×5 bingo board by finding everyday street sights and verifying them with photos you take yourself. If you need help, check the FAQ below first, and email us if your question isn't answered.</p>
+
+<h2>Contact</h2>
+<p class="contact">Bug reports, feature requests, and questions:<br>
+<a href="mailto:dev@bingostreet.app">dev@bingostreet.app</a></p>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <strong>Q. Do I need an account?</strong>
+  No. Bingo Street starts instantly — no sign-up or login required.
+</div>
+<div class="faq">
+  <strong>Q. Can I fill a cell with a photo from my gallery?</strong>
+  No. For authenticity, only photos captured live inside the app count as verification. The app does not even request gallery permission.
+</div>
+<div class="faq">
+  <strong>Q. Do I need the internet to play with friends?</strong>
+  No. Multiplayer works only over local communication (Bluetooth / Wi-Fi). Nearby devices connect directly to each other; no internet server is used.
+</div>
+<div class="faq">
+  <strong>Q. I denied camera permission. What now?</strong>
+  Camera permission is required for photo verification. Enable it in Settings → Bingo Street → Camera.
+</div>
+<div class="faq">
+  <strong>Q. Are my photos uploaded to a server?</strong>
+  No. Photos are stored only on your device and are never uploaded. Even in multiplayer, original photos are not transmitted to other devices. See the <a href="./privacy.html">Privacy Policy</a> for details.
+</div>
+<div class="faq">
+  <strong>Q. Is location recorded in my photos?</strong>
+  Location may be embedded in a photo's metadata when you take it. It is used only to display where the photo was taken on the history screen and is never sent to a server.
+</div>
+<div class="faq">
+  <strong>Q. How do I delete my records?</strong>
+  You can delete individual game records from the history detail screen. Deleting the app removes all local data.
+</div>
+<div class="faq">
+  <strong>Q. What devices are supported?</strong>
+  iPhone running iOS 17.0 or later (portrait orientation). Korean and English are supported.
+</div>
+</section>
+
+</body>
+</html>
