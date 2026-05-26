@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PocaBox — Privacy Policy / 개인정보처리방침</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #8a4fff; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.95rem; }
+.lang-toggle a { margin-right: 10px; cursor: pointer; }
+.callout { background: #8a4fff11; border-left: 3px solid #8a4fff; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+code { background: #8881; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+small { color: #888; }
+section[hidden] { display: none; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 40px 0; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a onclick="setLang('ko')"><strong id="tab-ko">한국어</strong></a> |
+  <a onclick="setLang('en')"><span id="tab-en">English</span></a>
+</div>
+
+<!-- ===================== KOREAN ===================== -->
+<section id="ko">
+<h1>개인정보처리방침 — PocaBox</h1>
+<p><small>시행일: 2026년 5월 26일 &middot; 최종 수정일: 2026년 5월 26일</small></p>
+
+<div class="callout">
+<strong>요약:</strong> PocaBox는 별도의 서버를 운영하지 않습니다. 회원님의 컬렉션·사진·메모 등 모든 데이터는 회원님 본인의 개인 iCloud(Apple CloudKit)에만 저장되며, 개발사(blue-code)는 이 데이터에 접근할 수 없습니다. 제3자 분석 도구, 광고 SDK, 추적 기술을 일절 사용하지 않으며, 추적 권한(ATT) 요청 창도 표시하지 않습니다. Apple App Store 앱 개인정보 표시는 <strong>"데이터가 수집되지 않음(Data Not Collected)"</strong> 입니다.
+</div>
+
+<h2>1. 수집·저장하는 정보</h2>
+<p>PocaBox는 어떤 정보도 개발사의 서버로 전송하지 않습니다. 개발사가 운영하는 서버는 존재하지 않습니다. 회원님이 앱에서 만드는 데이터는 다음 위치에만 저장됩니다.</p>
+<ul>
+  <li><strong>기기 내부(앱 샌드박스)</strong> — 로컬에 저장되는 컬렉션 데이터.</li>
+  <li><strong>회원님 본인의 개인 iCloud(Apple CloudKit Private Database)</strong> — iCloud에 로그인한 경우, 여러 기기 간 동기화를 위해 회원님 전용 비공개 iCloud 영역에 저장됩니다. 이 영역은 회원님의 Apple 계정으로 보호되며 개발사는 접근할 수 없습니다.</li>
+</ul>
+<p>저장되는 데이터의 예시:</p>
+<ul>
+  <li><strong>컬렉션 정보</strong> — 회원님이 직접 입력한 그룹·멤버·시즌·포토카드의 이름, 상태(보유/위시/듀프), 수량, 메모 등.</li>
+  <li><strong>포토카드 이미지</strong> — 카메라로 촬영하거나 사진 보관함에서 선택한 이미지. 앱 내에서 압축되어 컬렉션에 저장됩니다.</li>
+</ul>
+
+<h2>2. 데이터 공유</h2>
+<p><strong>PocaBox는 어떤 데이터도 제3자와 공유하지 않습니다.</strong></p>
+<ul>
+  <li>분석(애널리틱스) 도구 없음</li>
+  <li>크래시 리포팅 SDK 없음</li>
+  <li>광고 또는 추적 식별자 없음 (IDFA 미사용)</li>
+  <li>추적 투명성(App Tracking Transparency, ATT) 권한 요청 없음</li>
+  <li>개발사 백엔드 서버 없음</li>
+</ul>
+<p>데이터 동기화는 전적으로 Apple의 iCloud/CloudKit 인프라를 통해 회원님 본인의 계정 안에서만 이루어지며, 이에 대해서는 Apple의 개인정보처리방침이 적용됩니다.</p>
+
+<h2>3. 권한</h2>
+<p>앱은 다음 iOS 권한을 요청할 수 있으며, 아래에 기재된 목적으로만 사용합니다.</p>
+<ul>
+  <li><strong>카메라</strong> — 포토카드를 촬영하여 등록하기 위해 사용합니다. 촬영된 이미지는 기기 내에서만 처리됩니다.</li>
+  <li><strong>사진 보관함</strong> — 회원님이 기존 사진을 선택해 포토카드로 등록하거나, 생성한 공유 카드 이미지를 저장할 때만 사용합니다. 앱은 보관함 전체를 스캔하지 않으며, 회원님이 선택한 이미지만 읽습니다.</li>
+</ul>
+<p>이미지 배경 제거 기능은 Apple의 <strong>Vision</strong> 프레임워크를 이용해 <strong>전적으로 기기 내(on-device)</strong> 에서 처리됩니다. 이미지는 회원님 본인의 iCloud 외 어디로도 업로드되지 않습니다.</p>
+<p>권한은 언제든 iOS 설정에서 해제할 수 있습니다. 권한을 해제해도 해당 기능만 제한될 뿐, 어떤 데이터도 몰래 수집되지 않습니다.</p>
+
+<h2>4. 결제</h2>
+<p>유료 기능(구독 및 인앱 구매)은 Apple의 <strong>StoreKit</strong>을 통해 처리됩니다. 결제는 회원님의 Apple 계정으로 이루어지며, 개발사는 카드번호 등 어떤 결제 수단 정보도 수신하거나 저장하지 않습니다.</p>
+
+<h2>5. 데이터 보관 및 삭제</h2>
+<ul>
+  <li>앱 내에서 언제든지 컬렉션·카드·이미지를 삭제할 수 있습니다.</li>
+  <li>앱을 삭제하면 기기에 저장된 로컬 데이터가 즉시 제거됩니다.</li>
+  <li>iCloud에 동기화된 데이터는 iOS 설정의 iCloud 관리 화면 또는 다른 기기의 앱에서 관리·삭제할 수 있습니다.</li>
+</ul>
+
+<h2>6. 계정 및 로그인</h2>
+<p>PocaBox는 자체 계정, 로그인, 이메일·전화번호·소셜 로그인 등 어떠한 식별자도 요구하지 않습니다. iCloud 동기화는 기기에 이미 로그인된 회원님의 Apple 계정을 그대로 사용합니다.</p>
+
+<h2>7. 아동의 개인정보</h2>
+<p>PocaBox의 연령 등급은 <strong>4+</strong> 이며, 어떤 개인정보도 수집하지 않습니다. 따라서 아동으로부터 개인정보를 수집하지 않습니다.</p>
+
+<h2>8. 회원님의 권리</h2>
+<ul>
+  <li>모든 데이터가 회원님의 기기와 본인 iCloud에만 보관되므로, 회원님은 항상 데이터에 대한 완전한 통제권을 가집니다.</li>
+  <li>열람·수정·삭제 권리는 앱 내 화면과 iOS 시스템 설정을 통해 직접 행사할 수 있습니다.</li>
+  <li>GDPR / CCPA 등 규정 관련 문의는 아래 연락처로 보내 주세요.</li>
+</ul>
+
+<h2>9. 방침의 변경</h2>
+<p>본 방침이 변경되는 경우, 갱신된 내용과 새 시행일을 본 페이지에 게시합니다. 중요한 변경 사항은 앱 내에서도 안내합니다.</p>
+
+<h2>10. 독립 앱 고지 (IP)</h2>
+<p>PocaBox는 <strong>어떤 K-pop 그룹, 아티스트, 기획사와도 무관한 독립 앱</strong>이며, 공식 라이선스를 받지 않았습니다. 앱은 실제 아티스트의 사진·실명·로고·기획사명을 사전에 제공하지 않습니다. 앱에 표시되는 모든 그룹·멤버·시즌 정보는 <strong>회원님이 직접 입력한 것</strong>입니다.</p>
+
+<h2>11. 문의처</h2>
+<p>개발사: <strong>blue-code</strong><br>
+이메일: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+앱 번들 ID: <code>com.blueCode.PocaBox</code></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; PocaBox Legal</a></p>
+</section>
+
+<!-- ===================== ENGLISH ===================== -->
+<section id="en" hidden>
+<h1>Privacy Policy — PocaBox</h1>
+<p><small>Effective: May 26, 2026 &middot; Last updated: May 26, 2026</small></p>
+
+<div class="callout">
+<strong>Summary:</strong> PocaBox runs no servers of its own. Your collections, photos, and notes are stored only in your own private iCloud (Apple CloudKit), and the developer (blue-code) cannot access this data. The app uses no third-party analytics, no advertising SDKs, and no tracking, and it never shows an App Tracking Transparency (ATT) prompt. Our Apple App Store privacy label is <strong>"Data Not Collected."</strong>
+</div>
+
+<h2>1. Information We Collect / Store</h2>
+<p>PocaBox does not transmit any information to a developer-operated server. No such server exists. The data you create in the app is stored only in the following places:</p>
+<ul>
+  <li><strong>On your device (app sandbox)</strong> — collection data stored locally.</li>
+  <li><strong>Your own private iCloud (Apple CloudKit Private Database)</strong> — when you are signed in to iCloud, your data is stored in your personal, private iCloud area for syncing across your devices. This area is protected by your Apple Account and is not accessible to the developer.</li>
+</ul>
+<p>Examples of stored data:</p>
+<ul>
+  <li><strong>Collection details</strong> — the names, status (owned / wishlist / duplicate), counts, and notes for the groups, members, seasons, and photocards that you enter yourself.</li>
+  <li><strong>Photocard images</strong> — images you capture with the camera or pick from your Photo Library. They are compressed in the app and stored in your collection.</li>
+</ul>
+
+<h2>2. Data Sharing</h2>
+<p><strong>PocaBox does not share any data with any third party.</strong></p>
+<ul>
+  <li>No analytics tools</li>
+  <li>No crash-reporting SDKs</li>
+  <li>No advertising or tracking identifiers (no IDFA usage)</li>
+  <li>No App Tracking Transparency (ATT) prompt</li>
+  <li>No developer backend server</li>
+</ul>
+<p>Data syncing happens entirely within your own account through Apple's iCloud / CloudKit infrastructure, which is governed by Apple's privacy policy.</p>
+
+<h2>3. Permissions</h2>
+<p>The app may request the following iOS permissions, used strictly as described:</p>
+<ul>
+  <li><strong>Camera</strong> — to photograph photocards for adding to your collection. Captured images are processed only on-device.</li>
+  <li><strong>Photo Library</strong> — used only when you choose to pick an existing image to add as a photocard, or to save a generated share card image. The app does not scan your entire library; it reads only the image you select.</li>
+</ul>
+<p>Image background removal runs <strong>entirely on-device</strong> using Apple's <strong>Vision</strong> framework. Images are never uploaded anywhere except your own iCloud.</p>
+<p>You can revoke any permission at any time in iOS Settings. Revoking a permission only limits the corresponding feature; no data is ever collected silently.</p>
+
+<h2>4. Purchases</h2>
+<p>Paid features (subscriptions and in-app purchases) are handled by Apple's <strong>StoreKit</strong>. Payments are processed through your Apple Account, and the developer never receives or stores any payment details such as card numbers.</p>
+
+<h2>5. Data Retention &amp; Deletion</h2>
+<ul>
+  <li>You can delete collections, cards, and images inside the app at any time.</li>
+  <li>Uninstalling the app immediately removes the local data stored on the device.</li>
+  <li>Data synced to iCloud can be managed or deleted from the iCloud management screen in iOS Settings, or from the app on any of your other devices.</li>
+</ul>
+
+<h2>6. Accounts &amp; Login</h2>
+<p>PocaBox requires no account, no login, and no identifiers such as email, phone number, or social sign-in. iCloud syncing uses the Apple Account already signed in on your device.</p>
+
+<h2>7. Children's Privacy</h2>
+<p>PocaBox is rated <strong>4+</strong> and collects no personal data, so it does not knowingly collect any personal information from children.</p>
+
+<h2>8. Your Rights</h2>
+<ul>
+  <li>Because all data stays on your device and in your own iCloud, you retain full control at all times.</li>
+  <li>You can exercise access, correction, and deletion rights directly through the in-app UI and iOS system settings.</li>
+  <li>For GDPR / CCPA / other regulatory questions, contact us using the address below.</li>
+</ul>
+
+<h2>9. Changes to This Policy</h2>
+<p>If this policy changes, the updated version and a new effective date will be posted on this page. Material changes will also be announced in-app.</p>
+
+<h2>10. Independent App Notice (IP)</h2>
+<p>PocaBox is an <strong>independent app that is not affiliated with, nor officially licensed by, any K-pop group, artist, or agency.</strong> The app does not pre-supply any real artist photos, real names, logos, or agency names. All group, member, and season information shown in the app is <strong>entered by you, the user.</strong></p>
+
+<h2>11. Contact</h2>
+<p>Developer: <strong>blue-code</strong><br>
+Email: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+App bundle ID: <code>com.blueCode.PocaBox</code></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; PocaBox Legal</a></p>
+</section>
+
+<script>
+function setLang(lang) {
+  var ko = document.getElementById('ko');
+  var en = document.getElementById('en');
+  var isKo = lang === 'ko';
+  ko.hidden = !isKo;
+  en.hidden = isKo;
+  document.documentElement.lang = lang;
+  document.getElementById('tab-ko').outerHTML = isKo
+    ? '<strong id="tab-ko">한국어</strong>' : '<span id="tab-ko">한국어</span>';
+  document.getElementById('tab-en').outerHTML = isKo
+    ? '<span id="tab-en">English</span>' : '<strong id="tab-en">English</strong>';
+}
+// Honor ?lang=en (or browser preference) on load.
+(function () {
+  var params = new URLSearchParams(location.search);
+  var q = params.get('lang');
+  if (q === 'en' || (!q && (navigator.language || '').slice(0,2) !== 'ko')) setLang('en');
+})();
+</script>
+
+</body>
+</html>
