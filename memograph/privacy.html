@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoGraph — 개인정보처리방침 / Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; }
+h3 { margin-top: 24px; color: #0A84FF; }
+section { margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ccc4; padding: 8px 12px; text-align: left; }
+th { background: #0A84FF22; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #0A84FF; text-decoration: none; }
+.lang-toggle a:hover { text-decoration: underline; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<!-- =========== KOREAN =========== -->
+<section id="ko">
+<h1>개인정보처리방침 — MemoGraph</h1>
+<p><small>최종 업데이트: 2026년 5월 29일</small></p>
+
+<p>본 앱(이하 "MemoGraph")은 사용자의 개인정보를 소중히 여깁니다. MemoGraph는 <strong>로컬-퍼스트 + Apple iCloud</strong> 원칙으로 설계되었으며, 사용자가 저장하는 메모와 지식 그래프 데이터는 사용자의 기기와 사용자 본인의 iCloud 계정 안에서만 처리됩니다. 운영자는 어떠한 메모 내용도 수신하거나 보관하지 않습니다.</p>
+
+<h2>1. 수집 및 처리하는 정보</h2>
+<table>
+  <tr><th>항목</th><th>수집 시점</th><th>처리 위치</th><th>이용 목적</th></tr>
+  <tr><td>메모 텍스트, 엔티티/관계, 태그 (.md 파일)</td><td>메모 입력 시</td><td>기기 로컬 또는 사용자 iCloud</td><td>지식 그래프 저장 및 기기 간 동기화</td></tr>
+  <tr><td>음성 입력 오디오</td><td>음성 메모 시</td><td>기기 내 (Apple 음성 인식)</td><td>음성을 텍스트로 변환</td></tr>
+  <tr><td>Google Gemini API 키</td><td>설정에서 사용자가 직접 입력 시</td><td>기기 Keychain</td><td>AI 분류 요청 인증</td></tr>
+  <tr><td>AI 분류 시 전송되는 입력 텍스트</td><td>AI 분류 기능 사용 시</td><td>Google Gemini API로 전송</td><td>엔티티·관계·별칭 추출</td></tr>
+</table>
+
+<h2>2. 외부 서버로 전송되지 않는 정보</h2>
+<p>MemoGraph는 <strong>운영자가 운영하는 외부 서버나 분석 서비스로 어떠한 사용자 데이터도 전송하지 않습니다</strong>. 아래 정보는 모두 사용자의 기기 또는 사용자 본인의 iCloud 계정에만 존재합니다:</p>
+<ul>
+  <li>메모 내용, 엔티티, 관계, 위치 이력, 원문 발화</li>
+  <li>지식 그래프 구조 및 .md 파일</li>
+  <li>앱 사용 패턴, 사용 시간, 클릭 로그</li>
+</ul>
+
+<h2>3. 제3자 서비스 (AI 분류)</h2>
+<p>AI 자동 분류 기능은 사용자가 설정에서 직접 입력한 <strong>Google Gemini API 키</strong>로 동작합니다. 이 기능을 사용할 때에 한해, 분류 대상이 되는 입력 텍스트가 Google의 Gemini API로 전송되어 처리됩니다.</p>
+<ul>
+  <li>API 키가 입력되지 않으면 어떠한 텍스트도 외부로 전송되지 않습니다(지식 그래프 보기·탐색·저장 등 핵심 기능은 정상 동작).</li>
+  <li>전송된 텍스트의 처리는 Google의 정책을 따릅니다: <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>.</li>
+  <li>음성 인식은 Apple의 Speech 프레임워크를 사용하며, 지원 언어는 가능한 경우 온디바이스로 처리됩니다.</li>
+</ul>
+
+<h2>4. iCloud 동기화</h2>
+<p>사용자가 저장 위치를 iCloud로 선택한 경우, 메모(.md)는 Apple iCloud Documents를 통해 사용자의 기기 간에 동기화됩니다.</p>
+<ul>
+  <li>데이터는 사용자의 <strong>개인 iCloud 계정</strong>에만 저장됩니다.</li>
+  <li>MemoGraph 운영자는 사용자의 iCloud에 저장된 내용에 접근할 수 없습니다.</li>
+  <li>저장 위치는 설정에서 로컬/iCloud 간 언제든지 변경할 수 있습니다.</li>
+</ul>
+
+<h2>5. 권한 사용</h2>
+<table>
+  <tr><th>권한</th><th>사용 목적</th></tr>
+  <tr><td>마이크</td><td>음성으로 메모를 입력할 때 사용</td></tr>
+  <tr><td>음성 인식</td><td>음성을 텍스트로 변환 (Apple Speech)</td></tr>
+  <tr><td>iCloud</td><td>메모 동기화 (사용자가 선택한 경우)</td></tr>
+</table>
+
+<h2>6. 광고 및 분석</h2>
+<p>MemoGraph는 <strong>광고를 표시하지 않으며</strong>, Google Analytics, Firebase, Meta SDK 등 어떠한 분석/추적 SDK도 통합하지 않았습니다.</p>
+
+<h2>7. 데이터 보관 및 삭제</h2>
+<ul>
+  <li>메모는 사용자가 앱에서 삭제하거나 .md 파일을 제거할 때까지 보관됩니다.</li>
+  <li>앱을 삭제해도 사용자 iCloud의 데이터는 남을 수 있습니다. 완전 삭제는 iOS 설정 &gt; Apple ID &gt; iCloud에서 가능합니다.</li>
+  <li>API 키는 기기 Keychain에 저장되며, 설정에서 삭제할 수 있습니다.</li>
+</ul>
+
+<h2>8. 어린이 개인정보</h2>
+<p>MemoGraph는 만 13세 미만 어린이로부터 의도적으로 개인정보를 수집하지 않습니다.</p>
+
+<h2>9. 본 방침의 변경</h2>
+<p>처리방침이 변경되는 경우, 본 페이지를 업데이트합니다.</p>
+
+<h2>10. 문의</h2>
+<p>개인정보 관련 문의: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+</section>
+
+<hr>
+
+<!-- =========== ENGLISH =========== -->
+<section id="en">
+<h1>Privacy Policy — MemoGraph</h1>
+<p><small>Last updated: May 29, 2026</small></p>
+
+<p>This app ("MemoGraph") values your privacy. MemoGraph is designed with a <strong>local-first + Apple iCloud</strong> principle: the memos and knowledge-graph data you save are processed entirely on your device and within your own iCloud account. The developer never receives or stores the contents of your memos.</p>
+
+<h2>1. Data We Collect &amp; Process</h2>
+<table>
+  <tr><th>Item</th><th>When</th><th>Where</th><th>Purpose</th></tr>
+  <tr><td>Memo text, entities/relations, tags (.md files)</td><td>On memo input</td><td>On-device or your iCloud</td><td>Knowledge-graph storage &amp; cross-device sync</td></tr>
+  <tr><td>Voice input audio</td><td>On voice memo</td><td>On-device (Apple Speech)</td><td>Speech-to-text transcription</td></tr>
+  <tr><td>Google Gemini API key</td><td>When you enter it in Settings</td><td>Device Keychain</td><td>Authenticating AI classification requests</td></tr>
+  <tr><td>Input text sent for AI classification</td><td>When AI classification is used</td><td>Sent to Google Gemini API</td><td>Extracting entities, relations, aliases</td></tr>
+</table>
+
+<h2>2. Data We Do NOT Send to Our Servers</h2>
+<p>MemoGraph <strong>does not send any user data to any developer-operated server or analytics service</strong>. The following stays only on your device or in your own iCloud account:</p>
+<ul>
+  <li>Memo contents, entities, relations, location history, original utterances</li>
+  <li>Knowledge-graph structure and .md files</li>
+  <li>App usage patterns, timing, click logs</li>
+</ul>
+
+<h2>3. Third-Party Services (AI Classification)</h2>
+<p>The AI auto-classification feature runs with a <strong>Google Gemini API key that you enter yourself</strong> in Settings. Only when you use this feature, the input text being classified is sent to and processed by Google's Gemini API.</p>
+<ul>
+  <li>If no API key is entered, no text is sent externally (core features — viewing, browsing, and storing the knowledge graph — work normally).</li>
+  <li>Processing of transmitted text follows Google's policy: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+  <li>Speech recognition uses Apple's Speech framework and is processed on-device for supported languages where available.</li>
+</ul>
+
+<h2>4. iCloud Sync</h2>
+<p>If you choose iCloud as the storage location, your memos (.md) are synced across your devices via Apple iCloud Documents.</p>
+<ul>
+  <li>Data is stored only in <strong>your personal iCloud account</strong>.</li>
+  <li>The MemoGraph developer cannot access content stored in your iCloud.</li>
+  <li>You can switch the storage location between local and iCloud anytime in Settings.</li>
+</ul>
+
+<h2>5. Permissions</h2>
+<table>
+  <tr><th>Permission</th><th>Purpose</th></tr>
+  <tr><td>Microphone</td><td>Capturing voice when you dictate a memo</td></tr>
+  <tr><td>Speech Recognition</td><td>Converting speech to text (Apple Speech)</td></tr>
+  <tr><td>iCloud</td><td>Memo sync (only if you choose it)</td></tr>
+</table>
+
+<h2>6. Ads &amp; Tracking</h2>
+<p>MemoGraph <strong>shows no ads</strong> and integrates <strong>no analytics or tracking SDKs</strong> (no Google Analytics, Firebase, Meta SDK, etc.).</p>
+
+<h2>7. Retention &amp; Deletion</h2>
+<ul>
+  <li>Memos are retained until you delete them in the app or remove the .md files.</li>
+  <li>Deleting the app may leave data in your iCloud. Full deletion is available via iOS Settings &gt; Apple ID &gt; iCloud.</li>
+  <li>The API key is stored in the device Keychain and can be removed in Settings.</li>
+</ul>
+
+<h2>8. Children's Privacy</h2>
+<p>MemoGraph does not knowingly collect personal information from children under 13.</p>
+
+<h2>9. Changes to This Policy</h2>
+<p>If this policy changes, we will update this page.</p>
+
+<h2>10. Contact</h2>
+<p>Privacy inquiries: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+</section>
+
+</body>
+</html>
