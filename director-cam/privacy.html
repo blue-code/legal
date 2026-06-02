@@ -51,6 +51,18 @@ small { color: #888; }
   <li>구도·조명·음성 분석은 모두 기기 내에서 처리되는 추정치이며, 외부로 전송되지 않습니다.</li>
 </ul>
 
+<h2>2-1. 얼굴 데이터 (안면 정보)</h2>
+<p>Director Cam은 촬영 중 화면 안의 <strong>얼굴 위치(사각형 영역)</strong>를 기기 내에서 실시간으로 감지해, 구도·눈높이 가이드와 구도 점수를 표시합니다. 이는 <strong>얼굴 검출(위치 인식)</strong>일 뿐이며, 다음에 해당합니다:</p>
+<ul>
+  <li><strong>수집하는 얼굴 데이터:</strong> 한 프레임 안의 얼굴 위치(사각형 좌표)뿐입니다. 얼굴 특징값(faceprint)·템플릿·생체 식별자를 생성하지 않습니다.</li>
+  <li><strong>사용 목적:</strong> 오직 실시간 구도·눈높이 가이드 표시와 구도 점수 계산에만 사용됩니다. 그 외 용도는 없습니다.</li>
+  <li><strong>얼굴 인식·신원 식별을 하지 않습니다.</strong> Face ID·TrueDepth를 사용하지 않습니다.</li>
+  <li><strong>저장하지 않습니다.</strong> 감지된 좌표는 매 프레임 메모리에서만 쓰이고 즉시 폐기되며, 디스크·서버에 저장되지 않습니다.</li>
+  <li><strong>제3자 공유·전송 없음.</strong> 네트워크가 없어 외부로 전송되지 않습니다.</li>
+  <li><strong>보관 기간 없음.</strong> 얼굴 데이터는 프레임 단위 처리 후 폐기되어 보관되지 않습니다.</li>
+</ul>
+<p>참고: 사용자가 직접 녹화·저장한 <strong>영상</strong>에는 얼굴이 담길 수 있으나, 그 영상은 사용자의 기기에만 저장되고 앱이 업로드하지 않으며, 사용자가 시스템 공유 시트로만 직접 내보낼 수 있습니다.</p>
+
 <h2>3. 우리가 수집하지 않는 정보</h2>
 <ul>
   <li>이름, 이메일, 전화번호 등 개인 식별 정보</li>
@@ -103,6 +115,18 @@ small { color: #888; }
   <li>Recordings you capture stay on your device.</li>
   <li>Framing, lighting, and audio analysis are on-device estimates and are not sent anywhere.</li>
 </ul>
+
+<h2>2a. Face Data</h2>
+<p>While you shoot, Director Cam detects the <strong>location of a face (a bounding box)</strong> in the camera frame, on your device and in real time, to draw framing / eyeline guides and compute a framing score. This is <strong>face detection (locating a face)</strong> only:</p>
+<ul>
+  <li><strong>Face data collected:</strong> only the position of a face (bounding-box coordinates) within the current frame. The app does not create a faceprint, template, or biometric identifier.</li>
+  <li><strong>How it is used:</strong> solely to show real-time framing / eyeline guides and to compute a framing score. There is no other use.</li>
+  <li><strong>No facial recognition or identification</strong>, and no use of Face ID or TrueDepth.</li>
+  <li><strong>Not stored:</strong> the detected coordinates are used in memory for the current frame only and discarded immediately; nothing is written to disk or any server.</li>
+  <li><strong>Not shared or transmitted:</strong> there is no network, so face data is never sent to third parties or anywhere else.</li>
+  <li><strong>No retention:</strong> face data is processed per frame and discarded — it is not retained.</li>
+</ul>
+<p>Note: a <strong>video</strong> you choose to record and save may contain your face, but it is stored only on your device, is never uploaded by the app, and can be exported only by you via the system share sheet.</p>
 
 <h2>3. What We Do NOT Collect</h2>
 <ul>
