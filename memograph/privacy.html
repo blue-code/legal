@@ -32,7 +32,7 @@ small { color: #888; }
 <!-- =========== KOREAN =========== -->
 <section id="ko">
 <h1>개인정보처리방침 — MemoGraph</h1>
-<p><small>최종 업데이트: 2026년 5월 29일</small></p>
+<p><small>최종 업데이트: 2026년 6월 2일</small></p>
 
 <p>본 앱(이하 "MemoGraph")은 사용자의 개인정보를 소중히 여깁니다. MemoGraph는 <strong>로컬-퍼스트 + Apple iCloud</strong> 원칙으로 설계되었으며, 사용자가 저장하는 메모와 지식 그래프 데이터는 사용자의 기기와 사용자 본인의 iCloud 계정 안에서만 처리됩니다. 운영자는 어떠한 메모 내용도 수신하거나 보관하지 않습니다.</p>
 
@@ -53,11 +53,19 @@ small { color: #888; }
   <li>앱 사용 패턴, 사용 시간, 클릭 로그</li>
 </ul>
 
-<h2>3. 제3자 서비스 (AI 분류)</h2>
-<p>AI 자동 분류 기능은 사용자가 설정에서 직접 입력한 <strong>Google Gemini API 키</strong>로 동작합니다. 이 기능을 사용할 때에 한해, 분류 대상이 되는 입력 텍스트가 Google의 Gemini API로 전송되어 처리됩니다.</p>
+<h2>3. 제3자 AI 서비스 (Google Gemini)</h2>
+<p>MemoGraph는 입력을 분석하고 답변을 생성하기 위해 두 가지 AI 처리 방식을 제공합니다.</p>
 <ul>
-  <li>API 키가 입력되지 않으면 어떠한 텍스트도 외부로 전송되지 않습니다(지식 그래프 보기·탐색·저장 등 핵심 기능은 정상 동작).</li>
-  <li>전송된 텍스트의 처리는 Google의 정책을 따릅니다: <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>.</li>
+  <li><strong>온디바이스 AI(기본값, 지원 기기)</strong>: Apple Intelligence를 사용해 기기에서 처리되며, <strong>데이터가 기기를 벗어나지 않습니다.</strong></li>
+  <li><strong>클라우드 AI(Google LLC의 Google Gemini API, <code>generativelanguage.googleapis.com</code>)</strong>: 기기가 온디바이스 AI를 지원하지 않거나 사용자가 선택한 경우 사용됩니다.</li>
+</ul>
+<p>클라우드 AI를 사용할 때 <strong>Google LLC</strong>로 전송되는 데이터와 목적은 다음과 같습니다.</p>
+<ul>
+  <li><strong>전송되는 데이터</strong>: 사용자가 입력하거나 음성으로 말한 텍스트와 대화 내용. 여기에는 물건·장소·사람·일정·아이디어 등 개인 정보가 포함될 수 있습니다. 또한 배경 정리 기능(정원사)이 동작할 때 저장된 항목의 이름·내용이 함께 전송될 수 있습니다.</li>
+  <li><strong>받는 곳</strong>: Google LLC — Google Gemini API.</li>
+  <li><strong>사용 목적</strong>: 입력 분석, 항목·관계·별칭 추출, 질문에 대한 답변 생성. 오직 이 목적으로만 사용됩니다.</li>
+  <li><strong>사전 동의</strong>: 데이터가 클라우드로 전송되기 전에 앱 내에서 어떤 데이터가 누구에게 전송되는지 명확히 고지하고 사용자의 <strong>명시적 동의</strong>를 받습니다. 동의하지 않으면 어떠한 데이터도 전송되지 않으며, 동의는 설정 &gt; "데이터 및 개인정보"에서 언제든지 철회할 수 있습니다.</li>
+  <li>전송된 텍스트의 처리는 Google의 정책을 따릅니다: <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>. Google은 본 방침과 동등하거나 그 이상의 데이터 보호를 제공합니다.</li>
   <li>음성 인식은 Apple의 Speech 프레임워크를 사용하며, 지원 언어는 가능한 경우 온디바이스로 처리됩니다.</li>
 </ul>
 
@@ -103,7 +111,7 @@ small { color: #888; }
 <!-- =========== ENGLISH =========== -->
 <section id="en">
 <h1>Privacy Policy — MemoGraph</h1>
-<p><small>Last updated: May 29, 2026</small></p>
+<p><small>Last updated: June 2, 2026</small></p>
 
 <p>This app ("MemoGraph") values your privacy. MemoGraph is designed with a <strong>local-first + Apple iCloud</strong> principle: the memos and knowledge-graph data you save are processed entirely on your device and within your own iCloud account. The developer never receives or stores the contents of your memos.</p>
 
@@ -124,11 +132,19 @@ small { color: #888; }
   <li>App usage patterns, timing, click logs</li>
 </ul>
 
-<h2>3. Third-Party Services (AI Classification)</h2>
-<p>The AI auto-classification feature runs with a <strong>Google Gemini API key that you enter yourself</strong> in Settings. Only when you use this feature, the input text being classified is sent to and processed by Google's Gemini API.</p>
+<h2>3. Third-Party AI Service (Google Gemini)</h2>
+<p>MemoGraph offers two AI processing modes for analyzing input and generating answers:</p>
 <ul>
-  <li>If no API key is entered, no text is sent externally (core features — viewing, browsing, and storing the knowledge graph — work normally).</li>
-  <li>Processing of transmitted text follows Google's policy: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+  <li><strong>On-device AI (default, supported devices)</strong>: processed on the device with Apple Intelligence; <strong>data never leaves your device.</strong></li>
+  <li><strong>Cloud AI (Google LLC's Google Gemini API, <code>generativelanguage.googleapis.com</code>)</strong>: used when your device does not support on-device AI or when you choose it.</li>
+</ul>
+<p>When cloud AI is used, the following data is sent to <strong>Google LLC</strong> for the purposes described:</p>
+<ul>
+  <li><strong>Data sent</strong>: the text you type or dictate and your conversation, which may include personal information such as objects, places, people, schedules, and ideas. When the background "Gardener" feature runs, the names and contents of saved items may also be sent.</li>
+  <li><strong>Recipient</strong>: Google LLC — Google Gemini API.</li>
+  <li><strong>Purpose</strong>: analyzing input, extracting items, relationships, and aliases, and generating answers. Used solely for these purposes.</li>
+  <li><strong>Prior consent</strong>: before any data is sent to the cloud, the app presents a clear in-app disclosure of what data is sent and to whom, and obtains your <strong>explicit consent</strong>. If you do not consent, no data is sent, and consent can be withdrawn anytime in Settings &gt; "Data &amp; Privacy".</li>
+  <li>Processing of transmitted text follows Google's policy: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Google provides data protection equal to or stronger than this policy.</li>
   <li>Speech recognition uses Apple's Speech framework and is processed on-device for supported languages where available.</li>
 </ul>
 
