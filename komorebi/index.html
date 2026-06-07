@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komorebi — Film Camera</title>
+<meta name="description" content="Komorebi is a quiet film camera for everyday moments. Silent shutter, analog film looks, no AI smoothing.">
+<meta property="og:title" content="Komorebi — Film Camera">
+<meta property="og:description" content="A quiet film camera for everyday moments. Silent shutter, analog film looks, no AI smoothing.">
+<meta property="og:type" content="website">
+<style>
+:root {
+  color-scheme: light dark;
+  --gold: #C78A3D;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  line-height: 1.7;
+  color: #1c1c1e;
+  background: #fdfbf7;
+}
+@media (prefers-color-scheme: dark) {
+  body { color: #ececec; background: #121110; }
+  .card { background: #1c1a18 !important; border-color: #ffffff14 !important; }
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px 56px;
+  background:
+    radial-gradient(120% 90% at 50% -10%, #C78A3D33 0%, transparent 60%),
+    linear-gradient(180deg, #C78A3D14 0%, transparent 100%);
+}
+.brand {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.kanji { color: var(--gold); }
+.tagline { font-size: 1.25rem; margin: 14px 0 4px; }
+.sub { color: #888; margin: 0 0 28px; }
+.cta {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 999px;
+  transition: opacity .15s;
+}
+.cta:hover { opacity: .88; }
+
+/* Sections */
+section { padding: 40px 0; }
+h2 { color: var(--gold); font-size: 1.15rem; letter-spacing: .02em; text-transform: uppercase; }
+.features { list-style: none; padding: 0; margin: 0; }
+.features li { padding: 12px 0; border-bottom: 1px solid #ccc4; }
+.features li:last-child { border-bottom: none; }
+.features b { display: block; }
+.features span { color: #888; font-size: .95rem; }
+
+.langs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
+.langs div { padding: 8px 14px; border: 1px solid #C78A3D55; border-radius: 999px; font-size: .95rem; }
+
+footer { text-align: center; padding: 48px 20px; border-top: 1px solid #ccc4; margin-top: 24px; }
+footer a { color: var(--gold); text-decoration: none; margin: 0 10px; }
+footer a:hover { text-decoration: underline; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1 class="brand">Komorebi <span class="kanji">木漏れ日</span></h1>
+  <p class="tagline">A quiet film camera for everyday moments.</p>
+  <p class="sub">Silent shutter · Analog film looks · No AI smoothing</p>
+  <a class="cta" href="https://apps.apple.com/app/id6762462574">Download on the App Store</a>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <h2>What is Komorebi?</h2>
+    <p><em>Komorebi</em> (木漏れ日) is Japanese for sunlight filtering through leaves — fleeting, gentle, irreplaceable. The app is built for people who want to slow down and notice. No artificial sharpening, no AI smoothing — just light, shadow, and the soft texture of analog film.</p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul class="features">
+      <li><b>Five film looks</b><span>Raw · K-Portra 400 · T-Max 400 · Ektar 100 · F-Chrome 100, with adjustable intensity.</span></li>
+      <li><b>Always-silent shutter</b><span>No sound, ever — capture quiet moments without disturbing them.</span></li>
+      <li><b>Anti-AI mode</b><span>Preserves natural grain and skin texture instead of over-smoothing.</span></li>
+      <li><b>Exposure control</b><span>A simple slider for brighter or darker shots.</span></li>
+      <li><b>Self-timer &amp; interval</b><span>3s / 10s timer and interval (time-lapse) capture with an optional shot limit.</span></li>
+      <li><b>Landscape &amp; portrait</b><span>Hold your phone sideways for wide photos.</span></li>
+      <li><b>Action Button &amp; Shortcuts</b><span>Open the camera or cycle filters instantly.</span></li>
+      <li><b>Private by design</b><span>Photos are saved only to your library. Nothing leaves your device.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Available in</h2>
+    <div class="langs">
+      <div>English</div><div>한국어</div><div>日本語</div><div>简体中文</div><div>繁體中文</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div>
+    <a href="./support.html">Support</a>
+    <a href="./privacy.html">Privacy Policy</a>
+    <a href="../index.html">All apps</a>
+  </div>
+  <p><small>© 2026 blue-code · Komorebi</small></p>
+</footer>
+
+</body>
+</html>
