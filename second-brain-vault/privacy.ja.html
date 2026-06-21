@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Brain Vault — プライバシーポリシー</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #6C4DF6; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.9rem; }
+.lang-toggle a { margin-right: 10px; }
+.callout { background: #6C4DF611; border-left: 3px solid #6C4DF6; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="./privacy.ko.html">한국어</a> |
+  <a href="./privacy.en.html">English</a> |
+  <strong>日本語</strong> |
+  <a href="./privacy.zh-Hans.html">简体中文</a>
+</div>
+
+<h1>プライバシーポリシー — Second Brain Vault（セカンドブレイン）</h1>
+<p><small>施行日：2026年6月21日 · 最終更新日：2026年6月21日</small></p>
+
+<div class="callout">
+<strong>概要：</strong> Second Brain Vault は<strong>個人データを一切収集しません</strong>。保存したすべての項目（メモ、写真、PDF、ボイスメモ、ウェブリンク）と、AI が生成したタイトル・要約・カテゴリ・タグ、検索用の埋め込み（embeddings）、各種設定は、<strong>お使いのデバイス上にのみ</strong>保存され、<strong>外部に送信されることはありません</strong>。AI はすべてデバイス上で動作します。アカウント・ログイン・サーバーはなく、分析・トラッキング・広告 SDK の類も一切ありません。アプリがネットワークに接続するのは、ユーザーが<em>ウェブリンク</em>を保存するときに、その 1 ページを取得する場合だけです。
+</div>
+
+<h2>1. 収集する情報</h2>
+<p>Second Brain Vault は個人情報を収集しません。サインアップやログインはなく、氏名・メールアドレス・電話番号・位置情報などの識別情報を要求したり保存したりすることもありません。アプリ内で作成・取り込んだ内容はすべてデバイス上にとどまります。</p>
+<ul>
+  <li><strong>保存項目</strong> — Vault に追加したメモ、写真、PDF、ボイスメモ、ウェブリンク。デバイス内のデータベース（SwiftData）と、アプリ専用コンテナ内のファイルとしてのみ保存されます。</li>
+  <li><strong>AI による整理結果</strong> — デバイス上の AI が各項目に対して生成したタイトル・要約・カテゴリ・タグ、および自然言語検索を支える意味的な埋め込み。いずれもデバイス上でのみ生成・保存されます。</li>
+  <li><strong>設定値</strong> — 言語・テーマ・各種設定などのアプリ構成値で、デバイス上にのみ保存されます。</li>
+</ul>
+
+<h2>2. デバイス上の AI</h2>
+<p>Second Brain Vault は、Vault を整理し検索できるようにするために、Apple のオンデバイス・インテリジェンス機能を利用します。</p>
+<ul>
+  <li><strong>整理（自動タイトル・要約・カテゴリ・タグ）</strong>は、デバイス上で動作する Apple の Foundation Models が行います。</li>
+  <li><strong>意味的検索</strong>には Apple の NaturalLanguage による文脈的埋め込みを使用し、これもデバイス上で計算されます。</li>
+</ul>
+<p>プロンプトや項目の内容は、その一部であっても AI サーバーや開発者に送信されることはありません。AI 処理はすべてお使いのデバイス上で完結します。</p>
+
+<h2>3. ネットワークの利用 — ウェブリンクの保存</h2>
+<p>このアプリが行うネットワークリクエストは<strong>1 種類のみ</strong>で、ユーザーが<strong>ウェブリンク</strong>を保存することを選んだときにだけ発生します。その際、アプリはユーザーが貼り付けた<strong>当該ページ</strong>を取得するために、ユーザー自身の操作によって開始される単一の HTTPS GET リクエストを行います。これは、そのページの読みやすい本文とタイトルを抽出して Vault に取り込むためです。</p>
+<ul>
+  <li>接続先はユーザーが入力した URL <strong>のみ</strong>で、他のサーバーには接続しません。</li>
+  <li><strong>個人データを送信せず</strong>、デバイスから何もアップロードしません。</li>
+  <li><strong>Cookie を保存しない</strong>一時的（ephemeral）なセッションを使用します。</li>
+</ul>
+<p>これがアプリ全体で唯一の外向きネットワーク通信です。この動作と、ユーザーが明示的に有効化した iCloud 同期（第 7 項）を除き、アプリはいかなるネットワーク接続も行いません。</p>
+
+<h2>4. 権限</h2>
+<p>すべての権限は任意であり、ユーザーが該当機能を使うときにのみ用いられ、すべてデバイス上で処理されます。いずれの権限も拒否でき、いつでも iOS の設定で変更できます。</p>
+<ul>
+  <li><strong>カメラ</strong> — 保存したい対象を撮影するため。</li>
+  <li><strong>写真ライブラリ</strong> — 写真を取り込み、デバイス上の OCR（Vision）で写真内のテキストを読み取るため。</li>
+  <li><strong>マイク</strong> — ボイスメモを録音するため。</li>
+  <li><strong>音声認識</strong> — ボイスメモを文字に変換するため。変換は必ずデバイス上で実行され、サーバーに送信されることはありません。</li>
+</ul>
+<p>Second Brain Vault は、位置情報、ヘルスケア（HealthKit）、連絡先を利用しません。</p>
+
+<h2>5. データの送信および第三者への提供</h2>
+<p><strong>Second Brain Vault は、ユーザーのデータを外部に送信したり第三者に提供したりしません。</strong></p>
+<ul>
+  <li>バックエンドサーバーがありません — アカウントの仕組みがなく、データをアップロードする先そのものが存在しません。</li>
+  <li>分析ツールはありません。</li>
+  <li>クラッシュレポート SDK はありません。</li>
+  <li>広告またはトラッキング識別子（IDFA）はありません。</li>
+</ul>
+
+<h2>6. お支払い（アプリ内課金）</h2>
+<p>Second Brain Vault は、項目 100 件まで無料です。任意で <strong>Pro</strong>（年額 ₩6,600、自動更新）または<strong>買い切り（Lifetime）</strong>（₩29,000、一回限り）にアップグレードできます。<strong>すべての支払いは App Store / StoreKit を通じて Apple が処理</strong>し、アプリがカード番号などの決済情報を見たり保存したりすることはありません。支払い・返金・購入の復元は、ユーザーの Apple アカウントを通じて Apple のプライバシーポリシーに従って処理されます。</p>
+
+<h2>7. 任意の iCloud バックアップと同期</h2>
+<p>デバイス間のバックアップ・同期は<strong>任意（オプトイン）</strong>で、Pro で利用できます。有効にすると、Vault は<strong>ユーザー自身のプライベートな iCloud</strong>（Apple CloudKit）を通じて、Apple のプライバシー規約に従って同期されます。データはユーザーの Apple アカウント内にとどまり、開発者はこれにアクセスできず、この経路でいかなるサーバーも運用しません。この機能をオフにすれば何も同期されず、データはデバイス上にのみ残ります。</p>
+
+<h2>8. データの保持と削除</h2>
+<ul>
+  <li>すべてのデータがデバイス上にのみ保存されるため、ユーザーがデータを完全に管理できます。</li>
+  <li>保存した項目は、アプリ内で直接編集・削除できます。</li>
+  <li>アプリを削除すると、デバイス上のすべてのデータ（SwiftData およびアプリコンテナ内のファイル）も一緒に削除されます。iCloud 同期を使用していた場合は、iOS の設定からそのコピーを管理・削除できます。</li>
+  <li>アプリ内課金の権利は、Apple アカウントを通じて復元できます。</li>
+</ul>
+
+<h2>9. アカウントとログイン</h2>
+<p>Second Brain Vault は、アカウントの作成やログインを必要としません。メールアドレス、電話番号、ソーシャルログインなど、いかなる識別情報も要求しません。</p>
+
+<h2>10. お子様のプライバシー</h2>
+<p>Second Brain Vault は、すべての年齢（4+）に安全であるよう設計されています。お子様を含め、誰からも個人情報を収集しません。ユーザー間のやり取り機能はなく、広告もありません。</p>
+
+<h2>11. ユーザーの権利</h2>
+<p>すべてのデータがデバイス上にあるため、データへのアクセス・訂正・削除の権利は、アプリ内の画面と iOS のシステム設定を通じて直接行使できます。GDPR、CCPA その他の適用法に基づく権利についてのお問い合わせは、以下の連絡先までお願いいたします。</p>
+
+<h2>12. 本ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、変更内容とその施行日を本ページに掲載します。</p>
+
+<h2>13. お問い合わせ</h2>
+<p>開発者：<strong>Blue Code</strong><br>
+メール：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+アプリのバンドル ID：<code>com.blueCode.SecondBrainVault</code></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; Second Brain Vault 法的事項</a></p>
+
+</body>
+</html>

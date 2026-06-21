@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Brain Vault — 隐私政策</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #6C4DF6; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.9rem; }
+.lang-toggle a { margin-right: 10px; }
+.callout { background: #6C4DF611; border-left: 3px solid #6C4DF6; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="./privacy.ko.html">한국어</a> |
+  <a href="./privacy.en.html">English</a> |
+  <a href="./privacy.ja.html">日本語</a> |
+  <strong>简体中文</strong>
+</div>
+
+<h1>隐私政策 — Second Brain Vault（第二大脑）</h1>
+<p><small>生效日期：2026年6月21日 · 最后更新：2026年6月21日</small></p>
+
+<div class="callout">
+<strong>摘要：</strong>Second Brain Vault <strong>不收集任何个人数据</strong>。您保存的全部内容（笔记、照片、PDF、语音备忘、网页链接），以及 AI 生成的标题、摘要、分类、标签、搜索用的向量（embeddings）和您的设置，<strong>仅存储在您的设备上</strong>，<strong>绝不上传</strong>。AI 全部在设备上运行。没有账户、没有登录、没有服务器，也没有任何分析、跟踪或广告 SDK。应用唯一一次访问网络，是在<em>您</em>选择保存某个网页链接、需要抓取该网页时。
+</div>
+
+<h2>1. 我们收集的信息</h2>
+<p>Second Brain Vault 不收集个人信息。无需注册或登录，我们也绝不索取或存储姓名、电子邮件、电话号码、位置等任何身份信息。您在应用中创建或导入的所有内容都保留在您的设备上。</p>
+<ul>
+  <li><strong>保存的项目</strong> — 您添加到保险库中的笔记、照片、PDF、语音备忘和网页链接。仅存储在设备本地数据库（SwiftData）以及应用专属容器内的文件中。</li>
+  <li><strong>AI 整理结果</strong> — 设备端 AI 为各项目生成的标题、摘要、分类、标签，以及支持自然语言搜索的语义向量。均仅在设备上生成和存储。</li>
+  <li><strong>设置</strong> — 语言、主题、偏好等应用配置值，仅存储在您的设备上。</li>
+</ul>
+
+<h2>2. 设备端 AI</h2>
+<p>Second Brain Vault 使用 Apple 的设备端智能功能，让您的保险库可被整理和搜索：</p>
+<ul>
+  <li><strong>整理</strong>（自动标题、摘要、分类、标签）由在您设备上运行的 Apple Foundation Models 完成。</li>
+  <li><strong>语义搜索</strong>使用 Apple NaturalLanguage 的上下文向量，同样在您的设备上计算。</li>
+</ul>
+<p>提示词或项目内容的任何部分都不会被发送到 AI 服务器或发送给开发者。AI 处理完全在您的设备上完成。</p>
+
+<h2>3. 网络使用 — 保存网页链接</h2>
+<p>本应用只会发起<strong>一种网络请求</strong>，且仅在您选择保存<strong>网页链接</strong>时发生。此时，应用会发起一次由您主动触发的 HTTPS GET 请求，以抓取<strong>您粘贴的那个网页</strong>，从而提取该网页的正文与标题并存入保险库。</p>
+<ul>
+  <li>仅访问您提供的那个 URL，<strong>不访问</strong>任何其他服务器。</li>
+  <li><strong>不发送任何个人数据</strong>，也不从您的设备上传任何内容。</li>
+  <li>使用<strong>不保存 Cookie</strong> 的临时（ephemeral）会话。</li>
+</ul>
+<p>这是整个应用中唯一的对外网络活动。除此之外，以及您明确启用的 iCloud 同步（见第 7 节）外，应用不会进行任何网络连接。</p>
+
+<h2>4. 权限</h2>
+<p>所有权限均为可选，仅在您使用相应功能时才会用到，并完全在您的设备上处理。您可以拒绝任意权限，也可随时在 iOS 设置中更改。</p>
+<ul>
+  <li><strong>相机</strong> — 拍摄您想保存的对象。</li>
+  <li><strong>照片图库</strong> — 导入照片，并通过设备端 OCR（Vision）识别照片中的文字。</li>
+  <li><strong>麦克风</strong> — 录制语音备忘。</li>
+  <li><strong>语音识别</strong> — 将语音备忘转写为文字。转写被强制在设备上运行，绝不发送到服务器。</li>
+</ul>
+<p>Second Brain Vault 不使用定位、健康（HealthKit）或通讯录。</p>
+
+<h2>5. 数据传输与第三方共享</h2>
+<p><strong>Second Brain Vault 不会将您的数据对外传输或与第三方共享。</strong></p>
+<ul>
+  <li>没有后端服务器——应用没有账户系统，也没有可上传数据的去处。</li>
+  <li>没有分析工具。</li>
+  <li>没有崩溃报告 SDK。</li>
+  <li>没有广告或跟踪标识符（IDFA）。</li>
+</ul>
+
+<h2>6. 付款（应用内购买）</h2>
+<p>Second Brain Vault 在 100 个项目以内免费。您可以选择升级到 <strong>Pro</strong>（每年 ₩6,600，自动续订）或<strong>终身解锁</strong>（₩29,000，一次性）。<strong>所有付款均由 Apple 通过 App Store / StoreKit 处理</strong>；应用绝不会看到或存储卡号等付款信息。付款、退款和购买恢复均通过您的 Apple 账户、依据 Apple 的隐私政策处理。</p>
+
+<h2>7. 可选的 iCloud 备份与同步</h2>
+<p>跨设备备份与同步为<strong>可选（opt-in）</strong>功能，随 Pro 提供。若您启用，保险库将通过<strong>您自己的私人 iCloud</strong>（Apple CloudKit）、依据 Apple 的隐私条款进行同步。数据始终保留在您的 Apple 账户内，开发者无法访问，也不会在此路径上运营任何服务器。若您不开启此功能，则不会同步任何内容，数据仅保留在设备上。</p>
+
+<h2>8. 数据保留与删除</h2>
+<ul>
+  <li>由于所有数据仅存于您的设备，您对其拥有完全的控制权。</li>
+  <li>您可以在应用内直接编辑或删除任何已保存的项目。</li>
+  <li>删除应用会一并清除设备上的全部数据（SwiftData 及应用容器内的文件）。若您使用过 iCloud 同步，可在 iOS 设置中管理或删除该副本。</li>
+  <li>您的应用内购买权益可通过 Apple 账户恢复。</li>
+</ul>
+
+<h2>9. 账户与登录</h2>
+<p>Second Brain Vault 无需创建账户或登录。它不索取电子邮件、电话号码或社交登录等任何身份标识。</p>
+
+<h2>10. 儿童隐私</h2>
+<p>Second Brain Vault 设计为适合所有年龄（4+）安全使用。它不会从任何人（包括儿童）收集个人信息。没有用户间通讯功能，也没有广告。</p>
+
+<h2>11. 您的权利</h2>
+<p>由于所有数据都在您的设备上，您访问、更正和删除数据的权利可直接通过应用内界面和 iOS 系统设置行使。如对 GDPR、CCPA 或其他适用法律下的权利有疑问，请通过以下方式联系我们。</p>
+
+<h2>12. 本政策的变更</h2>
+<p>若本政策发生变更，我们将在本页面公布变更内容及其生效日期。</p>
+
+<h2>13. 联系方式</h2>
+<p>开发者：<strong>Blue Code</strong><br>
+电子邮件：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+应用 Bundle ID：<code>com.blueCode.SecondBrainVault</code></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; Second Brain Vault 法律信息</a></p>
+
+</body>
+</html>
