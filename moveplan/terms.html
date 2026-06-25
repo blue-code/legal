@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>무브플랜 (MovePlan) — Terms of Use / 이용약관</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 28px; font-size: 1.1rem; }
+a { color: #007AFF; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 10px; cursor: pointer; }
+section[hidden] { display: none; }
+small { color:#888; }
+</style>
+</head>
+<body>
+<div class="lang-toggle">
+  <a onclick="setLang('ko')"><strong id="tab-ko">한국어</strong></a> |
+  <a onclick="setLang('en')"><span id="tab-en">English</span></a>
+</div>
+<section id="ko">
+<h1>이용약관 — 무브플랜 (MovePlan)</h1>
+<p><small>시행일: 2026년 6월 25일</small></p>
+<h2>1. 서비스</h2>
+<p>무브플랜은 기기 내에서 동작하는 2D 가구·방 배치 시뮬레이터입니다. 배치 결과는 실제 치수와 차이가 있을 수 있으며, 시뮬레이션은 참고용입니다.</p>
+<h2>2. 인앱 구매</h2>
+<p>"무브플랜 Pro"는 평생 1회 결제(비소모성)이며 Apple App Store를 통해 제공됩니다. 환불은 Apple 정책을 따릅니다.</p>
+<h2>3. 면책</h2>
+<p>본 앱은 "있는 그대로" 제공됩니다. 배치·치수 판단으로 인한 결과(가구 구매·이사 등)에 대해 개발사는 책임지지 않습니다. 실제 구매 전 실측을 권장합니다.</p>
+<h2>4. 문의</h2>
+<p>이메일: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+</section>
+<section id="en" hidden>
+<h1>Terms of Use — MovePlan</h1>
+<p><small>Effective: June 25, 2026</small></p>
+<h2>1. Service</h2>
+<p>MovePlan is an on-device 2D furniture/room layout simulator. Results may differ from real-world dimensions; simulations are for reference only.</p>
+<h2>2. In-App Purchase</h2>
+<p>"MovePlan Pro" is a one-time, non-consumable lifetime purchase via the Apple App Store. Refunds follow Apple's policy.</p>
+<h2>3. Disclaimer</h2>
+<p>The app is provided "as is." The developer is not liable for outcomes (furniture purchases, moving, etc.) based on layout/measurement decisions. Please verify with real measurements before purchasing.</p>
+<h2>4. Contact</h2>
+<p>Email: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+</section>
+<script>
+function setLang(l){for(const id of ['ko','en']){document.getElementById(id).hidden=(id!==l);var t=document.getElementById('tab-'+id);if(t)t.outerHTML=(id===l)?('<strong id="tab-'+id+'">'+t.textContent+'</strong>'):('<span id="tab-'+id+'">'+t.textContent+'</span>');}}
+(function(){var n=(navigator.language||'ko').slice(0,2);if(['ko','en'].includes(n))setLang(n);})();
+</script>
+</body>
+</html>
