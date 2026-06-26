@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZipNote — プライバシーポリシー</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #2b6cb0; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.9rem; }
+.lang-toggle a { margin-right: 10px; }
+.callout { background: #2b6cb011; border-left: 3px solid #2b6cb0; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="./privacy.ko.html">한국어</a> |
+  <a href="./privacy.en.html">English</a> |
+  <strong>日本語</strong> |
+  <a href="./privacy.zh-Hans.html">简体中文</a>
+</div>
+
+<h1>プライバシーポリシー — ZipNote</h1>
+<p><small>施行日：2026年6月26日 ・ 最終更新：2026年6月26日</small></p>
+
+<div class="callout">
+<strong>概要：</strong> ZipNote はいかなる個人情報も<strong>収集しません</strong>。物件、スコア、写真、メモ、設定などすべてのデータは SwiftData によって端末内のみに保存され、<strong>端末の外に出ることはありません</strong>。開発者の独自サーバーはなく、分析・追跡・広告 SDK も一切ありません。
+</div>
+
+<h2>1. 収集する情報</h2>
+<p>開発者はいかなる個人情報も収集しません。会員登録・ログイン・アカウント作成はなく、氏名・メールアドレス・電話番号などの識別情報を要求も保存もしません。アプリ内で作成したすべての内容は SwiftData で端末内のみに保存され、開発者のサーバーに送信されることはありません。</p>
+<ul>
+  <li><strong>物件情報 / スコア / メモ</strong> — ユーザーが入力した記録。端末内のみに保存されます。</li>
+  <li><strong>写真</strong> — 物件に添付した画像。アプリの端末内ストレージにのみコピー・保管されます。</li>
+  <li><strong>位置情報</strong> — ユーザーの許可がある場合、地図ピンの表示と最寄り駅までの徒歩距離の計算に使用されます。端末内のみに保存されます（第2項参照）。</li>
+  <li><strong>設定・言語・テーマ</strong> — アプリの利用環境の値。同様に端末内のみに保存されます。</li>
+</ul>
+
+<h2>2. 位置情報</h2>
+<p>ユーザーが許可した場合に限り、アプリは<strong>端末内で</strong>現在地を読み取り、次の2つの目的に使用します。</p>
+<ul>
+  <li>物件を追加する際に地図上にピンを表示する</li>
+  <li>最寄り駅までの徒歩距離を計算する</li>
+</ul>
+<p>位置情報は<strong>端末内のみ</strong>に保存され、開発者のサーバーに送信されず、追跡に使用されず、いかなる身元とも紐付けられません。地図の表示と経路案内は <strong>Apple MapKit</strong> を通じて行われ、座標やクエリは Apple のプライバシー規約に従って Apple が処理します。開発者はそれらを受信も保存もしません。</p>
+
+<h2>3. データの送信および第三者提供</h2>
+<p><strong>開発者はいかなるデータも外部に送信せず、第三者に提供しません。</strong> ユーザーデータに関する開発者側のネットワーク通信は発生しません。</p>
+<ul>
+  <li>独自のバックエンドサーバーなし</li>
+  <li>分析（Analytics）SDK なし</li>
+  <li>クラッシュレポート SDK なし</li>
+  <li>広告・追跡用識別子（IDFA）不使用 ・ ATT の同意要求なし</li>
+</ul>
+<p>地図・経路機能は <strong>Apple MapKit</strong> が、アプリ内課金は <strong>Apple StoreKit / App Store</strong> が処理します。これらはすべて Apple のプライバシーポリシーに従って Apple が処理する部分です。開発者は当該データを受け取りません。</p>
+
+<h2>4. 権限</h2>
+<ul>
+  <li><strong>位置情報（使用中のみ許可）</strong> — 物件の地図ピン表示と最寄り駅までの徒歩距離の計算に使用されます。</li>
+  <li><strong>写真（追加・添付）</strong> — システムの写真選択（PHPicker）を通じてユーザーが選んだ写真のみがアプリのストレージにコピーされます。写真ライブラリ全体へのアクセスはなく、アップロードもしません。</li>
+</ul>
+<p>すべての権限は拒否でき、iOS の設定からいつでも変更できます。</p>
+
+<h2>5. データの保管および削除</h2>
+<ul>
+  <li>すべてのデータは端末内のみに存在するため、ユーザーが完全な管理権を持ちます。</li>
+  <li>アプリ内で記録を直接編集・削除できます。</li>
+  <li>アプリを削除すると、端末内に保存されたすべてのデータも一緒に削除されます。アプリ内課金の権利は Apple アカウントを通じて復元できます。</li>
+</ul>
+
+<h2>6. 決済（アプリ内課金）</h2>
+<p>ZipNote は無料で提供され、任意で買い切りの永久ライセンス（Pro、1回限りの購入）を提供します。<strong>すべての決済は Apple の App Store / StoreKit を通じて処理</strong>され、開発者はカード番号などの決済情報を見ることも保存することもありません。決済および返金に関するデータの取り扱いは Apple のプライバシーポリシーに従います。</p>
+
+<h2>7. 子どものプライバシー</h2>
+<p>ZipNote はすべての年齢（4歳以上）が安全に利用できるよう設計されています。子どもを含む誰からも個人情報を収集しません。</p>
+
+<h2>8. 本ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、変更内容と施行日を本ページに掲載します。</p>
+
+<h2>9. お問い合わせ</h2>
+<p>メール：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+</body>
+</html>
