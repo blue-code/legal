@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoodCanvas — プライバシーポリシー</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #2b6cb0; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.9rem; }
+.lang-toggle a { margin-right: 10px; }
+.callout { background: #2b6cb011; border-left: 3px solid #2b6cb0; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="./privacy.ko.html">한국어</a> |
+  <a href="./privacy.en.html">English</a> |
+  <strong>日本語</strong> |
+  <a href="./privacy.zh-Hans.html">简体中文</a>
+</div>
+
+<h1>プライバシーポリシー — MoodCanvas</h1>
+<p><small>施行日: 2026年6月26日 · 最終更新: 2026年6月26日</small></p>
+
+<div class="callout">
+<strong>概要:</strong> MoodCanvas は一切の個人情報を<strong>収集しません</strong>。気分の記録（気分レベル、感情、アクティビティタグ、一行メモ、写真）や設定など、すべてのデータは<strong>端末内のローカルストレージ（アプリのデータベース）</strong>にのみ保存され、<strong>端末から外に出ることはありません</strong>。アカウント・ログイン・独自サーバーはなく、分析／トラッキング／広告 SDK も一切ありません。
+</div>
+
+<h2>1. 収集する情報</h2>
+<p>MoodCanvas は個人情報を収集しません。会員登録やログインはなく、氏名・メールアドレス・電話番号・位置情報などの識別情報を要求も保存もしません。アプリ内で作成したすべてのコンテンツは外部サーバーに送信されません。</p>
+<ul>
+  <li><strong>気分の記録</strong> — 気分レベル（1〜5段階）、任意の感情、アクティビティタグ、一行メモ、記録ごとに任意で添付する写真1枚。すべて端末内のローカルストレージ（アプリのデータベースとファイル）にのみ保存されます。</li>
+  <li><strong>アプリ設定</strong> — リマインダー、テーマ、言語、アプリロックなどの環境設定。同様に端末内にのみ保存されます。</li>
+</ul>
+
+<h2>2. データ送信および第三者への提供</h2>
+<p><strong>MoodCanvas はいかなるデータも外部に送信せず、第三者に提供しません。</strong></p>
+<ul>
+  <li>独自バックエンドサーバーなし — ユーザーのコンテンツに関するネットワーク通信は発生しません。</li>
+  <li>アカウント・ログインなし</li>
+  <li>分析（Analytics）ツールなし</li>
+  <li>クラッシュレポート SDK なし</li>
+  <li>広告またはトラッキング識別子（IDFA）の不使用</li>
+</ul>
+
+<h2>3. 権限の使用（すべて任意・端末内処理）</h2>
+<p>以下の権限はすべて任意で、該当機能を使用するときのみ要求されます。いずれの場合もデータが端末から外に出ることはありません。</p>
+<ul>
+  <li><strong>写真（PhotosPicker）</strong> — ユーザーが選んだ写真1枚のみがアプリの端末内ストレージにコピーされます。写真ライブラリ全体へのアクセスは行いません。</li>
+  <li><strong>マイクおよび音声認識</strong> — メモを音声で入力する任意機能にのみ使用されます。音声認識は<strong>端末内で（requiresOnDeviceRecognition = true）</strong>処理され、音声（オーディオ）は保存も送信もされません。</li>
+  <li><strong>Face ID／パスコード（LocalAuthentication）</strong> — 任意のアプリロックに使用されます。生体情報は Secure Enclave から外に出ることはなく、アプリがそれを見ることはありません。</li>
+  <li><strong>ローカル通知</strong> — 任意の毎日のリマインダー。端末内でスケジュールされ、サーバーは使用しません。</li>
+</ul>
+
+<h2>4. バックアップとエクスポート</h2>
+<p>データがアプリの外に出る唯一の場合は、<strong>ユーザー自身がバックアップファイルをエクスポートするとき</strong>です。ユーザーは完全バックアップ（JSON）またはレポート（PDF）を生成し、iOS の共有シートを通じて保存・共有先を自分で選択します。この操作は完全にユーザーが管理します。</p>
+
+<h2>5. 決済（アプリ内課金）</h2>
+<p>MoodCanvas は無料で提供され、任意で買い切りの永久アンロック（MoodCanvas Pro、₩7,000、非消耗型の1回購入）を提供します。<strong>すべての決済は Apple の App Store／StoreKit を通じて処理</strong>され、MoodCanvas はカード番号などの決済情報を見ることも保存することもありません。購入の復元も Apple アカウントを通じて行われます。</p>
+
+<h2>6. データの保管および削除</h2>
+<ul>
+  <li>すべてのデータはユーザーの端末内にのみ存在するため、ユーザーが完全な管理権を持ちます。</li>
+  <li>アプリ内でどの記録も直接編集・削除できます。</li>
+  <li>アプリを削除すると端末内のすべてのデータも一緒に削除されます。サーバー上に複製は存在しません。アプリ内課金の権利は Apple アカウントを通じて復元できます。</li>
+</ul>
+
+<h2>7. アカウントとログイン</h2>
+<p>MoodCanvas はアカウント作成やログインを必要としません。メールアドレス、電話番号、SNS 認証などの識別子も一切要求しません。</p>
+
+<h2>8. 子どものプライバシー</h2>
+<p>MoodCanvas はすべての年齢層が安全に使用できるように設計されています。一切のデータを収集しないため、子どもを含む誰の個人情報も収集されません。</p>
+
+<h2>9. ユーザーの権利</h2>
+<p>すべてのデータがユーザーの端末内に存在するため、アクセス・修正・削除の権利はアプリ内 UI および iOS のシステム設定を通じて直接行使できます。GDPR、CCPA など関連法令上の権利に関するお問い合わせは下記の連絡先までお願いします。</p>
+
+<h2>10. ポリシーの変更</h2>
+<p>本ポリシーが変更された場合、変更内容と施行日を本ページに掲載します。</p>
+
+<h2>11. お問い合わせ</h2>
+<p>開発者: <strong>Blue Code</strong><br>
+メール: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; MoodCanvas Legal</a></p>
+
+</body>
+</html>
