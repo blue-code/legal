@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오랜 (OLANE) — 개인정보처리방침 / Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; }
+h3 { margin-top: 24px; color: #E0A93B; }
+section { margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ccc4; padding: 8px 12px; text-align: left; }
+th { background: #E0A93B22; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #E0A93B; }
+.callout { background: #E0A93B14; border-left: 3px solid #E0A93B; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+small { color: #888; }
+a { color: #E0A93B; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a href="#ko">한국어</a> |
+  <a href="#en">English</a> |
+  <a href="#ja">日本語</a> |
+  <a href="#zh">简体中文</a> |
+  <a href="../index.html">← Back</a>
+</div>
+
+<!-- =========== KOREAN =========== -->
+<section id="ko">
+<h1>개인정보처리방침 — 오랜 (OLANE)</h1>
+<p><small>시행일: 2026년 7월 1일 · 최종 수정일: 2026년 7월 1일</small></p>
+
+<div class="callout">
+<strong>요약:</strong> 오랜(OLANE)은 여행 중 위치·걸음·사진 메타데이터를 <strong>기기 안에서만</strong> 조용히 모아, 여행이 끝나면 경로·걸음·사진을 하나로 엮은 시네마틱 회고 영상을 만들어 드립니다. <strong>서버가 없고, 계정이 없고, 분석·광고·크래시 리포팅 SDK가 없으며, 어떠한 네트워크 통신도 하지 않습니다.</strong> 위치·사진·모션 데이터는 회고 영상을 만들기 위해 기기 안에서 <em>사용</em>될 뿐, 어디로도 <em>전송·수집</em>되지 않습니다.
+</div>
+
+<h2>1. 수집하는 정보</h2>
+<p><strong>없음.</strong> 오랜은 어떠한 개인정보도 수집·전송하지 않습니다. 서버가 존재하지 않으므로 데이터를 보낼 곳 자체가 없습니다. 회원가입·로그인이 없으며 이름·이메일·전화번호 등 식별 정보를 요청하지 않습니다.</p>
+
+<h2>2. 기기 안에서만 사용되는 정보 ("수집"과 "사용"의 차이)</h2>
+<p>오랜의 핵심 기능(여행 중 조용한 기록 → 여행 종료 시 자동 회고 생성)을 위해 아래 정보가 <strong>오직 사용자의 기기 안에서만</strong> 사용됩니다. 이 정보들은 App Store 개인정보 라벨상 <strong>"데이터 미수집(Data Not Collected)"</strong>으로 표시되는데, 그 이유는 어떤 형태로도 외부에 <em>전송</em>되거나, 신원과 연결되거나, 사용자를 추적하는 데 쓰이지 않기 때문입니다.</p>
+<table>
+  <tr><th>정보</th><th>사용 목적</th><th>처리 위치</th><th>외부 전송</th></tr>
+  <tr><td>위치 정보 (GPS, 유의미한 위치 변경)</td><td>여행 경로(루트)를 그리고 방문 장소를 인식</td><td>기기 내 (Core Location)</td><td>없음</td></tr>
+  <tr><td>사진 및 메타데이터 (PhotoKit)</td><td>여행 중 촬영한 사진 중 회고에 담길 최적의 사진을 자동 선별</td><td>기기 내 (Vision, NaturalLanguage)</td><td>없음</td></tr>
+  <tr><td>걸음 수·모션 활동 (Core Motion)</td><td>걸음 수 통계 및 배터리 절약을 위한 추적 강도 조절</td><td>기기 내</td><td>없음</td></tr>
+</table>
+<p>이 데이터는 SwiftData를 통해 기기 내 앱 저장공간에만 보관되며, 앱을 삭제하면 함께 삭제됩니다. 오랜은 이 정보를 이용해 광고를 하거나, 사용자를 식별하거나, 다른 회사와 공유하지 않습니다.</p>
+
+<h2>3. 기기 내 인공지능 (Apple Intelligence)</h2>
+<p>회고 영상의 사진 선별, 경로 시각화, 날씨/시간대/걸음 수 캡션 작성은 Apple의 <strong>Foundation Models, Vision, NaturalLanguage</strong> 프레임워크를 이용해 전적으로 기기 안에서 이루어집니다. 클라우드 LLM이나 제3자 AI API는 전혀 사용하지 않습니다. Apple Intelligence를 사용할 수 없는 기기에서는 규칙 기반(rule-based) 문구로 자연스럽게 대체되며, 앱이 멈추거나 오류를 일으키지 않습니다.</p>
+
+<h2>4. Face ID — 볼트(Vault) 잠금</h2>
+<p>오랜의 <strong>볼트</strong> 기능은 여권·카드 등 민감한 사진을 별도로 잠가 보관할 수 있게 해줍니다. 이 잠금은 Apple의 <strong>LocalAuthentication</strong> 프레임워크를 통한 Face ID(또는 기기 암호)로 이루어집니다. 생체 정보는 Apple의 Secure Enclave 안에만 존재하며, 본 앱은 생체 데이터 자체를 절대 전달받거나, 열람하거나, 저장하지 않습니다. 앱은 단지 "인증 성공/실패" 결과만 통보받습니다.</p>
+
+<h2>5. 날씨 정보</h2>
+<p>회고 캡션에 표시되는 날씨 관련 무드는 <strong>네트워크 날씨 API를 호출하지 않고</strong> 기기 내에서 계절·시간대·위치 등 이미 보유한 정보를 바탕으로 추정됩니다. WeatherKit을 포함한 어떠한 외부 날씨 서비스와도 통신하지 않습니다.</p>
+
+<h2>6. 지도 (MapKit)</h2>
+<p>여행 경로는 iOS 기본 MapKit으로 표시됩니다. 오랜은 자체적으로 지도 타일을 첫 번째 당사자 서버에서 내려받지 않으며, 기기에 이미 캐시되었거나 번들된 지도 데이터만 사용합니다.</p>
+
+<h2>7. 제3자 서비스 / SDK</h2>
+<p>오랜은 분석(Analytics), 광고, 크래시 리포팅 SDK를 <strong>일절 사용하지 않습니다.</strong> 광고 식별자(IDFA)도 사용하지 않으며, 사용자를 추적하지 않습니다. 앱이 통신하는 유일한 외부 시스템은 인앱 결제 처리를 위한 Apple의 App Store(StoreKit)뿐입니다.</p>
+
+<h2>8. 인앱 결제 (Lifetime Pro)</h2>
+<p>오랜은 <strong>평생 Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>) 단일 비소모성 인앱 구매를 제공합니다. 결제는 전적으로 <strong>Apple App Store / StoreKit</strong>을 통해 처리되며, 카드 번호 등 결제 정보를 본 앱이나 개발자가 수집·열람하지 않습니다. 제3자 결제 대행사는 사용되지 않습니다. 환불·구매 복원은 사용자의 Apple 계정을 통해 Apple의 정책에 따라 처리됩니다.</p>
+
+<h2>9. 클라우드 동기화</h2>
+<p>v1.0 기준 오랜은 <strong>클라우드 동기화를 사용하지 않는 완전 로컬 우선(local-first)</strong> 앱입니다. 모든 여행 기록, 오랜지도(Memory Map), 회고 영상은 기기 내 저장소에만 존재합니다.</p>
+
+<h2>10. 데이터 보관 및 삭제</h2>
+<ul>
+  <li>모든 데이터가 기기 안에만 저장되므로, 사용자가 데이터를 완전히 통제합니다.</li>
+  <li>앱 안에서 개별 여행·회고·볼트 항목을 직접 삭제할 수 있습니다.</li>
+  <li>앱을 삭제하면 기기 내 모든 데이터가 즉시, 영구적으로 삭제됩니다.</li>
+</ul>
+
+<h2>11. 아동의 개인정보</h2>
+<p>본 앱은 13세 미만 아동을 대상으로 하지 않으며, 의도적으로 아동의 정보를 수집하지 않습니다. 애초에 어떠한 개인정보도 수집하지 않으므로 이는 모든 연령의 사용자에게 동일하게 적용됩니다.</p>
+
+<h2>12. 사용자의 권리</h2>
+<p>모든 데이터가 기기 안에 있으므로, 열람·정정·삭제 권리는 앱 내 화면과 iOS 시스템 설정을 통해 직접 행사할 수 있습니다. 앱 삭제만으로 모든 로컬 데이터가 즉시 제거됩니다.</p>
+
+<h2>13. 변경 사항</h2>
+<p>본 처리방침이 변경될 경우 본 페이지에서 공지하며, 변경 내용과 시행일을 명시합니다.</p>
+
+<h2>14. 문의</h2>
+<p>개발자: <strong>blue-code</strong><br>
+본 처리방침에 대한 문의는 <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> 으로 연락주세요.<br>
+번들 ID: <code>com.blueCode.OLANE</code></p>
+</section>
+
+<hr>
+
+<!-- =========== ENGLISH =========== -->
+<section id="en">
+<h1>Privacy Policy — OLANE (오랜)</h1>
+<p><small>Effective: July 1, 2026 · Last updated: July 1, 2026</small></p>
+
+<div class="callout">
+<strong>Summary:</strong> OLANE silently gathers your location, step count, and photo metadata <strong>on your device only</strong> while you travel, then — once the trip ends — turns your route, steps, and photos into a cinematic recap. <strong>There is no server, no account, no analytics/advertising/crash-reporting SDK, and OLANE makes zero network calls.</strong> Location, photo, and motion data are <em>used</em> on-device to build the recap — they are never <em>transmitted</em> or <em>collected</em> anywhere.
+</div>
+
+<h2>1. Information We Collect</h2>
+<p><strong>None.</strong> OLANE does not collect or transmit any personal data. There is no backend server, so there is nowhere for data to be sent. There is no sign-up or login, and the app never asks for your name, email, or phone number.</p>
+
+<h2>2. Information Used On-Device Only (the difference between "collected" and "used")</h2>
+<p>To power OLANE's core feature — silent tracking during a trip, followed by an automatic recap when the trip ends — the following information is used <strong>only on your device</strong>. In App Store privacy labels this appears as <strong>"Data Not Collected"</strong> because none of it is ever transmitted off-device, linked to your identity, or used to track you.</p>
+<table>
+  <tr><th>Data</th><th>Purpose</th><th>Processed</th><th>Transmitted off-device</th></tr>
+  <tr><td>Location (GPS, significant location change)</td><td>Draw your travel route and recognize visited places</td><td>On-device (Core Location)</td><td>Never</td></tr>
+  <tr><td>Photos &amp; metadata (PhotoKit)</td><td>Automatically select the best photos from your trip for the recap</td><td>On-device (Vision, NaturalLanguage)</td><td>Never</td></tr>
+  <tr><td>Step count / motion activity (Core Motion)</td><td>Step statistics and battery-efficient tracking coarsening</td><td>On-device</td><td>Never</td></tr>
+</table>
+<p>This data is stored only in the app's local SwiftData store on your device and is deleted along with the app if you uninstall it. OLANE never uses this information for advertising, to identify you, or to share with any other company.</p>
+
+<h2>3. On-Device AI (Apple Intelligence)</h2>
+<p>Photo highlight selection, route visualization, and weather/timezone/step captions in your recap are produced entirely on-device using Apple's <strong>Foundation Models, Vision, and NaturalLanguage</strong> frameworks. No cloud LLM or third-party AI API is ever used. On devices where Apple Intelligence is unavailable, the app gracefully falls back to rule-based template captions — it never crashes or blocks the recap.</p>
+
+<h2>4. Face ID — Vault Lock</h2>
+<p>OLANE's <strong>Vault</strong> feature lets you lock sensitive photos (passports, cards) behind an extra layer of protection. This lock uses Face ID (or your device passcode) via Apple's <strong>LocalAuthentication</strong> framework. Your biometric data lives only inside Apple's Secure Enclave — this app never receives, sees, or stores the biometric data itself. The app only receives a pass/fail authentication result.</p>
+
+<h2>5. Weather</h2>
+<p>The weather-related mood shown in recap captions is estimated on-device from information the app already has (season, time of day, location) — <strong>no network weather API is ever called</strong>, including WeatherKit or any other external weather service.</p>
+
+<h2>6. Maps (MapKit)</h2>
+<p>Your travel route is displayed using iOS's built-in MapKit. OLANE does not fetch map tiles from a first-party server; it uses only tiles already cached on your device or bundled with iOS.</p>
+
+<h2>7. Third-Party Services / SDKs</h2>
+<p>OLANE uses <strong>no</strong> analytics, advertising, or crash-reporting SDKs. It does not use the advertising identifier (IDFA) and does not track you. The only external system the app ever communicates with is Apple's App Store (StoreKit) for in-app purchase processing.</p>
+
+<h2>8. In-App Purchase (Lifetime Pro)</h2>
+<p>OLANE offers a single non-consumable in-app purchase, <strong>Lifetime Pro</strong> (<code>com.blueCode.OLANE.lifetime</code>). Payment is processed entirely through <strong>Apple's App Store / StoreKit</strong>; neither this app nor its developer collects or views your payment details. No third-party payment processor is used. Refunds and purchase restoration are handled through your Apple account per Apple's policies.</p>
+
+<h2>9. Cloud Sync</h2>
+<p>As of v1.0, OLANE is a fully <strong>local-first app with no cloud sync</strong>. All trips, the Memory Map, and recap videos exist only in on-device storage.</p>
+
+<h2>10. Data Retention &amp; Deletion</h2>
+<ul>
+  <li>Because all data lives only on your device, you are always in full control of it.</li>
+  <li>You can delete individual trips, recaps, or Vault items directly within the app.</li>
+  <li>Deleting the app immediately and permanently removes all data stored on your device.</li>
+</ul>
+
+<h2>11. Children's Privacy</h2>
+<p>OLANE is not directed at children under 13 and does not knowingly collect information from children. Since the app collects no personal data of any kind, this applies equally to users of any age.</p>
+
+<h2>12. Your Rights</h2>
+<p>Because all data resides on your device, you can access, correct, or delete it directly through the app's screens and iOS system settings. Deleting the app alone removes all local data instantly.</p>
+
+<h2>13. Changes</h2>
+<p>Any changes to this policy will be posted on this page along with the updated content and effective date.</p>
+
+<h2>14. Contact</h2>
+<p>Developer: <strong>blue-code</strong><br>
+Questions about this policy: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+Bundle ID: <code>com.blueCode.OLANE</code></p>
+</section>
+
+<hr>
+
+<!-- =========== JAPANESE =========== -->
+<section id="ja">
+<h1>プライバシーポリシー — OLANE (オレン)</h1>
+<p><small>施行日: 2026年7月1日 · 最終更新日: 2026年7月1日</small></p>
+
+<div class="callout">
+<strong>要約:</strong> OLANEは旅行中、位置情報・歩数・写真メタデータを<strong>端末内でのみ</strong>静かに記録し、旅が終わると経路・歩数・写真をひとつにまとめたシネマティックな回想動画を作成します。<strong>サーバーはなく、アカウントもなく、分析・広告・クラッシュレポートSDKもなく、ネットワーク通信は一切行いません。</strong>位置情報・写真・モーションデータは回想動画作成のため端末内で<em>使用</em>されるだけで、外部に<em>送信・収集</em>されることはありません。
+</div>
+
+<h2>1. 収集する情報</h2>
+<p><strong>ありません。</strong>OLANEはいかなる個人情報も収集・送信しません。バックエンドサーバーが存在しないため、データを送る先自体がありません。会員登録やログインはなく、氏名・メール・電話番号などを求めることもありません。</p>
+
+<h2>2. 端末内でのみ使用される情報(「収集」と「使用」の違い)</h2>
+<p>OLANEの中核機能(旅行中の静かな記録 → 旅行終了時の自動回想生成)のために、以下の情報が<strong>ユーザーの端末内でのみ</strong>使用されます。App Storeのプライバシーラベル上は<strong>「データ非収集(Data Not Collected)」</strong>と表示されますが、これはどの情報も外部へ<em>送信</em>されず、個人の識別やトラッキングに使われないためです。</p>
+<table>
+  <tr><th>データ</th><th>目的</th><th>処理場所</th><th>外部送信</th></tr>
+  <tr><td>位置情報(GPS、有意な位置情報の変化)</td><td>旅行ルートの描画と訪問地の認識</td><td>端末内(Core Location)</td><td>なし</td></tr>
+  <tr><td>写真とメタデータ(PhotoKit)</td><td>旅行中の写真から回想動画に使うベストショットを自動選定</td><td>端末内(Vision, NaturalLanguage)</td><td>なし</td></tr>
+  <tr><td>歩数・モーションアクティビティ(Core Motion)</td><td>歩数統計とバッテリー効率のための記録頻度の調整</td><td>端末内</td><td>なし</td></tr>
+</table>
+<p>これらのデータはSwiftDataによる端末内のアプリ保存領域にのみ保管され、アプリを削除すると一緒に削除されます。OLANEはこれらの情報を広告目的やユーザー識別、他社との共有には一切使用しません。</p>
+
+<h2>3. 端末内AI(Apple Intelligence)</h2>
+<p>回想動画の写真選定、ルートの可視化、天気・タイムゾーン・歩数キャプションの生成は、Appleの<strong>Foundation Models、Vision、NaturalLanguage</strong>フレームワークを用いてすべて端末内で行われます。クラウドLLMや第三者のAI APIは一切使用しません。Apple Intelligenceが利用できない端末では、ルールベースの定型キャプションに自然に切り替わり、アプリがクラッシュしたりブロックされたりすることはありません。</p>
+
+<h2>4. Face ID — Vault(保管庫)のロック</h2>
+<p>OLANEの<strong>Vault</strong>機能では、パスポートやカードなど機密性の高い写真を追加のロックで保護できます。このロックはAppleの<strong>LocalAuthentication</strong>フレームワークを通じたFace ID(またはパスコード)によって行われます。生体情報はAppleのSecure Enclave内にのみ存在し、本アプリが生体データ自体を受け取ったり、閲覧したり、保存したりすることはありません。アプリが受け取るのは認証の成功・失敗という結果のみです。</p>
+
+<h2>5. 天気情報</h2>
+<p>回想キャプションに表示される天気に関するムードは、<strong>ネットワークの天気APIを一切呼び出さず</strong>、季節・時間帯・位置情報などアプリがすでに保有する情報から端末内で推定されます。WeatherKitを含むいかなる外部天気サービスとも通信しません。</p>
+
+<h2>6. 地図(MapKit)</h2>
+<p>旅行ルートはiOS標準のMapKitで表示されます。OLANEは自社サーバーから地図タイルを取得することはなく、端末に既にキャッシュされているか、iOSにバンドルされている地図データのみを使用します。</p>
+
+<h2>7. 第三者サービス / SDK</h2>
+<p>OLANEは分析(アナリティクス)・広告・クラッシュレポートSDKを<strong>一切使用しません。</strong>広告識別子(IDFA)も使用せず、ユーザーを追跡しません。アプリが通信する唯一の外部システムは、アプリ内課金処理のためのApple App Store(StoreKit)のみです。</p>
+
+<h2>8. アプリ内課金(Lifetime Pro)</h2>
+<p>OLANEは単一の非消費型アプリ内課金<strong>Lifetime Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>)を提供します。決済は完全に<strong>Apple App Store / StoreKit</strong>を通じて処理され、本アプリおよび開発者はカード情報などの決済情報を収集・閲覧しません。第三者の決済代行業者は使用されません。返金・購入の復元はAppleのポリシーに従い、ユーザーのApple IDを通じて処理されます。</p>
+
+<h2>9. クラウド同期</h2>
+<p>v1.0時点でOLANEはクラウド同期を使用しない、完全に<strong>ローカルファースト</strong>のアプリです。すべての旅行記録、Memory Map、回想動画は端末内のストレージにのみ存在します。</p>
+
+<h2>10. データの保持と削除</h2>
+<ul>
+  <li>すべてのデータは端末内にのみ保存されるため、ユーザーが完全にコントロールできます。</li>
+  <li>アプリ内で個々の旅行・回想・Vault項目を直接削除できます。</li>
+  <li>アプリを削除すると、端末内のすべてのデータが即座かつ永久に削除されます。</li>
+</ul>
+
+<h2>11. 子どものプライバシー</h2>
+<p>本アプリは13歳未満の子どもを対象としておらず、意図的に子どもの情報を収集しません。そもそもいかなる個人情報も収集しないため、これはすべての年齢のユーザーに等しく適用されます。</p>
+
+<h2>12. ユーザーの権利</h2>
+<p>すべてのデータが端末内にあるため、アクセス・訂正・削除の権利はアプリ内の画面とiOSのシステム設定を通じて直接行使できます。アプリを削除するだけで、すべてのローカルデータが即座に削除されます。</p>
+
+<h2>13. 変更</h2>
+<p>本ポリシーに変更がある場合は、変更内容と施行日とともに本ページで告知します。</p>
+
+<h2>14. お問い合わせ</h2>
+<p>開発者: <strong>blue-code</strong><br>
+本ポリシーに関するお問い合わせ: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+バンドルID: <code>com.blueCode.OLANE</code></p>
+</section>
+
+<hr>
+
+<!-- =========== CHINESE (Simplified) =========== -->
+<section id="zh">
+<h1>隐私政策 — OLANE(奥澜)</h1>
+<p><small>生效日期:2026年7月1日 · 最后更新:2026年7月1日</small></p>
+
+<div class="callout">
+<strong>摘要:</strong>OLANE 在您旅行期间会<strong>仅在设备本地</strong>静默记录位置、步数与照片元数据;旅程结束后,应用会将路线、步数与照片自动汇编成一部电影般的回忆视频。<strong>本应用没有服务器、没有账户、没有分析/广告/崩溃报告 SDK,也不会进行任何网络通信。</strong>位置、照片与运动数据仅在设备本地被<em>使用</em>以生成回忆视频,绝不会被<em>传输或收集</em>到任何地方。
+</div>
+
+<h2>1. 我们收集的信息</h2>
+<p><strong>无。</strong>OLANE 不收集或传输任何个人数据。由于不存在后端服务器,数据根本没有可发送的目的地。应用无需注册或登录,也从不询问您的姓名、邮箱或电话号码。</p>
+
+<h2>2. 仅在设备本地使用的信息("收集"与"使用"的区别)</h2>
+<p>为实现 OLANE 的核心功能(旅行期间静默记录 → 旅程结束后自动生成回忆),以下信息<strong>仅在您的设备本地</strong>被使用。在 App Store 隐私标签中,这些会显示为<strong>"不收集数据(Data Not Collected)"</strong>,因为它们从未被传输到设备之外,也从未与您的身份关联或用于追踪您。</p>
+<table>
+  <tr><th>数据</th><th>用途</th><th>处理位置</th><th>是否传出设备</th></tr>
+  <tr><td>位置信息(GPS、重要位置变化)</td><td>绘制旅行路线并识别到访地点</td><td>设备本地(Core Location)</td><td>从不</td></tr>
+  <tr><td>照片及元数据(PhotoKit)</td><td>从旅行照片中自动挑选适合放入回忆视频的最佳照片</td><td>设备本地(Vision、NaturalLanguage)</td><td>从不</td></tr>
+  <tr><td>步数 / 运动活动(Core Motion)</td><td>步数统计,以及为省电而调整记录频率</td><td>设备本地</td><td>从不</td></tr>
+</table>
+<p>这些数据仅通过 SwiftData 存储在设备本地的应用存储空间中,卸载应用时会一并删除。OLANE 绝不会将这些信息用于广告投放、识别您的身份,或与其他公司共享。</p>
+
+<h2>3. 设备端人工智能(Apple Intelligence)</h2>
+<p>回忆视频中的照片精选、路线可视化以及天气/时区/步数文案,完全通过 Apple 的<strong>Foundation Models、Vision 和 NaturalLanguage</strong> 框架在设备本地生成。绝不使用任何云端大语言模型或第三方 AI API。在无法使用 Apple Intelligence 的设备上,应用会自动降级为基于规则的模板文案,不会崩溃或阻塞回忆生成。</p>
+
+<h2>4. Face ID — Vault(保险箱)锁定</h2>
+<p>OLANE 的 <strong>Vault(保险箱)</strong> 功能可让您为护照、卡片等敏感照片加上额外锁定保护。此锁定通过 Apple 的 <strong>LocalAuthentication</strong> 框架使用 Face ID(或设备密码)完成。您的生物识别数据仅存在于 Apple 的 Secure Enclave 中——本应用绝不会接收、查看或存储生物识别数据本身,应用只会收到"验证成功/失败"的结果。</p>
+
+<h2>5. 天气信息</h2>
+<p>回忆文案中显示的天气相关氛围,是<strong>在不调用任何网络天气 API 的情况下</strong>,基于应用已有的信息(季节、时间、位置)在设备本地推断得出的。本应用不会与包括 WeatherKit 在内的任何外部天气服务通信。</p>
+
+<h2>6. 地图(MapKit)</h2>
+<p>旅行路线通过 iOS 内置的 MapKit 显示。OLANE 不会从自有服务器获取地图图块,仅使用设备已缓存或 iOS 自带的地图数据。</p>
+
+<h2>7. 第三方服务 / SDK</h2>
+<p>OLANE <strong>完全不使用</strong>分析、广告或崩溃报告 SDK,不使用广告标识符(IDFA),也不追踪用户。应用唯一会通信的外部系统是用于处理应用内购买的 Apple App Store(StoreKit)。</p>
+
+<h2>8. 应用内购买(Lifetime Pro)</h2>
+<p>OLANE 提供单一的非消耗型应用内购买项目 <strong>Lifetime Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>)。付款完全通过 <strong>Apple App Store / StoreKit</strong> 处理,本应用及其开发者不会收集或查看您的付款信息。不使用任何第三方支付处理商。退款与购买恢复通过您的 Apple 账户,依据 Apple 的政策处理。</p>
+
+<h2>9. 云同步</h2>
+<p>截至 v1.0,OLANE 是完全<strong>本地优先(local-first)、不使用云同步</strong>的应用。所有旅行记录、Memory Map(记忆地图)与回忆视频均仅存在于设备本地存储中。</p>
+
+<h2>10. 数据保留与删除</h2>
+<ul>
+  <li>由于所有数据仅存储在您的设备上,您始终完全掌控这些数据。</li>
+  <li>您可以在应用内直接删除单个旅行、回忆或 Vault 项目。</li>
+  <li>卸载应用会立即永久删除设备上存储的所有数据。</li>
+</ul>
+
+<h2>11. 儿童隐私</h2>
+<p>本应用不面向 13 岁以下儿童,且不会故意收集儿童信息。由于本应用本身不收集任何个人数据,这一点对所有年龄段的用户同样适用。</p>
+
+<h2>12. 用户权利</h2>
+<p>由于所有数据都保存在您的设备上,您可以直接通过应用内界面和 iOS 系统设置来访问、更正或删除数据。仅需卸载应用,即可立即清除所有本地数据。</p>
+
+<h2>13. 变更</h2>
+<p>本政策如有变更,将在本页面公布变更内容及生效日期。</p>
+
+<h2>14. 联系我们</h2>
+<p>开发者:<strong>blue-code</strong><br>
+关于本政策的咨询:<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+应用包标识符:<code>com.blueCode.OLANE</code></p>
+</section>
+
+</body>
+</html>
