@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlindFire — Terms of Use / 이용약관</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+a { color: #007AFF; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.95rem; }
+.lang-toggle a { margin-right: 10px; cursor: pointer; }
+small { color: #888; }
+section[hidden] { display: none; }
+</style>
+</head>
+<body>
+<div class="lang-toggle">
+  <a onclick="setLang('ko')"><strong id="tab-ko">한국어</strong></a> |
+  <a onclick="setLang('en')"><span id="tab-en">English</span></a>
+</div>
+
+<section id="ko">
+<h1>이용약관 — BlindFire</h1>
+<p><small>시행일: 2026년 7월 6일</small></p>
+<h2>1. 서비스</h2>
+<p>BlindFire는 1:1 턴제 포격 심리전 게임입니다. 솔로(봇)·핫시트·로컬 네트워크 대전을 제공합니다.</p>
+<h2>2. 인앱 구매</h2>
+<p>친구 초대(호스트) 대전은 무료로 3판까지 이용할 수 있으며, 이후 "호스트 무제한 해제"(비소모성, 1회 구매)로 무제한 이용할 수 있습니다. 초대받아 참가하는 쪽은 언제나 무료입니다. 결제·환불은 Apple App Store 정책을 따릅니다.</p>
+<h2>3. 면책</h2>
+<p>본 앱은 "있는 그대로" 제공됩니다. 개발사는 앱 사용으로 인한 간접적 손해에 대해 법이 허용하는 범위에서 책임을 지지 않습니다.</p>
+<h2>4. 문의</h2>
+<p>이메일: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+</section>
+
+<section id="en" hidden>
+<h1>Terms of Use — BlindFire</h1>
+<p><small>Effective: July 6, 2026</small></p>
+<h2>1. The Service</h2>
+<p>BlindFire is a 1v1 turn-based blind-artillery game offering solo (vs. bot), hotseat, and local-network matches.</p>
+<h2>2. In-App Purchase</h2>
+<p>Hosting a friend match is free for the first 3 games; after that, "Unlock Unlimited Hosting" (non-consumable, one-time purchase) enables unlimited hosting. Joining a friend's game is always free. Payments and refunds follow Apple App Store policy.</p>
+<h2>3. Disclaimer</h2>
+<p>The app is provided "as is." To the extent permitted by law, the developer is not liable for indirect damages arising from use of the app.</p>
+<h2>4. Contact</h2>
+<p>Email: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+</section>
+
+<script>
+function setLang(l) {
+  ['ko','en'].forEach(function(x){
+    document.getElementById(x).hidden = (x !== l);
+    var t = document.getElementById('tab-' + x);
+    if (t) t.outerHTML = (x === l)
+      ? '<strong id="tab-' + x + '">' + t.textContent + '</strong>'
+      : '<span id="tab-' + x + '">' + t.textContent + '</span>';
+  });
+}
+(function(){ var n=(navigator.language||'ko').toLowerCase(); if(!n.startsWith('ko')) setLang('en'); })();
+</script>
+</body>
+</html>
