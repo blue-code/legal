@@ -33,11 +33,12 @@
   <!-- ───────────── KOREAN ───────────── -->
   <section id="ko">
     <h1>작은 품평 개인정보처리방침</h1>
-    <p class="muted">최종 업데이트: 2026년 7월 7일</p>
+    <p class="muted">최종 업데이트: 2026년 7월 10일</p>
     <div class="lede">
       <p><strong>작은 품평은 당신의 기록을 수집하지 않습니다.</strong> 모든 품평, 별점, 사진, 위치, 태그는
-      당신의 기기 안에만 저장되며, 우리 서버나 제3자에게 전송되지 않습니다. 계정도, 로그인도, 광고도,
-      분석 도구도 없습니다. App Store 개인정보 라벨은 <strong>“데이터가 수집되지 않음(Data Not Collected)”</strong>입니다.</p>
+      당신의 기기와(iCloud에 로그인 시) 당신의 개인 iCloud 계정에만 저장되며, 우리 서버나 제3자에게 전송되지 않습니다.
+      계정 가입도, 로그인도, 광고도, 분석 도구도 없습니다. App Store 개인정보 라벨은
+      <strong>“데이터가 수집되지 않음(Data Not Collected)”</strong>입니다.</p>
     </div>
 
     <h2>1. 우리가 수집하는 정보</h2>
@@ -59,11 +60,14 @@
       <li><strong>위치</strong> — (옵트인) 품평에 장소를 함께 남기기 위해. 좌표와 장소 이름은 기기에만 저장됩니다.</li>
     </ul>
 
-    <h2>4. 네트워크 사용 (유일한 예외)</h2>
-    <p>작은 품평의 핵심 기능은 인터넷 없이 동작합니다. <strong>단 하나의 선택적 네트워크 통신</strong>이 있습니다:
-    당신이 기록에서 “현재 위치”를 눌렀을 때, 위치 좌표를 사람이 읽을 수 있는 <em>주소·장소 이름</em>으로
-    바꾸기 위해 Apple의 지도 서비스(역지오코딩)로 좌표가 전송됩니다. 이는 Apple이 처리하는 시스템 서비스이며,
-    우리(개발자)의 서버로는 어떤 데이터도 전송되지 않습니다. 위치를 사용하지 않으면 이 통신도 발생하지 않습니다.</p>
+    <h2>4. 네트워크 사용 (예외 항목)</h2>
+    <p>작은 품평의 핵심 기능은 인터넷 없이 동작합니다. 아래 통신만 예외이며, 모두 Apple 시스템 서비스이거나
+    당신의 개인 iCloud로 이루어집니다. <strong>우리(개발자)의 서버로는 어떤 데이터도 전송되지 않습니다.</strong></p>
+    <ul>
+      <li><strong>주소 변환</strong> — 기록에서 “현재 위치”를 누르면, 좌표가 Apple 지도(역지오코딩)로 전송되어 주소·장소 이름으로 변환됩니다.</li>
+      <li><strong>지도 표시</strong> — 지도 화면에서 기록된 장소를 보여주기 위해 Apple 지도에서 지도 이미지를 불러옵니다.</li>
+      <li><strong>iCloud 동기화</strong> — iCloud에 로그인되어 있으면, 당신의 기록이 <em>당신의 개인 iCloud 계정</em>(Apple CloudKit)을 통해 당신의 다른 기기와 비공개로 동기화됩니다. 우리는 이 데이터에 접근할 수 없습니다.</li>
+    </ul>
 
     <h2>5. 데이터 공유·판매</h2>
     <p>작은 품평은 당신의 데이터를 <strong>누구와도 공유하거나 판매하지 않습니다.</strong> 광고 네트워크,
@@ -88,12 +92,12 @@
   <!-- ───────────── ENGLISH ───────────── -->
   <section id="en">
     <h1>Little Review Privacy Policy</h1>
-    <p class="muted">Last updated: July 7, 2026</p>
+    <p class="muted">Last updated: July 10, 2026</p>
     <div class="lede">
       <p><strong>Little Review does not collect your reviews.</strong> Every review, rating, photo,
-      location, and tag stays on your device and is never sent to our servers or any third party. There
-      are no accounts, no logins, no ads, and no analytics. The App Store privacy label is
-      <strong>“Data Not Collected.”</strong></p>
+      location, and tag stays on your device and, when you're signed into iCloud, your own private iCloud
+      account — never on our servers or any third party. There are no accounts to create, no logins, no ads,
+      and no analytics. The App Store privacy label is <strong>“Data Not Collected.”</strong></p>
     </div>
 
     <h2>1. Information we collect</h2>
@@ -115,12 +119,14 @@
       <li><strong>Location</strong> — (opt-in) to tag a review with a place. Coordinates and place name stay on device.</li>
     </ul>
 
-    <h2>4. Network use (the only exception)</h2>
-    <p>Little Review's core works fully offline. There is <strong>one optional network call</strong>: when
-    you tap “current location” in a review, the coordinate is sent to Apple's mapping service
-    (reverse-geocoding) to turn it into a readable <em>address / place name</em>. This is a system service
-    handled by Apple; no data is sent to our (developer) servers. If you don't use location, this call
-    never happens.</p>
+    <h2>4. Network use (exceptions)</h2>
+    <p>Little Review's core works fully offline. Only the calls below reach the network — all to Apple system
+    services or your own private iCloud. <strong>No data is ever sent to our (developer) servers.</strong></p>
+    <ul>
+      <li><strong>Address lookup</strong> — when you tap “current location,” the coordinate is sent to Apple Maps (reverse-geocoding) to turn it into a readable address / place name.</li>
+      <li><strong>Map display</strong> — the Map screen loads map imagery from Apple Maps to show your recorded places.</li>
+      <li><strong>iCloud sync</strong> — when you're signed into iCloud, your records sync privately across your own devices through <em>your personal iCloud account</em> (Apple CloudKit). We cannot access this data.</li>
+    </ul>
 
     <h2>5. Sharing &amp; selling</h2>
     <p>We <strong>never share or sell</strong> your data. The app contains no ad networks, analytics SDKs,
@@ -145,12 +151,12 @@
   <!-- ───────────── JAPANESE ───────────── -->
   <section id="ja">
     <h1>ちいさな品評 プライバシーポリシー</h1>
-    <p class="muted">最終更新日: 2026年7月7日</p>
+    <p class="muted">最終更新日: 2026年7月10日</p>
     <div class="lede">
       <p><strong>ちいさな品評はあなたの記録を収集しません。</strong> すべての品評・評価・写真・位置・タグは
-      端末内にのみ保存され、当社のサーバーや第三者に送信されることはありません。アカウント・ログイン・
-      広告・分析は一切ありません。App Storeのプライバシーラベルは
-      <strong>「データを収集していません」</strong>です。</p>
+      あなたの端末と（iCloudにサインイン時は）あなた自身のiCloudにのみ保存され、当社のサーバーや第三者に
+      送信されることはありません。アカウント・ログイン・広告・分析は一切ありません。App Storeの
+      プライバシーラベルは<strong>「データを収集していません」</strong>です。</p>
     </div>
     <h2>1. 収集する情報</h2>
     <p><strong>ありません。</strong> ちいさな品評は開発者のサーバーを持ちません。品評、評価、ひとことメモ、
@@ -167,11 +173,14 @@
       <li><strong>写真</strong> — 選んだ写真を品評に添付するためだけに使用します。ライブラリ全体を読み取らず、写真は端末を離れません。</li>
       <li><strong>位置情報</strong> —（オプトイン）品評に場所を添えるため。座標と地名は端末内に保存されます。</li>
     </ul>
-    <h2>4. ネットワークの利用（唯一の例外）</h2>
-    <p>主要機能はオフラインで動作します。<strong>唯一の任意のネットワーク通信</strong>は、記録で「現在地」を
-    タップしたとき、位置座標を読みやすい<em>住所・地名</em>に変換するためAppleの地図サービス（リバース
-    ジオコーディング）へ座標を送信することです。これはAppleが処理するシステムサービスであり、当社（開発者）の
-    サーバーへは何も送信されません。位置情報を使わなければこの通信は発生しません。</p>
+    <h2>4. ネットワークの利用（例外）</h2>
+    <p>主要機能はオフラインで動作します。以下の通信のみ例外で、すべてAppleのシステムサービスまたはあなた自身の
+    iCloudです。<strong>当社（開発者）のサーバーへは何も送信されません。</strong></p>
+    <ul>
+      <li><strong>住所変換</strong> — 「現在地」をタップすると、座標がApple地図（リバースジオコーディング）へ送られ住所・地名に変換されます。</li>
+      <li><strong>地図表示</strong> — マップ画面で記録した場所を表示するため、Apple地図から地図画像を読み込みます。</li>
+      <li><strong>iCloud同期</strong> — iCloudにサインインしていると、記録が<em>あなた自身のiCloud</em>（Apple CloudKit）を通じて他の端末と非公開で同期されます。当社はこのデータにアクセスできません。</li>
+    </ul>
     <h2>5. 共有・販売</h2>
     <p>あなたのデータを<strong>共有・販売しません。</strong> 情報を外部へ送る広告・分析・クラッシュ
     レポートのコードは含まれていません。</p>
@@ -191,11 +200,11 @@
   <!-- ───────────── CHINESE ───────────── -->
   <section id="zh">
     <h1>小小品评 隐私政策</h1>
-    <p class="muted">最后更新：2026年7月7日</p>
+    <p class="muted">最后更新：2026年7月10日</p>
     <div class="lede">
-      <p><strong>小小品评不会收集您的记录。</strong> 所有品评、评分、照片、位置和标签都仅保存在您的设备上，
-      绝不会发送到我们的服务器或任何第三方。没有账户、没有登录、没有广告、没有分析工具。App Store 隐私
-      标签为<strong>“未收集数据”</strong>。</p>
+      <p><strong>小小品评不会收集您的记录。</strong> 所有品评、评分、照片、位置和标签都仅保存在您的设备，
+      以及（登录 iCloud 时）您自己的 iCloud 账户中，绝不会发送到我们的服务器或任何第三方。没有账户、没有登录、
+      没有广告、没有分析工具。App Store 隐私标签为<strong>“未收集数据”</strong>。</p>
     </div>
     <h2>1. 我们收集的信息</h2>
     <p><strong>没有。</strong> 小小品评不运营任何开发者服务器。您的品评、评分、点评、附加的照片、标签与
@@ -212,10 +221,14 @@
       <li><strong>照片</strong> — 仅用于将您选择的照片附加到品评。我们不会扫描相册，照片不会离开您的手机。</li>
       <li><strong>位置</strong> —（可选开启）用于为品评标注地点。坐标与地点名称保存在设备上。</li>
     </ul>
-    <h2>4. 网络使用（唯一例外）</h2>
-    <p>核心功能完全离线运行。<strong>唯一的可选网络通信</strong>是：当您在记录中点按“当前位置”时，为了把坐标
-    转换为可读的<em>地址／地点名称</em>，坐标会被发送给 Apple 的地图服务（反向地理编码）。这是由 Apple 处理的
-    系统服务，不会向我们（开发者）的服务器发送任何数据。若不使用位置，则不会发生此通信。</p>
+    <h2>4. 网络使用（例外）</h2>
+    <p>核心功能完全离线运行。仅以下通信会联网，且均为 Apple 系统服务或您自己的 iCloud。<strong>绝不会向我们
+    （开发者）的服务器发送任何数据。</strong></p>
+    <ul>
+      <li><strong>地址转换</strong> — 点按“当前位置”时，坐标会发送给 Apple 地图（反向地理编码）以转换为地址／地点名称。</li>
+      <li><strong>地图显示</strong> — 地图页面会从 Apple 地图加载地图图像，以显示您记录的地点。</li>
+      <li><strong>iCloud 同步</strong> — 登录 iCloud 后，您的记录会通过<em>您自己的 iCloud 账户</em>（Apple CloudKit）在您的设备之间私密同步。我们无法访问这些数据。</li>
+    </ul>
     <h2>5. 共享与出售</h2>
     <p>我们<strong>绝不共享或出售</strong>您的数据。应用不包含任何向设备外传输信息的广告网络、分析 SDK
     或崩溃报告器。</p>
