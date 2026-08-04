@@ -29,10 +29,17 @@
 <p><strong>없습니다.</strong> 이름, 이메일, 전화번호, 위치, 광고 식별자, 사용 통계 등 어떤 것도
 수집하거나 전송하지 않습니다. 분석 도구나 광고 SDK를 사용하지 않습니다.</p>
 
+<h2>상대에게 전달되는 것 (선택)</h2>
+<p>설정에서 켠 경우에만 <strong>성별</strong>과 <strong>나이대</strong>(예: 30대)가 대화 요청 시
+상대 기기로 전달됩니다. 정확한 생년월일이나 나이는 전달되지 않고, 기기에만 남습니다. 두 항목 모두
+기본값은 꺼짐이며 언제든 다시 끌 수 있습니다. 개발자에게는 전달되지 않습니다.</p>
+
 <h2>기기에만 저장되는 것</h2>
 <ul>
 <li>게임 진행 상황과 기록(점수·소거 줄 수·플레이 시간)</li>
 <li>설정(테마, 소리, 진동, 수신 태도)</li>
+<li>직접 밝힌 태어난 해와 성별 — 대화 기능의 연령 확인(만 18세 이상)에 쓰이며, 공유를 켜지 않으면
+    기기 밖으로 나가지 않습니다</li>
 <li>차단 목록 — 차단한 상대를 다시 만나지 않기 위한 무작위 토큰. 신원 정보가 아닙니다.</li>
 <li>기기 내부 난수 하나(Keychain) — 위 차단 토큰을 만드는 데만 쓰입니다.</li>
 </ul>
@@ -56,7 +63,8 @@ digimaru@gmail.com 으로 전달되어 신고 처리와 필터 개선에만 사�
 <p>인앱 구매는 Apple이 처리합니다. 개발자는 결제 정보를 받지 않으며 볼 수도 없습니다.</p>
 
 <h2>아동</h2>
-<p>이 앱은 만 17세 미만 사용자를 대상으로 하지 않으며, 아동으로부터 어떤 정보도 수집하지 않습니다.</p>
+<p>대화 기능은 만 18세 이상만 이용할 수 있으며, 미성년자로 밝힌 경우 대화 기능이 제공되지 않습니다.
+개발자는 아동을 포함한 누구로부터도 데이터를 수집하지 않습니다.</p>
 
 <h2>권한</h2>
 <ul>
@@ -79,10 +87,18 @@ from both devices when the conversation ends.</p>
 <p><strong>None.</strong> No name, email, phone number, location, advertising identifier or usage
 statistics is collected or transmitted. There is no analytics and no advertising SDK.</p>
 
+<h2>Shared with the other person (optional)</h2>
+<p>If you switch them on in Settings, your <strong>gender</strong> and <strong>age range</strong>
+(e.g. "30s") are sent to the other device when you ask to talk. Your exact date of birth or age is
+never sent and stays on your device. Both are off by default and can be switched off again at any
+time. Neither reaches the developer.</p>
+
 <h2>Stored only on your device</h2>
 <ul>
 <li>Game progress and records (score, lines cleared, time played)</li>
 <li>Settings (theme, sound, haptics, how you want to receive chat requests)</li>
+<li>The birth year and gender you declared — used for the 18+ check on the chat features, and
+    never leaving the device unless you switch sharing on</li>
 <li>Your block list — a random token per blocked person, so they are never discovered again.
     It is not an identity and reveals nothing about them.</li>
 <li>One random value in the device Keychain, used solely to derive that block token.</li>
@@ -109,7 +125,8 @@ are used only to handle the report and improve the filter.</p>
 <p>In-app purchases are handled by Apple. The developer never receives or sees payment details.</p>
 
 <h2>Children</h2>
-<p>This app is not directed to anyone under 17 and collects no information from children.</p>
+<p>The chat features are for 18 and over; a user who declares an age under 18 is not given them at
+all. The developer collects no data from anyone, children included.</p>
 
 <h2>Permissions</h2>
 <ul>
