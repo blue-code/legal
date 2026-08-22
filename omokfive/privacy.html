@@ -11,56 +11,220 @@
   .box { background: #f2f2f7; border-radius: 12px; padding: 14px 16px; }
   hr { border:0; border-top:1px solid #e5e5ea; margin:36px 0; }
   a { color:#2E6F5E; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; margin-top: 10px; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #e5e5ea; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f2f2f7; font-weight: 600; }
 </style>
 </head>
 <body>
   <h1>OmokFive (오목) — 개인정보처리방침</h1>
-  <p class="muted">최종 업데이트: 2026-06-10 · 운영자: blue-code · 문의: digimaru@gmail.com · 언어: <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="#ja">日本語</a> · <a href="#zh">中文</a></p>
+  <p class="muted">최종 업데이트: 2026-08-22 · 운영자: blue-code · 문의: digimaru@gmail.com · 언어: <a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="#ja">日本語</a> · <a href="#zh">中文</a></p>
 
   <div class="box">
-    <strong>요약:</strong> OmokFive는 어떠한 개인정보도 수집·전송·판매하지 않습니다. 서버도 계정도 없습니다.
-    설정·대국 기록·통계는 <strong>기기에만</strong> 저장됩니다. 근거리 대전은 기기 간 직접(P2P) 통신이며 외부 서버를 거치지 않습니다.
-    광고·추적 SDK를 사용하지 않습니다.
+    <strong>요약:</strong> OmokFive는 계정도 서버도 없으며, 이름·이메일·연락처·위치 등 <strong>개인을 식별하는 정보를 직접 수집하지 않습니다.</strong>
+    설정·대국 기록·통계는 <strong>기기에만</strong> 저장되고, 근거리 대전은 기기 간 직접(P2P) 통신이라 외부 서버를 거치지 않습니다.
+    다만 무료 이용자에게는 <strong>Google AdMob 전면 광고</strong>가 표시되며, 이 과정에서 광고 식별자(IDFA) 등이 Google에 의해 처리될 수 있습니다.
+    <strong>‘오목 Pro’를 구매하면 광고가 즉시 사라지며, 이후 앱을 실행할 때는 광고 SDK를 아예 초기화하지 않습니다.</strong>
   </div>
 
   <h2 id="ko">한국어</h2>
-  <h3>1. 수집하는 개인정보</h3>
-  <p><strong>없습니다.</strong> 이름·이메일·연락처·위치·광고식별자(IDFA) 등 어떤 개인정보도 수집하지 않습니다. 회원가입·로그인이 없습니다.</p>
-  <h3>2. 기기에 저장되는 정보</h3>
+
+  <h3>1. 운영자가 직접 수집하는 정보</h3>
+  <p><strong>없습니다.</strong> 회원가입·로그인이 없고, 이름·이메일·연락처·위치 등 어떤 개인정보도 운영자의 서버로 전송되거나 저장되지 않습니다. 운영자는 서버를 운영하지 않습니다.</p>
+
+  <h3>2. 광고를 통해 제3자가 처리하는 정보</h3>
+  <p>본 앱은 무료 이용자에게 <strong>Google AdMob 전면(Interstitial) 광고</strong>를 표시합니다. 광고는 <strong>대국이 끝나고 홈으로 돌아가는 시점에만</strong> 표시되며, 대국 진행 중에는 표시되지 않습니다. 배너 광고는 사용하지 않습니다.</p>
+  <p>광고 표시 과정에서 Google 및 그 파트너가 아래 정보를 처리할 수 있습니다. 이는 Apple App Store의 ‘앱 개인정보 보호’ 표시와 동일한 내용입니다.</p>
+  <table>
+    <tr><th>데이터 유형</th><th>사용 목적</th><th>신원 연결</th><th>추적 목적 사용</th></tr>
+    <tr><td>기기 ID (광고 식별자 IDFA 등)</td><td>타사 광고, 분석</td><td>예</td><td>예</td></tr>
+    <tr><td>광고 데이터 (본 광고 정보)</td><td>타사 광고, 분석</td><td>예</td><td>예</td></tr>
+    <tr><td>제품 상호 작용 (앱 실행·탭 등)</td><td>분석, 타사 광고</td><td>예</td><td>예</td></tr>
+    <tr><td>비정상 종료 데이터</td><td>앱 기능(SDK 오류 진단)</td><td>아니요</td><td>아니요</td></tr>
+    <tr><td>성능 데이터</td><td>앱 기능(SDK 성능 개선)</td><td>아니요</td><td>아니요</td></tr>
+  </table>
+  <p>이 정보는 운영자의 서버로 전송되지 않으며, 운영자는 개별 이용자를 식별할 수 있는 형태로 열람하지 않습니다. 운영자가 받는 것은 총계 형태의 수익·노출 통계뿐입니다.</p>
+
+  <h3>3. 추적 동의(ATT)와 유럽 이용자 동의(GDPR)</h3>
+  <ul>
+    <li><strong>App Tracking Transparency</strong> — iOS에서 추적 허용 여부를 묻는 시스템 창이 표시됩니다. <strong>허용하지 않아도 앱의 모든 기능을 그대로 이용할 수 있으며</strong>, 이 경우 맞춤형이 아닌 광고만 표시됩니다.</li>
+    <li><strong>EEA·영국·스위스</strong> — Google의 사용자 메시징 플랫폼(UMP)을 통해 개인정보 처리에 대한 동의를 별도로 요청합니다. ‘동의하지 않음’을 선택할 수 있으며, 이 경우에도 앱은 정상 이용 가능합니다.</li>
+    <li>동의는 언제든 iOS <em>설정 › 개인정보 보호 및 보안 › 추적</em>에서 철회할 수 있습니다.</li>
+  </ul>
+
+  <h3>4. 기기에 저장되는 정보</h3>
   <ul>
     <li>게임 설정(언어, 테마, 효과음·진동, 렌주룰, 무르기 등) — 기기 로컬 저장(localStorage).</li>
     <li>진행 중/지난 대국 기록·간단한 승패 통계 — 기기 로컬 저장. 외부로 전송되지 않습니다.</li>
+    <li>광고 노출 빈도 조절용 카운터(완료한 대국 수, 마지막 노출 시각) — 기기 로컬 저장.</li>
   </ul>
-  <h3>3. 근거리 대전(P2P)</h3>
+
+  <h3>5. 근거리 대전(P2P)</h3>
   <p>근거리 대전은 Apple의 MultipeerConnectivity를 사용해 같은 Wi-Fi/블루투스 범위의 두 기기가 <strong>직접</strong> 연결됩니다.
   교환되는 정보는 착수 좌표·이모지 등 게임 진행 데이터뿐이며, 운영자 서버나 제3자를 거치지 않고 어디에도 저장되지 않습니다.
   연결을 위해 로컬 네트워크 접근 권한을 사용합니다(상대 기기 탐색 용도).</p>
-  <h3>4. 인앱 구매</h3>
-  <p>구매는 Apple App Store가 처리하며, 운영자는 결제수단·카드 정보를 전혀 받지 않습니다. 구매 복원도 Apple을 통해 이루어집니다.</p>
-  <h3>5. 광고·분석·추적</h3>
-  <p>광고를 표시하지 않으며, 제3자 광고/분석 SDK를 사용하지 않고, 어떤 추적도 하지 않습니다.</p>
-  <h3>6. 아동</h3>
-  <p>본 앱은 개인정보를 수집하지 않으며 모든 연령이 안전하게 이용할 수 있습니다(4+).</p>
-  <h3>7. 변경 및 문의</h3>
+
+  <h3>6. 인앱 구매</h3>
+  <p>구매는 Apple App Store가 처리하며, 운영자는 결제수단·카드 정보를 전혀 받지 않습니다. 구매 복원도 Apple을 통해 이루어집니다.
+  <strong>‘오목 Pro’를 구매하면 광고가 즉시 사라집니다. 구매 이후 앱을 실행할 때는 광고 SDK를 초기화하지 않으므로 위 2항의 정보 처리도 발생하지 않습니다.</strong></p>
+
+  <h3>7. 제3자 서비스</h3>
+  <ul>
+    <li><strong>Google AdMob</strong> — 광고 송출 (<a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google 개인정보처리방침</a>)</li>
+    <li><strong>Apple App Store / StoreKit</strong> — 인앱 구매 처리 (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple 개인정보 보호 정책</a>)</li>
+  </ul>
+
+  <h3>8. 아동</h3>
+  <p>본 앱은 운영자가 직접 개인정보를 수집하지 않으며 연령 등급 4+입니다. 다만 광고가 표시되므로, 보호자의 지도 아래 이용하시기를 권장합니다. 광고 없이 이용하려면 ‘오목 Pro’를 구매하시면 됩니다.</p>
+
+  <h3>9. 변경 및 문의</h3>
   <p>정책 변경 시 본 페이지를 갱신합니다. 문의: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
 
   <hr/>
   <h2 id="en">English</h2>
-  <p><strong>Summary:</strong> OmokFive collects, transmits, and sells <strong>no personal data</strong>. There is no server and no account.</p>
-  <p><strong>1. Personal data collected:</strong> None. No name, email, contacts, location, or advertising identifier (IDFA). No sign-up or login.</p>
-  <p><strong>2. Stored on your device:</strong> Game settings (language, theme, sound/haptics, Renju rule, undo) and your game records / simple win-loss stats are stored locally on your device only and never sent anywhere.</p>
-  <p><strong>3. Nearby match (P2P):</strong> Uses Apple's MultipeerConnectivity to connect two devices <strong>directly</strong> over the same Wi-Fi/Bluetooth range. Only gameplay data (stone coordinates, emoji) is exchanged, device-to-device, never via our server or a third party, and is not stored. Local Network access is used solely to discover the opponent's device.</p>
-  <p><strong>4. In-app purchases:</strong> Handled entirely by the Apple App Store; we never receive your payment or card information. Restore is handled through Apple.</p>
-  <p><strong>5. Ads / analytics / tracking:</strong> No ads, no third-party advertising or analytics SDKs, no tracking of any kind.</p>
-  <p><strong>6. Children:</strong> The app collects no personal data and is safe for all ages (4+).</p>
-  <p><strong>7. Changes & contact:</strong> Updates appear on this page. Contact: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+  <p><strong>Summary:</strong> OmokFive has no account and no server, and we collect <strong>no directly identifying personal data</strong>. Settings, game records and stats stay <strong>on your device</strong>; nearby matches are device-to-device (P2P). However, free users are shown <strong>Google AdMob interstitial ads</strong>, and Google may process your advertising identifier (IDFA) in that process. <strong>Purchasing “Gomoku Pro” removes ads immediately, and from the next launch the ad SDK is not initialized at all.</strong></p>
+
+  <h3>1. Data we collect ourselves</h3>
+  <p><strong>None.</strong> There is no sign-up or login. No name, email, contacts or location is ever sent to or stored on our servers — we do not operate a server.</p>
+
+  <h3>2. Data processed by third parties for ads</h3>
+  <p>The app shows <strong>Google AdMob interstitial ads</strong> to free users. Ads appear <strong>only when a game has finished and you return to the home screen</strong> — never during play. No banner ads are used.</p>
+  <p>In serving ads, Google and its partners may process the following. This matches the App Store “App Privacy” label for this app.</p>
+  <table>
+    <tr><th>Data type</th><th>Purpose</th><th>Linked to you</th><th>Used for tracking</th></tr>
+    <tr><td>Device ID (advertising identifier / IDFA)</td><td>Third-party advertising, analytics</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Advertising data (ads you viewed)</td><td>Third-party advertising, analytics</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Product interaction (launches, taps)</td><td>Analytics, third-party advertising</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Crash data</td><td>App functionality (SDK diagnostics)</td><td>No</td><td>No</td></tr>
+    <tr><td>Performance data</td><td>App functionality (SDK performance)</td><td>No</td><td>No</td></tr>
+  </table>
+  <p>None of this reaches our servers, and we never view it in a form that identifies an individual user. We receive only aggregate revenue and impression statistics.</p>
+
+  <h3>3. Tracking consent (ATT) and European consent (GDPR)</h3>
+  <ul>
+    <li><strong>App Tracking Transparency</strong> — iOS shows a system prompt asking whether to allow tracking. <strong>Declining does not restrict any app feature</strong>; you will simply see non-personalized ads.</li>
+    <li><strong>EEA, UK and Switzerland</strong> — consent is requested separately through Google’s User Messaging Platform (UMP). You may choose “Do not consent”, and the app remains fully usable.</li>
+    <li>You can withdraw consent at any time in iOS <em>Settings › Privacy &amp; Security › Tracking</em>.</li>
+  </ul>
+
+  <h3>4. Stored on your device</h3>
+  <p>Game settings (language, theme, sound/haptics, Renju rule, undo), your game records and simple win-loss stats, and a small counter used to pace ad frequency (games completed, time of last ad) are stored locally on your device only and never sent anywhere.</p>
+
+  <h3>5. Nearby match (P2P)</h3>
+  <p>Uses Apple’s MultipeerConnectivity to connect two devices <strong>directly</strong> over the same Wi-Fi/Bluetooth range. Only gameplay data (stone coordinates, emoji) is exchanged, device-to-device, never via our server or a third party, and is not stored. Local Network access is used solely to discover the opponent’s device.</p>
+
+  <h3>6. In-app purchases</h3>
+  <p>Handled entirely by the Apple App Store; we never receive your payment or card information. Restore is handled through Apple. <strong>Purchasing “Gomoku Pro” removes ads immediately. From the next launch after purchase the ad SDK is not initialized at all, so the processing described in section 2 no longer occurs.</strong></p>
+
+  <h3>7. Third-party services</h3>
+  <ul>
+    <li><strong>Google AdMob</strong> — ad delivery (<a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google Privacy Policy</a>)</li>
+    <li><strong>Apple App Store / StoreKit</strong> — in-app purchases (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple Privacy Policy</a>)</li>
+  </ul>
+
+  <h3>8. Children</h3>
+  <p>We collect no personal data ourselves and the app is rated 4+. Because ads are shown, we recommend use under parental guidance. To use the app without ads, purchase “Gomoku Pro”.</p>
+
+  <h3>9. Changes &amp; contact</h3>
+  <p>Updates appear on this page. Contact: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
 
   <hr/>
   <h2 id="ja">日本語</h2>
-  <p>OmokFiveは個人情報を一切収集・送信・販売しません。サーバーもアカウントもありません。設定・対局記録・成績は端末内のみに保存されます。近距離対戦はAppleのMultipeerConnectivityで2台の端末が直接(P2P)通信し、着手座標やスタンプなどの対局データのみを端末間でやり取りします（サーバーや第三者を経由せず、保存もしません）。相手の端末を探すためにローカルネットワークへのアクセスを使用します。アプリ内課金はApp Storeが処理し、運営者は支払い情報を受け取りません。広告・解析・トラッキングは一切ありません。全年齢対象(4+)。お問い合わせ: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+  <p><strong>概要:</strong> OmokFiveはアカウントもサーバーもなく、氏名・メール・連絡先・位置情報などの個人を特定する情報を<strong>運営者が直接収集することはありません</strong>。設定・対局記録・成績は<strong>端末内のみ</strong>に保存され、近距離対戦は端末間の直接(P2P)通信です。ただし無料でご利用の場合は<strong>Google AdMobの全画面広告</strong>が表示され、その過程で広告識別子(IDFA)などがGoogleにより処理されることがあります。<strong>「オモク Pro」を購入すると広告は直ちになくなり、以後アプリを起動する際は広告SDKを初期化しません。</strong></p>
+
+  <h3>1. 運営者が直接収集する情報</h3>
+  <p><strong>ありません。</strong>会員登録・ログインはなく、いかなる個人情報も運営者のサーバーへ送信・保存されません。運営者はサーバーを運用していません。</p>
+
+  <h3>2. 広告のために第三者が処理する情報</h3>
+  <p>本アプリは無料利用者に<strong>Google AdMobの全画面(インタースティシャル)広告</strong>を表示します。広告は<strong>対局が終了してホームに戻るときのみ</strong>表示され、対局中には表示されません。バナー広告は使用しません。</p>
+  <p>広告配信の過程で、Googleおよびそのパートナーが以下の情報を処理する場合があります。App Storeの「Appのプライバシー」表示と同じ内容です。</p>
+  <table>
+    <tr><th>データの種類</th><th>利用目的</th><th>本人と紐付け</th><th>トラッキング利用</th></tr>
+    <tr><td>デバイスID(広告識別子 IDFA など)</td><td>サードパーティ広告、解析</td><td>はい</td><td>はい</td></tr>
+    <tr><td>広告データ(閲覧した広告)</td><td>サードパーティ広告、解析</td><td>はい</td><td>はい</td></tr>
+    <tr><td>製品操作(起動・タップなど)</td><td>解析、サードパーティ広告</td><td>はい</td><td>はい</td></tr>
+    <tr><td>クラッシュデータ</td><td>App機能(SDKの不具合診断)</td><td>いいえ</td><td>いいえ</td></tr>
+    <tr><td>パフォーマンスデータ</td><td>App機能(SDKの性能改善)</td><td>いいえ</td><td>いいえ</td></tr>
+  </table>
+  <p>これらが運営者のサーバーへ送られることはなく、運営者が個人を特定できる形で閲覧することもありません。運営者が受け取るのは集計された収益・表示回数の統計のみです。</p>
+
+  <h3>3. トラッキング同意(ATT)と欧州の同意(GDPR)</h3>
+  <ul>
+    <li><strong>App Tracking Transparency</strong> — iOSがトラッキングの許可を尋ねる画面を表示します。<strong>許可しなくてもアプリの全機能をそのままご利用いただけ</strong>、その場合は非パーソナライズ広告のみが表示されます。</li>
+    <li><strong>EEA・英国・スイス</strong> — GoogleのUser Messaging Platform(UMP)により別途同意を求めます。「同意しない」を選ぶこともでき、その場合もアプリは通常どおり利用できます。</li>
+    <li>同意はiOSの<em>設定 › プライバシーとセキュリティ › トラッキング</em>からいつでも撤回できます。</li>
+  </ul>
+
+  <h3>4. 端末に保存される情報</h3>
+  <p>ゲーム設定(言語・テーマ・効果音/振動・連珠ルール・待った)、対局記録と簡単な勝敗成績、広告の表示間隔を調整するためのカウンター(完了した対局数・最後に表示した時刻)は、すべて端末内のみに保存され、外部へ送信されません。</p>
+
+  <h3>5. 近距離対戦(P2P)</h3>
+  <p>AppleのMultipeerConnectivityを使用し、同じWi-Fi/Bluetooth範囲の2台の端末が<strong>直接</strong>接続します。やり取りされるのは着手座標やスタンプなどの対局データのみで、運営者のサーバーや第三者を経由せず、保存もされません。相手の端末を探すためにローカルネットワークへのアクセスを使用します。</p>
+
+  <h3>6. アプリ内課金</h3>
+  <p>課金はApp Storeが処理し、運営者が支払い情報を受け取ることはありません。復元もAppleを通じて行われます。<strong>「オモク Pro」を購入すると広告は直ちに表示されなくなります。購入後にアプリを起動する際は広告SDKを初期化しないため、第2項の情報処理も発生しません。</strong></p>
+
+  <h3>7. 第三者サービス</h3>
+  <ul>
+    <li><strong>Google AdMob</strong> — 広告配信 (<a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Googleプライバシーポリシー</a>)</li>
+    <li><strong>Apple App Store / StoreKit</strong> — アプリ内課金 (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Appleプライバシーポリシー</a>)</li>
+  </ul>
+
+  <h3>8. お子様の利用</h3>
+  <p>運営者が個人情報を収集することはなく、年齢制限は4+です。ただし広告が表示されるため、保護者の方の見守りのもとでのご利用を推奨します。広告なしでご利用になる場合は「オモク Pro」をご購入ください。</p>
+
+  <h3>9. 変更とお問い合わせ</h3>
+  <p>方針を変更した場合は本ページを更新します。お問い合わせ: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
 
   <hr/>
   <h2 id="zh">中文</h2>
-  <p>OmokFive 不收集、不传输、不出售任何个人信息，没有服务器、没有账号。设置、对局记录与简单胜负统计仅保存在你的设备上。近距离对战使用 Apple 的 MultipeerConnectivity，在同一 Wi-Fi/蓝牙范围内的两台设备之间<strong>直接</strong>(P2P)通信，仅交换落子坐标、表情等对局数据，不经过我们的服务器或第三方，也不会被存储；为发现对方设备会使用本地网络访问权限。应用内购买完全由 App Store 处理，运营者不会收到任何支付信息。没有广告、分析或追踪。适合所有年龄(4+)。联系：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
+
+  <p><strong>摘要：</strong>OmokFive 没有账号、没有服务器，运营者<strong>不直接收集</strong>姓名、邮箱、联系方式、位置等可识别个人身份的信息。设置、对局记录与统计仅保存在<strong>你的设备上</strong>，近距离对战为设备间直接(P2P)通信。但免费用户会看到 <strong>Google AdMob 插页广告</strong>，在此过程中 Google 可能处理你的广告标识符(IDFA)。<strong>购买「五子棋 Pro」后广告立即消失，此后再启动应用时将不再初始化广告 SDK。</strong></p>
+
+  <h3>1. 运营者直接收集的信息</h3>
+  <p><strong>没有。</strong>无需注册或登录，任何个人信息都不会被发送到或保存在运营者的服务器上。运营者不运营服务器。</p>
+
+  <h3>2. 第三方为广告处理的信息</h3>
+  <p>本应用向免费用户展示 <strong>Google AdMob 插页(全屏)广告</strong>。广告<strong>仅在一局对弈结束、返回主页时</strong>展示，对局进行中不会展示。不使用横幅广告。</p>
+  <p>在投放广告的过程中，Google 及其合作伙伴可能处理以下信息。这与 App Store「App 隐私」标签所示内容一致。</p>
+  <table>
+    <tr><th>数据类型</th><th>使用目的</th><th>与身份关联</th><th>用于追踪</th></tr>
+    <tr><td>设备 ID(广告标识符 IDFA 等)</td><td>第三方广告、分析</td><td>是</td><td>是</td></tr>
+    <tr><td>广告数据(已浏览的广告)</td><td>第三方广告、分析</td><td>是</td><td>是</td></tr>
+    <tr><td>产品交互(启动、点按等)</td><td>分析、第三方广告</td><td>是</td><td>是</td></tr>
+    <tr><td>崩溃数据</td><td>App 功能(SDK 故障诊断)</td><td>否</td><td>否</td></tr>
+    <tr><td>性能数据</td><td>App 功能(SDK 性能改进)</td><td>否</td><td>否</td></tr>
+  </table>
+  <p>这些信息不会传送到运营者的服务器，运营者也不会以能够识别个人的形式查看。运营者收到的仅为汇总后的收益与展示次数统计。</p>
+
+  <h3>3. 追踪同意(ATT)与欧洲用户同意(GDPR)</h3>
+  <ul>
+    <li><strong>App Tracking Transparency</strong> — iOS 会弹出系统窗口询问是否允许追踪。<strong>拒绝不会限制任何功能</strong>，只会改为展示非个性化广告。</li>
+    <li><strong>欧洲经济区、英国与瑞士</strong> — 通过 Google 的用户信息平台(UMP)单独征求同意。你可以选择「不同意」，应用仍可正常使用。</li>
+    <li>你可随时在 iOS <em>设置 › 隐私与安全性 › 跟踪</em> 中撤回同意。</li>
+  </ul>
+
+  <h3>4. 保存在设备上的信息</h3>
+  <p>游戏设置(语言、主题、音效/震动、连珠规则、悔棋)、对局记录与简单胜负统计，以及用于控制广告展示频率的计数器(已完成对局数、上次展示时间)，均仅保存在你的设备上，不会发送到任何地方。</p>
+
+  <h3>5. 近距离对战(P2P)</h3>
+  <p>使用 Apple 的 MultipeerConnectivity，在同一 Wi-Fi/蓝牙范围内的两台设备之间<strong>直接</strong>通信，仅交换落子坐标、表情等对局数据，不经过我们的服务器或第三方，也不会被存储；为发现对方设备会使用本地网络访问权限。</p>
+
+  <h3>6. 应用内购买</h3>
+  <p>购买完全由 App Store 处理，运营者不会收到任何支付信息，恢复购买同样通过 Apple 进行。<strong>购买「五子棋 Pro」后广告立即消失。购买后再次启动应用时不会初始化广告 SDK，因此第 2 条所述的信息处理也不会发生。</strong></p>
+
+  <h3>7. 第三方服务</h3>
+  <ul>
+    <li><strong>Google AdMob</strong> — 广告投放 (<a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google 隐私政策</a>)</li>
+    <li><strong>Apple App Store / StoreKit</strong> — 应用内购买 (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple 隐私政策</a>)</li>
+  </ul>
+
+  <h3>8. 儿童</h3>
+  <p>运营者不收集个人信息，应用分级为 4+。但由于会展示广告，建议在监护人的指导下使用。如需无广告使用，可购买「五子棋 Pro」。</p>
+
+  <h3>9. 变更与联系</h3>
+  <p>政策变更时将更新本页面。联系：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
 </body>
 </html>
