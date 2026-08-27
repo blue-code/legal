@@ -35,20 +35,21 @@ a { color: #E0A93B; }
 <!-- =========== KOREAN =========== -->
 <section id="ko">
 <h1>개인정보처리방침 — 오랜 (OLANE)</h1>
-<p><small>시행일: 2026년 7월 1일 · 최종 수정일: 2026년 7월 1일</small></p>
+<p><small>시행일: 2026년 7월 1일 · 최종 수정일: 2026년 8월 27일</small></p>
 
 <div class="callout">
-<strong>요약:</strong> 오랜(OLANE)은 여행 중 위치·걸음·사진 메타데이터를 <strong>기기 안에서만</strong> 조용히 모아, 여행이 끝나면 경로·걸음·사진을 하나로 엮은 시네마틱 회고 영상을 만들어 드립니다. <strong>서버가 없고, 계정이 없고, 분석·광고·크래시 리포팅 SDK가 없으며, 어떠한 네트워크 통신도 하지 않습니다.</strong> 위치·사진·모션 데이터는 회고 영상을 만들기 위해 기기 안에서 <em>사용</em>될 뿐, 어디로도 <em>전송·수집</em>되지 않습니다.
+<strong>요약:</strong> 오랜(OLANE)은 여행 중 위치·걸음·사진 메타데이터를 <strong>기기 안에서만</strong> 조용히 모아, 여행이 끝나면 경로·걸음·사진을 하나로 엮은 시네마틱 회고 영상을 만들어 드립니다. <strong>오랜에는 서버가 없고, 계정이 없고, 분석·광고·크래시 리포팅 SDK가 없습니다.</strong> 사진·경로·걸음 데이터는 회고 영상을 만들기 위해 기기 안에서 <em>사용</em>될 뿐, 기기 밖으로 나가지 않습니다. 앱이 통신하는 상대는 애플의 지도·지명 서비스와 App Store뿐이며(§6·§7), 개발자가 받아 보는 정보는 어떤 것도 없습니다.
 </div>
 
 <h2>1. 수집하는 정보</h2>
-<p><strong>없음.</strong> 오랜은 어떠한 개인정보도 수집·전송하지 않습니다. 서버가 존재하지 않으므로 데이터를 보낼 곳 자체가 없습니다. 회원가입·로그인이 없으며 이름·이메일·전화번호 등 식별 정보를 요청하지 않습니다.</p>
+<p><strong>없음.</strong> 오랜은 어떠한 개인정보도 수집하지 않습니다. 개발자에게는 서버가 없으므로 데이터가 도달할 곳 자체가 없고, 회원가입·로그인이 없으며 이름·이메일·전화번호 등 식별 정보를 요청하지 않습니다.</p>
+<p>기기 밖으로 나가는 것이 딱 하나 있습니다. 여행 이름을 지명으로 붙이는 기능을 켜 두면, 회고를 만들 때 <strong>경로 중간 지점의 좌표 하나</strong>가 지명을 묻기 위해 <strong>애플의 지도 서비스</strong>로 전송됩니다. 이때 정보를 받는 곳은 애플이며, 애플의 <a href="https://www.apple.com/legal/privacy/">개인정보 보호 정책</a>이 적용됩니다. 개발자는 이 조회의 존재조차 알 수 없습니다. 설정에서 끌 수 있고, 끄면 아무것도 전송되지 않습니다(§6).</p>
 
 <h2>2. 기기 안에서만 사용되는 정보 ("수집"과 "사용"의 차이)</h2>
-<p>오랜의 핵심 기능(여행 중 조용한 기록 → 여행 종료 시 자동 회고 생성)을 위해 아래 정보가 <strong>오직 사용자의 기기 안에서만</strong> 사용됩니다. 이 정보들은 App Store 개인정보 라벨상 <strong>"데이터 미수집(Data Not Collected)"</strong>으로 표시되는데, 그 이유는 어떤 형태로도 외부에 <em>전송</em>되거나, 신원과 연결되거나, 사용자를 추적하는 데 쓰이지 않기 때문입니다.</p>
+<p>오랜의 핵심 기능(여행 중 조용한 기록 → 여행 종료 시 자동 회고 생성)을 위해 아래 정보가 <strong>오직 사용자의 기기 안에서만</strong> 사용됩니다. 이 정보들은 App Store 개인정보 라벨상 <strong>"데이터 미수집(Data Not Collected)"</strong>으로 표시되는데, 그 이유는 개발자에게 <em>수집</em>되지 않고, 신원과 연결되지 않으며, 사용자를 추적하는 데 쓰이지 않기 때문입니다. 유일한 예외인 지명 조회(§6)에서도 좌표를 받는 곳은 애플이지 개발자가 아닙니다.</p>
 <table>
   <tr><th>정보</th><th>사용 목적</th><th>처리 위치</th><th>외부 전송</th></tr>
-  <tr><td>위치 정보 (GPS, 유의미한 위치 변경)</td><td>여행 경로(루트)를 그리고 방문 장소를 인식</td><td>기기 내 (Core Location)</td><td>없음</td></tr>
+  <tr><td>위치 정보 (GPS, 유의미한 위치 변경)</td><td>여행 경로(루트)를 그리고 방문 장소를 인식</td><td>기기 내 (Core Location)</td><td>없음 — 지명 조회를 켠 경우 좌표 <strong>한 개</strong>만 애플로 (§6)</td></tr>
   <tr><td>사진 및 메타데이터 (PhotoKit)</td><td>여행 중 촬영한 사진 중 회고에 담길 최적의 사진을 자동 선별</td><td>기기 내 (Vision, NaturalLanguage)</td><td>없음</td></tr>
   <tr><td>걸음 수·모션 활동 (Core Motion)</td><td>걸음 수 통계 및 배터리 절약을 위한 추적 강도 조절</td><td>기기 내</td><td>없음</td></tr>
 </table>
@@ -63,11 +64,24 @@ a { color: #E0A93B; }
 <h2>5. 날씨 정보</h2>
 <p>회고 캡션에 표시되는 날씨 관련 무드는 <strong>네트워크 날씨 API를 호출하지 않고</strong> 기기 내에서 계절·시간대·위치 등 이미 보유한 정보를 바탕으로 추정됩니다. WeatherKit을 포함한 어떠한 외부 날씨 서비스와도 통신하지 않습니다.</p>
 
-<h2>6. 지도 (MapKit)</h2>
-<p>여행 경로는 iOS 기본 MapKit으로 표시됩니다. 오랜은 자체적으로 지도 타일을 첫 번째 당사자 서버에서 내려받지 않으며, 기기에 이미 캐시되었거나 번들된 지도 데이터만 사용합니다.</p>
+<h2>6. 지도와 지명 조회 (애플 지도)</h2>
+<p>여행 경로는 iOS 기본 MapKit으로 표시됩니다. 지도를 화면에 그리기 위해 iOS가 애플로부터 지도 타일을 받아오는 것은 애플 지도를 쓰는 모든 앱과 동일하며, 이 통신은 iOS가 애플과 직접 수행합니다. 오랜은 자체 서버를 두고 있지 않으므로 지도와 관련해 개발자에게 전달되는 정보는 없습니다.</p>
+<h3>지명으로 여행 이름 짓기 (설정에서 끌 수 있음)</h3>
+<p>여행에 직접 이름을 붙이지 않은 경우, 오랜은 회고를 만들면서 <strong>경로 중간 지점의 좌표 하나</strong>를 애플 지도에 보내 그곳의 지명을 묻고, 받은 이름으로 "전주에서의 하루"처럼 여행 이름을 짓습니다.</p>
+<ul>
+  <li><strong>보내는 것:</strong> 좌표 한 개(위도·경도). 경로 전체도, 사진도, 걸음 수도, 기기·사용자 식별자도 보내지 않습니다.</li>
+  <li><strong>보내는 시점:</strong> 회고를 만드는 순간 한 번뿐입니다. 여행 중에는 조회하지 않습니다.</li>
+  <li><strong>받는 곳:</strong> 애플(Apple Inc.)의 지도 서비스이며, 애플의 <a href="https://www.apple.com/legal/privacy/">개인정보 보호 정책</a>이 적용됩니다.</li>
+  <li><strong>끄는 방법:</strong> 설정 → 여행 이름 → "지명으로 이름 짓기"를 끄면 됩니다. 끄면 여행은 날짜로 이름 지어지고, 좌표는 전혀 전송되지 않습니다.</li>
+  <li><strong>실패해도 무방:</strong> 인터넷이 없거나 응답이 없으면 조용히 날짜 이름으로 돌아갑니다.</li>
+</ul>
+<p>회고 영상의 경로 장면 배경에 지도를 넣는 선택 기능도 같은 원리로 동작합니다. 지도 이미지는 기기 안에서 영상에 합성되며, 만들어진 영상이 어디론가 업로드되는 일은 없습니다.</p>
+<div class="callout">
+<strong>이 조회에도 App Store 개인정보 라벨이 "데이터 미수집"으로 유지되는 이유:</strong> 애플의 라벨 기준에서 "수집"은 <em>개발자가</em> 사용자의 데이터를 받아 보관하는 것을 뜻합니다. 지명 조회의 좌표는 애플이 자사 서비스 제공을 위해 처리하며, 개발자는 그 좌표를 받지도, 보관하지도, 볼 수도 없습니다.
+</div>
 
 <h2>7. 제3자 서비스 / SDK</h2>
-<p>오랜은 분석(Analytics), 광고, 크래시 리포팅 SDK를 <strong>일절 사용하지 않습니다.</strong> 광고 식별자(IDFA)도 사용하지 않으며, 사용자를 추적하지 않습니다. 앱이 통신하는 유일한 외부 시스템은 인앱 결제 처리를 위한 Apple의 App Store(StoreKit)뿐입니다.</p>
+<p>오랜은 분석(Analytics), 광고, 크래시 리포팅 SDK를 <strong>일절 사용하지 않습니다.</strong> 광고 식별자(IDFA)도 사용하지 않으며, 사용자를 추적하지 않습니다. 앱이 통신하는 외부 시스템은 인앱 결제 처리를 위한 Apple의 App Store(StoreKit)와, 지도 표시·지명 조회를 위한 Apple의 지도 서비스(§6)뿐입니다. 둘 다 애플이 운영하며, 개발자에게 데이터를 전달하는 제3자는 존재하지 않습니다.</p>
 
 <h2>8. 인앱 결제 (Lifetime Pro)</h2>
 <p>오랜은 <strong>평생 Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>) 단일 비소모성 인앱 구매를 제공합니다. 결제는 전적으로 <strong>Apple App Store / StoreKit</strong>을 통해 처리되며, 카드 번호 등 결제 정보를 본 앱이나 개발자가 수집·열람하지 않습니다. 제3자 결제 대행사는 사용되지 않습니다. 환불·구매 복원은 사용자의 Apple 계정을 통해 Apple의 정책에 따라 처리됩니다.</p>
@@ -102,20 +116,21 @@ a { color: #E0A93B; }
 <!-- =========== ENGLISH =========== -->
 <section id="en">
 <h1>Privacy Policy — OLANE (오랜)</h1>
-<p><small>Effective: July 1, 2026 · Last updated: July 1, 2026</small></p>
+<p><small>Effective: July 1, 2026 · Last updated: August 27, 2026</small></p>
 
 <div class="callout">
-<strong>Summary:</strong> OLANE silently gathers your location, step count, and photo metadata <strong>on your device only</strong> while you travel, then — once the trip ends — turns your route, steps, and photos into a cinematic recap. <strong>There is no server, no account, no analytics/advertising/crash-reporting SDK, and OLANE makes zero network calls.</strong> Location, photo, and motion data are <em>used</em> on-device to build the recap — they are never <em>transmitted</em> or <em>collected</em> anywhere.
+<strong>Summary:</strong> OLANE silently gathers your location, step count, and photo metadata <strong>on your device only</strong> while you travel, then — once the trip ends — turns your route, steps, and photos into a cinematic recap. <strong>OLANE has no server of its own, no account, and no analytics/advertising/crash-reporting SDK.</strong> Your photos, route, and step data are <em>used</em> on-device to build the recap and never leave the device. The only parties the app talks to are Apple's map and place-name services and the App Store (§6, §7) — nothing reaches the developer, ever.
 </div>
 
 <h2>1. Information We Collect</h2>
-<p><strong>None.</strong> OLANE does not collect or transmit any personal data. There is no backend server, so there is nowhere for data to be sent. There is no sign-up or login, and the app never asks for your name, email, or phone number.</p>
+<p><strong>None.</strong> OLANE collects no personal data. The developer runs no backend server, so there is nowhere for data to arrive; there is no sign-up or login, and the app never asks for your name, email, or phone number.</p>
+<p>Exactly one thing leaves the device. If naming trips after places is switched on, then while a recap is being made <strong>a single coordinate from the middle of your route</strong> is sent to <strong>Apple's map service</strong> to ask what that place is called. Apple is the recipient, and Apple's <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a> governs that lookup. The developer never learns it happened. You can turn it off in Settings, and then nothing is sent at all (§6).</p>
 
 <h2>2. Information Used On-Device Only (the difference between "collected" and "used")</h2>
-<p>To power OLANE's core feature — silent tracking during a trip, followed by an automatic recap when the trip ends — the following information is used <strong>only on your device</strong>. In App Store privacy labels this appears as <strong>"Data Not Collected"</strong> because none of it is ever transmitted off-device, linked to your identity, or used to track you.</p>
+<p>To power OLANE's core feature — silent tracking during a trip, followed by an automatic recap when the trip ends — the following information is used <strong>only on your device</strong>. In App Store privacy labels this appears as <strong>"Data Not Collected"</strong> because none of it is ever collected by the developer, linked to your identity, or used to track you. Even in the one exception — the place-name lookup in §6 — the coordinate goes to Apple, not to the developer.</p>
 <table>
   <tr><th>Data</th><th>Purpose</th><th>Processed</th><th>Transmitted off-device</th></tr>
-  <tr><td>Location (GPS, significant location change)</td><td>Draw your travel route and recognize visited places</td><td>On-device (Core Location)</td><td>Never</td></tr>
+  <tr><td>Location (GPS, significant location change)</td><td>Draw your travel route and recognize visited places</td><td>On-device (Core Location)</td><td>Never — except <strong>one single coordinate</strong> to Apple if place naming is on (§6)</td></tr>
   <tr><td>Photos &amp; metadata (PhotoKit)</td><td>Automatically select the best photos from your trip for the recap</td><td>On-device (Vision, NaturalLanguage)</td><td>Never</td></tr>
   <tr><td>Step count / motion activity (Core Motion)</td><td>Step statistics and battery-efficient tracking coarsening</td><td>On-device</td><td>Never</td></tr>
 </table>
@@ -130,11 +145,24 @@ a { color: #E0A93B; }
 <h2>5. Weather</h2>
 <p>The weather-related mood shown in recap captions is estimated on-device from information the app already has (season, time of day, location) — <strong>no network weather API is ever called</strong>, including WeatherKit or any other external weather service.</p>
 
-<h2>6. Maps (MapKit)</h2>
-<p>Your travel route is displayed using iOS's built-in MapKit. OLANE does not fetch map tiles from a first-party server; it uses only tiles already cached on your device or bundled with iOS.</p>
+<h2>6. Maps &amp; Place-Name Lookup (Apple Maps)</h2>
+<p>Your travel route is displayed using iOS's built-in MapKit. Drawing a map means iOS fetches map tiles from Apple, exactly as in every app that uses Apple Maps; that traffic is between iOS and Apple. OLANE runs no server of its own, so nothing about your maps reaches the developer.</p>
+<h3>Naming trips after places (can be turned off in Settings)</h3>
+<p>If you haven't named a trip yourself, OLANE sends <strong>a single coordinate from the middle of your route</strong> to Apple Maps while building the recap, asks what that place is called, and names the trip with the answer — "A day in Jeonju".</p>
+<ul>
+  <li><strong>What is sent:</strong> one coordinate (latitude and longitude). Not your route, not your photos, not your step count, and no device or user identifier.</li>
+  <li><strong>When:</strong> once, at the moment a recap is generated. Never while you are travelling.</li>
+  <li><strong>Who receives it:</strong> Apple Inc.'s map service, governed by Apple's <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a>.</li>
+  <li><strong>How to turn it off:</strong> Settings → Trip names → "Name trips after places". With it off, trips are named by date and no coordinate is sent at all.</li>
+  <li><strong>Failure is fine:</strong> with no internet or no answer, the app quietly falls back to the date-based name.</li>
+</ul>
+<p>The optional map background behind the route sequence in your recap works the same way. The map image is composited into the video on your device; the finished video is never uploaded anywhere.</p>
+<div class="callout">
+<strong>Why the App Store privacy label stays "Data Not Collected" despite this lookup:</strong> under Apple's own label definitions, "collect" means <em>the developer</em> receives and retains your data. The coordinate in a place-name lookup is processed by Apple to provide Apple's service; the developer never receives it, stores it, or sees it.
+</div>
 
 <h2>7. Third-Party Services / SDKs</h2>
-<p>OLANE uses <strong>no</strong> analytics, advertising, or crash-reporting SDKs. It does not use the advertising identifier (IDFA) and does not track you. The only external system the app ever communicates with is Apple's App Store (StoreKit) for in-app purchase processing.</p>
+<p>OLANE uses <strong>no</strong> analytics, advertising, or crash-reporting SDKs. It does not use the advertising identifier (IDFA) and does not track you. The only external systems the app ever communicates with are Apple's App Store (StoreKit), for in-app purchase processing, and Apple's map service, for displaying maps and looking up place names (§6). Both are operated by Apple; no third party ever passes your data to the developer.</p>
 
 <h2>8. In-App Purchase (Lifetime Pro)</h2>
 <p>OLANE offers a single non-consumable in-app purchase, <strong>Lifetime Pro</strong> (<code>com.blueCode.OLANE.lifetime</code>). Payment is processed entirely through <strong>Apple's App Store / StoreKit</strong>; neither this app nor its developer collects or views your payment details. No third-party payment processor is used. Refunds and purchase restoration are handled through your Apple account per Apple's policies.</p>
@@ -169,20 +197,21 @@ Bundle ID: <code>com.blueCode.OLANE</code></p>
 <!-- =========== JAPANESE =========== -->
 <section id="ja">
 <h1>プライバシーポリシー — OLANE (オレン)</h1>
-<p><small>施行日: 2026年7月1日 · 最終更新日: 2026年7月1日</small></p>
+<p><small>施行日: 2026年7月1日 · 最終更新日: 2026年8月27日</small></p>
 
 <div class="callout">
-<strong>要約:</strong> OLANEは旅行中、位置情報・歩数・写真メタデータを<strong>端末内でのみ</strong>静かに記録し、旅が終わると経路・歩数・写真をひとつにまとめたシネマティックな回想動画を作成します。<strong>サーバーはなく、アカウントもなく、分析・広告・クラッシュレポートSDKもなく、ネットワーク通信は一切行いません。</strong>位置情報・写真・モーションデータは回想動画作成のため端末内で<em>使用</em>されるだけで、外部に<em>送信・収集</em>されることはありません。
+<strong>要約:</strong> OLANEは旅行中、位置情報・歩数・写真メタデータを<strong>端末内でのみ</strong>静かに記録し、旅が終わると経路・歩数・写真をひとつにまとめたシネマティックな回想動画を作成します。<strong>OLANE自身のサーバーはなく、アカウントもなく、分析・広告・クラッシュレポートSDKもありません。</strong>写真・経路・歩数データは回想動画を作るために端末内で<em>使用</em>されるだけで、端末の外に出ることはありません。アプリが通信する相手はAppleの地図・地名サービスとApp Storeのみで(§6・§7)、開発者が受け取る情報は一切ありません。
 </div>
 
 <h2>1. 収集する情報</h2>
-<p><strong>ありません。</strong>OLANEはいかなる個人情報も収集・送信しません。バックエンドサーバーが存在しないため、データを送る先自体がありません。会員登録やログインはなく、氏名・メール・電話番号などを求めることもありません。</p>
+<p><strong>ありません。</strong>OLANEはいかなる個人情報も収集しません。開発者側にバックエンドサーバーが存在しないため、データが届く先自体がありません。会員登録やログインはなく、氏名・メール・電話番号などを求めることもありません。</p>
+<p>端末の外に出るものは一つだけです。地名で旅に名前をつける機能をオンにしている場合、回想動画を作る際に<strong>経路の中間地点の座標一つ</strong>が、その場所の名前を尋ねるために<strong>Appleの地図サービス</strong>へ送信されます。受け取るのはAppleであり、Appleの<a href="https://www.apple.com/legal/privacy/">プライバシーポリシー</a>が適用されます。開発者はこの照会が行われたことすら知りません。設定でオフにでき、オフにすれば何も送信されません(§6)。</p>
 
 <h2>2. 端末内でのみ使用される情報(「収集」と「使用」の違い)</h2>
-<p>OLANEの中核機能(旅行中の静かな記録 → 旅行終了時の自動回想生成)のために、以下の情報が<strong>ユーザーの端末内でのみ</strong>使用されます。App Storeのプライバシーラベル上は<strong>「データ非収集(Data Not Collected)」</strong>と表示されますが、これはどの情報も外部へ<em>送信</em>されず、個人の識別やトラッキングに使われないためです。</p>
+<p>OLANEの中核機能(旅行中の静かな記録 → 旅行終了時の自動回想生成)のために、以下の情報が<strong>ユーザーの端末内でのみ</strong>使用されます。App Storeのプライバシーラベル上は<strong>「データ非収集(Data Not Collected)」</strong>と表示されますが、これはどの情報も開発者に<em>収集</em>されず、個人の識別やトラッキングに使われないためです。唯一の例外である地名の照会(§6)でも、座標を受け取るのはAppleであって開発者ではありません。</p>
 <table>
   <tr><th>データ</th><th>目的</th><th>処理場所</th><th>外部送信</th></tr>
-  <tr><td>位置情報(GPS、有意な位置情報の変化)</td><td>旅行ルートの描画と訪問地の認識</td><td>端末内(Core Location)</td><td>なし</td></tr>
+  <tr><td>位置情報(GPS、有意な位置情報の変化)</td><td>旅行ルートの描画と訪問地の認識</td><td>端末内(Core Location)</td><td>なし — 地名照会をオンにした場合のみ座標<strong>一つ</strong>がAppleへ(§6)</td></tr>
   <tr><td>写真とメタデータ(PhotoKit)</td><td>旅行中の写真から回想動画に使うベストショットを自動選定</td><td>端末内(Vision, NaturalLanguage)</td><td>なし</td></tr>
   <tr><td>歩数・モーションアクティビティ(Core Motion)</td><td>歩数統計とバッテリー効率のための記録頻度の調整</td><td>端末内</td><td>なし</td></tr>
 </table>
@@ -197,11 +226,24 @@ Bundle ID: <code>com.blueCode.OLANE</code></p>
 <h2>5. 天気情報</h2>
 <p>回想キャプションに表示される天気に関するムードは、<strong>ネットワークの天気APIを一切呼び出さず</strong>、季節・時間帯・位置情報などアプリがすでに保有する情報から端末内で推定されます。WeatherKitを含むいかなる外部天気サービスとも通信しません。</p>
 
-<h2>6. 地図(MapKit)</h2>
-<p>旅行ルートはiOS標準のMapKitで表示されます。OLANEは自社サーバーから地図タイルを取得することはなく、端末に既にキャッシュされているか、iOSにバンドルされている地図データのみを使用します。</p>
+<h2>6. 地図と地名の照会(Appleマップ)</h2>
+<p>旅行ルートはiOS標準のMapKitで表示されます。地図を描画するためにiOSがAppleから地図タイルを取得するのは、Appleマップを使うすべてのアプリと同じであり、その通信はiOSとAppleの間で行われます。OLANEには自社サーバーがないため、地図に関して開発者に届く情報はありません。</p>
+<h3>地名で旅に名前をつける(設定でオフにできます)</h3>
+<p>旅に自分で名前をつけていない場合、OLANEは回想動画を作る際に<strong>経路の中間地点の座標一つ</strong>をAppleマップへ送り、その場所の名前を尋ねて「全州での一日」のように旅の名前をつけます。</p>
+<ul>
+  <li><strong>送るもの:</strong> 座標一つ(緯度・経度)。経路全体も、写真も、歩数も、端末・ユーザー識別子も送りません。</li>
+  <li><strong>送るタイミング:</strong> 回想動画を作る瞬間の一度だけです。旅行中に照会することはありません。</li>
+  <li><strong>受け取る先:</strong> Apple Inc.の地図サービスで、Appleの<a href="https://www.apple.com/legal/privacy/">プライバシーポリシー</a>が適用されます。</li>
+  <li><strong>オフにする方法:</strong> 設定 → 旅の名前 → 「地名で名前をつける」をオフに。オフにすると旅は日付で名前がつけられ、座標は一切送信されません。</li>
+  <li><strong>失敗しても問題ありません:</strong> インターネットがない、応答がない場合は静かに日付の名前に戻ります。</li>
+</ul>
+<p>回想動画の経路シーンの背景に地図を入れる任意機能も同じ仕組みです。地図画像は端末内で動画に合成され、できあがった動画がどこかへアップロードされることはありません。</p>
+<div class="callout">
+<strong>この照会があってもApp Storeのプライバシーラベルが「データ非収集」のままである理由:</strong> Appleのラベル定義において「収集」とは、<em>開発者が</em>ユーザーのデータを受け取り保持することを指します。地名照会の座標はAppleが自社サービス提供のために処理するものであり、開発者はそれを受け取ることも、保存することも、見ることもできません。
+</div>
 
 <h2>7. 第三者サービス / SDK</h2>
-<p>OLANEは分析(アナリティクス)・広告・クラッシュレポートSDKを<strong>一切使用しません。</strong>広告識別子(IDFA)も使用せず、ユーザーを追跡しません。アプリが通信する唯一の外部システムは、アプリ内課金処理のためのApple App Store(StoreKit)のみです。</p>
+<p>OLANEは分析(アナリティクス)・広告・クラッシュレポートSDKを<strong>一切使用しません。</strong>広告識別子(IDFA)も使用せず、ユーザーを追跡しません。アプリが通信する外部システムは、アプリ内課金処理のためのApple App Store(StoreKit)と、地図の表示および地名の照会のためのAppleの地図サービス(§6)のみです。いずれもAppleが運営しており、開発者にデータを渡す第三者は存在しません。</p>
 
 <h2>8. アプリ内課金(Lifetime Pro)</h2>
 <p>OLANEは単一の非消費型アプリ内課金<strong>Lifetime Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>)を提供します。決済は完全に<strong>Apple App Store / StoreKit</strong>を通じて処理され、本アプリおよび開発者はカード情報などの決済情報を収集・閲覧しません。第三者の決済代行業者は使用されません。返金・購入の復元はAppleのポリシーに従い、ユーザーのApple IDを通じて処理されます。</p>
@@ -236,20 +278,21 @@ Bundle ID: <code>com.blueCode.OLANE</code></p>
 <!-- =========== CHINESE (Simplified) =========== -->
 <section id="zh">
 <h1>隐私政策 — OLANE(奥澜)</h1>
-<p><small>生效日期:2026年7月1日 · 最后更新:2026年7月1日</small></p>
+<p><small>生效日期:2026年7月1日 · 最后更新:2026年8月27日</small></p>
 
 <div class="callout">
-<strong>摘要:</strong>OLANE 在您旅行期间会<strong>仅在设备本地</strong>静默记录位置、步数与照片元数据;旅程结束后,应用会将路线、步数与照片自动汇编成一部电影般的回忆视频。<strong>本应用没有服务器、没有账户、没有分析/广告/崩溃报告 SDK,也不会进行任何网络通信。</strong>位置、照片与运动数据仅在设备本地被<em>使用</em>以生成回忆视频,绝不会被<em>传输或收集</em>到任何地方。
+<strong>摘要:</strong>OLANE 在您旅行期间会<strong>仅在设备本地</strong>静默记录位置、步数与照片元数据;旅程结束后,应用会将路线、步数与照片自动汇编成一部电影般的回忆视频。<strong>OLANE 没有自己的服务器,没有账户,也没有分析/广告/崩溃报告 SDK。</strong>您的照片、路线与步数数据仅在设备本地被<em>使用</em>以生成回忆视频,不会离开设备。应用唯一会通信的对象是 Apple 的地图与地名服务以及 App Store(见 §6、§7),开发者不会收到任何信息。
 </div>
 
 <h2>1. 我们收集的信息</h2>
-<p><strong>无。</strong>OLANE 不收集或传输任何个人数据。由于不存在后端服务器,数据根本没有可发送的目的地。应用无需注册或登录,也从不询问您的姓名、邮箱或电话号码。</p>
+<p><strong>无。</strong>OLANE 不收集任何个人数据。开发者没有后端服务器,数据根本没有可抵达之处;应用无需注册或登录,也从不询问您的姓名、邮箱或电话号码。</p>
+<p>只有一样东西会离开设备。若开启了「用地名命名旅行」,在生成回忆视频时,<strong>路线中点的一个坐标</strong>会被发送给 <strong>Apple 的地图服务</strong>以查询该地点的名称。接收方是 Apple,适用 Apple 的<a href="https://www.apple.com/legal/privacy/">隐私政策</a>。开发者甚至无从得知这次查询的发生。您可在设置中关闭它,关闭后不会发送任何内容(见 §6)。</p>
 
 <h2>2. 仅在设备本地使用的信息("收集"与"使用"的区别)</h2>
-<p>为实现 OLANE 的核心功能(旅行期间静默记录 → 旅程结束后自动生成回忆),以下信息<strong>仅在您的设备本地</strong>被使用。在 App Store 隐私标签中,这些会显示为<strong>"不收集数据(Data Not Collected)"</strong>,因为它们从未被传输到设备之外,也从未与您的身份关联或用于追踪您。</p>
+<p>为实现 OLANE 的核心功能(旅行期间静默记录 → 旅程结束后自动生成回忆),以下信息<strong>仅在您的设备本地</strong>被使用。在 App Store 隐私标签中,这些会显示为<strong>"不收集数据(Data Not Collected)"</strong>,因为它们从未被开发者收集,也从未与您的身份关联或用于追踪您。即便是唯一的例外——§6 的地名查询——接收坐标的也是 Apple,而非开发者。</p>
 <table>
   <tr><th>数据</th><th>用途</th><th>处理位置</th><th>是否传出设备</th></tr>
-  <tr><td>位置信息(GPS、重要位置变化)</td><td>绘制旅行路线并识别到访地点</td><td>设备本地(Core Location)</td><td>从不</td></tr>
+  <tr><td>位置信息(GPS、重要位置变化)</td><td>绘制旅行路线并识别到访地点</td><td>设备本地(Core Location)</td><td>从不 — 仅在开启地名命名时,将<strong>一个</strong>坐标发给 Apple(见 §6)</td></tr>
   <tr><td>照片及元数据(PhotoKit)</td><td>从旅行照片中自动挑选适合放入回忆视频的最佳照片</td><td>设备本地(Vision、NaturalLanguage)</td><td>从不</td></tr>
   <tr><td>步数 / 运动活动(Core Motion)</td><td>步数统计,以及为省电而调整记录频率</td><td>设备本地</td><td>从不</td></tr>
 </table>
@@ -264,11 +307,24 @@ Bundle ID: <code>com.blueCode.OLANE</code></p>
 <h2>5. 天气信息</h2>
 <p>回忆文案中显示的天气相关氛围,是<strong>在不调用任何网络天气 API 的情况下</strong>,基于应用已有的信息(季节、时间、位置)在设备本地推断得出的。本应用不会与包括 WeatherKit 在内的任何外部天气服务通信。</p>
 
-<h2>6. 地图(MapKit)</h2>
-<p>旅行路线通过 iOS 内置的 MapKit 显示。OLANE 不会从自有服务器获取地图图块,仅使用设备已缓存或 iOS 自带的地图数据。</p>
+<h2>6. 地图与地名查询(Apple 地图)</h2>
+<p>旅行路线通过 iOS 内置的 MapKit 显示。绘制地图时,iOS 会向 Apple 获取地图图块——这与所有使用 Apple 地图的应用完全一致,该通信发生在 iOS 与 Apple 之间。OLANE 没有自有服务器,因此与地图相关的信息不会有任何一项抵达开发者。</p>
+<h3>用地名命名旅行(可在设置中关闭)</h3>
+<p>如果您没有自行为旅行命名,OLANE 会在生成回忆视频时将<strong>路线中点的一个坐标</strong>发送给 Apple 地图,查询该地点的名称,并据此把旅行命名为「在全州的一天」。</p>
+<ul>
+  <li><strong>发送的内容:</strong>一个坐标(纬度与经度)。不发送完整路线、照片、步数,也不发送设备或用户标识符。</li>
+  <li><strong>发送时机:</strong>仅在生成回忆视频的那一刻发送一次。旅行途中不会查询。</li>
+  <li><strong>接收方:</strong>Apple Inc. 的地图服务,适用 Apple 的<a href="https://www.apple.com/legal/privacy/">隐私政策</a>。</li>
+  <li><strong>如何关闭:</strong>设置 → 旅行名称 → 关闭「用地名命名旅行」。关闭后旅行按日期命名,不会发送任何坐标。</li>
+  <li><strong>失败也无妨:</strong>若无网络或未收到回应,应用会静默回退为按日期命名。</li>
+</ul>
+<p>回忆视频中路线场景的可选地图背景也遵循同样的原理。地图图像在设备本地合成进视频,成片绝不会被上传到任何地方。</p>
+<div class="callout">
+<strong>为何有此查询,App Store 隐私标签仍为「不收集数据」:</strong>按 Apple 自己的标签定义,「收集」指的是<em>开发者</em>接收并保存您的数据。地名查询中的坐标由 Apple 为提供其自身服务而处理,开发者既不会收到、也不会存储或看到它。
+</div>
 
 <h2>7. 第三方服务 / SDK</h2>
-<p>OLANE <strong>完全不使用</strong>分析、广告或崩溃报告 SDK,不使用广告标识符(IDFA),也不追踪用户。应用唯一会通信的外部系统是用于处理应用内购买的 Apple App Store(StoreKit)。</p>
+<p>OLANE <strong>完全不使用</strong>分析、广告或崩溃报告 SDK,不使用广告标识符(IDFA),也不追踪用户。应用会通信的外部系统只有两个:用于处理应用内购买的 Apple App Store(StoreKit),以及用于显示地图和查询地名的 Apple 地图服务(见 §6)。二者均由 Apple 运营,不存在任何向开发者传递数据的第三方。</p>
 
 <h2>8. 应用内购买(Lifetime Pro)</h2>
 <p>OLANE 提供单一的非消耗型应用内购买项目 <strong>Lifetime Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>)。付款完全通过 <strong>Apple App Store / StoreKit</strong> 处理,本应用及其开发者不会收集或查看您的付款信息。不使用任何第三方支付处理商。退款与购买恢复通过您的 Apple 账户,依据 Apple 的政策处理。</p>
