@@ -35,10 +35,10 @@ a { color: #E0A93B; }
 <!-- =========== KOREAN =========== -->
 <section id="ko">
 <h1>개인정보처리방침 — 오랜 (OLANE)</h1>
-<p><small>시행일: 2026년 7월 1일 · 최종 수정일: 2026년 8월 27일</small></p>
+<p><small>시행일: 2026년 7월 1일 · 최종 수정일: 2026년 9월 3일</small></p>
 
 <div class="callout">
-<strong>요약:</strong> 오랜(OLANE)은 여행 중 위치·걸음·사진 메타데이터를 <strong>기기 안에서만</strong> 조용히 모아, 여행이 끝나면 경로·걸음·사진을 하나로 엮은 시네마틱 회고 영상을 만들어 드립니다. <strong>오랜에는 서버가 없고, 계정이 없고, 분석·광고·크래시 리포팅 SDK가 없습니다.</strong> 사진·경로·걸음 데이터는 회고 영상을 만들기 위해 기기 안에서 <em>사용</em>될 뿐, 기기 밖으로 나가지 않습니다. 앱이 통신하는 상대는 애플의 지도·지명 서비스와 App Store뿐이며(§6·§7), 개발자가 받아 보는 정보는 어떤 것도 없습니다.
+<strong>요약:</strong> 오랜(OLANE)은 여행 중 위치·걸음·사진 메타데이터를 <strong>기기 안에서만</strong> 조용히 모아, 여행이 끝나면 경로·걸음·사진을 하나로 엮은 시네마틱 회고 영상을 만들어 드립니다. <strong>오랜에는 서버가 없고, 계정이 없고, 분석·광고·크래시 리포팅 SDK가 없습니다.</strong> 사진·경로·걸음 데이터는 회고 영상을 만들기 위해 기기 안에서 <em>사용</em>될 뿐, 기기 밖으로 나가지 않습니다. 앱이 통신하는 상대는 애플뿐입니다 — 여행 기록이 보관되는 <strong>사용자 본인의 iCloud</strong>(§9, 끌 수 있음), 지명 조회(§6), 그리고 App Store(§8). <strong>개발자가 받아 보는 정보는 어떤 것도 없습니다.</strong>
 </div>
 
 <h2>1. 수집하는 정보</h2>
@@ -83,17 +83,24 @@ a { color: #E0A93B; }
 <h2>7. 제3자 서비스 / SDK</h2>
 <p>오랜은 분석(Analytics), 광고, 크래시 리포팅 SDK를 <strong>일절 사용하지 않습니다.</strong> 광고 식별자(IDFA)도 사용하지 않으며, 사용자를 추적하지 않습니다. 앱이 통신하는 외부 시스템은 인앱 결제 처리를 위한 Apple의 App Store(StoreKit)와, 지도 표시·지명 조회를 위한 Apple의 지도 서비스(§6)뿐입니다. 둘 다 애플이 운영하며, 개발자에게 데이터를 전달하는 제3자는 존재하지 않습니다.</p>
 
-<h2>8. 인앱 결제 (Lifetime Pro)</h2>
-<p>오랜은 <strong>평생 Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>) 단일 비소모성 인앱 구매를 제공합니다. 결제는 전적으로 <strong>Apple App Store / StoreKit</strong>을 통해 처리되며, 카드 번호 등 결제 정보를 본 앱이나 개발자가 수집·열람하지 않습니다. 제3자 결제 대행사는 사용되지 않습니다. 환불·구매 복원은 사용자의 Apple 계정을 통해 Apple의 정책에 따라 처리됩니다.</p>
+<h2>8. 인앱 결제</h2>
+<p>오랜은 두 가지 인앱 구매를 제공합니다: <strong>이 회고 깨끗하게</strong>(<code>com.blueCode.OLANE.clean</code>, 소모성 &mdash; 여행 한 편의 표시를 지웁니다)와 <strong>평생 이용</strong>(<code>com.blueCode.OLANE.lifetime</code>, 비소모성). 어느 쪽도 개인정보를 요구하지 않으며, 구매 여부는 여행 기록 옆에 남을 뿐 개발자에게 전송되지 않습니다. 결제는 전적으로 <strong>Apple App Store / StoreKit</strong>을 통해 처리되며, 카드 번호 등 결제 정보를 본 앱이나 개발자가 수집·열람하지 않습니다. 제3자 결제 대행사는 사용되지 않습니다. 환불·구매 복원은 사용자의 Apple 계정을 통해 Apple의 정책에 따라 처리됩니다.</p>
 
 <h2>9. 클라우드 동기화</h2>
-<p>v1.0 기준 오랜은 <strong>클라우드 동기화를 사용하지 않는 완전 로컬 우선(local-first)</strong> 앱입니다. 모든 여행 기록, 오랜지도(Memory Map), 회고 영상은 기기 내 저장소에만 존재합니다.</p>
+<p>오랜은 여행 기록을 <strong>사용자 본인의 iCloud</strong>(비공개 CloudKit 데이터베이스)에 동기화합니다. 기본값은 켜짐이며 <strong>설정 &rarr; iCloud &rarr; “iCloud로 여행 동기화”</strong>에서 끌 수 있습니다.</p>
+<ul>
+  <li><strong>동기화되는 것:</strong> 여행 기록 &mdash; 경로 좌표, 걸음·거리 등 통계, 그리고 사진 <em>참조 정보</em>(사진 자체가 아니라, 기기 사진 보관함 안의 식별자와 촬영 시각).</li>
+  <li><strong>동기화되지 않는 것:</strong> <strong>사진과 동영상 원본은 오랜이 어디로도 업로드하지 않습니다.</strong> 완성된 회고 <strong>영상 파일도 전송하지 않으며</strong>, 다른 기기에서는 그 기기의 사진 보관함으로 다시 만들어집니다. <strong>볼트(Vault) 항목과 앱 설정은 동기화 대상이 아니며</strong>, 기기 전용 저장소에 따로 보관됩니다.</li>
+  <li><strong>누가 볼 수 있는가:</strong> 비공개 CloudKit 데이터베이스는 <strong>사용자 본인의 iCloud 저장 공간</strong>이고 <strong>개발자는 접근할 수 없습니다.</strong> 이 동기화로 개발자가 받아 보는 정보는 없습니다. 저장·처리는 Apple의 <a href="https://www.apple.com/legal/privacy/">개인정보 보호 정책</a>과 iCloud 약관을 따릅니다.</li>
+  <li><strong>왜 켜 두는가:</strong> 이것이 있어야 앱을 지웠다 다시 깔거나 새 아이폰으로 옮겨도 여행 기록과 오랜지도가 남습니다. 끄면 모든 데이터는 이 기기에만 존재하고, 앱을 삭제하면 함께 사라집니다.</li>
+</ul>
 
 <h2>10. 데이터 보관 및 삭제</h2>
 <ul>
-  <li>모든 데이터가 기기 안에만 저장되므로, 사용자가 데이터를 완전히 통제합니다.</li>
-  <li>앱 안에서 개별 여행·회고·볼트 항목을 직접 삭제할 수 있습니다.</li>
-  <li>앱을 삭제하면 기기 내 모든 데이터가 즉시, 영구적으로 삭제됩니다.</li>
+  <li>모든 데이터는 사용자의 기기와, 동기화를 켠 경우 사용자 본인의 iCloud에만 존재합니다. 개발자에게는 사본이 없습니다.</li>
+  <li>앱 안에서 개별 여행·회고·볼트 항목을 직접 삭제할 수 있으며, 삭제는 동기화된 다른 기기에도 반영됩니다.</li>
+  <li>앱을 삭제하면 기기 안의 데이터는 즉시 삭제됩니다. <strong>동기화를 켜 두었다면 여행 기록은 사용자 본인의 iCloud에 남아</strong> 다시 설치할 때 돌아옵니다 — 그것이 이 기능의 목적입니다. 완전히 지우려면 iOS의 <em>설정 &rarr; [사용자 이름] &rarr; iCloud &rarr; 저장 공간 관리</em>에서 오랜의 데이터를 삭제하십시오.</li>
+  <li>볼트 항목과 앱 설정은 동기화되지 않으므로, 앱을 삭제하면 함께 사라집니다.</li>
 </ul>
 
 <h2>11. 아동의 개인정보</h2>
@@ -116,10 +123,10 @@ a { color: #E0A93B; }
 <!-- =========== ENGLISH =========== -->
 <section id="en">
 <h1>Privacy Policy — OLANE (오랜)</h1>
-<p><small>Effective: July 1, 2026 · Last updated: August 27, 2026</small></p>
+<p><small>Effective: July 1, 2026 · Last updated: September 3, 2026</small></p>
 
 <div class="callout">
-<strong>Summary:</strong> OLANE silently gathers your location, step count, and photo metadata <strong>on your device only</strong> while you travel, then — once the trip ends — turns your route, steps, and photos into a cinematic recap. <strong>OLANE has no server of its own, no account, and no analytics/advertising/crash-reporting SDK.</strong> Your photos, route, and step data are <em>used</em> on-device to build the recap and never leave the device. The only parties the app talks to are Apple's map and place-name services and the App Store (§6, §7) — nothing reaches the developer, ever.
+<strong>Summary:</strong> OLANE silently gathers your location, step count, and photo metadata <strong>on your device only</strong> while you travel, then — once the trip ends — turns your route, steps, and photos into a cinematic recap. <strong>OLANE has no server of its own, no account, and no analytics/advertising/crash-reporting SDK.</strong> Your photos, route, and step data are <em>used</em> on-device to build the recap and never leave the device. The only party the app talks to is Apple: <strong>your own iCloud</strong>, where your trip records are kept (§9, and you can turn it off), the place-name lookup (§6), and the App Store (§8). <strong>Nothing reaches the developer, ever.</strong>
 </div>
 
 <h2>1. Information We Collect</h2>
@@ -164,17 +171,24 @@ a { color: #E0A93B; }
 <h2>7. Third-Party Services / SDKs</h2>
 <p>OLANE uses <strong>no</strong> analytics, advertising, or crash-reporting SDKs. It does not use the advertising identifier (IDFA) and does not track you. The only external systems the app ever communicates with are Apple's App Store (StoreKit), for in-app purchase processing, and Apple's map service, for displaying maps and looking up place names (§6). Both are operated by Apple; no third party ever passes your data to the developer.</p>
 
-<h2>8. In-App Purchase (Lifetime Pro)</h2>
-<p>OLANE offers a single non-consumable in-app purchase, <strong>Lifetime Pro</strong> (<code>com.blueCode.OLANE.lifetime</code>). Payment is processed entirely through <strong>Apple's App Store / StoreKit</strong>; neither this app nor its developer collects or views your payment details. No third-party payment processor is used. Refunds and purchase restoration are handled through your Apple account per Apple's policies.</p>
+<h2>8. In-App Purchases</h2>
+<p>OLANE offers two in-app purchases: <strong>Clean This Recap</strong> (<code>com.blueCode.OLANE.clean</code>, a consumable that removes the mark from one trip) and <strong>Lifetime</strong> (<code>com.blueCode.OLANE.lifetime</code>, non-consumable). Neither asks for any personal information, and the fact of a purchase is recorded beside your trip on your device &mdash; it is not transmitted to the developer. Payment is processed entirely through <strong>Apple's App Store / StoreKit</strong>; neither this app nor its developer collects or views your payment details. No third-party payment processor is used. Refunds and purchase restoration are handled through your Apple account per Apple's policies.</p>
 
 <h2>9. Cloud Sync</h2>
-<p>As of v1.0, OLANE is a fully <strong>local-first app with no cloud sync</strong>. All trips, the Memory Map, and recap videos exist only in on-device storage.</p>
+<p>OLANE syncs your trip records to <strong>your own iCloud</strong> (a private CloudKit database). This is on by default and can be turned off in <strong>Settings &rarr; iCloud &rarr; “Sync trips with iCloud”</strong>.</p>
+<ul>
+  <li><strong>What syncs:</strong> trip records &mdash; route coordinates, statistics such as steps and distance, and photo <em>references</em> (identifiers and capture times from your own photo library, not the images).</li>
+  <li><strong>What does not:</strong> <strong>your photos and videos are never uploaded by OLANE.</strong> The rendered recap <strong>films are not transferred either</strong> &mdash; another device rebuilds them from the photos already in its own library. <strong>Vault items and your app settings never sync</strong>; they live in a separate, device-only store.</li>
+  <li><strong>Who can see it:</strong> a private CloudKit database is <strong>your own iCloud storage</strong>, and <strong>the developer cannot access it.</strong> Nothing about this sync reaches the developer. Storage and processing are governed by Apple’s <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a> and iCloud terms.</li>
+  <li><strong>Why it is on:</strong> it is what makes your trips and your Memory Map survive deleting the app or moving to a new iPhone. With it off, everything lives on this device only and is deleted with the app.</li>
+</ul>
 
 <h2>10. Data Retention &amp; Deletion</h2>
 <ul>
-  <li>Because all data lives only on your device, you are always in full control of it.</li>
-  <li>You can delete individual trips, recaps, or Vault items directly within the app.</li>
-  <li>Deleting the app immediately and permanently removes all data stored on your device.</li>
+  <li>All data lives on your device and, if sync is on, in your own iCloud. The developer holds no copy of any of it.</li>
+  <li>You can delete individual trips, recaps, or Vault items directly within the app; deletions propagate to your synced devices.</li>
+  <li>Deleting the app immediately removes the data stored on your device. <strong>With sync on, your trip records remain in your own iCloud</strong> and come back when you reinstall &mdash; that is the point of the feature. To erase them completely, remove OLANE’s data in iOS <em>Settings &rarr; [your name] &rarr; iCloud &rarr; Manage Storage</em>.</li>
+  <li>Vault items and app settings never sync, so deleting the app removes them for good.</li>
 </ul>
 
 <h2>11. Children's Privacy</h2>
@@ -197,10 +211,10 @@ Bundle ID: <code>com.blueCode.OLANE</code></p>
 <!-- =========== JAPANESE =========== -->
 <section id="ja">
 <h1>プライバシーポリシー — OLANE (オレン)</h1>
-<p><small>施行日: 2026年7月1日 · 最終更新日: 2026年8月27日</small></p>
+<p><small>施行日: 2026年7月1日 · 最終更新日: 2026年9月3日</small></p>
 
 <div class="callout">
-<strong>要約:</strong> OLANEは旅行中、位置情報・歩数・写真メタデータを<strong>端末内でのみ</strong>静かに記録し、旅が終わると経路・歩数・写真をひとつにまとめたシネマティックな回想動画を作成します。<strong>OLANE自身のサーバーはなく、アカウントもなく、分析・広告・クラッシュレポートSDKもありません。</strong>写真・経路・歩数データは回想動画を作るために端末内で<em>使用</em>されるだけで、端末の外に出ることはありません。アプリが通信する相手はAppleの地図・地名サービスとApp Storeのみで(§6・§7)、開発者が受け取る情報は一切ありません。
+<strong>要約:</strong> OLANEは旅行中、位置情報・歩数・写真メタデータを<strong>端末内でのみ</strong>静かに記録し、旅が終わると経路・歩数・写真をひとつにまとめたシネマティックな回想動画を作成します。<strong>OLANE自身のサーバーはなく、アカウントもなく、分析・広告・クラッシュレポートSDKもありません。</strong>写真・経路・歩数データは回想動画を作るために端末内で<em>使用</em>されるだけで、端末の外に出ることはありません。アプリが通信する相手はAppleだけです — 旅の記録が保管される<strong>あなた自身のiCloud</strong>（§9、オフにできます）、地名の問い合わせ（§6）、そしてApp Store（§8）。<strong>開発者が受け取る情報は一切ありません。</strong>
 </div>
 
 <h2>1. 収集する情報</h2>
@@ -249,7 +263,13 @@ Bundle ID: <code>com.blueCode.OLANE</code></p>
 <p>OLANEは単一の非消費型アプリ内課金<strong>Lifetime Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>)を提供します。決済は完全に<strong>Apple App Store / StoreKit</strong>を通じて処理され、本アプリおよび開発者はカード情報などの決済情報を収集・閲覧しません。第三者の決済代行業者は使用されません。返金・購入の復元はAppleのポリシーに従い、ユーザーのApple IDを通じて処理されます。</p>
 
 <h2>9. クラウド同期</h2>
-<p>v1.0時点でOLANEはクラウド同期を使用しない、完全に<strong>ローカルファースト</strong>のアプリです。すべての旅行記録、Memory Map、回想動画は端末内のストレージにのみ存在します。</p>
+<p>OLANEは旅の記録を<strong>あなた自身のiCloud</strong>（プライベートCloudKitデータベース）に同期します。既定でオンで、<strong>設定 &rarr; iCloud &rarr;「iCloudで旅を同期」</strong>でオフにできます。</p>
+<ul>
+  <li><strong>同期されるもの：</strong>旅の記録 &mdash; 経路の座標、歩数や距離などの統計、写真の<em>参照情報</em>（写真そのものではなく、端末の写真ライブラリ内の識別子と撮影時刻）。</li>
+  <li><strong>同期されないもの：</strong><strong>写真と動画そのものをOLANEがアップロードすることはありません。</strong>完成した回想<strong>動画ファイルも転送されず</strong>、別の端末ではその端末の写真ライブラリから作り直されます。<strong>ボルトの項目とアプリの設定は同期対象外</strong>で、端末専用の別ストレージに保管されます。</li>
+  <li><strong>誰が見られるか：</strong>プライベートCloudKitデータベースは<strong>あなた自身のiCloudの保管領域</strong>であり、<strong>開発者はアクセスできません。</strong>この同期によって開発者が受け取る情報はありません。保管と処理はAppleの<a href="https://www.apple.com/legal/privacy/">プライバシーポリシー</a>およびiCloud利用規約に従います。</li>
+  <li><strong>なぜ既定でオンか：</strong>アプリを入れ直しても、新しいiPhoneに移っても、旅の記録とオラン地図が残るためです。オフにすると、すべてのデータはこの端末だけに存在し、アプリの削除とともに消えます。</li>
+</ul>
 
 <h2>10. データの保持と削除</h2>
 <ul>
@@ -281,7 +301,7 @@ Bundle ID: <code>com.blueCode.OLANE</code></p>
 <p><small>生效日期:2026年7月1日 · 最后更新:2026年8月27日</small></p>
 
 <div class="callout">
-<strong>摘要:</strong>OLANE 在您旅行期间会<strong>仅在设备本地</strong>静默记录位置、步数与照片元数据;旅程结束后,应用会将路线、步数与照片自动汇编成一部电影般的回忆视频。<strong>OLANE 没有自己的服务器,没有账户,也没有分析/广告/崩溃报告 SDK。</strong>您的照片、路线与步数数据仅在设备本地被<em>使用</em>以生成回忆视频,不会离开设备。应用唯一会通信的对象是 Apple 的地图与地名服务以及 App Store(见 §6、§7),开发者不会收到任何信息。
+<strong>摘要:</strong>OLANE 在您旅行期间会<strong>仅在设备本地</strong>静默记录位置、步数与照片元数据;旅程结束后,应用会将路线、步数与照片自动汇编成一部电影般的回忆视频。<strong>OLANE 没有自己的服务器,没有账户,也没有分析/广告/崩溃报告 SDK。</strong>您的照片、路线与步数数据仅在设备本地被<em>使用</em>以生成回忆视频,不会离开设备。应用唯一会通信的对象是 Apple — 保存你旅行记录的<strong>你自己的 iCloud</strong>（见 §9，可关闭）、地名查询（见 §6）以及 App Store（见 §8）。<strong>开发者不会收到任何信息。</strong>
 </div>
 
 <h2>1. 我们收集的信息</h2>
@@ -330,7 +350,13 @@ Bundle ID: <code>com.blueCode.OLANE</code></p>
 <p>OLANE 提供单一的非消耗型应用内购买项目 <strong>Lifetime Pro</strong>(<code>com.blueCode.OLANE.lifetime</code>)。付款完全通过 <strong>Apple App Store / StoreKit</strong> 处理,本应用及其开发者不会收集或查看您的付款信息。不使用任何第三方支付处理商。退款与购买恢复通过您的 Apple 账户,依据 Apple 的政策处理。</p>
 
 <h2>9. 云同步</h2>
-<p>截至 v1.0,OLANE 是完全<strong>本地优先(local-first)、不使用云同步</strong>的应用。所有旅行记录、Memory Map(记忆地图)与回忆视频均仅存在于设备本地存储中。</p>
+<p>OLANE 会把你的旅行记录同步到<strong>你自己的 iCloud</strong>（私有 CloudKit 数据库）。默认开启，可在<strong>设置 &rarr; iCloud &rarr;「用 iCloud 同步旅行」</strong>中关闭。</p>
+<ul>
+  <li><strong>会同步的：</strong>旅行记录 &mdash; 路线坐标、步数与距离等统计，以及照片的<em>引用信息</em>（你自己相册中的标识符与拍摄时间，而不是照片本身）。</li>
+  <li><strong>不会同步的：</strong><strong>OLANE 绝不会上传你的照片和视频。</strong>生成的回忆<strong>影片文件也不会传输</strong>，另一台设备会用它自己相册里的照片重新生成。<strong>保险库内容与应用设置从不同步</strong>，它们保存在单独的、仅限本机的存储中。</li>
+  <li><strong>谁能看到：</strong>私有 CloudKit 数据库是<strong>你自己的 iCloud 存储空间</strong>，<strong>开发者无法访问。</strong>此同步不会让开发者收到任何信息。存储与处理适用 Apple 的<a href="https://www.apple.com/legal/privacy/">隐私政策</a>与 iCloud 条款。</li>
+  <li><strong>为什么默认开启：</strong>只有这样，删除应用重装或更换新 iPhone 后，你的旅行记录和回忆地图才会还在。关闭后，所有数据仅存在于本机，并随应用删除而消失。</li>
+</ul>
 
 <h2>10. 数据保留与删除</h2>
 <ul>
