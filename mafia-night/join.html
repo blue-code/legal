@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 색인 금지: 이 URL 은 ?code=XXXX&name=<닉네임> 형태로 유통된다. 검색결과에
+     "OO 님이 초대했어요 · 방 코드 K7M2" 가 남으면 D9(무수집) 취지에 어긋난다. -->
+<meta name="robots" content="noindex, nofollow">
+<title>마피아 나이트 방 입장 / Join a Mafia Night room</title>
+<!--
+  초대 QR 랜딩 (2026-09-04 상품성 리뷰 P1-2).
+
+  왜 필요한가: 초대 QR 을 찍는 사람은 아직 앱이 없을 확률이 가장 높다. QR 에 커스텀 스킴
+  (mafianight://)을 담으면 미설치자의 카메라는 아무 일도 하지 않는다 — 초대장이 죽는다.
+  게임 최소 정원이 4인이라 한 명이 못 들어오면 그 모임 전체가 시작조차 못 한다.
+
+  이 페이지가 하는 일은 셋뿐이다:
+    1) 설치돼 있으면 앱으로 넘긴다(mafianight://join?code=...).
+    2) 안 넘어가면(=미설치) App Store 로 안내한다.
+    3) 어느 쪽도 안 되면 룸코드를 크게 보여준다 — 손으로 입력하면 그만이다.
+  추적·수집·쿠키 없음(D9 무수집 유지). 서버 로직 없는 정적 페이지다.
+-->
+<style>
+:root {
+  --ink: #f0ead9; --inkSoft: #b9b1a0; --bg: #14131a; --card: #201f29;
+  --line: #3a3848; --hi: #fde047; --hiInk: #14131a; --blood: #d64545;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  max-width: 520px; margin: 0 auto; padding: 48px 20px; line-height: 1.65;
+  color: var(--ink); background: var(--bg); text-align: center;
+}
+h1 { font-size: 1.5rem; margin-bottom: 6px; }
+p { color: var(--inkSoft); margin: 10px 0; }
+.code {
+  font-size: 3.2rem; font-weight: 800; letter-spacing: 0.18em; margin: 6px 0 2px;
+  font-variant-numeric: tabular-nums;
+}
+.card {
+  background: var(--card); border: 1.6px solid var(--line); border-radius: 14px;
+  padding: 22px 18px; margin: 26px 0;
+}
+.btn {
+  display: block; width: 100%; font: inherit; font-weight: 700; font-size: 1.05rem;
+  cursor: pointer; padding: 15px 18px; margin: 10px 0; border-radius: 12px;
+  border: 1.6px solid var(--hi); background: var(--hi); color: var(--hiInk);
+  text-decoration: none;
+}
+.btn.secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+small { color: var(--inkSoft); font-size: 0.82rem; }
+.lang { display: none; } .lang.show { display: block; }
+.langbar { margin-bottom: 22px; }
+.langbar button {
+  font: inherit; font-size: 0.86rem; cursor: pointer; margin: 0 3px; padding: 5px 11px;
+  border-radius: 8px; border: 1.4px solid var(--line); background: transparent; color: var(--inkSoft);
+}
+.langbar button.active { background: var(--hi); color: var(--hiInk); border-color: var(--hi); }
+@media (prefers-color-scheme: light) {
+  :root { --ink: #1a1a1a; --inkSoft: #5b554a; --bg: #f5f1e8; --card: #ece5d3; --line: #d8d1bf; }
+}
+</style>
+</head>
+<body>
+
+<div class="langbar">
+  <button data-l="ko" class="active">한국어</button>
+  <button data-l="en">English</button>
+  <button data-l="ja">日本語</button>
+  <button data-l="zh">简体中文</button>
+</div>
+
+<div class="card">
+  <p id="codeLabel">방 코드</p>
+  <div class="code" id="code">----</div>
+  <p><small id="hostLine"></small></p>
+</div>
+
+<a class="btn" id="openApp" href="#">앱에서 열기</a>
+<a class="btn secondary" id="store" href="https://apps.apple.com/app/id6783649219">App Store에서 받기</a>
+
+<div class="lang show" id="ko">
+  <h1>마피아 나이트</h1>
+  <p>앱이 설치돼 있으면 자동으로 열립니다. 열리지 않으면 App Store에서 받은 뒤,
+     <b>방 참여</b>에서 위 코드를 입력하세요.</p>
+  <p><small>같은 방에 있는 사람끼리 인터넷 없이 연결됩니다. 이 페이지는 아무 정보도 수집하지 않습니다.</small></p>
+</div>
+<div class="lang" id="en">
+  <h1>Mafia Night</h1>
+  <p>If you already have the app it opens automatically. If not, get it from the App Store and
+     enter the code above under <b>Join room</b>.</p>
+  <p><small>Players connect directly in the same room, with no internet. This page collects nothing.</small></p>
+</div>
+<div class="lang" id="ja">
+  <h1>マフィア・ナイト</h1>
+  <p>アプリが入っていれば自動で開きます。開かない場合は App Store で入手し、
+     <b>ルームに参加</b>で上のコードを入力してください。</p>
+  <p><small>同じ部屋の端末どうしがインターネットなしで接続します。このページは何も収集しません。</small></p>
+</div>
+<div class="lang" id="zh">
+  <h1>黑手党之夜</h1>
+  <p>已安装应用会自动打开。若未打开，请在 App Store 下载后，在<b>加入房间</b>中输入上方代码。</p>
+  <p><small>同一房间的设备之间直接连接，无需联网。本页面不收集任何信息。</small></p>
+</div>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var code = (q.get("code") || "").toUpperCase().replace(/[^23456789ABCDEFGHJKMNPQRSTUVWXYZ]/g, "");
+  var name = q.get("name") || "";
+  var deep = "mafianight://join?code=" + encodeURIComponent(code) + "&v=1" +
+             (name ? "&name=" + encodeURIComponent(name) : "");
+
+  if (code.length === 4) {
+    document.getElementById("code").textContent = code;
+    document.getElementById("openApp").href = deep;
+  } else {
+    // 코드가 없거나 망가진 링크 — 자동 이동하지 않고 스토어 안내만 남긴다.
+    document.getElementById("code").textContent = "—";
+    document.getElementById("openApp").style.display = "none";
+  }
+
+  var labels = {
+    ko: { code: "방 코드", host: "님이 초대했어요", open: "앱에서 열기", store: "App Store에서 받기" },
+    en: { code: "Room code", host: "invited you", open: "Open in the app", store: "Get it on the App Store" },
+    ja: { code: "ルームコード", host: "さんの招待です", open: "アプリで開く", store: "App Store で入手" },
+    zh: { code: "房间代码", host: "邀请了你", open: "在应用中打开", store: "前往 App Store 下载" }
+  };
+
+  function setLang(l) {
+    document.documentElement.lang = (l === "zh") ? "zh-Hans" : l;
+    ["ko", "en", "ja", "zh"].forEach(function (x) {
+      document.getElementById(x).classList.toggle("show", x === l);
+    });
+    document.querySelectorAll(".langbar button").forEach(function (b) {
+      b.classList.toggle("active", b.dataset.l === l);
+    });
+    var t = labels[l];
+    document.getElementById("codeLabel").textContent = t.code;
+    document.getElementById("openApp").textContent = t.open;
+    document.getElementById("store").textContent = t.store;
+    // 이름은 반드시 textContent 로만 넣는다(URL 파라미터 = 신뢰할 수 없는 입력).
+    document.getElementById("hostLine").textContent = name ? (name + " " + t.host) : "";
+  }
+
+  var nav = (navigator.language || "ko").toLowerCase();
+  var initial = nav.indexOf("ja") === 0 ? "ja" : nav.indexOf("zh") === 0 ? "zh" : nav.indexOf("ko") === 0 ? "ko" : "en";
+  setLang(initial);
+  document.querySelectorAll(".langbar button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.dataset.l); });
+  });
+
+  // ⚠️ 자동 리다이렉트를 하지 않는다.
+  // location.href = "mafianight://..." 를 로드 시점에 실행하면, 앱이 없는 사람의 Safari 는
+  // "주소가 올바르지 않아 페이지를 열 수 없습니다" 모달을 띄운다 — 이 페이지가 존재하는 이유가
+  // 바로 '미설치자를 살리는 것'인데 그 사람에게 제일 먼저 에러창을 보여주게 된다.
+  // 설치된 사람도 사용자 제스처 없는 스킴 전환에는 확인 팝업이 뜰 수 있다.
+  // → 앱 전환은 반드시 버튼 탭(사용자 제스처)으로만 일어난다. 미설치자는 스토어 버튼과 룸코드를 본다.
+})();
+</script>
+
+</body>
+</html>
