@@ -34,17 +34,17 @@ small { color: #888; }
 <!-- =========== KOREAN =========== -->
 <section id="ko">
 <h1>개인정보처리방침 — 데이아크 (DayArc)</h1>
-<p><small>최종 업데이트: 2026년 6월 14일</small></p>
+<p><small>최종 업데이트: 2026년 9월 4일</small></p>
 
-<p><span class="badge">🔒 이 기기에서만</span> 데이아크는 위치·움직임·건강 데이터를 읽어 하루의 시간을 자동으로 분류해 주는 <strong>온디바이스</strong> 라이프로그 앱입니다. <strong>모든 개인 데이터는 사용자의 iPhone 안에서만 처리·저장되며, 어떠한 서버로도 전송되지 않습니다.</strong> 계정도, 로그인도, 광고도, 추적도 없습니다.</p>
+<p><span class="badge">🔒 온디바이스 분석</span> 데이아크는 위치·움직임·건강 데이터를 읽어 하루의 시간을 자동으로 분류해 주는 <strong>온디바이스</strong> 라이프로그 앱입니다. <strong>모든 분석은 사용자의 iPhone 안에서 이루어지며, 데이아크는 자체 서버를 운영하지 않습니다.</strong> 계정도, 로그인도, 광고도, 추적도 없습니다. 앱이 통신하는 상대는 애플뿐입니다 — 기록이 백업되는 <strong>사용자 본인의 iCloud</strong>(§3-1)와 App Store(§4). <strong>개발자가 받아 보는 정보는 어떤 것도 없습니다.</strong></p>
 
 <h2>1. 수집·이용하는 정보 (모두 기기 내 저장)</h2>
 <table>
   <tr><th>항목</th><th>이용 목적</th><th>저장 위치 / 보유</th></tr>
-  <tr><td>위치 정보 (방문지·이동 구간)</td><td>방문 장소와 이동 시간을 자동 기록·분류</td><td>기기 내 로컬 DB(SwiftData). 원시 위치 샘플은 약 90일 후 요약으로 축약</td></tr>
+  <tr><td>위치 정보 (방문지·이동 구간)</td><td>방문 장소와 이동 시간을 자동 기록·분류</td><td>기기 내 로컬 DB(SwiftData). 원시 위치 샘플은 약 90일 후 요약으로 축약되며, <strong>원시 샘플은 iCloud로 백업되지 않습니다</strong>. 방문·이동 기록은 사용자 본인의 iCloud에 백업됩니다(§3-1)</td></tr>
   <tr><td>동작 및 피트니스 (CoreMotion)</td><td>걷기·달리기·차량 이동 구분</td><td>기기 내에서만 사용</td></tr>
   <tr><td>건강 데이터 (걸음수·수면, HealthKit 읽기)</td><td>도넛 중앙 지표와 통계 표시</td><td>기기 내에서만 읽어 표시. 외부 전송 없음</td></tr>
-  <tr><td>사용자 입력 (활동·장소 이름·보정)</td><td>시간 분류 정확도 향상, 통계 생성</td><td>기기 내 로컬 DB</td></tr>
+  <tr><td>사용자 입력 (활동·장소 이름·보정)</td><td>시간 분류 정확도 향상, 통계 생성</td><td>기기 내 로컬 DB. 사용자 본인의 iCloud에 백업됨(§3-1)</td></tr>
   <tr><td>앱 설정 (언어·외관·잠금 등)</td><td>앱 환경 유지</td><td>기기 내 로컬 저장</td></tr>
 </table>
 
@@ -52,11 +52,21 @@ small { color: #888; }
 <ul>
   <li>이름·이메일·전화번호 등 개인 식별 정보 (계정 자체가 없습니다)</li>
   <li>광고 식별자, 추적·분석 식별자</li>
-  <li>서버로 전송되는 어떠한 위치·건강·활동 데이터</li>
+  <li>데이아크의 서버로 전송되는 데이터 (데이아크에는 서버가 없습니다). 방문·활동 기록은 <strong>사용자 본인의 iCloud</strong>에만 백업됩니다 &mdash; §3-1</li>
 </ul>
 
-<h2>3. 서버 전송 없음 · 제3자 공유 없음</h2>
-<p>데이아크는 자체 서버를 운영하지 않으며, 사용자의 위치·건강·활동 데이터를 blue-code 또는 제3자에게 전송하지 않습니다. 분석은 전적으로 기기 내에서 수행됩니다. CoreLocation·CoreMotion·HealthKit는 Apple이 제공하는 <em>기기 내</em> 프레임워크이며, 이를 통해 읽은 데이터는 앱 밖으로 나가지 않습니다.</p>
+<h2>3. 데이아크 서버 없음 · 제3자 공유 없음</h2>
+<p>데이아크는 자체 서버를 운영하지 않으며, 사용자의 위치·건강·활동 데이터를 blue-code 또는 제3자에게 전송하지 않습니다. 분석은 전적으로 기기 내에서 수행됩니다. CoreLocation·CoreMotion·HealthKit는 Apple이 제공하는 <em>기기 내</em> 프레임워크입니다. 데이터가 기기를 벗어나는 경우는 아래 §3-1의 <strong>사용자 본인 iCloud 백업</strong> 하나뿐이며, 그 사본 역시 개발자는 볼 수 없습니다.</p>
+
+<h2>3-1. iCloud 백업</h2>
+<p>앱을 삭제했다가 다시 설치해도 기록이 남도록, 데이아크는 아래 데이터의 스냅샷을 <strong>사용자 본인의 iCloud</strong>(이 앱 전용 비공개 컨테이너 <code>iCloud.com.blueCode.DayArc</code>)에 저장합니다. 이 백업은 앱이 백그라운드로 전환될 때 <strong>자동으로</strong> 갱신되며, <strong>앱 안에 끄는 설정은 없습니다</strong>(중단 방법은 아래 참조).</p>
+<ul>
+  <li><strong>백업되는 것:</strong> 장소, 방문 기록, 활동 기록, 사용자가 만든 카테고리, 일별 통계, 학습된 분류 규칙.</li>
+  <li><strong>백업되지 않는 것:</strong> <strong>원본 GPS 좌표 기록(raw location samples)</strong>과 <strong>암호 잠금</strong>. 암호는 이 기기의 키체인에만 보관되며 iCloud로 나가지 않습니다.</li>
+  <li><strong>누가 볼 수 있는가:</strong> 이 컨테이너는 <strong>사용자 Apple ID의 iCloud 저장 공간</strong>이며 <strong>개발자는 접근할 수 없습니다.</strong> 이 백업으로 개발자나 제3자가 받아 보는 정보는 없습니다. 저장·처리는 Apple의 <a href="https://www.apple.com/legal/privacy/" target="_blank">개인정보 보호 정책</a>과 iCloud 약관을 따릅니다.</li>
+  <li><strong>끄는 방법:</strong> iOS <em>설정 &rarr; [사용자 이름] &rarr; iCloud &rarr; 저장 공간 관리 / iCloud Drive</em>에서 데이아크를 끄면 백업이 생성되지 않습니다. iCloud가 꺼져 있거나 저장 공간이 부족하면 백업은 만들어지지 않으며, 이 경우 앱을 삭제하면 기록도 함께 사라집니다.</li>
+  <li>상태 확인과 즉시 갱신은 앱의 <em>설정 &rarr; iCloud 백업</em>에서 할 수 있습니다.</li>
+</ul>
 
 <h2>4. 인앱 구입</h2>
 <p>프리미엄 기능의 평생 해제는 <strong>Apple StoreKit</strong>을 통해 처리됩니다. 결제 처리는 Apple이 담당하며, 데이아크는 신용카드 등 결제 정보를 보거나 저장하지 않습니다. 구입 복원을 위해 Apple이 제공하는 구입 상태만 확인합니다. (<a href="https://www.apple.com/legal/privacy/" target="_blank">Apple 개인정보처리방침</a>)</p>
@@ -64,14 +74,15 @@ small { color: #888; }
 <h2>5. 데이터 내보내기 및 삭제</h2>
 <ul>
   <li><strong>내보내기</strong>: CSV/JSON 내보내기는 사용자가 직접 실행할 때만 동작하며, 생성된 파일의 공유 위치는 사용자가 정합니다.</li>
-  <li><strong>삭제</strong>: 설정 &gt; 데이터베이스에서 데이터를 초기화하거나, 앱을 삭제하면 모든 로컬 데이터가 즉시 영구 삭제됩니다.</li>
+  <li><strong>삭제</strong>: 설정 &gt; 데이터베이스에서 데이터를 초기화하거나, 앱을 삭제하면 기기 안의 데이터는 즉시 삭제됩니다.</li>
+  <li><strong>iCloud 사본까지 지우려면</strong>: §3-1의 백업은 앱을 삭제해도 <strong>사용자 본인의 iCloud에 남아</strong> 다시 설치할 때 돌아옵니다 &mdash; 그것이 이 기능의 목적입니다. 완전히 지우려면 iOS <em>설정 &rarr; [사용자 이름] &rarr; iCloud &rarr; 저장 공간 관리</em>에서 데이아크의 데이터를 삭제하십시오.</li>
 </ul>
 
 <h2>6. 권한</h2>
 <p>위치(항상)·동작 및 피트니스·건강(읽기) 권한은 자동 시간 분류 기능을 위해 요청됩니다. 모든 권한은 선택 사항이며, 거부해도 앱은 작동합니다(해당 기능만 비활성화됩니다). 권한은 iOS 설정에서 언제든 변경할 수 있습니다.</p>
 
 <h2>7. 아동의 개인정보</h2>
-<p>본 앱은 만 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다(애초에 어떠한 개인정보도 수집·전송하지 않습니다).</p>
+<p>본 앱은 만 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다(개발자에게 전송되는 개인정보는 어떤 것도 없습니다).</p>
 
 <h2>8. 처리방침 변경</h2>
 <p>본 방침이 변경되면 이 페이지의 최종 업데이트 날짜를 갱신합니다.</p>
@@ -85,17 +96,17 @@ small { color: #888; }
 <!-- =========== ENGLISH =========== -->
 <section id="en">
 <h1>Privacy Policy — DayArc (데이아크)</h1>
-<p><small>Last updated: June 14, 2026</small></p>
+<p><small>Last updated: September 4, 2026</small></p>
 
-<p><span class="badge">🔒 On this device</span> DayArc is an <strong>on-device</strong> life-logging app that reads your location, motion, and health data to automatically sort your day into time blocks. <strong>All personal data is processed and stored only on your iPhone and is never sent to any server.</strong> No account, no sign-in, no ads, no tracking.</p>
+<p><span class="badge">🔒 On-device analysis</span> DayArc is an <strong>on-device</strong> life-logging app that reads your location, motion, and health data to automatically sort your day into time blocks. <strong>All analysis happens on your iPhone, and DayArc operates no server of its own.</strong> No account, no sign-in, no ads, no tracking. The only party the app talks to is Apple: <strong>your own iCloud</strong>, where your records are backed up (§3-1), and the App Store (§4). <strong>Nothing reaches the developer, ever.</strong></p>
 
 <h2>1. Information used (all stored on device)</h2>
 <table>
   <tr><th>Data</th><th>Purpose</th><th>Storage / retention</th></tr>
-  <tr><td>Location (visits &amp; routes)</td><td>Automatically record &amp; classify places and travel time</td><td>Local DB (SwiftData) on device. Raw location samples are reduced to summaries after ~90 days</td></tr>
+  <tr><td>Location (visits &amp; routes)</td><td>Automatically record &amp; classify places and travel time</td><td>Local DB (SwiftData) on device. Raw location samples are reduced to summaries after ~90 days and are <strong>never backed up to iCloud</strong>; visit and route records are backed up to your own iCloud (§3-1)</td></tr>
   <tr><td>Motion &amp; Fitness (CoreMotion)</td><td>Tell walking, running, and driving apart</td><td>Used on device only</td></tr>
   <tr><td>Health data (steps &amp; sleep, HealthKit read)</td><td>Show the donut center metric and statistics</td><td>Read &amp; displayed on device only; never transmitted</td></tr>
-  <tr><td>Your input (activity/place names, corrections)</td><td>Improve classification accuracy, build statistics</td><td>Local DB on device</td></tr>
+  <tr><td>Your input (activity/place names, corrections)</td><td>Improve classification accuracy, build statistics</td><td>Local DB on device; backed up to your own iCloud (§3-1)</td></tr>
   <tr><td>App settings (language, appearance, lock…)</td><td>Persist your preferences</td><td>Stored locally on device</td></tr>
 </table>
 
@@ -103,11 +114,21 @@ small { color: #888; }
 <ul>
   <li>Personal identifiers such as name, email, phone (there is no account)</li>
   <li>Advertising identifiers, tracking/analytics identifiers</li>
-  <li>Any location, health, or activity data sent to a server</li>
+  <li>Any data sent to a DayArc server (there is none). Your visit and activity records are backed up only to <strong>your own iCloud</strong> &mdash; see §3-1</li>
 </ul>
 
-<h2>3. No server transmission · No third-party sharing</h2>
-<p>DayArc operates no server of its own and does not transmit your location, health, or activity data to blue-code or any third party. All analysis happens on your device. CoreLocation, CoreMotion, and HealthKit are Apple <em>on-device</em> frameworks; data read through them does not leave the app.</p>
+<h2>3. No DayArc server · No third-party sharing</h2>
+<p>DayArc operates no server of its own and does not transmit your location, health, or activity data to blue-code or any third party. All analysis happens on your device. CoreLocation, CoreMotion, and HealthKit are Apple <em>on-device</em> frameworks. The one case where data leaves the device is the <strong>backup to your own iCloud</strong> described in §3-1 &mdash; and the developer cannot read that copy either.</p>
+
+<h2>3-1. iCloud backup</h2>
+<p>So that your history survives deleting and reinstalling the app, DayArc stores a snapshot of the following in <strong>your own iCloud</strong> (a private container for this app alone, <code>iCloud.com.blueCode.DayArc</code>). The snapshot refreshes <strong>automatically</strong> when the app goes to the background; <strong>there is no in-app switch to turn it off</strong> (see below for how to stop it).</p>
+<ul>
+  <li><strong>What is backed up:</strong> places, visits, activity records, your custom categories, daily summaries, and learned classification rules.</li>
+  <li><strong>What is not:</strong> <strong>raw GPS location samples</strong> and your <strong>passcode</strong>. The passcode is kept only in this device's Keychain and never goes to iCloud.</li>
+  <li><strong>Who can read it:</strong> the container is <strong>your Apple ID's own iCloud storage</strong> and <strong>the developer cannot access it.</strong> Nothing from this backup reaches the developer or any third party. Storage and processing follow Apple's <a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Policy</a> and iCloud terms.</li>
+  <li><strong>How to stop it:</strong> turn DayArc off in iOS <em>Settings &rarr; [your name] &rarr; iCloud &rarr; Manage Storage / iCloud Drive</em> and no backup will be written. If iCloud is off or storage is full, no backup is created &mdash; in that case deleting the app also deletes your history.</li>
+  <li>You can check its status or refresh it immediately in the app's <em>Settings &rarr; iCloud backup</em>.</li>
+</ul>
 
 <h2>4. In-App Purchase</h2>
 <p>The lifetime unlock of premium features is handled via <strong>Apple StoreKit</strong>. Payment is processed by Apple; DayArc never sees or stores your payment details. To restore purchases we only check the entitlement status Apple provides. (<a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a>)</p>
@@ -115,14 +136,15 @@ small { color: #888; }
 <h2>5. Export &amp; deletion</h2>
 <ul>
   <li><strong>Export</strong>: CSV/JSON export runs only when you initiate it; you choose where the file is shared.</li>
-  <li><strong>Deletion</strong>: Reset your data in Settings &gt; Database, or delete the app to permanently remove all local data immediately.</li>
+  <li><strong>Deletion</strong>: Reset your data in Settings &gt; Database, or delete the app to remove the data on your device immediately.</li>
+  <li><strong>To erase the iCloud copy too</strong>: the §3-1 backup <strong>stays in your own iCloud</strong> after you delete the app and returns when you reinstall &mdash; that is the point of the feature. To erase it completely, go to iOS <em>Settings &rarr; [your name] &rarr; iCloud &rarr; Manage Storage</em> and delete DayArc's data.</li>
 </ul>
 
 <h2>6. Permissions</h2>
 <p>Location (Always), Motion &amp; Fitness, and Health (read) permissions are requested to power automatic time classification. All permissions are optional; the app works if you decline (only the related feature is disabled). You can change permissions anytime in iOS Settings.</p>
 
 <h2>7. Children's privacy</h2>
-<p>This app is not directed to children under 13 and does not knowingly collect children's personal information (it collects and transmits no personal information at all).</p>
+<p>This app is not directed to children under 13 and does not knowingly collect children's personal information (no personal information is ever transmitted to the developer).</p>
 
 <h2>8. Changes</h2>
 <p>If this policy changes, we will update the "last updated" date on this page.</p>
@@ -136,17 +158,17 @@ small { color: #888; }
 <!-- =========== JAPANESE =========== -->
 <section id="ja">
 <h1>プライバシーポリシー — DayArc（데이아크）</h1>
-<p><small>最終更新: 2026年6月14日</small></p>
+<p><small>最終更新: 2026年9月4日</small></p>
 
-<p><span class="badge">🔒 この端末のみ</span> DayArc は、位置・動き・健康データを読み取って一日の時間を自動で分類する<strong>オンデバイス</strong>ライフログアプリです。<strong>すべての個人データは端末（iPhone）内でのみ処理・保存され、いかなるサーバーにも送信されません。</strong> アカウント・ログイン・広告・トラッキングはありません。</p>
+<p><span class="badge">🔒 端末内で分析</span> DayArc は、位置・動き・健康データを読み取って一日の時間を自動で分類する<strong>オンデバイス</strong>ライフログアプリです。<strong>すべての分析はお客様のiPhone内で行われ、DayArcは自社サーバーを運用していません。</strong> アカウント・ログイン・広告・トラッキングはありません。アプリが通信する相手はAppleのみです — 記録がバックアップされる<strong>お客様ご自身のiCloud</strong>（§3-1）と App Store（§4）。<strong>開発者が受け取る情報は一切ありません。</strong></p>
 
 <h2>1. 利用する情報（すべて端末内に保存）</h2>
 <table>
   <tr><th>項目</th><th>目的</th><th>保存場所 / 保持</th></tr>
-  <tr><td>位置情報（訪問地・移動区間）</td><td>訪れた場所と移動時間を自動記録・分類</td><td>端末内ローカルDB（SwiftData）。生の位置サンプルは約90日後に要約へ縮約</td></tr>
+  <tr><td>位置情報（訪問地・移動区間）</td><td>訪れた場所と移動時間を自動記録・分類</td><td>端末内ローカルDB（SwiftData）。生の位置サンプルは約90日後に要約へ縮約され、<strong>iCloudにはバックアップされません</strong>。訪問・移動の記録はお客様ご自身のiCloudにバックアップされます（§3-1）</td></tr>
   <tr><td>モーションとフィットネス（CoreMotion）</td><td>歩く・走る・車での移動を区別</td><td>端末内でのみ使用</td></tr>
   <tr><td>健康データ（歩数・睡眠、HealthKit 読み取り）</td><td>ドーナツ中央の指標と統計を表示</td><td>端末内で読み取り・表示のみ。送信なし</td></tr>
-  <tr><td>ユーザー入力（活動・場所名・補正）</td><td>分類精度の向上、統計の生成</td><td>端末内ローカルDB</td></tr>
+  <tr><td>ユーザー入力（活動・場所名・補正）</td><td>分類精度の向上、統計の生成</td><td>端末内ローカルDB。お客様ご自身のiCloudにバックアップ（§3-1）</td></tr>
   <tr><td>アプリ設定（言語・外観・ロック等）</td><td>設定の保持</td><td>端末内に保存</td></tr>
 </table>
 
@@ -154,11 +176,21 @@ small { color: #888; }
 <ul>
   <li>氏名・メール・電話番号などの個人識別情報（アカウント自体がありません）</li>
   <li>広告識別子、トラッキング・分析識別子</li>
-  <li>サーバーへ送信される位置・健康・活動データ</li>
+  <li>DayArcのサーバーへ送信されるデータ（DayArcにサーバーはありません）。訪問・活動の記録は<strong>お客様ご自身のiCloud</strong>にのみバックアップされます &mdash; §3-1</li>
 </ul>
 
-<h2>3. サーバー送信なし・第三者提供なし</h2>
-<p>DayArc は独自のサーバーを運用せず、利用者の位置・健康・活動データを blue-code や第三者に送信しません。分析はすべて端末内で行われます。CoreLocation・CoreMotion・HealthKit は Apple の<em>端末内</em>フレームワークであり、それらを通じて読み取ったデータがアプリの外に出ることはありません。</p>
+<h2>3. DayArcのサーバーなし・第三者提供なし</h2>
+<p>DayArc は独自のサーバーを運用せず、利用者の位置・健康・活動データを blue-code や第三者に送信しません。分析はすべて端末内で行われます。CoreLocation・CoreMotion・HealthKit は Apple の<em>端末内</em>フレームワークです。データが端末外に出るのは下記 §3-1 の<strong>お客様ご自身のiCloudへのバックアップ</strong>のみで、その控えも開発者は閲覧できません。</p>
+
+<h2>3-1. iCloudバックアップ</h2>
+<p>アプリを削除して再インストールしても記録が残るよう、DayArc は以下のデータのスナップショットを<strong>お客様ご自身のiCloud</strong>（このアプリ専用の非公開コンテナ <code>iCloud.com.blueCode.DayArc</code>）に保存します。バックアップはアプリがバックグラウンドに移行する際に<strong>自動で</strong>更新され、<strong>アプリ内にオフにする設定はありません</strong>（停止方法は下記）。</p>
+<ul>
+  <li><strong>バックアップされるもの:</strong> 場所、訪問履歴、活動記録、お客様が作成したカテゴリ、日別の統計、学習された分類ルール。</li>
+  <li><strong>されないもの:</strong> <strong>生の位置情報サンプル</strong>と<strong>パスコードロック</strong>。パスコードはこの端末のキーチェーンにのみ保管され、iCloudへは出ません。</li>
+  <li><strong>誰が見られるか:</strong> このコンテナはお客様の<strong>Apple IDのiCloudストレージ</strong>であり、<strong>開発者はアクセスできません。</strong> このバックアップから開発者や第三者が受け取る情報はありません。保存・処理は Apple の<a href="https://www.apple.com/legal/privacy/" target="_blank">プライバシーポリシー</a>およびiCloud規約に従います。</li>
+  <li><strong>停止する方法:</strong> iOSの<em>設定 &rarr; [お客様の名前] &rarr; iCloud &rarr; ストレージを管理 / iCloud Drive</em> で DayArc をオフにすると、バックアップは作成されません。iCloudがオフ、または容量が不足している場合もバックアップは作成されず、その場合はアプリを削除すると記録も失われます。</li>
+  <li>状態の確認と即時更新は、アプリの<em>設定 &rarr; iCloudバックアップ</em>で行えます。</li>
+</ul>
 
 <h2>4. アプリ内課金</h2>
 <p>プレミアム機能の買い切り解除は <strong>Apple StoreKit</strong> を通じて処理されます。決済は Apple が行い、DayArc が決済情報を見たり保存したりすることはありません。購入の復元のために Apple が提供する購入状態のみを確認します。（<a href="https://www.apple.com/legal/privacy/" target="_blank">Apple プライバシーポリシー</a>）</p>
@@ -166,14 +198,15 @@ small { color: #888; }
 <h2>5. データの書き出しと削除</h2>
 <ul>
   <li><strong>書き出し</strong>: CSV/JSON の書き出しは利用者が実行したときのみ動作し、共有先は利用者が選びます。</li>
-  <li><strong>削除</strong>: 設定 &gt; データベースで初期化するか、アプリを削除すると、すべてのローカルデータが直ちに完全に削除されます。</li>
+  <li><strong>削除</strong>: 設定 &gt; データベースで初期化するか、アプリを削除すると、端末内のデータは直ちに削除されます。</li>
+  <li><strong>iCloudの控えも消すには</strong>: §3-1 のバックアップはアプリを削除しても<strong>お客様ご自身のiCloudに残り</strong>、再インストール時に戻ります &mdash; それがこの機能の目的です。完全に消すには iOSの<em>設定 &rarr; [お客様の名前] &rarr; iCloud &rarr; ストレージを管理</em> から DayArc のデータを削除してください。</li>
 </ul>
 
 <h2>6. 権限</h2>
 <p>位置（常に）・モーションとフィットネス・健康（読み取り）の権限は、自動の時間分類のために要求されます。すべて任意で、拒否してもアプリは動作します（該当機能のみ無効）。権限は iOS の設定でいつでも変更できます。</p>
 
 <h2>7. 子どものプライバシー</h2>
-<p>本アプリは13歳未満の子どもを対象としておらず、子どもの個人情報を意図的に収集しません（そもそも個人情報を一切収集・送信しません）。</p>
+<p>本アプリは13歳未満の子どもを対象としておらず、子どもの個人情報を意図的に収集しません（開発者へ送信される個人情報は一切ありません）。</p>
 
 <h2>8. 変更</h2>
 <p>本ポリシーを変更した場合、このページの最終更新日を更新します。</p>
@@ -187,17 +220,17 @@ small { color: #888; }
 <!-- =========== CHINESE =========== -->
 <section id="zh">
 <h1>隐私政策 — DayArc（데이아크）</h1>
-<p><small>最后更新: 2026年6月14日</small></p>
+<p><small>最后更新: 2026年9月4日</small></p>
 
-<p><span class="badge">🔒 仅在本机</span> DayArc 是一款<strong>本机（on-device）</strong>生活记录应用，通过读取位置、运动和健康数据，自动把你的一天划分为时间段。<strong>所有个人数据只在你的 iPhone 上处理和存储，绝不发送到任何服务器。</strong> 无账户、无登录、无广告、无追踪。</p>
+<p><span class="badge">🔒 本机分析</span> DayArc 是一款<strong>本机（on-device）</strong>生活记录应用，通过读取位置、运动和健康数据，自动把你的一天划分为时间段。<strong>所有分析都在你的 iPhone 上完成，DayArc 不运营任何自有服务器。</strong> 无账户、无登录、无广告、无追踪。应用通信的对象只有 Apple —— 记录备份所在的<strong>你自己的 iCloud</strong>（§3-1）与 App Store（§4）。<strong>开发者不会收到任何信息。</strong></p>
 
 <h2>1. 使用的信息（全部存储于本机）</h2>
 <table>
   <tr><th>项目</th><th>用途</th><th>存储位置 / 保留</th></tr>
-  <tr><td>位置信息（访问地点与行程）</td><td>自动记录并归类地点与出行时间</td><td>本机本地数据库（SwiftData）。原始位置样本约 90 天后缩减为汇总</td></tr>
+  <tr><td>位置信息（访问地点与行程）</td><td>自动记录并归类地点与出行时间</td><td>本机本地数据库（SwiftData）。原始位置样本约 90 天后缩减为汇总，且<strong>不会备份到 iCloud</strong>；访问与移动记录会备份到你自己的 iCloud（§3-1）</td></tr>
   <tr><td>运动与健身（CoreMotion）</td><td>区分步行、跑步与驾车</td><td>仅在本机使用</td></tr>
   <tr><td>健康数据（步数与睡眠，HealthKit 读取）</td><td>显示圆环中心指标与统计</td><td>仅在本机读取与显示；不传输</td></tr>
-  <tr><td>用户输入（活动/地点名称、更正）</td><td>提升归类准确度、生成统计</td><td>本机本地数据库</td></tr>
+  <tr><td>用户输入（活动/地点名称、更正）</td><td>提升归类准确度、生成统计</td><td>本机本地数据库；备份到你自己的 iCloud（§3-1）</td></tr>
   <tr><td>应用设置（语言、外观、锁定等）</td><td>保存你的偏好</td><td>存储于本机</td></tr>
 </table>
 
@@ -205,11 +238,21 @@ small { color: #888; }
 <ul>
   <li>姓名、邮箱、电话等个人身份信息（根本没有账户）</li>
   <li>广告标识符、追踪/分析标识符</li>
-  <li>任何发送到服务器的位置、健康或活动数据</li>
+  <li>任何发送至 DayArc 服务器的数据（DayArc 没有服务器）。访问与活动记录仅备份到<strong>你自己的 iCloud</strong> &mdash; 见 §3-1</li>
 </ul>
 
-<h2>3. 不上传服务器 · 不共享第三方</h2>
-<p>DayArc 不运营任何自有服务器，也不会将你的位置、健康或活动数据发送给 blue-code 或任何第三方。所有分析都在你的设备上完成。CoreLocation、CoreMotion、HealthKit 是 Apple 的<em>本机</em>框架，通过它们读取的数据不会离开应用。</p>
+<h2>3. 无 DayArc 服务器 · 不共享第三方</h2>
+<p>DayArc 不运营任何自有服务器，也不会将你的位置、健康或活动数据发送给 blue-code 或任何第三方。所有分析都在你的设备上完成。CoreLocation、CoreMotion、HealthKit 是 Apple 的<em>本机</em>框架。数据离开设备的情形只有下述 §3-1 的<strong>备份到你自己的 iCloud</strong>，而该副本开发者同样无法读取。</p>
+
+<h2>3-1. iCloud 备份</h2>
+<p>为了让你在删除并重新安装应用后记录依然保留，DayArc 会把以下数据的快照保存到<strong>你自己的 iCloud</strong>（本应用专属的私有容器 <code>iCloud.com.blueCode.DayArc</code>）。备份会在应用进入后台时<strong>自动</strong>更新，<strong>应用内没有关闭开关</strong>（停止方法见下）。</p>
+<ul>
+  <li><strong>会备份:</strong> 地点、访问记录、活动记录、你创建的自定义分类、每日统计、学习到的分类规则。</li>
+  <li><strong>不会备份:</strong> <strong>原始 GPS 定位记录</strong>与<strong>密码锁</strong>。密码仅保存在本机的钥匙串中，不会进入 iCloud。</li>
+  <li><strong>谁能读取:</strong> 该容器属于<strong>你 Apple ID 的 iCloud 存储空间</strong>，<strong>开发者无法访问。</strong> 开发者或任何第三方都不会从该备份中获得信息。存储与处理遵循 Apple 的<a href="https://www.apple.com/legal/privacy/" target="_blank">隐私政策</a>与 iCloud 条款。</li>
+  <li><strong>如何停止:</strong> 在 iOS <em>设置 &rarr; [你的姓名] &rarr; iCloud &rarr; 管理储存空间 / iCloud 云盘</em> 中关闭 DayArc，即不会写入备份。若 iCloud 已关闭或空间不足，也不会创建备份 —— 此时删除应用，记录也会一并消失。</li>
+  <li>你可以在应用的<em>设置 &rarr; iCloud 备份</em>中查看状态或立即更新。</li>
+</ul>
 
 <h2>4. 应用内购买</h2>
 <p>高级功能的永久解锁通过 <strong>Apple StoreKit</strong> 处理。付款由 Apple 处理，DayArc 不会看到或存储你的支付信息。为恢复购买，我们仅检查 Apple 提供的购买状态。（<a href="https://www.apple.com/legal/privacy/" target="_blank">Apple 隐私政策</a>）</p>
@@ -217,14 +260,15 @@ small { color: #888; }
 <h2>5. 导出与删除</h2>
 <ul>
   <li><strong>导出</strong>: CSV/JSON 导出仅在你主动操作时运行，文件分享位置由你决定。</li>
-  <li><strong>删除</strong>: 在 设置 &gt; 数据库 中重置数据，或删除应用，所有本地数据将立即永久删除。</li>
+  <li><strong>删除</strong>: 在 设置 &gt; 数据库 中重置数据，或删除应用，设备上的数据将立即删除。</li>
+  <li><strong>同时清除 iCloud 副本</strong>: §3-1 的备份在你删除应用后<strong>仍留在你自己的 iCloud 中</strong>，重装时会恢复 —— 这正是该功能的目的。若要彻底清除，请前往 iOS <em>设置 &rarr; [你的姓名] &rarr; iCloud &rarr; 管理储存空间</em> 删除 DayArc 的数据。</li>
 </ul>
 
 <h2>6. 权限</h2>
 <p>位置（始终）、运动与健身、健康（读取）权限用于自动时间归类。所有权限均为可选；拒绝后应用仍可使用（仅停用相关功能）。你可随时在 iOS 设置中更改权限。</p>
 
 <h2>7. 儿童隐私</h2>
-<p>本应用不面向 13 岁以下儿童，也不会有意收集儿童个人信息（本应用根本不收集或传输任何个人信息）。</p>
+<p>本应用不面向 13 岁以下儿童，也不会有意收集儿童个人信息（不会有任何个人信息传输给开发者）。</p>
 
 <h2>8. 政策变更</h2>
 <p>若本政策发生变更，我们将更新本页的最后更新日期。</p>
