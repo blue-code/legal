@@ -10,6 +10,7 @@ Hosted via GitHub Pages at: https://blue-code.github.io/legal/
 - **삼국지 덕력고사 (Three Kingdoms Quiz)** — [Privacy](./samguk/privacy.html) · [Terms](./samguk/terms.html)
 - **BizCard AI (명함 스캐너)** — [Privacy (ko/en/ja/zh-Hans)](./bizcardai/index.html)
 - **BlindFire (블라인드파이어)** — [Privacy](./blindfire/privacy.html) · [Terms](./blindfire/terms.html)
+- **7 Verbs: Survive in English** — [Privacy](./seven-verbs/privacy.html) · [Support](./seven-verbs/support.html)
 
 ## Adding a new app
 
