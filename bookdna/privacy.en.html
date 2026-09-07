@@ -27,7 +27,7 @@ small { color: #888; }
 </div>
 
 <h1>Privacy Policy — BookDNA</h1>
-<p><small>Effective: June 16, 2026 &middot; Last updated: June 16, 2026</small></p>
+<p><small>Effective: June 16, 2026 &middot; Last updated: September 7, 2026</small></p>
 
 <div class="callout">
 <strong>Summary:</strong> BookDNA <strong>collects no data</strong>. Your library, Top 5, ratings, one-line reviews, and taste settings are stored only on your device (localStorage) and <strong>never leave it</strong>. There is no backend server, and there are no analytics, tracking, or advertising SDKs.
@@ -38,18 +38,24 @@ small { color: #888; }
 <ul>
   <li><strong>Your library / Top 5 / ratings / one-line reviews</strong> — reading records you enter yourself, saved only in your device's local storage (localStorage).</li>
   <li><strong>Taste settings, language, and theme</strong> — app preferences, likewise stored only on your device.</li>
-  <li><strong>Book catalog and sample readers / book clubs</strong> — local sample data bundled inside the app. These are not real user accounts or an external database.</li>
+  <li><strong>Book catalog</strong> &mdash; local data bundled inside the app. It is not an account system or a user database.</li>
 </ul>
 
 <h2>2. Data Transmission &amp; Third-Party Sharing</h2>
 <p><strong>BookDNA does not transmit any data off your device or share anything with third parties.</strong></p>
 <ul>
-  <li>No backend server &mdash; the app makes no network calls for your data.</li>
+  <li>No backend server &mdash; what you create (library, ratings, reviews, TOP 5) is never transmitted anywhere.</li>
   <li>No analytics tools</li>
   <li>No crash-reporting SDKs</li>
   <li>No advertising or tracking identifiers (no IDFA usage)</li>
 </ul>
-<p>The app may load web fonts for display quality; no personally identifying information is transmitted in that process.</p>
+<p>There are, however, <strong>three cases where the app does make an outbound request</strong>. None of them carries anything that identifies you, or anything you created.</p>
+<ul>
+  <li><strong>Book cover images</strong> &mdash; loaded from a public book-cover service (Open Library).</li>
+  <li><strong>Book search</strong> &mdash; when you search in &ldquo;Add a Book&rdquo;, your <em>query</em> is looked up against public book databases (Google Books, Open Library). The query is the title or author you typed; it is not sent with an account or device identifier.</li>
+  <li><strong>Web fonts</strong> &mdash; may be loaded for display quality.</li>
+</ul>
+<p>These requests may leave connection records (such as an IP address) on those services' servers. BookDNA does not access, collect or retain those records in any form.</p>
 
 <h2>3. Payments (In-App Purchase)</h2>
 <p>BookDNA is free, with an optional one-time lifetime upgrade (BookDNA Pro). <strong>All payments are handled by Apple through the App Store / StoreKit.</strong> BookDNA never sees or stores your payment details such as card numbers. Payment and refund data are governed by Apple's privacy policy. Purchase restoration is also performed through your Apple account.</p>
@@ -65,7 +71,7 @@ small { color: #888; }
 <p>BookDNA requires no account, no login, and no identifiers such as email, phone number, or social sign-in.</p>
 
 <h2>6. Children's Privacy</h2>
-<p>BookDNA is designed to be safe for all ages (4+). It collects no personal information from anyone, including children. It contains no objectionable content, no external links, and no user-to-user communication features.</p>
+<p>BookDNA is designed to be safe for all ages (4+). It collects no personal information from anyone, including children. It contains no objectionable content and no user-to-user communication features. The Settings screen contains links to this privacy policy and to a feedback form; tapping either opens Safari.</p>
 
 <h2>7. Your Rights</h2>
 <p>Because all data stays on your device, you can exercise access, correction, and deletion rights directly through the in-app UI and iOS system settings. For GDPR / CCPA / other regulatory questions, contact us using the address below.</p>
