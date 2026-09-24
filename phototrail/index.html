@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoTrail — Geotag &amp; Trip Map</title>
+<meta name="description" content="PhotoTrail links each photo's time and location into a map of where you went — and gives you directions back to the exact spot.">
+<meta property="og:title" content="PhotoTrail — Geotag &amp; Trip Map">
+<meta property="og:description" content="Map your trip from your photos, and go back to the exact spot.">
+<meta property="og:type" content="website">
+<style>
+:root {
+  color-scheme: light dark;
+  --coral: #FF5C6F;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans", sans-serif;
+  margin: 0;
+  line-height: 1.7;
+  color: #1c1c1e;
+  background: #fbfaf9;
+}
+@media (prefers-color-scheme: dark) {
+  body { color: #ececec; background: #121212; }
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+.lang-toggle { text-align: center; padding: 16px 20px 0; }
+.lang-toggle a { color: var(--coral); text-decoration: none; margin: 0 8px; }
+.lang-toggle a[aria-current="true"] { font-weight: 700; text-decoration: underline; }
+
+.hero {
+  text-align: center;
+  padding: 56px 20px 48px;
+  background:
+    radial-gradient(120% 90% at 50% -10%, #FF5C6F33 0%, transparent 60%),
+    linear-gradient(180deg, #FF5C6F14 0%, transparent 100%);
+}
+.brand { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+.tagline { font-size: 1.25rem; margin: 14px 0 4px; }
+.sub { color: #888; margin: 0 0 28px; }
+.cta {
+  display: inline-block;
+  background: var(--coral);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 999px;
+  transition: opacity .15s;
+}
+.cta:hover { opacity: .88; }
+
+section { padding: 32px 0; }
+h2 { color: var(--coral); font-size: 1.15rem; letter-spacing: .02em; }
+.features { list-style: none; padding: 0; margin: 0; }
+.features li { padding: 12px 0; border-bottom: 1px solid #ccc4; }
+.features li:last-child { border-bottom: none; }
+.features b { display: block; }
+.features span { color: #888; font-size: .95rem; }
+
+footer { text-align: center; padding: 48px 20px; border-top: 1px solid #ccc4; margin-top: 24px; }
+footer a { color: var(--coral); text-decoration: none; margin: 0 10px; }
+footer a:hover { text-decoration: underline; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<nav class="lang-toggle">
+  <a href="#en" data-lang="en">English</a>
+  <a href="#ko" data-lang="ko">한국어</a>
+  <a href="#ja" data-lang="ja">日本語</a>
+  <a href="#zh" data-lang="zh">简体中文</a>
+</nav>
+
+<!-- =========== ENGLISH =========== -->
+<main id="en" lang="en" class="locale">
+<div class="hero">
+  <h1 class="brand">PhotoTrail</h1>
+  <p class="tagline">Map your trip, go back there.</p>
+  <p class="sub">Route map · Directions to the spot · EXIF editing</p>
+  <a class="cta" href="https://apps.apple.com/app/id6762003017">Download on the App Store</a>
+</div>
+<div class="wrap">
+  <section>
+    <p>You come home with the photos but not the places. PhotoTrail links each shot's time and location into a map of where you actually went — and when you want to go back, it gives you directions to the exact spot.</p>
+  </section>
+  <section>
+    <h2>Features</h2>
+    <ul class="features">
+      <li><b>Your route, kept as a map</b><span>Geotagged photos connect in time order into the trip you walked.</span></li>
+      <li><b>Go back to that spot</b><span>From a single photo, open directions in Apple Maps or Google Maps.</span></li>
+      <li><b>The trip, in order</b><span>A timeline with place names, so you can read the whole trip back.</span></li>
+      <li><b>Location and settings per photo</b><span>Camera, lens, aperture, shutter and ISO — read and fix them without re-encoding the image.</span></li>
+      <li><b>For cameras without GPS</b><span>Import a GPX track and locations are matched by capture time, with time-zone correction.</span></li>
+      <li><b>Apple Watch · Widget · iCloud</b><span>Record a track on the Watch, see recent trips on your home screen, and keep trips backed up in iCloud.</span></li>
+      <li><b>Private by design</b><span>Photos and locations never leave your device except through your own iCloud. No account, no ads.</span></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Price</h2>
+    <p>Three trips are free. A single PhotoTrail Pro purchase removes the limit — not a subscription. Every other feature is free.</p>
+  </section>
+</div>
+</main>
+
+<!-- =========== KOREAN =========== -->
+<main id="ko" lang="ko" class="locale">
+<div class="hero">
+  <h1 class="brand">PhotoTrail</h1>
+  <p class="tagline">촬영 장소 기록하고 다시 찾아가기</p>
+  <p class="sub">여행 경로 지도 · 촬영 지점 길찾기 · EXIF 편집</p>
+  <a class="cta" href="https://apps.apple.com/app/id6762003017">App Store에서 다운로드</a>
+</div>
+<div class="wrap">
+  <section>
+    <p>여행에서 돌아오면 사진은 남는데, "그게 어디였지"는 흐려집니다. PhotoTrail은 사진에 들어 있는 시간과 위치를 이어 다녀온 길을 지도로 남기고, 다시 가고 싶을 때 그 장소까지 바로 안내합니다.</p>
+  </section>
+  <section>
+    <h2>주요 기능</h2>
+    <ul class="features">
+      <li><b>다녀온 길이 지도로</b><span>사진의 위치를 시간순으로 이어 여행 경로를 그립니다.</span></li>
+      <li><b>그 장소로 다시 가기</b><span>사진 한 장에서 Apple 지도·구글 지도 길찾기로 바로 이어집니다.</span></li>
+      <li><b>시간순 타임라인</b><span>언제 어디였는지 장소 이름과 함께 정리합니다.</span></li>
+      <li><b>사진마다 위치와 촬영 정보</b><span>카메라, 렌즈, 조리개, 셔터, ISO를 확인하고 수정합니다. 이미지는 재압축하지 않습니다.</span></li>
+      <li><b>GPS 없는 카메라도</b><span>GPX 트랙을 가져오면 촬영 시각으로 위치를 자동 매칭하고, 시간대도 보정합니다.</span></li>
+      <li><b>Apple Watch · 위젯 · iCloud</b><span>워치로 경로를 기록하고, 홈 화면에서 최근 여행을 보고, iCloud에 백업합니다.</span></li>
+      <li><b>개인정보 보호</b><span>사진과 위치는 내 iCloud 외에는 기기 밖으로 나가지 않습니다. 계정도 광고도 없습니다.</span></li>
+    </ul>
+  </section>
+  <section>
+    <h2>가격</h2>
+    <p>여행 3개까지 무료입니다. PhotoTrail Pro를 한 번 결제하면 개수 제한이 사라집니다(구독 아님). 다른 기능은 모두 무료입니다.</p>
+  </section>
+</div>
+</main>
+
+<!-- =========== JAPANESE =========== -->
+<main id="ja" lang="ja" class="locale">
+<div class="hero">
+  <h1 class="brand">PhotoTrail</h1>
+  <p class="tagline">撮った場所を記録して、また行く</p>
+  <p class="sub">旅のルート地図 · 撮影地点への経路案内 · EXIF編集</p>
+  <a class="cta" href="https://apps.apple.com/app/id6762003017">App Storeでダウンロード</a>
+</div>
+<div class="wrap">
+  <section>
+    <p>旅から帰ると写真は残っても、「あれはどこだったか」は薄れていきます。PhotoTrailは写真の時間と位置をつないで歩いた道を地図に残し、また行きたくなったときはその場所まで案内します。</p>
+  </section>
+  <section>
+    <h2>主な機能</h2>
+    <ul class="features">
+      <li><b>歩いた道が地図に残る</b><span>位置情報のある写真を時系列でつなぎ、旅の軌跡を描きます。</span></li>
+      <li><b>その場所へまた行く</b><span>写真一枚からAppleマップ・Googleマップの経路案内へ。</span></li>
+      <li><b>時系列のタイムライン</b><span>いつ、どこかを場所の名前と一緒に並べます。</span></li>
+      <li><b>写真ごとの位置と撮影情報</b><span>カメラ、レンズ、絞り、シャッター、ISOを確認・修正。画像は再圧縮しません。</span></li>
+      <li><b>GPSのないカメラでも</b><span>GPXトラックを読み込むと撮影時刻で位置を自動マッチング。タイムゾーンも補正できます。</span></li>
+      <li><b>Apple Watch · ウィジェット · iCloud</b><span>Watchでルートを記録し、ホーム画面で最近の旅を確認、iCloudにバックアップします。</span></li>
+      <li><b>プライバシー</b><span>写真と位置情報は自分のiCloud以外に送信されません。アカウント登録も広告もありません。</span></li>
+    </ul>
+  </section>
+  <section>
+    <h2>価格</h2>
+    <p>旅は3件まで無料。PhotoTrail Proを一度購入すると件数制限がなくなります（サブスクリプションではありません）。他の機能はすべて無料です。</p>
+  </section>
+</div>
+</main>
+
+<!-- =========== CHINESE (SIMPLIFIED) =========== -->
+<main id="zh" lang="zh-Hans" class="locale">
+<div class="hero">
+  <h1 class="brand">PhotoTrail</h1>
+  <p class="tagline">记录拍摄地点，再次前往</p>
+  <p class="sub">旅行路线地图 · 导航回拍摄地点 · EXIF编辑</p>
+  <a class="cta" href="https://apps.apple.com/app/id6762003017">在 App Store 下载</a>
+</div>
+<div class="wrap">
+  <section>
+    <p>旅行回来，照片还在，"那是在哪儿拍的"却模糊了。PhotoTrail 把每张照片的时间与位置连成一张你走过的地图，想再去的时候，还能直接导航回那个地点。</p>
+  </section>
+  <section>
+    <h2>主要功能</h2>
+    <ul class="features">
+      <li><b>走过的路，留成一张地图</b><span>把带位置的照片按时间顺序连起来，还原这趟旅行的动线。</span></li>
+      <li><b>再回到那个地点</b><span>从一张照片直接进入 Apple 地图或 Google 地图导航。</span></li>
+      <li><b>按时间顺序的时间线</b><span>带地点名称的时间线，从头重看整趟旅行。</span></li>
+      <li><b>每张照片的位置与拍摄参数</b><span>查看并修改相机、镜头、光圈、快门、ISO，不会重新压缩图片。</span></li>
+      <li><b>没有GPS的相机也能用</b><span>导入GPX轨迹，按拍摄时间自动匹配位置，并可校正时区。</span></li>
+      <li><b>Apple Watch · 小组件 · iCloud</b><span>用手表记录轨迹，在主屏幕查看最近的行程，并备份到 iCloud。</span></li>
+      <li><b>隐私保护</b><span>照片和位置只经由您自己的 iCloud，不会发送到其他服务器。无需注册账号，没有广告。</span></li>
+    </ul>
+  </section>
+  <section>
+    <h2>价格</h2>
+    <p>免费最多可创建 3 个行程。一次性购买 PhotoTrail Pro 即可解除数量限制（非订阅）。其他功能全部免费。</p>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div>
+    <a href="./support.html">Support</a>
+    <a href="./privacy.html">Privacy Policy</a>
+    <a href="../index.html">All apps</a>
+  </div>
+  <p><small>© 2026 blue-code · PhotoTrail</small></p>
+</footer>
+
+<script>
+// JS가 없으면 4개 언어가 모두 보인다. 있으면 브라우저 언어 또는 #해시에 맞는 하나만 보인다.
+(function () {
+  var langs = ["en", "ko", "ja", "zh"];
+  function show(lang) {
+    langs.forEach(function (l) {
+      document.getElementById(l).hidden = l !== lang;
+      document.querySelector('[data-lang="' + l + '"]').setAttribute("aria-current", l === lang);
+    });
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+  }
+  function fromHash() {
+    var h = location.hash.slice(1);
+    return langs.indexOf(h) >= 0 ? h : null;
+  }
+  var nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+  show(fromHash() || (langs.indexOf(nav) >= 0 ? nav : "en"));
+  window.addEventListener("hashchange", function () {
+    var l = fromHash();
+    if (l) { show(l); window.scrollTo(0, 0); }
+  });
+})();
+</script>
+
+</body>
+</html>
