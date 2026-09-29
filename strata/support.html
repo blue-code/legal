@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strata — 지원 / Support</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; }
+h3 { margin-top: 24px; color: #5C70DC; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ccc4; padding: 8px 12px; text-align: left; }
+th { background: #5C70DC22; }
+.lang-toggle { margin-bottom: 24px; }
+.lang-toggle a { margin-right: 12px; color: #5C70DC; }
+.callout { background: #5C70DC14; border-left: 3px solid #5C70DC; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+hr { border: none; border-top: 1px solid #ccc4; margin: 48px 0; }
+small { color: #888; }
+a { color: #5C70DC; }
+</style>
+</head>
+<body>
+<div class="lang-toggle"><a href="#ko">한국어</a> | <a href="#en">English</a> | <a href="#ja">日本語</a> | <a href="#zh-hans">简体中文</a> | <a href="#zh-hant">繁體中文</a></div>
+
+<h1 id="ko">Strata 지원</h1>
+<p>디스크를 채우고 있는 것을 중첩 지도로 찾아내는 맥 앱입니다.</p>
+<h2>자주 묻는 것</h2>
+<h3>디스크를 고를 때 macOS가 권한을 묻습니다</h3>
+<p>Strata는 App Sandbox 안에서 동작하므로, 사용자가 표준 권한 창에서 직접 고른 위치만 읽을 수 있습니다. <strong>한 번만</strong> 물으며, 그 뒤로는 시작 화면의 디스크 카드를 눌러 바로 스캔됩니다(파란 화살표 표시).</p>
+<h3>일부 폴더를 읽지 못했다고 나옵니다</h3>
+<p>권한이 없는 폴더는 건너뜁니다. 해당 폴더를 직접 골라 다시 스캔하면 포함됩니다.</p>
+<h3>Finder에 표시되는 용량과 다릅니다</h3>
+<p>Strata는 파일이 실제로 디스크에서 차지하는 <strong>점유 크기</strong>를 씁니다. APFS 클론이나 sparse 파일은 논리 크기와 점유 크기가 다를 수 있습니다.</p>
+<h3>삭제하면 완전히 지워지나요?</h3>
+<p>아닙니다. <strong>항상 휴지통으로 이동</strong>합니다. 영구 삭제 기능은 앱에 없습니다.</p>
+<h3>필터를 어떻게 쓰나요?</h3>
+<p>툴바의 슬라이더 버튼을 누르면 종류·크기·기간·태그를 골라 만들 수 있습니다. 직접 입력할 수도 있습니다: <code>*.mp4;&gt;500mb;&gt;2years</code> — 같은 종류끼리는 OR, 다른 종류끼리는 AND입니다.</p>
+<h3>결제한 기능이 안 보입니다</h3>
+<p>설정(⌘,) → Strata Pro → <strong>구매 복원</strong>을 눌러 주세요.</p>
+<h2>문의</h2>
+<p>버그나 제안은 앱의 <strong>설정 → 정보 → 피드백 보내기</strong>로 보내 주세요. 앱 버전과 사용 언어가 자동으로 함께 전달됩니다.</p>
+<p><a href="privacy.html">개인정보처리방침</a></p>
+
+<hr>
+<h1 id="en">Strata Support</h1>
+<p>A Mac app that finds what is filling your disk, using a nested map.</p>
+<h2>Common questions</h2>
+<h3>macOS asks for permission when I pick a disk</h3>
+<p>Strata runs inside the App Sandbox, so it can only read locations you choose yourself in the standard permission dialog. It asks <strong>once</strong>; after that, clicking the disk card on the welcome screen scans it straight away (shown with a blue arrow).</p>
+<h3>It says some folders couldn't be read</h3>
+<p>Folders you haven't granted access to are skipped. Choose that folder directly and scan again to include it.</p>
+<h3>The size differs from what Finder shows</h3>
+<p>Strata uses <strong>allocated size</strong> — the space a file actually occupies on disk. APFS clones and sparse files can have a logical size that differs from what they really take up.</p>
+<h3>Does deleting remove files permanently?</h3>
+<p>No. Strata <strong>always moves to the Trash</strong>. There is no permanent-delete feature in the app.</p>
+<h3>How do filters work?</h3>
+<p>Press the slider button in the toolbar to build one from kind, size, age and tags. You can also type one: <code>*.mp4;&gt;500mb;&gt;2years</code> — terms of the same kind are OR'd, different kinds are AND'd.</p>
+<h3>I paid but the features are locked</h3>
+<p>Open Settings (⌘,) → Strata Pro → <strong>Restore Purchase</strong>.</p>
+<h2>Contact</h2>
+<p>Send bugs and suggestions from <strong>Settings → About → Send Feedback</strong> in the app. Your app version and language are included automatically.</p>
+<p><a href="privacy.html">Privacy Policy</a></p>
+
+<hr>
+<h1 id="ja">Strata サポート</h1>
+<p>ディスクを埋めているものを入れ子のマップで見つける Mac アプリです。</p>
+<h3>ディスクを選ぶと macOS が許可を求めます</h3>
+<p>Strata は App Sandbox 内で動作するため、標準の許可ダイアログでユーザーが選んだ場所のみ読み取れます。確認は<strong>初回のみ</strong>で、その後はようこそ画面のディスクカードを押せばすぐスキャンされます（青い矢印表示）。</p>
+<h3>一部のフォルダを読めなかったと出ます</h3><p>権限のないフォルダはスキップします。そのフォルダを直接選んで再スキャンすれば含まれます。</p>
+<h3>Finder の表示と容量が違います</h3><p>Strata は実際にディスクを占有する<strong>割り当てサイズ</strong>を使います。APFS クローンやスパースファイルは論理サイズと異なることがあります。</p>
+<h3>削除すると完全に消えますか</h3><p>いいえ。<strong>常にゴミ箱へ移動</strong>します。完全削除の機能はありません。</p>
+<h3>購入した機能が使えません</h3><p>設定(⌘,) → Strata Pro → <strong>購入を復元</strong>を押してください。</p>
+<h2>お問い合わせ</h2><p>アプリの<strong>設定 → 情報 → フィードバックを送る</strong>からお送りください。</p>
+<p><a href="privacy.html">プライバシーポリシー</a></p>
+
+<hr>
+<h1 id="zh-hans">Strata 支持</h1>
+<p>用嵌套地图找出占满磁盘的元凶的 Mac 应用。</p>
+<h3>选择磁盘时 macOS 请求授权</h3><p>Strata 运行于 App Sandbox 内，只能读取你在标准授权对话框中亲自选择的位置。<strong>只会询问一次</strong>，之后点击欢迎界面的磁盘卡片即可直接扫描（显示蓝色箭头）。</p>
+<h3>提示有些文件夹无法读取</h3><p>未获授权的文件夹会被跳过。直接选择该文件夹重新扫描即可包含。</p>
+<h3>容量和访达显示的不一样</h3><p>Strata 使用<strong>实际占用大小</strong>。APFS 克隆和稀疏文件的逻辑大小可能与实际占用不同。</p>
+<h3>删除会永久清除吗</h3><p>不会。<strong>始终移到废纸篓</strong>。应用中没有永久删除功能。</p>
+<h3>已购买但功能仍锁定</h3><p>设置(⌘,) → Strata Pro → <strong>恢复购买</strong>。</p>
+<h2>联系我们</h2><p>请通过应用内<strong>设置 → 关于 → 发送反馈</strong>联系。</p>
+<p><a href="privacy.html">隐私政策</a></p>
+
+<hr>
+<h1 id="zh-hant">Strata 支援</h1>
+<p>用巢狀地圖找出佔滿磁碟元凶的 Mac App。</p>
+<h3>選擇磁碟時 macOS 要求授權</h3><p>Strata 執行於 App Sandbox 內，只能讀取你在標準授權對話框中親自選擇的位置。<strong>只會詢問一次</strong>，之後點擊歡迎畫面的磁碟卡片即可直接掃描（顯示藍色箭頭）。</p>
+<h3>顯示有些檔案夾無法讀取</h3><p>未獲授權的檔案夾會被略過。直接選擇該檔案夾重新掃描即可包含。</p>
+<h3>容量與 Finder 顯示不同</h3><p>Strata 使用<strong>實際佔用大小</strong>。APFS 複製與稀疏檔案的邏輯大小可能與實際佔用不同。</p>
+<h3>刪除會永久清除嗎</h3><p>不會。<strong>始終移到垃圾桶</strong>。App 中沒有永久刪除功能。</p>
+<h3>已購買但功能仍鎖定</h3><p>設定(⌘,) → Strata Pro → <strong>回復購買</strong>。</p>
+<h2>聯絡我們</h2><p>請透過 App 內<strong>設定 → 關於 → 傳送意見回饋</strong>聯絡。</p>
+<p><a href="privacy.html">隱私權政策</a></p>
+
+</body></html>
