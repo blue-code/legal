@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacBridge — Privacy Policy / 개인정보처리방침</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #1B3A6B; }
+@media (prefers-color-scheme: dark) { a { color: #7FA6DC; } }
+.lang-toggle { margin-bottom: 24px; font-size: 0.95rem; }
+.lang-toggle a { margin-right: 10px; cursor: pointer; }
+.callout { background: #1B3A6B11; border-left: 3px solid #1B3A6B; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+.note { background: #C8341F11; border-left: 3px solid #C8341F; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+section[hidden] { display: none; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a onclick="setLang('ko')"><strong id="tab-ko">한국어</strong></a> |
+  <a onclick="setLang('en')"><span id="tab-en">English</span></a> |
+  <a onclick="setLang('ja')"><span id="tab-ja">日本語</span></a> |
+  <a onclick="setLang('zh-Hans')"><span id="tab-zh-Hans">简体中文</span></a> |
+  <a onclick="setLang('zh-Hant')"><span id="tab-zh-Hant">繁體中文</span></a>
+</div>
+
+<!-- ===================== KOREAN ===================== -->
+<section id="ko">
+<h1>개인정보처리방침 — MacBridge</h1>
+<p><small>App Store 이름: MacBridge Remote · 시행일: 2026년 9월 29일 · 최종 수정일: 2026년 9월 29일</small></p>
+<div class="callout"><strong>요약:</strong> MacBridge는 아이폰·아이패드에서 <strong>회원님 자신의 Mac</strong>을 macOS 내장 화면 공유로 원격 제어하는 앱입니다. 개발사(blue-code)는 서버를 운영하지 않으며, 앱은 <strong>회원님이 입력하거나 고른 Mac에만</strong> 연결합니다. 계정·분석·광고·추적 없음. App Store 개인정보 표시는 <strong>"데이터가 수집되지 않음"</strong>.</div>
+
+<h2>1. 수집하는 정보 — 없음</h2>
+<p>앱이 개발사에게 보내는 정보는 없으며, 개발사 서버 자체가 존재하지 않습니다.</p>
+<ul>
+<li><strong>계정</strong> — 회원가입이나 로그인이 없습니다.</li>
+<li><strong>분석·광고·추적</strong> — 분석 도구, 광고, 추적 기능이 없습니다.</li>
+<li><strong>화면·입력·클립보드·파일</strong> — 원격 화면, 키보드·포인터 입력, 클립보드, 주고받는 파일은 회원님의 기기와 회원님의 Mac 사이에서만 직접 오갑니다. 개발사를 거치지 않으며 개발사는 이를 볼 수 없습니다.</li>
+</ul>
+
+<h2>2. 앱이 연결하는 곳 — 회원님의 Mac뿐</h2>
+<ul>
+<li><strong>화면 공유(포트 5900)</strong> — Mac의 macOS 내장 화면 공유에 Apple 원격 데스크톱 인증으로 접속합니다.</li>
+<li><strong>MacBridge Helper(포트 5901, 선택)</strong> — Mac에 무료 MacBridge Helper를 설치한 경우 한글·이모지 클립보드, 파일 전송, H.264 영상 모드, 멀티 디스플레이 선택을 위해 연결합니다.</li>
+<li><strong>근처의 Mac 찾기</strong> — 같은 로컬 네트워크에서 화면 공유가 켜진 Mac을 Bonjour(<code>_rfb._tcp</code>)로 찾습니다. 이 검색은 로컬 네트워크 안에서만 이루어집니다.</li>
+</ul>
+<p>밖에서 접속할 때는 회원님이 직접 구성한 VPN을 통해 회원님의 Mac 주소로만 연결합니다. 앱에는 중계 서버가 없습니다.</p>
+
+<h2>3. 기기에 저장하는 정보</h2>
+<ul>
+<li><strong>저장된 Mac</strong> — 이름·주소·포트·사용자 이름은 이 기기의 앱 저장 공간에만 저장됩니다.</li>
+<li><strong>암호</strong> — 암호는 <strong>이 기기의 키체인에만</strong> 저장되며(이 기기 전용 항목, iCloud 키체인으로 동기화되지 않음), 회원님의 Mac에 인증할 때만 사용됩니다. 저장된 Mac을 삭제하면 그 암호도 키체인에서 삭제됩니다.</li>
+<li><strong>받은 파일</strong> — Mac에서 받은 파일은 회원님이 직접 저장하거나 공유한 곳에만 남습니다.</li>
+</ul>
+
+<h2>4. 권한</h2>
+<ul>
+<li><strong>로컬 네트워크</strong> — 같은 네트워크에 있는 회원님 Mac의 화면 공유(5900)와 MacBridge Helper(5901)에 연결하고, 근처의 Mac을 찾기 위해 사용합니다. 거부하면 근처의 Mac을 찾거나 같은 네트워크의 Mac에 연결할 수 없습니다. 설정 앱 › MacBridge에서 언제든 바꿀 수 있습니다.</li>
+<li><strong>파일</strong> — Mac으로 보낼 때는 회원님이 직접 고른 파일만 읽습니다.</li>
+</ul>
+
+<h2>5. 예외적으로 기기 밖으로 나가는 두 가지</h2>
+<div class="note">
+<p><strong>① 피드백 보내기</strong> — 설정의 「피드백 보내기」를 누르면 <strong>브라우저에서 구글 폼이 열립니다.</strong> 앱이 직접 전송하는 것이 아니라, 회원님이 브라우저에서 직접 입력·제출하는 것입니다. 제출한 내용은 Google과 개발사가 받습니다. 폼을 열 때 앱 이름·버전·언어가 미리 채워집니다.</p>
+<p><strong>② iCloud 기기 백업</strong> — 회원님이 iOS의 iCloud 백업을 켜 두었다면 저장된 Mac 목록이 그 백업에 포함될 수 있습니다(암호는 이 기기 전용 키체인 항목이라 포함되지 않습니다). 이것은 앱의 통신이 아니라 iOS의 기능이며, Apple의 개인정보처리방침이 적용됩니다.</p>
+</div>
+
+<h2>6. 결제</h2>
+<p>MacBridge Pro(구독이 아닌 1회 구매, 평생 사용)는 Apple App Store 결제(StoreKit)로 처리됩니다. 결제는 Apple이 처리하며 개발사는 결제 수단 정보를 받지 않습니다. 앱은 구매 여부만 기기에서 확인합니다. 설정의 「구매 복원」으로 언제든 복원할 수 있습니다.</p>
+
+<h2>7. 데이터 삭제</h2>
+<p>앱에서 저장된 Mac을 삭제하면 그 정보와 암호가 함께 삭제됩니다. 앱을 삭제하면 앱이 저장한 정보가 함께 삭제됩니다. 개발사가 보관하는 사본은 없습니다.</p>
+
+<h2>8. 아동</h2>
+<p>MacBridge는 아동을 대상으로 하지 않으며, 어떤 연령의 사용자로부터도 개인정보를 수집하지 않습니다.</p>
+
+<h2>9. 상표</h2>
+<p>MacBridge는 Apple Inc.와 관련이 없습니다. Mac은 Apple Inc.의 상표입니다.</p>
+
+<h2>10. 변경 · 문의</h2>
+<p>방침이 바뀌면 이 페이지로 고지합니다. 문의: Kim Byoungho · <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="support.html">지원 페이지</a></p>
+</section>
+
+<!-- ===================== ENGLISH ===================== -->
+<section id="en" hidden>
+<h1>Privacy Policy — MacBridge</h1>
+<p><small>App Store name: MacBridge Remote · Effective 29 September 2026 · Last updated 29 September 2026</small></p>
+<div class="callout"><strong>In short:</strong> MacBridge lets you control <strong>your own Mac</strong> from your iPhone or iPad using the Screen Sharing built into macOS. The developer (blue-code) runs no servers, and the app connects <strong>only to the Macs you enter or pick</strong>. No accounts, no analytics, no ads, no tracking. The App Store privacy label is <strong>“Data Not Collected”</strong>.</div>
+
+<h2>1. What we collect — nothing</h2>
+<p>The app sends nothing to the developer, and no developer server exists.</p>
+<ul>
+<li><strong>Accounts</strong> — there is no sign-up and no sign-in.</li>
+<li><strong>Analytics, ads, tracking</strong> — none.</li>
+<li><strong>Screen, input, clipboard, files</strong> — the remote screen, your keyboard and pointer input, clipboard contents and any files you transfer travel directly between your device and your Mac. They never pass through the developer, and the developer cannot see them.</li>
+</ul>
+
+<h2>2. Where the app connects — only your Mac</h2>
+<ul>
+<li><strong>Screen Sharing (port 5900)</strong> — the app connects to your Mac's built-in macOS Screen Sharing using Apple Remote Desktop authentication.</li>
+<li><strong>MacBridge Helper (port 5901, optional)</strong> — if you install the free MacBridge Helper on your Mac, the app connects to it for a Unicode/emoji clipboard, file transfer, H.264 video mode and multi-display selection.</li>
+<li><strong>Finding nearby Macs</strong> — the app looks for Macs with Screen Sharing turned on using Bonjour (<code>_rfb._tcp</code>) on your local network only.</li>
+</ul>
+<p>To connect from elsewhere, the app connects to your Mac's address over a VPN you set up yourself. The app has no relay server.</p>
+
+<h2>3. What is stored on your device</h2>
+<ul>
+<li><strong>Saved Macs</strong> — name, address, port and user name are stored only in the app's storage on this device.</li>
+<li><strong>Passwords</strong> — stored <strong>only in this device's Keychain</strong> (as a this-device-only item that does not sync through iCloud Keychain) and used only to authenticate to your Mac. Deleting a saved Mac also deletes its password from the Keychain.</li>
+<li><strong>Received files</strong> — files received from your Mac go only where you choose to save or share them.</li>
+</ul>
+
+<h2>4. Permissions</h2>
+<ul>
+<li><strong>Local Network</strong> — used to connect to Screen Sharing (5900) and MacBridge Helper (5901) on your Mac on the same network, and to find nearby Macs. If you decline, nearby Macs can't be found and Macs on your local network can't be reached. You can change this anytime in the Settings app › MacBridge.</li>
+<li><strong>Files</strong> — when sending to your Mac, only the files you pick are read.</li>
+</ul>
+
+<h2>5. The two things that do leave the device</h2>
+<div class="note">
+<p><strong>1. Send Feedback</strong> — tapping “Send Feedback” in Settings <strong>opens a Google Form in your browser.</strong> The app does not submit anything; you do, in the browser. What you submit is received by Google and the developer. When the form opens, it is pre-filled with the app name, version and language.</p>
+<p><strong>2. iCloud device backup</strong> — if you have iOS iCloud Backup turned on, your list of saved Macs may be included in that backup (passwords are not, because they are this-device-only Keychain items). This is an iOS feature, not a transmission by the app, and Apple's privacy policy applies.</p>
+</div>
+
+<h2>6. Purchases</h2>
+<p>MacBridge Pro (a one-time, lifetime purchase — not a subscription) is handled by Apple's App Store billing (StoreKit). Apple processes the payment; the developer receives no payment details. The app only checks your purchase status on the device. You can use “Restore Purchases” in Settings at any time.</p>
+
+<h2>7. Deleting your data</h2>
+<p>Deleting a saved Mac in the app deletes its details and password. Deleting the app deletes the information it stored. The developer holds no copy.</p>
+
+<h2>8. Children</h2>
+<p>MacBridge is not directed at children and collects no personal information from users of any age.</p>
+
+<h2>9. Trademarks</h2>
+<p>MacBridge is not affiliated with Apple Inc. Mac is a trademark of Apple Inc.</p>
+
+<h2>10. Changes · Contact</h2>
+<p>Changes will be posted on this page. Contact: Kim Byoungho · <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="support.html">Support page</a></p>
+</section>
+
+<!-- ===================== JAPANESE ===================== -->
+<section id="ja" hidden>
+<h1>プライバシーポリシー — MacBridge</h1>
+<p><small>App Store名：MacBridge Remote · 施行日：2026年9月29日 · 最終更新：2026年9月29日</small></p>
+<div class="callout"><strong>要約：</strong>MacBridgeは、iPhone・iPadから<strong>ご自身のMac</strong>をmacOS標準の画面共有で遠隔操作するアプリです。開発者（blue-code）はサーバーを運用しておらず、アプリは<strong>ご自身が入力または選択したMacにのみ</strong>接続します。アカウント・分析・広告・トラッキングなし。App Storeのプライバシー表示は<strong>「データを収集していません」</strong>です。</div>
+
+<h2>1. 収集する情報 — ありません</h2>
+<p>アプリが開発者へ送信する情報はなく、開発者のサーバー自体が存在しません。</p>
+<ul>
+<li><strong>アカウント</strong> — 登録もログインもありません。</li>
+<li><strong>分析・広告・トラッキング</strong> — ありません。</li>
+<li><strong>画面・入力・クリップボード・ファイル</strong> — リモート画面、キーボード・ポインタの入力、クリップボード、送受信するファイルは、お使いのデバイスとご自身のMacの間で直接やり取りされます。開発者を経由せず、開発者が見ることはできません。</li>
+</ul>
+
+<h2>2. アプリの接続先 — ご自身のMacのみ</h2>
+<ul>
+<li><strong>画面共有（ポート5900）</strong> — MacのmacOS標準の画面共有に、Apple Remote Desktop認証で接続します。</li>
+<li><strong>MacBridge Helper（ポート5901、任意）</strong> — Macに無料のMacBridge Helperをインストールした場合、日本語・絵文字のクリップボード、ファイル転送、H.264ビデオモード、マルチディスプレイの選択のために接続します。</li>
+<li><strong>近くのMacの検出</strong> — 同じローカルネットワーク上で画面共有がオンのMacを、Bonjour（<code>_rfb._tcp</code>）で検出します。検出はローカルネットワーク内だけで行われます。</li>
+</ul>
+<p>外出先から接続する場合は、ご自身で設定したVPNを通じてご自身のMacのアドレスにのみ接続します。アプリに中継サーバーはありません。</p>
+
+<h2>3. デバイスに保存する情報</h2>
+<ul>
+<li><strong>保存済みのMac</strong> — 名前・アドレス・ポート・ユーザ名は、このデバイスのアプリ内ストレージにのみ保存されます。</li>
+<li><strong>パスワード</strong> — <strong>このデバイスのキーチェーンにのみ</strong>保存され（このデバイス専用の項目で、iCloudキーチェーンでは同期されません）、ご自身のMacでの認証にのみ使用されます。保存済みのMacを削除すると、そのパスワードもキーチェーンから削除されます。</li>
+<li><strong>受信したファイル</strong> — Macから受け取ったファイルは、ご自身が保存・共有した場所にのみ残ります。</li>
+</ul>
+
+<h2>4. 権限</h2>
+<ul>
+<li><strong>ローカルネットワーク</strong> — 同じネットワーク上にあるMacの画面共有（5900）とMacBridge Helper（5901）に接続し、近くのMacを検出するために使用します。拒否すると、近くのMacの検出や同じネットワーク上のMacへの接続ができません。「設定」App › MacBridgeでいつでも変更できます。</li>
+<li><strong>ファイル</strong> — Macへ送信するときは、ご自身で選んだファイルのみを読み込みます。</li>
+</ul>
+
+<h2>5. 端末の外に出る二つの例外</h2>
+<div class="note">
+<p><strong>① フィードバックを送信</strong> — 設定の「フィードバックを送信」をタップすると<strong>ブラウザでGoogleフォームが開きます。</strong>アプリが送信するのではなく、ブラウザでご自身が入力・送信します。送信内容はGoogleと開発者が受け取ります。フォームを開くと、アプリ名・バージョン・言語があらかじめ入力されます。</p>
+<p><strong>② iCloudバックアップ</strong> — iOSのiCloudバックアップを有効にしている場合、保存済みのMacの一覧がそのバックアップに含まれることがあります（パスワードはこのデバイス専用のキーチェーン項目のため含まれません）。これはアプリの通信ではなくiOSの機能で、Appleのプライバシーポリシーが適用されます。</p>
+</div>
+
+<h2>6. 購入</h2>
+<p>MacBridge Pro（サブスクリプションではなく買い切り、永久に利用可能）はApple App Storeの決済（StoreKit）で処理されます。決済はAppleが行い、開発者が支払い情報を受け取ることはありません。アプリは端末内で購入状況を確認するだけです。設定の「購入を復元」でいつでも復元できます。</p>
+
+<h2>7. データの削除</h2>
+<p>アプリで保存済みのMacを削除すると、その情報とパスワードも削除されます。アプリを削除すると、アプリが保存した情報も削除されます。開発者側に控えはありません。</p>
+
+<h2>8. お子様について</h2>
+<p>MacBridgeは子ども向けではなく、年齢を問わず個人情報を収集しません。</p>
+
+<h2>9. 商標</h2>
+<p>MacBridgeはApple Inc.とは関係ありません。MacはApple Inc.の商標です。</p>
+
+<h2>10. 変更 · お問い合わせ</h2>
+<p>変更があった場合は本ページでお知らせします。お問い合わせ：Kim Byoungho · <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="support.html">サポートページ</a></p>
+</section>
+
+<!-- ===================== SIMPLIFIED CHINESE ===================== -->
+<section id="zh-Hans" hidden>
+<h1>隐私政策 — MacBridge</h1>
+<p><small>App Store 名称：MacBridge Remote · 生效日期：2026年9月29日 · 最后更新：2026年9月29日</small></p>
+<div class="callout"><strong>摘要：</strong>MacBridge 让你在 iPhone 或 iPad 上通过 macOS 内置的屏幕共享远程控制<strong>你自己的 Mac</strong>。开发者（blue-code）不运营任何服务器，应用<strong>只连接你输入或选择的 Mac</strong>。无账户、无分析、无广告、无追踪。App Store 隐私标签为<strong>“未收集数据”</strong>。</div>
+
+<h2>1. 我们收集的信息 — 没有</h2>
+<p>应用不会向开发者发送任何信息，也不存在开发者服务器。</p>
+<ul>
+<li><strong>账户</strong> — 无需注册，也无需登录。</li>
+<li><strong>分析、广告、追踪</strong> — 均没有。</li>
+<li><strong>屏幕、输入、剪贴板、文件</strong> — 远程屏幕、键盘与指针输入、剪贴板内容以及传输的文件，只在你的设备与你的 Mac 之间直接传输，不经过开发者，开发者也无法看到。</li>
+</ul>
+
+<h2>2. 应用连接的对象 — 只有你的 Mac</h2>
+<ul>
+<li><strong>屏幕共享（端口 5900）</strong> — 使用 Apple 远程桌面认证连接到 Mac 上 macOS 内置的屏幕共享。</li>
+<li><strong>MacBridge Helper（端口 5901，可选）</strong> — 如果你在 Mac 上安装了免费的 MacBridge Helper，应用会连接它，用于中文与表情符号剪贴板、文件传输、H.264 视频模式和多显示器选择。</li>
+<li><strong>查找附近的 Mac</strong> — 通过 Bonjour（<code>_rfb._tcp</code>）在同一本地网络中查找已打开屏幕共享的 Mac。查找仅在本地网络内进行。</li>
+</ul>
+<p>从外部连接时，应用会通过你自己设置的 VPN，只连接到你的 Mac 的地址。应用没有中继服务器。</p>
+
+<h2>3. 存储在设备上的信息</h2>
+<ul>
+<li><strong>已存储的 Mac</strong> — 名称、地址、端口和用户名仅存储在此设备的应用存储空间中。</li>
+<li><strong>密码</strong> — <strong>仅存储在此设备的钥匙串中</strong>（为仅限此设备的项目，不会通过 iCloud 钥匙串同步），并且只用于在你的 Mac 上进行认证。删除已存储的 Mac 时，其密码也会从钥匙串中删除。</li>
+<li><strong>接收的文件</strong> — 从 Mac 接收的文件只保存在你自己选择存储或共享的位置。</li>
+</ul>
+
+<h2>4. 权限</h2>
+<ul>
+<li><strong>本地网络</strong> — 用于连接同一网络中你的 Mac 上的屏幕共享（5900）和 MacBridge Helper（5901），以及查找附近的 Mac。若拒绝，将无法查找附近的 Mac，也无法连接本地网络中的 Mac。你可以随时在“设置” App › MacBridge 中更改。</li>
+<li><strong>文件</strong> — 发送到 Mac 时，只读取你自己选择的文件。</li>
+</ul>
+
+<h2>5. 两项会离开本机的例外</h2>
+<div class="note">
+<p><strong>① 发送反馈</strong> — 轻点设置中的“发送反馈”会<strong>在浏览器中打开 Google 表单。</strong>不是应用提交，而是你在浏览器中自行填写并提交。提交内容由 Google 和开发者接收。打开表单时会预填应用名称、版本和语言。</p>
+<p><strong>② iCloud 设备备份</strong> — 若你开启了 iOS 的 iCloud 备份，已存储的 Mac 列表可能会包含在该备份中（密码是仅限此设备的钥匙串项目，不会包含在内）。这是 iOS 的功能而非应用的通信，适用 Apple 的隐私政策。</p>
+</div>
+
+<h2>6. 购买</h2>
+<p>MacBridge Pro（一次性购买、永久使用，非订阅）通过 Apple App Store 结算（StoreKit）处理。付款由 Apple 处理，开发者不会收到你的支付信息。应用仅在本机确认购买状态。你可以随时在设置中使用“恢复购买”。</p>
+
+<h2>7. 删除数据</h2>
+<p>在应用中删除已存储的 Mac，会一并删除其信息和密码。删除应用即删除应用存储的信息。开发者不保留任何副本。</p>
+
+<h2>8. 儿童</h2>
+<p>MacBridge 并非面向儿童，且不收集任何年龄用户的个人信息。</p>
+
+<h2>9. 商标</h2>
+<p>MacBridge 与 Apple Inc. 无关。Mac 是 Apple Inc. 的商标。</p>
+
+<h2>10. 变更 · 联系</h2>
+<p>政策变更将在本页公布。联系方式：Kim Byoungho · <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="support.html">支持页面</a></p>
+</section>
+
+<!-- ===================== TRADITIONAL CHINESE ===================== -->
+<section id="zh-Hant" hidden>
+<h1>隱私權政策 — MacBridge</h1>
+<p><small>App Store 名稱：MacBridge Remote · 生效日期：2026年9月29日 · 最後更新：2026年9月29日</small></p>
+<div class="callout"><strong>摘要：</strong>MacBridge 讓你在 iPhone 或 iPad 上透過 macOS 內建的螢幕共享遠端控制<strong>你自己的 Mac</strong>。開發者（blue-code）不營運任何伺服器，應用程式<strong>只會連線到你輸入或選擇的 Mac</strong>。無帳號、無分析、無廣告、無追蹤。App Store 隱私標籤為<strong>「未收集資料」</strong>。</div>
+
+<h2>1. 我們收集的資訊 — 沒有</h2>
+<p>應用程式不會向開發者傳送任何資訊，也不存在開發者伺服器。</p>
+<ul>
+<li><strong>帳號</strong> — 無需註冊，也無需登入。</li>
+<li><strong>分析、廣告、追蹤</strong> — 皆沒有。</li>
+<li><strong>螢幕、輸入、剪貼簿、檔案</strong> — 遠端螢幕、鍵盤與指標輸入、剪貼簿內容以及傳輸的檔案，只在你的裝置與你的 Mac 之間直接傳輸，不經過開發者，開發者也無法看到。</li>
+</ul>
+
+<h2>2. 應用程式連線的對象 — 只有你的 Mac</h2>
+<ul>
+<li><strong>螢幕共享（連接埠 5900）</strong> — 使用 Apple 遠端桌面認證連線到 Mac 上 macOS 內建的螢幕共享。</li>
+<li><strong>MacBridge Helper（連接埠 5901，選用）</strong> — 若你在 Mac 上安裝了免費的 MacBridge Helper，應用程式會連線到它，用於中文與表情符號剪貼簿、檔案傳輸、H.264 影片模式和多顯示器選擇。</li>
+<li><strong>尋找附近的 Mac</strong> — 透過 Bonjour（<code>_rfb._tcp</code>）在同一區域網路中尋找已開啟螢幕共享的 Mac。尋找僅在區域網路內進行。</li>
+</ul>
+<p>從外部連線時，應用程式會透過你自己設定的 VPN，只連線到你的 Mac 的位址。應用程式沒有中繼伺服器。</p>
+
+<h2>3. 儲存在裝置上的資訊</h2>
+<ul>
+<li><strong>已儲存的 Mac</strong> — 名稱、位址、連接埠和使用者名稱僅儲存在此裝置的應用程式儲存空間中。</li>
+<li><strong>密碼</strong> — <strong>只會儲存在此裝置的鑰匙圈中</strong>（為僅限此裝置的項目，不會透過 iCloud 鑰匙圈同步），並且只用於在你的 Mac 上進行認證。刪除已儲存的 Mac 時，其密碼也會從鑰匙圈中刪除。</li>
+<li><strong>接收的檔案</strong> — 從 Mac 接收的檔案只會保存在你自己選擇儲存或分享的位置。</li>
+</ul>
+
+<h2>4. 權限</h2>
+<ul>
+<li><strong>區域網路</strong> — 用於連線到同一網路中你的 Mac 上的螢幕共享（5900）與 MacBridge Helper（5901），以及尋找附近的 Mac。若拒絕，將無法尋找附近的 Mac，也無法連線到區域網路中的 Mac。你可以隨時在「設定」App › MacBridge 中變更。</li>
+<li><strong>檔案</strong> — 傳送到 Mac 時，只會讀取你自己選擇的檔案。</li>
+</ul>
+
+<h2>5. 兩項會離開本機的例外</h2>
+<div class="note">
+<p><strong>① 傳送意見回饋</strong> — 點一下設定中的「傳送意見回饋」會<strong>在瀏覽器中開啟 Google 表單。</strong>不是應用程式提交，而是你在瀏覽器中自行填寫並提交。提交內容由 Google 和開發者接收。開啟表單時會預先填入應用程式名稱、版本和語言。</p>
+<p><strong>② iCloud 裝置備份</strong> — 若你開啟了 iOS 的 iCloud 備份，已儲存的 Mac 列表可能會包含在該備份中（密碼是僅限此裝置的鑰匙圈項目，不會包含在內）。這是 iOS 的功能而非應用程式的通訊，適用 Apple 的隱私權政策。</p>
+</div>
+
+<h2>6. 購買</h2>
+<p>MacBridge Pro（一次性購買、永久使用，並非訂閱制）透過 Apple App Store 結帳（StoreKit）處理。付款由 Apple 處理，開發者不會收到你的付款資訊。應用程式僅在本機確認購買狀態。你可以隨時在設定中使用「回復購買項目」。</p>
+
+<h2>7. 刪除資料</h2>
+<p>在應用程式中刪除已儲存的 Mac，會一併刪除其資訊與密碼。刪除應用程式即刪除應用程式儲存的資訊。開發者不保留任何副本。</p>
+
+<h2>8. 兒童</h2>
+<p>MacBridge 並非針對兒童，且不收集任何年齡使用者的個人資訊。</p>
+
+<h2>9. 商標</h2>
+<p>MacBridge 與 Apple Inc. 無關。Mac 是 Apple Inc. 的商標。</p>
+
+<h2>10. 變更 · 聯絡</h2>
+<p>政策變更將在本頁公布。聯絡方式：Kim Byoungho · <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="support.html">支援頁面</a></p>
+</section>
+
+<script>
+var LANGS = ['ko','en','ja','zh-Hans','zh-Hant'];
+function setLang(lang) {
+  LANGS.forEach(function (l) {
+    document.getElementById(l).hidden = (l !== lang);
+    var tab = document.getElementById('tab-' + l);
+    tab.outerHTML = (l === lang ? '<strong id="tab-' + l + '">' : '<span id="tab-' + l + '">')
+      + tab.textContent + (l === lang ? '</strong>' : '</span>');
+  });
+  document.documentElement.lang = lang;
+}
+(function () {
+  var preferred = (navigator.language || 'en');
+  var match = LANGS.find(function (l) { return preferred.toLowerCase().indexOf(l.toLowerCase()) === 0; })
+    || (/^zh-(tw|hk|mo)/i.test(preferred) ? 'zh-Hant' : null)
+    || (preferred.indexOf('zh') === 0 ? 'zh-Hans' : null)
+    || (preferred.indexOf('ko') === 0 ? 'ko' : 'en');
+  setLang(match);
+})();
+</script>
+</body>
+</html>

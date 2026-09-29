@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacBridge — Support / 지원</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 30px; font-size: 1.05rem; }
+a { color: #1B3A6B; }
+@media (prefers-color-scheme: dark) { a { color: #7FA6DC; } }
+.lang-toggle { margin-bottom: 24px; font-size: 0.95rem; }
+.lang-toggle a { margin-right: 10px; cursor: pointer; }
+.callout { background: #1B3A6B11; border-left: 3px solid #1B3A6B; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+section[hidden] { display: none; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <a onclick="setLang('ko')"><strong id="tab-ko">한국어</strong></a> |
+  <a onclick="setLang('en')"><span id="tab-en">English</span></a> |
+  <a onclick="setLang('ja')"><span id="tab-ja">日本語</span></a> |
+  <a onclick="setLang('zh-Hans')"><span id="tab-zh-Hans">简体中文</span></a> |
+  <a onclick="setLang('zh-Hant')"><span id="tab-zh-Hant">繁體中文</span></a>
+</div>
+
+<section id="ko">
+<h1>MacBridge 지원</h1>
+<div class="callout">문의: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSekD7Uyg8Oa5WVWX0zV15PEyWS2y9A5sIGxA_pSeAcvWVtf6Q/viewform?usp=pp_url&amp;entry.1556462282=macbridge">피드백 폼</a> · 앱 안에서는 <strong>설정 → 피드백 보내기</strong></div>
+
+<h2>Mac에 연결할 수 없어요</h2>
+<ul>
+<li><strong>화면 공유가 켜져 있는지</strong> — Mac의 <strong>시스템 설정 › 일반 › 공유 › 화면 공유</strong>를 켜세요. Mac에 다른 앱을 설치할 필요는 없습니다.</li>
+<li><strong>같은 네트워크인지</strong> — 아이폰·아이패드와 Mac이 같은 Wi‑Fi에 있어야 합니다. 밖에서 접속하려면 VPN으로 연결한 뒤 VPN 주소를 직접 입력하세요.</li>
+<li><strong>주소와 포트</strong> — 주소(예: 192.168.0.10, mymac.local)와 화면 공유 포트 <strong>5900</strong>이 맞는지 확인하세요.</li>
+<li><strong>사용자 이름과 암호</strong> — Mac에 로그인할 때 쓰는 계정을 입력하세요.</li>
+<li><strong>로컬 네트워크 권한</strong> — 아이폰·아이패드의 <strong>설정 앱 › MacBridge</strong>에서 로컬 네트워크를 허용하세요. 꺼져 있으면 근처의 Mac이 보이지 않고 같은 네트워크의 Mac에 연결할 수 없습니다.</li>
+</ul>
+
+<h2>MacBridge Helper는 꼭 설치해야 하나요?</h2>
+<p>아니요. 헬퍼 없이도 원격 제어·로그인 화면 제어·키보드 입력·텍스트 클립보드는 모두 됩니다. Mac에 무료 MacBridge Helper를 설치하면 한글·이모지 클립보드 양방향, 파일 전송, 고성능 영상 모드(H.264), 멀티 디스플레이 선택을 쓸 수 있습니다.</p>
+<ul>
+<li><strong>설치</strong> — Mac에서 <a href="https://github.com/blue-code/macbridge/releases/latest">github.com/blue-code/macbridge/releases/latest</a> 를 열어 .pkg 파일을 받고 더블클릭해 설치합니다(Apple 공증을 받은 설치 파일). 앱의 <strong>설정 › Mac 헬퍼 설치 안내</strong>에도 같은 안내가 있습니다.</li>
+<li><strong>헬퍼에 연결되지 않으면</strong> — 헬퍼는 Mac의 <strong>5901</strong> 포트를 사용합니다. Mac의 방화벽이나 네트워크가 이 포트를 막고 있지 않은지 확인하세요.</li>
+<li><strong>영상 모드가 안 되면</strong> — Mac의 <strong>시스템 설정 › 개인정보 보호 및 보안 › 화면 및 시스템 오디오 녹음</strong>에서 MacBridge Helper를 허용하세요.</li>
+</ul>
+
+<h2>⌘Space, ⌘Tab이 Mac으로 가지 않아요</h2>
+<p>아이패드에서 ⌘Space·⌘Tab 같은 일부 단축키는 iPadOS가 먼저 가져갑니다. 원격 화면 툴바의 <strong>⌘ 버튼 › 단축키 보내기</strong>에서 Mac으로 보내세요.</p>
+
+<h2>한글 입력은 어떻게 되나요?</h2>
+<p>한글과 다른 언어는 아이폰·아이패드에서 조합을 마친 뒤 완성된 글자로 Mac에 보냅니다. 그래서 Mac의 입력 소스가 무엇이든 상관없습니다.</p>
+
+<h2>무료로 어디까지 쓸 수 있나요?</h2>
+<p>원격 제어·로그인 화면 제어·키보드 입력·클립보드 텍스트 동기화는 모두 무료입니다. 무료판은 Mac을 1대까지 저장할 수 있고, 저장하지 않고 바로 연결은 무제한입니다. <strong>MacBridge Pro</strong>는 구독이 아닌 1회 구매(평생 사용)로 Mac 무제한 저장, 고성능 영상 모드, 파일 보내기·받기, 멀티 디스플레이 선택, 이미지 클립보드를 엽니다(Pro 기능 중 저장 무제한을 뺀 나머지는 Mac에 헬퍼가 필요합니다).</p>
+
+<h2>구매를 복원하려면</h2>
+<p><strong>설정 → 구매 복원</strong>을 누르세요. 구매할 때 쓴 Apple 계정으로 로그인되어 있어야 합니다. 결제는 Apple이 처리하며 개발사는 결제 정보를 받지 않습니다.</p>
+
+<h2>인터넷 너머에서도 되나요?</h2>
+<p>MacBridge에는 중계 서버가 없고 회원님의 Mac에만 직접 연결합니다. 밖에서 접속하려면 회원님이 구성한 VPN을 통해 Mac 주소를 입력하세요.</p>
+
+<h2>개인정보</h2>
+<p><a href="privacy.html">개인정보처리방침</a> — 데이터를 수집하지 않습니다.</p>
+<p><small>MacBridge는 Apple Inc.와 관련이 없습니다. Mac은 Apple Inc.의 상표입니다.</small></p>
+</section>
+
+<section id="en" hidden>
+<h1>MacBridge Support</h1>
+<div class="callout">Contact: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSekD7Uyg8Oa5WVWX0zV15PEyWS2y9A5sIGxA_pSeAcvWVtf6Q/viewform?usp=pp_url&amp;entry.1556462282=macbridge">Feedback form</a> · In the app: <strong>Settings → Send Feedback</strong></div>
+
+<h2>I can't connect to my Mac</h2>
+<ul>
+<li><strong>Screen Sharing is on</strong> — on your Mac, turn on <strong>System Settings › General › Sharing › Screen Sharing</strong>. There's nothing else to install on your Mac.</li>
+<li><strong>Same network</strong> — your iPhone or iPad and your Mac need to be on the same Wi‑Fi. To connect from elsewhere, connect over a VPN and enter the VPN address manually.</li>
+<li><strong>Address and port</strong> — check the address (e.g. 192.168.0.10, mymac.local) and the Screen Sharing port <strong>5900</strong>.</li>
+<li><strong>User name and password</strong> — enter the account you use to log in to your Mac.</li>
+<li><strong>Local Network permission</strong> — on your iPhone or iPad, allow Local Network in the <strong>Settings app › MacBridge</strong>. If it's off, nearby Macs won't appear and Macs on your network can't be reached.</li>
+</ul>
+
+<h2>Do I need MacBridge Helper?</h2>
+<p>No. Remote control, login-screen control, keyboard input and the text clipboard all work without it. Install the free MacBridge Helper on your Mac to get a two-way clipboard for any language and emoji, file transfer, High-Performance Video Mode (H.264) and multi-display selection.</p>
+<ul>
+<li><strong>Install</strong> — on your Mac, open <a href="https://github.com/blue-code/macbridge/releases/latest">github.com/blue-code/macbridge/releases/latest</a>, download the .pkg file and double-click it to install (the installer is notarized by Apple). The same steps are in the app under <strong>Settings › Mac Helper Setup Guide</strong>.</li>
+<li><strong>Helper won't connect</strong> — the Helper uses port <strong>5901</strong> on your Mac. Make sure the Mac's firewall or your network isn't blocking it.</li>
+<li><strong>Video mode doesn't work</strong> — on your Mac, allow MacBridge Helper in <strong>System Settings › Privacy &amp; Security › Screen &amp; System Audio Recording</strong>.</li>
+</ul>
+
+<h2>⌘Space and ⌘Tab don't reach my Mac</h2>
+<p>On iPad, iPadOS takes some shortcuts such as ⌘Space and ⌘Tab for itself. Send them to your Mac from the <strong>⌘ button › Send Shortcut</strong> menu in the remote screen's toolbar.</p>
+
+<h2>How does typing in Korean or other languages work?</h2>
+<p>Korean and other languages are composed on your iPhone or iPad and sent to the Mac as finished characters, so it doesn't matter which input source your Mac is set to.</p>
+
+<h2>What do I get for free?</h2>
+<p>Remote control, login-screen control, keyboard input and clipboard text sync are all free. The free version saves one Mac, and quick connections without saving are always unlimited. <strong>MacBridge Pro</strong> is a one-time, lifetime purchase — not a subscription — that unlocks Unlimited Saved Macs, High-Performance Video Mode, Send &amp; Receive Files, Multi-Display Selection and Image Clipboard. (Every Pro feature except unlimited saved Macs needs the Helper on your Mac.)</p>
+
+<h2>Restoring a purchase</h2>
+<p>Tap <strong>Settings → Restore Purchases</strong>. You need to be signed in with the Apple Account you bought it with. Apple processes payments; the developer receives no payment details.</p>
+
+<h2>Does it work over the internet?</h2>
+<p>MacBridge has no relay server and connects directly to your Mac only. To connect from elsewhere, enter your Mac's address over a VPN you set up.</p>
+
+<h2>Privacy</h2>
+<p><a href="privacy.html">Privacy Policy</a> — no data is collected.</p>
+<p><small>MacBridge is not affiliated with Apple Inc. Mac is a trademark of Apple Inc.</small></p>
+</section>
+
+<section id="ja" hidden>
+<h1>MacBridge サポート</h1>
+<div class="callout">お問い合わせ：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSekD7Uyg8Oa5WVWX0zV15PEyWS2y9A5sIGxA_pSeAcvWVtf6Q/viewform?usp=pp_url&amp;entry.1556462282=macbridge">フィードバックフォーム</a> · アプリ内では<strong>設定 → フィードバックを送信</strong></div>
+
+<h2>Macに接続できません</h2>
+<ul>
+<li><strong>画面共有がオンか</strong> — Macの<strong>システム設定 › 一般 › 共有 › 画面共有</strong>をオンにしてください。Macにほかのアプリをインストールする必要はありません。</li>
+<li><strong>同じネットワークか</strong> — iPhone・iPadとMacが同じWi‑Fiにある必要があります。外出先から接続するには、VPNで接続してからVPNのアドレスを直接入力してください。</li>
+<li><strong>アドレスとポート</strong> — アドレス（例：192.168.0.10, mymac.local）と画面共有のポート<strong>5900</strong>が正しいか確認してください。</li>
+<li><strong>ユーザ名とパスワード</strong> — Macへのログインに使うアカウントを入力してください。</li>
+<li><strong>ローカルネットワークの権限</strong> — iPhone・iPadの<strong>「設定」App › MacBridge</strong>でローカルネットワークを許可してください。オフだと近くのMacが表示されず、同じネットワーク上のMacに接続できません。</li>
+</ul>
+
+<h2>MacBridge Helperは必要ですか？</h2>
+<p>いいえ。ヘルパーがなくても、リモート操作・ログイン画面の操作・キーボード入力・テキストのクリップボードはすべて使えます。Macに無料のMacBridge Helperをインストールすると、日本語・絵文字のクリップボードの双方向同期、ファイル転送、高性能ビデオモード（H.264）、マルチディスプレイの選択が使えます。</p>
+<ul>
+<li><strong>インストール</strong> — Macで <a href="https://github.com/blue-code/macbridge/releases/latest">github.com/blue-code/macbridge/releases/latest</a> を開いて.pkgファイルをダウンロードし、ダブルクリックしてインストールします（Appleによる公証済みのインストーラです）。アプリの<strong>設定 › Macヘルパーのインストール方法</strong>にも同じ手順があります。</li>
+<li><strong>ヘルパーに接続できない場合</strong> — ヘルパーはMacのポート<strong>5901</strong>を使用します。Macのファイアウォールやネットワークがこのポートをブロックしていないか確認してください。</li>
+<li><strong>ビデオモードが使えない場合</strong> — Macの<strong>システム設定 › プライバシーとセキュリティ › 画面収録とシステムオーディオ録音</strong>でMacBridge Helperを許可してください。</li>
+</ul>
+
+<h2>⌘Space・⌘TabがMacに届きません</h2>
+<p>iPadでは⌘Spaceや⌘Tabなど一部のショートカットをiPadOSが先に使います。リモート画面のツールバーの<strong>⌘ボタン › ショートカットを送信</strong>からMacに送ってください。</p>
+
+<h2>日本語入力はどうなりますか？</h2>
+<p>日本語などの言語はiPhone・iPadで変換を確定してから、完成した文字としてMacに送られます。そのため、Macの入力ソースが何に設定されていても問題ありません。</p>
+
+<h2>無料でどこまで使えますか？</h2>
+<p>リモート操作、ログイン画面の操作、キーボード入力、クリップボードのテキスト同期はすべて無料です。無料版で保存できるMacは1台までで、保存せずに接続するのは無制限です。<strong>MacBridge Pro</strong>はサブスクリプションではなく買い切り（永久に利用可能）で、Macを無制限に保存、高性能ビデオモード、ファイルの送受信、マルチディスプレイの選択、画像クリップボードが使えるようになります（無制限保存以外のPro機能にはMac側のヘルパーが必要です）。</p>
+
+<h2>購入の復元</h2>
+<p><strong>設定 → 購入を復元</strong>をタップしてください。購入時のApple アカウントでサインインしている必要があります。決済はAppleが行い、開発者が支払い情報を受け取ることはありません。</p>
+
+<h2>インターネット越しでも使えますか？</h2>
+<p>MacBridgeには中継サーバーがなく、ご自身のMacにだけ直接接続します。外出先から接続するには、ご自身で設定したVPNを通じてMacのアドレスを入力してください。</p>
+
+<h2>プライバシー</h2>
+<p><a href="privacy.html">プライバシーポリシー</a> — データは収集しません。</p>
+<p><small>MacBridgeはApple Inc.とは関係ありません。MacはApple Inc.の商標です。</small></p>
+</section>
+
+<section id="zh-Hans" hidden>
+<h1>MacBridge 支持</h1>
+<div class="callout">联系：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSekD7Uyg8Oa5WVWX0zV15PEyWS2y9A5sIGxA_pSeAcvWVtf6Q/viewform?usp=pp_url&amp;entry.1556462282=macbridge">反馈表单</a> · 在应用中：<strong>设置 → 发送反馈</strong></div>
+
+<h2>无法连接 Mac</h2>
+<ul>
+<li><strong>屏幕共享是否已打开</strong> — 在 Mac 上打开<strong>系统设置 › 通用 › 共享 › 屏幕共享</strong>。无需在 Mac 上安装其他 App。</li>
+<li><strong>是否在同一网络</strong> — iPhone 或 iPad 与 Mac 需要在同一 Wi‑Fi 中。如需从外部连接，请先连接 VPN，然后手动输入 VPN 地址。</li>
+<li><strong>地址和端口</strong> — 请确认地址（例如：192.168.0.10, mymac.local）和屏幕共享端口 <strong>5900</strong> 是否正确。</li>
+<li><strong>用户名和密码</strong> — 请输入登录 Mac 时使用的账户。</li>
+<li><strong>本地网络权限</strong> — 在 iPhone 或 iPad 的<strong>“设置” App › MacBridge</strong> 中允许本地网络。关闭时将看不到附近的 Mac，也无法连接同一网络中的 Mac。</li>
+</ul>
+
+<h2>一定要安装 MacBridge Helper 吗？</h2>
+<p>不需要。即使没有 Helper，远程控制、登录屏幕控制、键盘输入和文本剪贴板也都可以使用。在 Mac 上安装免费的 MacBridge Helper 后，可以使用中文与表情符号剪贴板双向同步、文件传输、高性能视频模式（H.264）和多显示器选择。</p>
+<ul>
+<li><strong>安装</strong> — 在 Mac 上打开 <a href="https://github.com/blue-code/macbridge/releases/latest">github.com/blue-code/macbridge/releases/latest</a>，下载 .pkg 文件并双击安装（该安装器已通过 Apple 公证）。应用中的<strong>设置 › Mac Helper 安装指南</strong>也有同样的步骤。</li>
+<li><strong>无法连接 Helper 时</strong> — Helper 使用 Mac 的端口 <strong>5901</strong>。请确认 Mac 的防火墙或网络没有阻止该端口。</li>
+<li><strong>视频模式无法使用时</strong> — 请在 Mac 的<strong>系统设置 › 隐私与安全 › 录屏与系统录音</strong>中允许 MacBridge Helper。</li>
+</ul>
+
+<h2>⌘Space、⌘Tab 发不到 Mac</h2>
+<p>在 iPad 上，⌘Space、⌘Tab 等部分快捷键会先被 iPadOS 占用。请通过远程屏幕工具栏中的<strong>⌘ 按钮 › 发送快捷键</strong>发送到 Mac。</p>
+
+<h2>中文输入是怎样的？</h2>
+<p>中文等语言会先在 iPhone 或 iPad 上完成输入，再以完整的文字发送到 Mac。因此无论 Mac 当前使用哪种输入法都没有关系。</p>
+
+<h2>免费版能用到什么程度？</h2>
+<p>远程控制、登录屏幕控制、键盘输入和剪贴板文本同步全部免费。免费版最多可保存 1 台 Mac，不保存直接连接则不限次数。<strong>MacBridge Pro</strong> 是一次性购买、永久使用（非订阅），可解锁无限保存 Mac、高性能视频模式、收发文件、多显示器选择和图像剪贴板（除无限保存外，其他 Pro 功能都需要在 Mac 上安装 Helper）。</p>
+
+<h2>恢复购买</h2>
+<p>轻点<strong>设置 → 恢复购买</strong>。需要使用购买时的 Apple 账户登录。付款由 Apple 处理，开发者不会收到你的支付信息。</p>
+
+<h2>可以通过互联网使用吗？</h2>
+<p>MacBridge 没有中继服务器，只会直接连接你的 Mac。如需从外部连接，请通过你自己设置的 VPN 输入 Mac 的地址。</p>
+
+<h2>隐私</h2>
+<p><a href="privacy.html">隐私政策</a> — 不收集任何数据。</p>
+<p><small>MacBridge 与 Apple Inc. 无关。Mac 是 Apple Inc. 的商标。</small></p>
+</section>
+
+<section id="zh-Hant" hidden>
+<h1>MacBridge 支援</h1>
+<div class="callout">聯絡：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSekD7Uyg8Oa5WVWX0zV15PEyWS2y9A5sIGxA_pSeAcvWVtf6Q/viewform?usp=pp_url&amp;entry.1556462282=macbridge">意見回饋表單</a> · 在應用程式中：<strong>設定 → 傳送意見回饋</strong></div>
+
+<h2>無法連線到 Mac</h2>
+<ul>
+<li><strong>螢幕共享是否已開啟</strong> — 在 Mac 上開啟<strong>系統設定 › 一般 › 共享 › 螢幕共享</strong>。不需要在 Mac 上安裝其他 App。</li>
+<li><strong>是否位於同一網路</strong> — iPhone 或 iPad 與 Mac 需要在同一 Wi‑Fi 中。若要從外部連線，請先連上 VPN，再手動輸入 VPN 位址。</li>
+<li><strong>位址和連接埠</strong> — 請確認位址（例如：192.168.0.10, mymac.local）和螢幕共享連接埠 <strong>5900</strong> 是否正確。</li>
+<li><strong>使用者名稱和密碼</strong> — 請輸入登入 Mac 時使用的帳號。</li>
+<li><strong>區域網路權限</strong> — 在 iPhone 或 iPad 的<strong>「設定」App › MacBridge</strong> 中允許區域網路。關閉時將看不到附近的 Mac，也無法連線到同一網路中的 Mac。</li>
+</ul>
+
+<h2>一定要安裝 MacBridge Helper 嗎？</h2>
+<p>不需要。即使沒有 Helper，遠端控制、登入畫面控制、鍵盤輸入和文字剪貼簿也都可以使用。在 Mac 上安裝免費的 MacBridge Helper 後，可以使用中文與表情符號剪貼簿雙向同步、檔案傳輸、高效能影片模式（H.264）和多顯示器選擇。</p>
+<ul>
+<li><strong>安裝</strong> — 在 Mac 上開啟 <a href="https://github.com/blue-code/macbridge/releases/latest">github.com/blue-code/macbridge/releases/latest</a>，下載 .pkg 檔案並按兩下進行安裝（此安裝程式已通過 Apple 公證）。應用程式中的<strong>設定 › Mac Helper 安裝說明</strong>也有同樣的步驟。</li>
+<li><strong>無法連線到 Helper 時</strong> — Helper 使用 Mac 的連接埠 <strong>5901</strong>。請確認 Mac 的防火牆或網路沒有封鎖該連接埠。</li>
+<li><strong>影片模式無法使用時</strong> — 請在 Mac 的<strong>系統設定 › 隱私權與安全性 › 螢幕與系統錄音</strong>中允許 MacBridge Helper。</li>
+</ul>
+
+<h2>⌘Space、⌘Tab 傳不到 Mac</h2>
+<p>在 iPad 上，⌘Space、⌘Tab 等部分快速鍵會先被 iPadOS 使用。請透過遠端螢幕工具列中的<strong>⌘ 按鈕 › 傳送快速鍵</strong>傳送到 Mac。</p>
+
+<h2>中文輸入是怎麼運作的？</h2>
+<p>中文等語言會先在 iPhone 或 iPad 上完成輸入，再以完整的文字傳送到 Mac。因此不論 Mac 目前使用哪種輸入方式都沒有關係。</p>
+
+<h2>免費版能用到什麼程度？</h2>
+<p>遠端控制、登入畫面控制、鍵盤輸入和剪貼簿文字同步全部免費。免費版最多可儲存 1 台 Mac，不儲存直接連線則不限次數。<strong>MacBridge Pro</strong> 是一次性購買、永久使用（並非訂閱制），可解鎖無限儲存 Mac、高效能影片模式、傳送與接收檔案、多顯示器選擇和影像剪貼簿（除無限儲存外，其他 Pro 功能都需要在 Mac 上安裝 Helper）。</p>
+
+<h2>回復購買項目</h2>
+<p>點一下<strong>設定 → 回復購買項目</strong>。需要使用購買時的 Apple 帳號登入。付款由 Apple 處理，開發者不會收到你的付款資訊。</p>
+
+<h2>可以透過網際網路使用嗎？</h2>
+<p>MacBridge 沒有中繼伺服器，只會直接連線到你的 Mac。若要從外部連線，請透過你自己設定的 VPN 輸入 Mac 的位址。</p>
+
+<h2>隱私</h2>
+<p><a href="privacy.html">隱私權政策</a> — 不收集任何資料。</p>
+<p><small>MacBridge 與 Apple Inc. 無關。Mac 是 Apple Inc. 的商標。</small></p>
+</section>
+
+<script>
+var LANGS = ['ko','en','ja','zh-Hans','zh-Hant'];
+function setLang(lang) {
+  LANGS.forEach(function (l) {
+    document.getElementById(l).hidden = (l !== lang);
+    var tab = document.getElementById('tab-' + l);
+    tab.outerHTML = (l === lang ? '<strong id="tab-' + l + '">' : '<span id="tab-' + l + '">')
+      + tab.textContent + (l === lang ? '</strong>' : '</span>');
+  });
+  document.documentElement.lang = lang;
+}
+(function () {
+  var preferred = (navigator.language || 'en');
+  var match = LANGS.find(function (l) { return preferred.toLowerCase().indexOf(l.toLowerCase()) === 0; })
+    || (/^zh-(tw|hk|mo)/i.test(preferred) ? 'zh-Hant' : null)
+    || (preferred.indexOf('zh') === 0 ? 'zh-Hans' : null)
+    || (preferred.indexOf('ko') === 0 ? 'ko' : 'en');
+  setLang(match);
+})();
+</script>
+</body>
+</html>
