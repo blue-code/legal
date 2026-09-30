@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexTerm — プライバシーポリシー</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #2b6cb0; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.9rem; }
+.lang-toggle a { margin-right: 10px; }
+.callout { background: #2b6cb011; border-left: 3px solid #2b6cb0; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+<a href="./privacy.ko.html">한국어</a> |
+<a href="./privacy.en.html">English</a> |
+<strong>日本語</strong> |
+<a href="./privacy.zh-Hans.html">简体中文</a>
+</div>
+
+<h1>プライバシーポリシー — NexTerm</h1>
+<p><small>施行日: 2026年9月29日 ・ 最終更新日: 2026年9月29日</small></p>
+
+<div class="callout">
+<strong>概要:</strong> NexTermは独自のバックエンドサーバーを持たないWindowsデスクトップアプリです。設定、ワークスペースのレイアウト、ターミナルセッションの内容はすべて<strong>お使いのPC内でのみ</strong>保存・処理されます。アナリティクス・広告・トラッキングSDKは一切なく、ユーザーデータがblue-codeのサーバーに送信されることはありません。
+</div>
+
+<h2>1. 収集・保存する情報</h2>
+<p>NexTermはユーザーデータを外部サーバーへ送信しません。以下の情報はすべてPCのローカルストレージにのみ保存されます。</p>
+<ul>
+<li><strong>アプリ設定</strong> — フォント、テーマ、既定シェルなど（<code>%APPDATA%/nexterm/settings.json</code>）</li>
+<li><strong>セッション状態</strong> — ワークスペース／パネルのレイアウト（<code>%APPDATA%/nexterm/session.json</code>、24時間後に自動失効）</li>
+<li><strong>登録したお気に入り・クイックコマンド</strong> — よく使うターミナルコマンドのローカル一覧</li>
+<li><strong>ターミナルセッションの内容</strong> — 入力したコマンドとその出力はローカルプロセス（node-pty）でのみ処理され、外部へ送信されることはありません。</li>
+</ul>
+
+<h2>2. 第三者提供・共有</h2>
+<p><strong>NexTermはいかなるユーザーデータも第三者に提供・共有しません。</strong></p>
+<ul>
+<li>アナリティクスツールなし</li>
+<li>クラッシュレポートSDKなし</li>
+<li>広告・トラッキング識別子の不使用</li>
+<li>独自バックエンドサーバーの運用なし</li>
+</ul>
+
+<h2>3. AIエージェント使用量の確認（任意機能）</h2>
+<p>NexTermには、Claude Code・Codex・Antigravityなど、CLIベースのAIコーディングツールの使用量（クォータ）をステータスバーに表示する任意機能があります。</p>
+<ul>
+<li>この機能は、ユーザーが<strong>すでに各CLIツールにログインしてPCにローカル保存済みの認証情報</strong>（OAuthトークンなど）を読み取り、<strong>ユーザーのPCから直接</strong>Anthropic・OpenAI・Googleなど各サービスの公式APIへ問い合わせを送信します。</li>
+<li>この通信はblue-codeのサーバーを経由せず、NexTermがこれらの認証情報を別途収集・保存・送信することはありません。</li>
+<li>この機能は設定画面からいつでもオフにできます。</li>
+</ul>
+
+<h2>4. 権限について</h2>
+<p>NexTermは以下のローカル機能を使用し、いずれもユーザーのデバイス内でのみ動作します。</p>
+<ul>
+<li><strong>ファイルシステムアクセス</strong> — ユーザーが指定した作業フォルダを開く、またはエクスプローラーの右クリックメニュー（「NexTermで開く」）から起動</li>
+<li><strong>クリップボードの読み書き</strong> — ターミナルのコピー（Ctrl+Shift+C）・貼り付け（Ctrl+V）</li>
+<li><strong>ローカルプロセスの実行</strong> — PowerShell／コマンドプロンプト／インストール済みのシェルやCLIツールの実行</li>
+</ul>
+
+<h2>5. データの保管と削除</h2>
+<p><code>%APPDATA%/nexterm</code>フォルダを削除すると、設定やセッション状態を含むすべてのローカルデータが削除されます。</p>
+
+<h2>6. アカウントとログイン</h2>
+<p>NexTerm自体はアカウント作成やログインを必要としません。</p>
+
+<h2>7. 自動アップデート</h2>
+<p>通常配布版はGitHub Releases APIを通じて新バージョンの有無のみを確認し、個人を特定できる情報は送信しません。Microsoft Store版はStore自体の更新機能を使用するため、この機能は無効化されています。</p>
+
+<h2>8. 児童のプライバシー</h2>
+<p>NexTermは13歳未満の児童を対象としておらず、意図的に児童の情報を収集することはありません。</p>
+
+<h2>9. 本方針の変更</h2>
+<p>本方針が変更された場合、変更内容と施行日を本ページに掲載します。</p>
+
+<h2>10. お問い合わせ</h2>
+<p>開発者: <strong>Blue Code</strong><br>
+メール: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+アプリID: <code>com.nexterm.app</code></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; NexTerm Legal</a></p>
+
+</body>
+</html>

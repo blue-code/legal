@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexTerm — Privacy Policy</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #2b6cb0; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.9rem; }
+.lang-toggle a { margin-right: 10px; }
+.callout { background: #2b6cb011; border-left: 3px solid #2b6cb0; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+<a href="./privacy.ko.html">한국어</a> |
+<strong>English</strong> |
+<a href="./privacy.ja.html">日本語</a> |
+<a href="./privacy.zh-Hans.html">简体中文</a>
+</div>
+
+<h1>Privacy Policy — NexTerm</h1>
+<p><small>Effective: September 29, 2026 &middot; Last updated: September 29, 2026</small></p>
+
+<div class="callout">
+<strong>Summary:</strong> NexTerm is a Windows desktop app with no backend server of its own. Settings, workspace layout, and terminal session content are stored and processed <strong>only on your PC</strong>. There is no analytics, advertising, or tracking SDK, and no user data is ever sent to blue-code's servers.
+</div>
+
+<h2>1. Information We Collect and Store</h2>
+<p>NexTerm never sends your data to an external server. The following is stored only on your PC's local storage.</p>
+<ul>
+<li><strong>App settings</strong> — font, theme, default shell, etc. (<code>%APPDATA%/nexterm/settings.json</code>)</li>
+<li><strong>Session state</strong> — workspace/panel layout (<code>%APPDATA%/nexterm/session.json</code>, auto-expires after 24 hours)</li>
+<li><strong>Saved favorite/quick commands</strong> — a local list of frequently used terminal commands you register</li>
+<li><strong>Terminal session content</strong> — commands you type and their output are processed only through a local process (node-pty) and are never transmitted anywhere.</li>
+</ul>
+
+<h2>2. Third-Party Disclosure and Sharing</h2>
+<p><strong>NexTerm does not disclose or share any user data with third parties.</strong></p>
+<ul>
+<li>No analytics tools</li>
+<li>No crash-reporting SDK</li>
+<li>No advertising or tracking identifiers</li>
+<li>No backend server of its own</li>
+</ul>
+
+<h2>3. AI Agent Usage Lookup (Optional Feature)</h2>
+<p>NexTerm includes an optional feature that shows usage/quota for CLI-based AI coding tools such as Claude Code, Codex, and Antigravity in the status bar.</p>
+<ul>
+<li>This feature reads the credentials (OAuth tokens, etc.) that you have <strong>already stored locally by signing in to those CLI tools yourself</strong>, and sends the lookup request <strong>directly from your PC</strong> to each provider's official API (Anthropic, OpenAI, Google).</li>
+<li>These requests and responses never pass through any blue-code server, and NexTerm does not separately collect, store, or transmit these credentials.</li>
+<li>This feature can be turned off at any time in Settings.</li>
+</ul>
+
+<h2>4. Permissions</h2>
+<p>NexTerm uses the following local capabilities, all of which operate only on your device.</p>
+<ul>
+<li><strong>File system access</strong> — opening a folder you specify, or launching via the Explorer right-click menu ("Open with NexTerm")</li>
+<li><strong>Clipboard read/write</strong> — terminal copy (Ctrl+Shift+C) and paste (Ctrl+V)</li>
+<li><strong>Local process execution</strong> — running PowerShell, Command Prompt, or shells/CLI tools you have installed</li>
+</ul>
+
+<h2>5. Data Retention and Deletion</h2>
+<p>Deleting the <code>%APPDATA%/nexterm</code> folder removes all local data, including settings and session state.</p>
+
+<h2>6. Accounts and Sign-in</h2>
+<p>NexTerm itself does not require account creation or sign-in.</p>
+
+<h2>7. Automatic Updates</h2>
+<p>The standard distribution checks the GitHub Releases API only to see whether a newer version exists, and transmits no personally identifiable information. The Microsoft Store build uses the Store's own update mechanism, and this feature is disabled in that build.</p>
+
+<h2>8. Children's Privacy</h2>
+<p>NexTerm is not directed at children under 13 and does not knowingly collect information from children.</p>
+
+<h2>9. Changes to This Policy</h2>
+<p>If this policy changes, updates and the effective date will be posted on this page.</p>
+
+<h2>10. Contact</h2>
+<p>Developer: <strong>Blue Code</strong><br>
+Email: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+App ID: <code>com.nexterm.app</code></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; NexTerm Legal</a></p>
+
+</body>
+</html>

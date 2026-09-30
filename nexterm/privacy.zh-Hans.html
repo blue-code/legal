@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexTerm — 隐私政策</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #2b6cb0; }
+.lang-toggle { margin-bottom: 24px; font-size: 0.9rem; }
+.lang-toggle a { margin-right: 10px; }
+.callout { background: #2b6cb011; border-left: 3px solid #2b6cb0; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+<a href="./privacy.ko.html">한국어</a> |
+<a href="./privacy.en.html">English</a> |
+<a href="./privacy.ja.html">日本語</a> |
+<strong>简体中文</strong>
+</div>
+
+<h1>隐私政策 — NexTerm</h1>
+<p><small>生效日期：2026年9月29日 &middot; 最近更新：2026年9月29日</small></p>
+
+<div class="callout">
+<strong>摘要：</strong>NexTerm 是一款没有自有后端服务器的 Windows 桌面应用。设置、工作区布局和终端会话内容<strong>仅保存和处理在您的电脑本地</strong>。应用不含任何分析、广告或跟踪 SDK，也不会向 blue-code 的服务器发送任何用户数据。
+</div>
+
+<h2>1. 收集与存储的信息</h2>
+<p>NexTerm 不会将您的数据发送到外部服务器。以下信息仅保存在您电脑的本地存储中。</p>
+<ul>
+<li><strong>应用设置</strong> — 字体、主题、默认 Shell 等（<code>%APPDATA%/nexterm/settings.json</code>）</li>
+<li><strong>会话状态</strong> — 工作区／面板布局（<code>%APPDATA%/nexterm/session.json</code>，24 小时后自动过期）</li>
+<li><strong>用户保存的常用／快捷命令</strong> — 本地保存的常用终端命令列表</li>
+<li><strong>终端会话内容</strong> — 您输入的命令及其输出仅通过本地进程（node-pty）处理，绝不会被发送到任何地方。</li>
+</ul>
+
+<h2>2. 第三方提供与共享</h2>
+<p><strong>NexTerm 不会将任何用户数据提供或共享给第三方。</strong></p>
+<ul>
+<li>无分析（Analytics）工具</li>
+<li>无崩溃报告 SDK</li>
+<li>不使用广告或跟踪标识符</li>
+<li>不运营自有后端服务器</li>
+</ul>
+
+<h2>3. AI 代理用量查询（可选功能）</h2>
+<p>NexTerm 提供一个可选功能，可在状态栏显示 Claude Code、Codex、Antigravity 等基于 CLI 的 AI 编程工具的用量（配额）。</p>
+<ul>
+<li>该功能会读取您<strong>已自行登录相应 CLI 工具并保存在本机的凭据</strong>（如 OAuth 令牌），并<strong>直接从您的电脑</strong>向 Anthropic、OpenAI、Google 等各服务商的官方 API 发送查询请求。</li>
+<li>这些请求与响应不会经过 blue-code 的任何服务器，NexTerm 也不会另行收集、存储或传输这些凭据。</li>
+<li>您可以随时在设置中关闭此功能。</li>
+</ul>
+
+<h2>4. 权限说明</h2>
+<p>NexTerm 使用以下本地功能，均仅在您的设备上运行。</p>
+<ul>
+<li><strong>文件系统访问</strong> — 打开您指定的工作文件夹，或通过资源管理器右键菜单（"使用 NexTerm 打开"）启动</li>
+<li><strong>剪贴板读写</strong> — 终端复制（Ctrl+Shift+C）／粘贴（Ctrl+V）</li>
+<li><strong>本地进程执行</strong> — 运行 PowerShell、命令提示符或您已安装的 Shell／CLI 工具</li>
+</ul>
+
+<h2>5. 数据保留与删除</h2>
+<p>删除 <code>%APPDATA%/nexterm</code> 文件夹即可清除包括设置和会话状态在内的所有本地数据。</p>
+
+<h2>6. 账户与登录</h2>
+<p>NexTerm 本身不需要注册账户或登录。</p>
+
+<h2>7. 自动更新</h2>
+<p>标准发行版仅通过 GitHub Releases API 检查是否存在新版本，不传输任何可识别个人身份的信息。Microsoft Store 版本使用 Store 自身的更新机制，该功能在此版本中已被禁用。</p>
+
+<h2>8. 儿童隐私</h2>
+<p>NexTerm 不面向 13 岁以下儿童，也不会故意收集儿童的信息。</p>
+
+<h2>9. 政策变更</h2>
+<p>如本政策发生变更，变更内容及生效日期将公布在本页面。</p>
+
+<h2>10. 联系方式</h2>
+<p>开发者：<strong>Blue Code</strong><br>
+邮箱：<a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+应用 ID：<code>com.nexterm.app</code></p>
+
+<p style="margin-top:48px"><a href="./index.html">&larr; NexTerm Legal</a></p>
+
+</body>
+</html>
