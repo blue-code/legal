@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PackNine — 개인정보처리방침</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 20px; line-height: 1.75; }
+h1 { border-bottom: 1px solid #ccc4; padding-bottom: 8px; }
+h2 { margin-top: 32px; font-size: 1.15rem; }
+ul { padding-left: 20px; }
+a { color: #2b6cb0; }
+.callout { background: #2b6cb011; border-left: 3px solid #2b6cb0; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+small { color: #888; }
+code { background: #8881; padding: 1px 5px; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>개인정보처리방침 — PackNine</h1>
+<p><small>시행일: 2026년 9월 30일 · 최종 업데이트: 2026년 9월 30일</small></p>
+
+<div class="callout">
+<strong>요약:</strong> PackNine은 별도의 백엔드 서버를 운영하지 않는 Windows 데스크톱 압축 프로그램입니다. 압축하거나 해제한 파일은 모두 <strong>사용자 PC 내부에서만</strong> 처리됩니다. 분석/광고/트래킹 SDK가 전혀 없으며, blue-code 서버로 어떠한 사용자 데이터도 전송되지 않습니다.
+</div>
+
+<h2>1. 수집하지 않는 정보</h2>
+<p>PackNine은 다음을 일절 수집·전송·저장하지 않습니다.</p>
+<ul>
+<li>이름, 이메일 주소, 계정 정보 등 개인을 식별할 수 있는 정보</li>
+<li>압축하거나 해제한 파일의 이름, 내용, 경로</li>
+<li>사용 통계, 분석 데이터, 텔레메트리, 크래시 리포트</li>
+<li>IP 주소, 기기 식별자, 위치 정보</li>
+<li>광고 식별자 (PackNine에는 광고가 없습니다)</li>
+</ul>
+
+<h2>2. 제3자 제공 및 공유</h2>
+<p><strong>PackNine은 어떠한 사용자 데이터도 제3자에게 제공하거나 공유하지 않습니다.</strong></p>
+<ul>
+<li>분석(Analytics) 도구 없음</li>
+<li>크래시 리포팅 SDK 없음</li>
+<li>광고 또는 트래킹 식별자 미사용</li>
+<li>자체 백엔드 서버 운영 안 함</li>
+</ul>
+
+<h2>3. 네트워크 통신</h2>
+<p>PackNine은 정상 동작 과정에서 <strong>인터넷에 접속하지 않습니다.</strong> 외부 서버와 통신하는 기능이 없으며, 자동 업데이트 확인도 수행하지 않습니다. Microsoft Store 배포판은 Store 자체 업데이트 메커니즘을 사용합니다.</p>
+
+<h2>4. 로컬에 저장되는 정보</h2>
+<p>진단 목적으로 실행 기록을 사용자 컴퓨터에만 남깁니다.</p>
+<ul>
+<li><strong>위치</strong> — <code>%LOCALAPPDATA%\PackNine\packnine-debug.log</code></li>
+<li><strong>내용</strong> — 실행 시각, 전달받은 명령줄 인자, 오류 발생 시 스택 트레이스</li>
+<li><strong>용도</strong> — 탐색기 우클릭 메뉴처럼 콘솔이 없는 환경에서 오류 원인을 추적하기 위함</li>
+<li><strong>전송</strong> — 어디에도 전송되지 않습니다. 사용자가 직접 열어 보거나 삭제할 수 있습니다.</li>
+</ul>
+<p>일반 설치본(GitHub 배포)은 파일 연결과 우클릭 메뉴 등록을 위해 현재 사용자 레지스트리(<code>HKEY_CURRENT_USER</code>)에만 설정값을 기록하며, 프로그램 제거 시 원래 상태로 복원합니다. Microsoft Store 배포판은 파일 연결을 Windows가 패키지 정보로 관리하므로 레지스트리를 직접 수정하지 않습니다.</p>
+
+<h2>5. 권한 안내</h2>
+<p>PackNine은 다음 로컬 기능을 사용하며, 모두 사용자 기기 내에서만 동작합니다.</p>
+<ul>
+<li><strong>파일 시스템 접근</strong> — 사용자가 직접 선택한 파일과 폴더를 압축·해제·미리보기하기 위해 읽고 씁니다. 사용자가 선택하지 않은 파일을 탐색하거나 열지 않습니다.</li>
+<li><strong>로컬 프로세스 실행</strong> — RAR 형식 해제 시 시스템에 설치된 <code>unrar</code> 또는 <code>bsdtar</code> 실행 파일에 위임합니다.</li>
+<li><strong>전체 신뢰(runFullTrust)</strong> — 일반 데스크톱 앱으로 동작하기 위해 Microsoft Store 패키지가 선언하는 권한입니다. 이 권한으로 추가 정보를 수집하지 않습니다.</li>
+</ul>
+
+<h2>6. 데이터 보관 및 삭제</h2>
+<p><code>%LOCALAPPDATA%\PackNine</code> 폴더를 삭제하면 로그를 포함한 모든 로컬 데이터가 제거됩니다.</p>
+
+<h2>7. 계정 및 로그인</h2>
+<p>PackNine은 회원가입이나 로그인을 요구하지 않습니다.</p>
+
+<h2>8. 아동의 개인정보</h2>
+<p>PackNine은 만 13세 미만 아동을 대상으로 하지 않으며, 의도적으로 아동의 정보를 수집하지 않습니다.</p>
+
+<h2>9. 오픈소스</h2>
+<p>PackNine은 MIT 라이선스 오픈소스입니다. 위 내용은 누구나 소스 코드로 직접 확인할 수 있습니다.<br>
+<a href="https://github.com/blue-code/packnine">https://github.com/blue-code/packnine</a></p>
+
+<h2>10. 처리방침의 변경</h2>
+<p>본 처리방침이 변경될 경우 본 페이지에 변경 사항과 시행일을 게시합니다.</p>
+
+<h2>11. 문의</h2>
+<p>개발자: <strong>Blue Code</strong><br>
+이메일: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a><br>
+문의: <a href="https://github.com/blue-code/packnine/issues">https://github.com/blue-code/packnine/issues</a></p>
+
+<p style="margin-top:48px"><a href="../index.html">&larr; blue-code Legal</a></p>
+
+</body>
+</html>

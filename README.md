@@ -12,6 +12,7 @@ Hosted via GitHub Pages at: https://blue-code.github.io/legal/
 - **BlindFire (블라인드파이어)** — [Privacy](./blindfire/privacy.html) · [Terms](./blindfire/terms.html)
 - **7 Verbs: Survive in English** — [Privacy](./seven-verbs/privacy.html) · [Support](./seven-verbs/support.html)
 - **NexTerm** — [Privacy (ko/en/ja/zh-Hans)](./nexterm/index.html)
+- **PackNine (팩나인)** — [Privacy (ko)](./packnine/privacy.html)
 
 ## Adding a new app
 
