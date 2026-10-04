@@ -11,6 +11,7 @@ Hosted via GitHub Pages at: https://blue-code.github.io/legal/
 - **BizCard AI (명함 스캐너)** — [Privacy (ko/en/ja/zh-Hans)](./bizcardai/index.html)
 - **BlindFire (블라인드파이어)** — [Privacy](./blindfire/privacy.html) · [Terms](./blindfire/terms.html)
 - **7 Verbs: Survive in English** — [Privacy](./seven-verbs/privacy.html) · [Support](./seven-verbs/support.html)
+- **Layerforge** — [Privacy (ko/en/ja/zh-Hans)](./layerforge/index.html)
 - **NexTerm** — [Privacy (ko/en/ja/zh-Hans)](./nexterm/index.html)
 - **PackNine (팩나인)** — [Privacy (ko)](./packnine/privacy.html)
 
