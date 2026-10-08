@@ -26,18 +26,21 @@ small { color: #888; }
 <p>없습니다. 회원가입·로그인·분석 도구·광고가 없습니다.</p>
 
 <h2>2. 도면 파일</h2>
-<p>사용자가 직접 열거나 저장한 파일(DWG·DXF·PDF)만 사용자의 PC에서 읽고 씁니다. 파일은 외부로 전송되지 않습니다.</p>
+<p>사용자가 직접 열거나 저장한 파일(DWG·DXF·PDF)만 사용자의 PC에서 읽고 씁니다. 앱은 파일을 외부로 전송하지 않습니다(사용자가 켠 로컬 AI 연결은 5항 참고).</p>
 
 <h2>3. 네트워크 사용</h2>
 <p>유료 기능(애드온) 보유 여부를 확인하고 구매하기 위해 Microsoft Store 서비스와 통신합니다. 결제·계정 정보는 Microsoft가 처리하며 개발자는 받지 않습니다. <a href="https://privacy.microsoft.com">Microsoft 개인정보처리방침</a></p>
 
 <h2>4. 로컬 저장</h2>
-<p>마지막으로 확인한 라이선스 등급을 <code>%LOCALAPPDATA%\ArchiDraft\license.json</code>에 저장합니다(오프라인 사용용). 개인정보는 들어 있지 않습니다.</p>
+<p>마지막으로 확인한 라이선스 등급(<code>%LOCALAPPDATA%\ArchiDraft\license.json</code>, 오프라인 사용용)과 앱 설정(<code>settings.json</code>, AI 연결 켜짐·승인 여부)을 저장합니다. 개인정보는 들어 있지 않습니다.</p>
 
-<h2>5. 문의</h2>
+<h2>5. 로컬 AI 연결(선택, Pro)</h2>
+<p>사용자가 자기 PC의 AI 에이전트(Claude Code·Codex 등)를 직접 등록하고 앱의 AI 연결이 켜져 있으면, 그 에이전트의 요청에 따라 열린 도면의 내용(객체 정보·화면 이미지)을 같은 PC·같은 Windows 계정 안에서만 전달합니다. 앱은 네트워크 포트를 열지 않으며 AI 계정·API 키를 받거나 저장하지 않습니다. 에이전트가 받은 내용을 AI 제공자에게 보내는지는 사용자와 그 제공자 사이의 약관을 따르며, 앱 개발자는 그 내용을 받지 않습니다. 상태 표시줄의 AI 토글로 언제든 끌 수 있습니다.</p>
+
+<h2>6. 문의</h2>
 <p>개발자: Blue Code (퍼블리셔: 수카버스)<br>이메일: digimaru@gmail.com<br>Microsoft Store ID: 9P4J4VKL3SKX</p>
 
 <p><a href="./index.html">&larr; ArchiDraft</a></p>
-<p><small>시행일: 2026-10-02</small></p>
+<p><small>시행일: 2026-10-08 (개정, 최초 시행 2026-10-02)</small></p>
 </body>
 </html>

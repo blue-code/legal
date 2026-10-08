@@ -26,18 +26,21 @@ small { color: #888; }
 <p>None. There is no sign-up, login, analytics or advertising.</p>
 
 <h2>2. Drawing files</h2>
-<p>The app only reads and writes files the user explicitly opens or saves (DWG, DXF, PDF) on the user's PC. Files are never uploaded.</p>
+<p>The app only reads and writes files the user explicitly opens or saves (DWG, DXF, PDF) on the user's PC. The app never uploads files (for the optional local AI connection, see section 5).</p>
 
 <h2>3. Network use</h2>
 <p>The app contacts Microsoft Store services to check and purchase add-on licenses. Payment and account data are handled by Microsoft and are not received by the developer. <a href="https://privacy.microsoft.com">Microsoft Privacy Statement</a></p>
 
 <h2>4. Local storage</h2>
-<p>The last verified license tier is stored in <code>%LOCALAPPDATA%\ArchiDraft\license.json</code> for offline use. It contains no personal information.</p>
+<p>The last verified license tier (<code>%LOCALAPPDATA%\ArchiDraft\license.json</code>, for offline use) and app settings (<code>settings.json</code>: whether AI connection and approvals are on) are stored locally. They contain no personal information.</p>
 
-<h2>5. Contact</h2>
+<h2>5. Local AI connection (optional, Pro)</h2>
+<p>If the user registers their own AI agent on their PC (such as Claude Code or Codex) and AI connection is turned on in the app, the app provides the open drawing's contents (object data and rendered images) to that agent at its request, only within the same PC and Windows account. The app opens no network ports and never receives or stores AI accounts or API keys. Whether the agent sends that content to its AI provider is governed by the user's own agreement with that provider; the developer does not receive it. AI connection can be turned off at any time with the AI toggle in the status bar.</p>
+
+<h2>6. Contact</h2>
 <p>Developer: Blue Code (publisher: 수카버스)<br>Email: digimaru@gmail.com<br>Microsoft Store ID: 9P4J4VKL3SKX</p>
 
 <p><a href="./index.html">&larr; ArchiDraft</a></p>
-<p><small>Effective: 2026-10-02</small></p>
+<p><small>Effective: 2026-10-08 (revised; first effective 2026-10-02)</small></p>
 </body>
 </html>
