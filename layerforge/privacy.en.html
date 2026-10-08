@@ -27,27 +27,33 @@ small { color: #888; }
 </div>
 
 <h1>Privacy Policy — Layerforge</h1>
-<p><small>Effective: October 4, 2026 · Last updated: October 4, 2026</small></p>
+<p><small>Effective: October 4, 2026 · Last updated: October 8, 2026</small></p>
 
 <div class="callout">
-<strong>Summary:</strong> Layerforge is a layer-based image editor for Windows and runs no servers of its own. The images and projects you open, AI processing and app settings are all handled and stored <strong>only on your PC</strong>. There are no analytics, advertising or tracking tools, and no user data is sent to blue-code.
+<strong>Summary:</strong> Layerforge is a layer-based image editor for Windows and runs no servers of its own. The images and projects you open, AI processing and app settings are all handled and stored <strong>only on your PC</strong>. There are no analytics, advertising or tracking tools, and no user data is sent to blue-code. If you turn on the optional AI agent connection, an AI agent that you run on this PC can read the open document (see section 3).
 </div>
 
 <h2>1. Information the app handles</h2>
 <ul>
-<li><strong>Images and project files</strong> — Files you open or import (JPEG, PNG, TIFF, HEIC, SVG, PSD/PSB, camera RAW, Layerforge .comp projects) are read and written only on your PC for editing. They are never uploaded.</li>
+<li><strong>Images and project files</strong> — Files you open or import (JPEG, PNG, TIFF, HEIC, SVG, PSD/PSB, camera RAW, Layerforge .comp projects) are read and written only on your PC for editing. Layerforge never uploads them (for the optional AI agent connection, see section 3).</li>
 <li><strong>App settings</strong> — Preferences such as panel sizes, tool options and the recent files list are stored in the app settings file on this device.</li>
 <li><strong>Pro status hint</strong> — To show the right state quickly at startup, the last known Layerforge Pro status (yes/no) is saved in the same settings file.</li>
+<li><strong>AI agent connection settings</strong> — Whether the AI agent connection is allowed and whether the first-run guide has been shown are saved in the same settings file.</li>
 </ul>
 
 <h2>2. AI features (Object Selection, Select Subject, Remove Background)</h2>
 <p>AI features run <strong>directly on your PC</strong> using models included in the app (U²-Net, EfficientSAM). Your images are never sent to a server, and the app does not download models or collect results.</p>
 
-<h2>3. In-app purchase (Layerforge Pro)</h2>
+<h2>3. Local AI agent connection (optional)</h2>
+<p>Only if you turn it on in the app (Help ▸ AI Agent Connection), AI agents running on this PC, such as Claude Code or Codex, can use Layerforge as a tool. The connection stays inside your device through a channel that only your Windows account can use, and no network port is opened. It is off by default and can be turned off at any time in the same place. Layerforge does not receive or store your AI service account or API keys.</p>
+<p>For the tasks you ask it to do, a connected agent may receive information about the open document (such as layer names, sizes and settings) and preview images, and the agent may send them to its own AI service. That transfer is made by the agent, not by Layerforge, and the privacy policy of the agent's provider applies. blue-code does not receive this information.</p>
+
+<h2>4. In-app purchase (Layerforge Pro)</h2>
 <p>Layerforge Pro is an add-on sold through the Microsoft Store. Payment and order processing are handled by Microsoft, and the <a href="https://privacy.microsoft.com">Microsoft Privacy Statement</a> applies to the information processed for the purchase. Layerforge uses the Microsoft Store features built into Windows only to check whether your Layerforge Pro license is active and to show the price listed in the Store. Layerforge does not receive or store your name, email address, payment details or other account information.</p>
 
-<h2>4. Sharing with third parties</h2>
+<h2>5. Sharing with third parties</h2>
 <p><strong>Layerforge does not provide or share any user data with third parties.</strong></p>
+<p>An AI agent you connect yourself (section 3) is your own tool; what it sends to its provider is governed by your agreement with that provider.</p>
 <ul>
 <li>No analytics tools</li>
 <li>No crash-reporting SDKs</li>
@@ -55,27 +61,28 @@ small { color: #888; }
 <li>No servers of our own</li>
 </ul>
 
-<h2>5. Device features used</h2>
+<h2>6. Device features used</h2>
 <ul>
 <li><strong>File access</strong> — Only the files and folders you choose through file dialogs, drag and drop or "Open with" are read and written.</li>
 <li><strong>Folder change detection</strong> — While a .comp project is open, only that folder is watched so that changes made by other programs appear on screen.</li>
 <li><strong>Clipboard</strong> — Images are read or written only when you run Copy or Paste.</li>
 <li><strong>Graphics device</strong> — The GPU is used for display and AI processing.</li>
+<li><strong>Local connection channel</strong> — Only while the AI agent connection is on, a named pipe that only your Windows account can use is opened. No network port is opened.</li>
 </ul>
 
-<h2>6. Retention and deletion</h2>
+<h2>7. Retention and deletion</h2>
 <p>App settings are stored only on this device and are removed when you uninstall Layerforge. Images and project files you create stay wherever you saved them and remain under your control.</p>
 
-<h2>7. Accounts</h2>
+<h2>8. Accounts</h2>
 <p>Layerforge does not require registration or sign-in.</p>
 
-<h2>8. Children's privacy</h2>
+<h2>9. Children's privacy</h2>
 <p>Layerforge is not directed at children under 13 and does not knowingly collect information from children.</p>
 
-<h2>9. Changes to this policy</h2>
+<h2>10. Changes to this policy</h2>
 <p>If this policy changes, the changes and their effective date will be posted on this page.</p>
 
-<h2>10. Contact</h2>
+<h2>11. Contact</h2>
 <p>Developer: <strong>Blue Code</strong><br>
 Email: <a href="mailto:digimaru@gmail.com">digimaru@gmail.com</a></p>
 
