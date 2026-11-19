@@ -20,7 +20,7 @@ small { color: #888; }
 <body>
 <div class="lang-toggle"><a href="./privacy.ko.html">한국어</a> | <strong>English</strong> | <a href="./privacy.ja.html">日本語</a> | <a href="./privacy.zh-Hans.html">简体中文</a></div>
 <h1>Partsmith Privacy Policy</h1>
-<div class="callout">Partsmith does not collect, store or transmit personal information.</div>
+<div class="callout">The Partsmith developer does not collect personal information. If you turn on the optional in-app AI chat, what you send goes directly to your own Anthropic account (section 6).</div>
 
 <h2>1. Information we collect</h2>
 <p>None. There is no sign-up, login, analytics or advertising.</p>
@@ -29,18 +29,21 @@ small { color: #888; }
 <p>The app reads and writes only the files you save, open or export (.partsmith, STL, 3MF) on your own PC. It never uploads them.</p>
 
 <h2>3. Network use</h2>
-<p>The app contacts the Microsoft Store service to check and purchase the paid add-on (Partsmith Pro). Payment and account data are handled by Microsoft; the developer does not receive them. <a href="https://privacy.microsoft.com">Microsoft Privacy Statement</a></p>
+<p>The app contacts the Microsoft Store service to check and purchase the paid add-on (Partsmith Pro). Payment and account data are handled by Microsoft; the developer does not receive them. <a href="https://privacy.microsoft.com">Microsoft Privacy Statement</a> Only when you use the in-app AI chat does the app contact the Anthropic API (api.anthropic.com) (section 6).</p>
 
 <h2>4. Local storage</h2>
-<p>The app stores an autosave of the open design and its settings (window position, local AI connection port and access token) in its app data folder. So that AI clients can find the app, it also places the connection details (port and access token) and a small connector program in <code>%USERPROFILE%\.partsmith</code>. None of this contains personal information.</p>
+<p>The app stores an autosave of the open design and its settings (window position, local AI connection port and access token) in its app data folder. So that AI clients can find the app, it also places the connection details (port and access token) and a small connector program in <code>%USERPROFILE%\.partsmith</code>. If you enter an Anthropic API key for the in-app AI chat, it is encrypted with Windows Data Protection (DPAPI) and stored only in the app settings on this PC; it is never sent to the developer. The same settings record how many free exports you have used. If you create a Claude Desktop extension file (Partsmith.mcpb), it is saved in <code>%USERPROFILE%\.partsmith</code>.</p>
 
 <h2>5. Local AI connection (MCP)</h2>
-<p>While the app is running it opens a local server reachable only from the same PC (127.0.0.1) so that AI clients you register yourself (Claude Desktop, Claude Code, Codex and others) can call its modeling tools. The server cannot be reached from the network and rejects requests without the access token as well as requests from web pages. On request it passes the contents of the open design (features, dimensions and rendered images) to that AI client. The app never receives or stores AI accounts or API keys. Whether your AI client sends that content to its provider is governed by your agreement with that provider; the developer never receives it. You can regenerate the access token at any time in the app's "Connect AI" screen.</p>
+<p>While the app is running it opens a local server reachable only from the same PC (127.0.0.1) so that AI clients you register yourself (Claude Desktop, Claude Code, Codex and others) can call its modeling tools. The server cannot be reached from the network and rejects requests without the access token as well as requests from web pages. On request it passes the contents of the open design (features, dimensions and rendered images) to that AI client. The app never receives the accounts of external AI clients. Whether your AI client sends that content to its provider is governed by your agreement with that provider; the developer never receives it. You can regenerate the access token at any time in the app's "Connect AI" screen.</p>
 
-<h2>6. Contact</h2>
+<h2>6. In-app AI chat (optional)</h2>
+<p>Only when you enter your own Anthropic API key and send a chat message does the app call the Anthropic API directly with that key. Your message, the contents of the open design (features and dimensions) and rendered images of the model are then sent to Anthropic. Processing of this data and usage charges are governed by your agreement with Anthropic and the <a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a>; the developer never receives this content or your key. You can delete the key at any time in the chat settings, and nothing is sent if you do not use the chat.</p>
+
+<h2>7. Contact</h2>
 <p>Developer: Blue Code (publisher: 수카버스)<br>Email: digimaru@gmail.com<br>Microsoft Store ID: 9NZ7VDPNWSQ8</p>
 
 <p><a href="./index.html">&larr; Partsmith</a></p>
-<p><small>Effective: 2026-10-08</small></p>
+<p><small>Effective: 2026-10-08 · Updated: 2026-11-19 (in-app AI chat added)</small></p>
 </body>
 </html>

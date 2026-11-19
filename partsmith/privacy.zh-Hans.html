@@ -19,7 +19,7 @@ small { color: #888; }
 <body>
 <div class="lang-toggle"><a href="./privacy.ko.html">한국어</a> | <a href="./privacy.en.html">English</a> | <a href="./privacy.ja.html">日本語</a> | <strong>简体中文</strong></div>
 <h1>Partsmith 隐私政策</h1>
-<div class="callout">Partsmith 不收集、存储或传输任何个人信息。</div>
+<div class="callout">Partsmith 开发者不收集任何个人信息。如果你使用可选的应用内 AI 对话,你发送的内容会直接传送到你自己的 Anthropic 账户(第 6 条)。</div>
 
 <h2>1. 收集的信息</h2>
 <p>无。没有注册、登录、分析工具或广告。</p>
@@ -28,18 +28,21 @@ small { color: #888; }
 <p>应用只在你的电脑上读写你自己保存、打开或导出的文件(.partsmith、STL、3MF),不会上传这些文件。</p>
 
 <h2>3. 网络使用</h2>
-<p>为确认和购买付费功能(Partsmith Pro 附加产品),应用会与 Microsoft Store 服务通信。付款和账户信息由 Microsoft 处理,开发者不会获得。<a href="https://privacy.microsoft.com">Microsoft 隐私声明</a></p>
+<p>为确认和购买付费功能(Partsmith Pro 附加产品),应用会与 Microsoft Store 服务通信。付款和账户信息由 Microsoft 处理,开发者不会获得。<a href="https://privacy.microsoft.com">Microsoft 隐私声明</a> 仅在你使用应用内 AI 对话时,应用才会与 Anthropic API(api.anthropic.com)通信(第 6 条)。</p>
 
 <h2>4. 本地存储</h2>
-<p>应用会在其数据文件夹中保存当前设计的自动保存副本和应用设置(窗口位置、本地 AI 连接的端口和访问令牌)。为便于 AI 客户端找到应用,还会在 <code>%USERPROFILE%\.partsmith</code> 中放置连接信息(端口和访问令牌)以及一个小型连接程序。其中不包含个人信息。</p>
+<p>应用会在其数据文件夹中保存当前设计的自动保存副本和应用设置(窗口位置、本地 AI 连接的端口和访问令牌)。为便于 AI 客户端找到应用,还会在 <code>%USERPROFILE%\.partsmith</code> 中放置连接信息(端口和访问令牌)以及一个小型连接程序。如果你为应用内 AI 对话填入 Anthropic API 密钥,该密钥会用 Windows 数据保护(DPAPI)加密,只保存在本机的应用设置中,不会发送给开发者。同一设置中还会记录免费导出的使用次数。如果你创建 Claude Desktop 扩展文件(Partsmith.mcpb),它会保存在 <code>%USERPROFILE%\.partsmith</code> 中。</p>
 
 <h2>5. 本地 AI 连接(MCP)</h2>
-<p>应用运行期间会开启一个仅能从本机访问的本地服务器(127.0.0.1),让你自行注册的 AI 客户端(Claude Desktop、Claude Code、Codex 等)调用建模工具。该服务器无法从外部网络访问,并会拒绝没有访问令牌的请求以及来自网页的请求。应请求,它会把当前设计的内容(特征、尺寸、渲染图像)传给该 AI 客户端。应用不会接收或保存任何 AI 账户或 API 密钥。AI 客户端是否将收到的内容发送给 AI 提供商,取决于你与该提供商之间的条款,开发者不会获得这些内容。你可以随时在应用的"连接 AI"界面重新生成访问令牌。</p>
+<p>应用运行期间会开启一个仅能从本机访问的本地服务器(127.0.0.1),让你自行注册的 AI 客户端(Claude Desktop、Claude Code、Codex 等)调用建模工具。该服务器无法从外部网络访问,并会拒绝没有访问令牌的请求以及来自网页的请求。应请求,它会把当前设计的内容(特征、尺寸、渲染图像)传给该 AI 客户端。应用不会接收外部 AI 客户端的账户。AI 客户端是否将收到的内容发送给 AI 提供商,取决于你与该提供商之间的条款,开发者不会获得这些内容。你可以随时在应用的"连接 AI"界面重新生成访问令牌。</p>
 
-<h2>6. 联系方式</h2>
+<h2>6. 应用内 AI 对话(可选)</h2>
+<p>只有在你填入自己的 Anthropic API 密钥并发送对话消息时,应用才会用该密钥直接请求 Anthropic API。此时你输入的消息、当前设计的内容(特征、尺寸)以及模型的渲染图像会发送给 Anthropic。这些数据的处理和费用结算受你与 Anthropic 之间的条款及 <a href="https://www.anthropic.com/legal/privacy">Anthropic 隐私政策</a> 约束,开发者不会获得这些内容或你的密钥。你可以随时在对话设置中删除密钥;不使用对话功能就不会发生这类传输。</p>
+
+<h2>7. 联系方式</h2>
 <p>开发者:Blue Code(发布者:수카버스)<br>邮箱:digimaru@gmail.com<br>Microsoft Store ID:9NZ7VDPNWSQ8</p>
 
 <p><a href="./index.html">&larr; Partsmith</a></p>
-<p><small>生效日期:2026-10-08</small></p>
+<p><small>生效日期:2026-10-08 · 修订日期:2026-11-19(新增应用内 AI 对话)</small></p>
 </body>
 </html>
