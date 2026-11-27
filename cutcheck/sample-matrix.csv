@@ -1,0 +1,9 @@
+Creative,Country,Ratio,Length (sec),Width,Height,FPS,Codec,Audio,Channels,Hz,Copy note
+Hero,US,16:9,15,1920,1080,25,H.264,required,2,48000,"Legal line: Terms apply. Check end card."
+Hero,UK,16:9,15,1920,1080,25,H.264,required,2,48000,"UK spelling (colour); Ofcom super"
+Hero,US,9:16,15,1080,1920,25,H.264,required,2,48000,"Safe zones for captions"
+Hero,UK,9:16,15,1080,1920,25,H.264,required,2,48000,"UK spelling (colour)"
+Teaser,US,1:1,6,1080,1080,25,H.264,any,,,"Logo lock-up"
+Teaser,UK,1:1,6,1080,1080,25,H.264,any,,,"Logo lock-up"
+Offer,US,16:9,30,1920,1080,25,H.264,required,2,48000,"Price: $19.99 super"
+Offer,UK,16:9,30,1920,1080,25,H.264,required,2,48000,"Price: £17.99 super"
